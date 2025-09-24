@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Train, Mail, MapPin } from 'lucide-react';
-import logoIcon from '@/assets/logo-icon.jpg';
+import logoIcon from '@/assets/logo.png';
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img src={logoIcon} alt="Sustainability Express" className="h-8 w-8 rounded-lg" />
+              <img src={logoIcon} alt="Sustainability Express" className="h-10 w-10" />
               <span className="font-bold text-xl">Sustainability Express</span>
             </div>
             <p className="text-background/80 text-sm">

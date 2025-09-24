@@ -8,9 +8,9 @@
 @layer base {
   :root {
     /* Brand Colors - Sustainability Express */
-    --primary: 145 58% 47%; /* #3DAF5C Green */
+    --primary: 105 60% 45%; /* #52C41A Vibrant Green */
     --primary-foreground: 0 0% 98%;
-    --accent: 4 85% 58%; /* #ED4638 Orange */
+    --accent: 16 100% 66%; /* #FF7A45 Coral Orange */
     --accent-foreground: 0 0% 98%;
     
     /* Neutrals */
@@ -20,7 +20,7 @@
     --card-foreground: 0 0% 5.5%;
     
     /* Interactive Elements */
-    --secondary: 145 20% 95%;
+    --secondary: 105 20% 95%;
     --secondary-foreground: 0 0% 5.5%;
     --muted: 0 0% 92%;
     --muted-foreground: 0 0% 40%;
@@ -28,7 +28,7 @@
     /* UI Elements */
     --border: 0 0% 90%;
     --input: 0 0% 100%;
-    --ring: 145 58% 47%;
+    --ring: 105 60% 45%;
     --radius: 1rem; /* 16px rounded corners */
     
     /* Popover & Dialog */
@@ -40,9 +40,9 @@
     --destructive-foreground: 0 0% 98%;
     
     /* Custom Design Tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(145 58% 47%), hsl(145 68% 57%));
-    --gradient-hero: linear-gradient(135deg, hsl(145 58% 47%) 0%, hsl(4 85% 58%) 100%);
-    --shadow-elegant: 0 10px 30px -10px hsl(145 58% 47% / 0.2);
+    --gradient-primary: linear-gradient(135deg, hsl(105 60% 45%), hsl(105 70% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(105 60% 45%) 0%, hsl(16 100% 66%) 100%);
+    --shadow-elegant: 0 10px 30px -10px hsl(105 60% 45% / 0.2);
     --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.1);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -54,19 +54,19 @@
     --card-foreground: 0 0% 97%;
     --popover: 0 0% 8%;
     --popover-foreground: 0 0% 97%;
-    --primary: 145 58% 55%;
+    --primary: 105 60% 55%;
     --primary-foreground: 0 0% 5.5%;
     --secondary: 0 0% 12%;
     --secondary-foreground: 0 0% 97%;
     --muted: 0 0% 12%;
     --muted-foreground: 0 0% 60%;
-    --accent: 4 85% 65%;
+    --accent: 16 100% 76%;
     --accent-foreground: 0 0% 5.5%;
     --destructive: 0 62% 51%;
     --destructive-foreground: 0 0% 97%;
     --border: 0 0% 15%;
     --input: 0 0% 12%;
-    --ring: 145 58% 55%;
+    --ring: 105 60% 55%;
   }
 }
 
