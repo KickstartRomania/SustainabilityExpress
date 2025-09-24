@@ -5,10 +5,8 @@ import { ArrowRight, Calendar, Users, Lightbulb, Train, Leaf, Zap } from 'lucide
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import heroTrain from '@/assets/hero-train.jpg';
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
@@ -59,11 +57,7 @@ const Index = () => {
             {/* Hero Image */}
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-hero rounded-3xl blur-3xl opacity-20 animate-pulse"></div>
-              <img 
-                src={heroTrain} 
-                alt="Sustainability Express - Innovation on Rails" 
-                className="relative rounded-3xl shadow-2xl animate-float"
-              />
+              <img src={heroTrain} alt="Sustainability Express - Innovation on Rails" className="relative rounded-3xl shadow-2xl animate-float" />
             </div>
           </div>
         </div>
@@ -74,11 +68,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-foreground mb-8">What it is</h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              No talk, all action — on rails. A weekend hackathon hosted on an Astra Trans Carpatic train, 
-              traveling Bucharest → Arad → Bucharest. Build practical, weekend-ready solutions that make 
-              train travel more sustainable and more loved.
-            </p>
+            <p className="text-xl text-muted-foreground leading-relaxed">A weekend hackathon hosted on an Astra Trans Carpatic train, traveling Bucharest → Arad → Bucharest. Build practical, weekend-ready solutions that make train travel more sustainable and more loved.</p>
           </div>
         </div>
       </section>
@@ -175,23 +165,35 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {[
-              { icon: Leaf, title: 'Green Passenger Experience', color: 'bg-green-500' },
-              { icon: Zap, title: 'Smart Waste & Circular', color: 'bg-blue-500' },
-              { icon: Lightbulb, title: 'Eco-Nudges & Awareness', color: 'bg-yellow-500' },
-              { icon: Users, title: 'Community & Culture', color: 'bg-purple-500' },
-              { icon: Train, title: 'Digital Tools for Crew', color: 'bg-orange-500' },
-            ].map((theme, index) => {
-              const Icon = theme.icon;
-              return (
-                <Card key={index} className="p-6 text-center hover:shadow-card transition-shadow duration-300">
+            {[{
+            icon: Leaf,
+            title: 'Green Passenger Experience',
+            color: 'bg-green-500'
+          }, {
+            icon: Zap,
+            title: 'Smart Waste & Circular',
+            color: 'bg-blue-500'
+          }, {
+            icon: Lightbulb,
+            title: 'Eco-Nudges & Awareness',
+            color: 'bg-yellow-500'
+          }, {
+            icon: Users,
+            title: 'Community & Culture',
+            color: 'bg-purple-500'
+          }, {
+            icon: Train,
+            title: 'Digital Tools for Crew',
+            color: 'bg-orange-500'
+          }].map((theme, index) => {
+            const Icon = theme.icon;
+            return <Card key={index} className="p-6 text-center hover:shadow-card transition-shadow duration-300">
                   <div className={`w-12 h-12 ${theme.color} rounded-full mx-auto mb-4 flex items-center justify-center`}>
                     <Icon className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="font-semibold text-foreground">{theme.title}</h3>
-                </Card>
-              );
-            })}
+                </Card>;
+          })}
           </div>
           
           <div className="text-center mt-12">
@@ -218,8 +220,6 @@ const Index = () => {
       </section>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
