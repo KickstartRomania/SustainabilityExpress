@@ -203,7 +203,7 @@ const Index = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 bg-gradient-hero">
+      <section className="py-24 bg-primary">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Seats Are Limited</h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
