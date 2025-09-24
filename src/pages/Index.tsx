@@ -19,15 +19,15 @@ const Index = () => {
             {/* Hero Text */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
-                  Sustainability Express
-                </h1>
-                <p className="text-2xl lg:text-3xl text-gradient font-semibold">
-                  Hackathon on Rails
-                </p>
-                <p className="text-xl text-muted-foreground max-w-lg">
-                  48 hours. On a moving train. Real solutions for greener travel.
-                </p>
+              <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
+                Sustainability Express
+              </h1>
+              <p className="text-2xl lg:text-3xl text-gradient font-semibold">
+                Hackathon on Rails
+              </p>
+              <p className="text-xl text-muted-foreground max-w-lg">
+                48 hours. On a moving train. Real solutions for greener travel.
+              </p>
               </div>
               
               {/* Stats Strip */}
@@ -86,41 +86,41 @@ const Index = () => {
       {/* Why Join Section */}
       <section className="py-24">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-6">Why Join</h2>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="card-elevated text-center group hover:scale-105 transition-transform duration-300">
-              <div className="w-16 h-16 bg-gradient-primary rounded-full mx-auto mb-6 flex items-center justify-center">
-                <Lightbulb className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Build a Real Prototype</h3>
-              <p className="text-muted-foreground">
-                Get hands-on mentoring while building something tangible that could actually change how people experience train travel.
-              </p>
-            </Card>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-foreground mb-6">Why Join</h2>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <Card className="card-elevated text-center group hover:scale-105 transition-transform duration-300">
+                <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <Lightbulb className="h-8 w-8 text-primary-foreground" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-4">Build a real prototype with on-train mentoring</h3>
+                <p className="text-muted-foreground">
+                  Get hands-on mentoring while building something tangible that could actually change how people experience train travel.
+                </p>
+              </Card>
 
-            <Card className="card-elevated text-center group hover:scale-105 transition-transform duration-300">
-              <div className="w-16 h-16 bg-gradient-primary rounded-full mx-auto mb-6 flex items-center justify-center">
-                <Users className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Meet Future Co-founders</h3>
-              <p className="text-muted-foreground">
-                Connect with passionate developers, designers, and entrepreneurs who share your vision for sustainable innovation.
-              </p>
-            </Card>
+              <Card className="card-elevated text-center group hover:scale-105 transition-transform duration-300">
+                <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <Users className="h-8 w-8 text-primary-foreground" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-4">Meet future co-founders and collaborators</h3>
+                <p className="text-muted-foreground">
+                  Connect with passionate developers, designers, and entrepreneurs who share your vision for sustainable innovation.
+                </p>
+              </Card>
 
-            <Card className="card-elevated text-center group hover:scale-105 transition-transform duration-300">
-              <div className="w-16 h-16 bg-gradient-primary rounded-full mx-auto mb-6 flex items-center justify-center">
-                <Leaf className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Shape Sustainable Mobility</h3>
-              <p className="text-muted-foreground">
-                Be part of the movement that makes eco-friendly travel the preferred choice for the next generation.
-              </p>
-            </Card>
-          </div>
+              <Card className="card-elevated text-center group hover:scale-105 transition-transform duration-300">
+                <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <Leaf className="h-8 w-8 text-primary-foreground" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-4">Shape the future of sustainable mobility</h3>
+                <p className="text-muted-foreground">
+                  Be part of the movement that makes eco-friendly travel the preferred choice for the next generation.
+                </p>
+              </Card>
+            </div>
         </div>
       </section>
 
