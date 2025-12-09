@@ -31,7 +31,7 @@ const Index = () => {
               {/* Stats Strip */}
               <div className="flex flex-wrap gap-6 text-sm font-medium text-muted-foreground">
                 <span className="flex items-center gap-2">
-                  <Users className="h-4 w-4" /> 20–30 participants
+                  <Users className="h-4 w-4" /> 20 participants
                 </span>
                 <span className="flex items-center gap-2">
                   <Lightbulb className="h-4 w-4" /> Prototype-first
@@ -68,7 +68,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-foreground mb-8">What it is</h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">A weekend hackathon hosted on an Astra Trans Carpatic train, traveling Bucharest → Arad → Bucharest. Build practical, weekend-ready solutions that make train travel more sustainable and more loved.</p>
+            <p className="text-xl text-muted-foreground leading-relaxed">A weekend hackathon hosted on a train, traveling Bucharest → Timisoara → Bucharest. Build practical, weekend-ready solutions that make train travel more sustainable and more loved.</p>
           </div>
         </div>
       </section>
@@ -129,7 +129,7 @@ const Index = () => {
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Depart</h3>
               <p className="text-muted-foreground">
-                Friday 20:30 from Bucharest. Icebreakers, team formation, and late-night brainstorming as we roll towards Arad.
+                Friday 20:30 from Bucharest. Icebreakers, team formation, and late-night brainstorming as we roll towards Timisoara.
               </p>
             </div>
 
@@ -139,7 +139,7 @@ const Index = () => {
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Build</h3>
               <p className="text-muted-foreground">
-                Saturday in Arad: full hack day with mentorship. Evening departure back to Bucharest with overnight coding sprints.
+                Saturday in Timisoara: full hack day with mentorship. Evening departure back to Bucharest with overnight coding sprints.
               </p>
             </div>
 

@@ -21,41 +21,6 @@ const Partners = () => {
             </p>
           </div>
 
-          {/* Primary Partner */}
-          <section className="mb-20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Powered By</h2>
-            </div>
-            
-            <Card className="card-elevated max-w-4xl mx-auto text-center bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20">
-              <Train className="h-20 w-20 text-primary mx-auto mb-6" />
-              <h3 className="text-4xl font-bold text-foreground mb-4">Astra Trans Carpatic</h3>
-              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Leading the future of sustainable mobility in Romania. Astra Trans Carpatic provides 
-                the train, expertise, and vision that makes this unique hackathon possible.
-              </p>
-              
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary mb-2">500+</div>
-                  <div className="text-sm text-muted-foreground">Daily Passengers</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary mb-2">75%</div>
-                  <div className="text-sm text-muted-foreground">Lower Emissions vs Cars</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary mb-2">20+</div>
-                  <div className="text-sm text-muted-foreground">Years of Innovation</div>
-                </div>
-              </div>
-              
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-                Learn About Astra
-              </Button>
-            </Card>
-          </section>
-
           {/* Partner Categories */}
           <section className="mb-20">
             <div className="text-center mb-12">
