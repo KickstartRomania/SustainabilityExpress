@@ -10,13 +10,25 @@ import RailSection from '@/components/decorative/RailSection';
 import SectionDivider from '@/components/decorative/SectionDivider';
 import RouteVisualization from '@/components/decorative/RouteVisualization';
 import JourneyRail from '@/components/decorative/JourneyRail';
+import ScrollProgressRail from '@/components/decorative/ScrollProgressRail';
+
+const sections = [
+  { id: 'hero', label: 'Welcome' },
+  { id: 'what-it-is', label: 'What it is' },
+  { id: 'why-join', label: 'Why Join' },
+  { id: 'journey', label: 'The Journey' },
+  { id: 'themes', label: 'Themes' },
+  { id: 'apply', label: 'Apply' },
+];
 
 const Index = () => {
   return <div className="min-h-screen bg-background">
       <Navigation />
+      <ScrollProgressRail sections={sections} />
       
       {/* Hero Section */}
-      <section className="relative pt-16 pb-32 overflow-hidden">
+      <section id="hero" className="relative pt-16 pb-32 overflow-hidden">
+      
         {/* Background gradient */}
         <div className="absolute inset-0 bg-gradient-hero opacity-5"></div>
         
@@ -107,6 +119,7 @@ const Index = () => {
 
       {/* What it is Section */}
       <RailSection 
+        id="what-it-is"
         className="py-24 bg-secondary/20" 
         showSideRails
         railVariant="subtle"
@@ -128,7 +141,7 @@ const Index = () => {
       </RailSection>
 
       {/* Why Join Section */}
-      <section className="py-24 relative overflow-hidden">
+      <section id="why-join" className="py-24 relative overflow-hidden">
         {/* Subtle side rails */}
         <div className="absolute left-6 md:left-12 top-0 bottom-0 w-5 opacity-20">
           <RailLine variant="vertical" showLeaves />
@@ -195,7 +208,8 @@ const Index = () => {
 
       {/* Timeline Section */}
       <RailSection 
-        className="py-24 bg-secondary/20" 
+        id="journey"
+        className="py-24 bg-secondary/20"
         showSideRails
         railVariant="subtle"
       >
@@ -244,7 +258,7 @@ const Index = () => {
       </RailSection>
 
       {/* Themes Teaser */}
-      <section className="py-24 relative overflow-hidden">
+      <section id="themes" className="py-24 relative overflow-hidden">
         {/* Side rails */}
         <div className="absolute left-6 md:left-12 top-0 bottom-0 w-5 opacity-20">
           <RailLine variant="vertical" />
@@ -310,7 +324,7 @@ const Index = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 bg-primary relative overflow-hidden">
+      <section id="apply" className="py-24 bg-primary relative overflow-hidden">
         {/* Rail decorations in CTA */}
         <div className="absolute top-0 left-0 right-0 opacity-20">
           <div className="h-6 flex flex-col justify-between">
