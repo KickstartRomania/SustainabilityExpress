@@ -1,14 +1,15 @@
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Calendar, Users, Lightbulb, Train, Leaf, Zap } from 'lucide-react';
+import { ArrowRight, Users, Lightbulb, Train, Leaf, Zap } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import heroTrain from '@/assets/hero-train.jpg';
-import FloatingLeaves from '@/components/decorative/FloatingLeaves';
-import MovingTrain from '@/components/decorative/MovingTrain';
-import CircuitLines from '@/components/decorative/CircuitLines';
-import RailPattern from '@/components/decorative/RailPattern';
+import RailLine from '@/components/decorative/RailLine';
+import RailSection from '@/components/decorative/RailSection';
+import SectionDivider from '@/components/decorative/SectionDivider';
+import RouteVisualization from '@/components/decorative/RouteVisualization';
+import JourneyRail from '@/components/decorative/JourneyRail';
 
 const Index = () => {
   return <div className="min-h-screen bg-background">
@@ -16,25 +17,25 @@ const Index = () => {
       
       {/* Hero Section */}
       <section className="relative pt-16 pb-32 overflow-hidden">
-        {/* Background decorative elements */}
+        {/* Background gradient */}
         <div className="absolute inset-0 bg-gradient-hero opacity-5"></div>
-        <FloatingLeaves className="z-0" count={8} />
-        <CircuitLines className="left-0 top-20 w-64 h-64 text-primary/20" />
-        <CircuitLines className="right-0 bottom-20 w-48 h-48 text-primary/20 rotate-180" />
         
-        {/* Moving train decoration */}
-        <MovingTrain className="top-32 left-0 right-0 w-full" direction="right" />
+        {/* Side rails */}
+        <div className="absolute left-6 md:left-12 top-24 bottom-8 w-5 opacity-30">
+          <RailLine variant="vertical" showLeaves />
+        </div>
+        <div className="absolute right-6 md:right-12 top-24 bottom-8 w-5 opacity-20">
+          <RailLine variant="vertical" />
+        </div>
         
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Hero Text */}
             <div className="space-y-8">
               <div className="space-y-4">
-                {/* Decorative rail line */}
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="h-0.5 w-12 bg-gradient-to-r from-primary to-accent animate-gradient-shift" style={{ backgroundSize: '200% 200%' }}></div>
-                  <Train className="h-5 w-5 text-primary animate-bounce-subtle" />
-                  <div className="h-0.5 w-8 bg-gradient-to-r from-accent to-transparent"></div>
+                {/* Rail accent line */}
+                <div className="w-32 mb-6">
+                  <RailLine />
                 </div>
                 
                 <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
@@ -48,8 +49,8 @@ const Index = () => {
                 </p>
               </div>
               
-              {/* Stats Strip with icons */}
-              <div className="flex flex-wrap gap-6 text-sm font-medium text-muted-foreground">
+              {/* Stats Strip */}
+              <div className="flex flex-wrap gap-4 text-sm font-medium text-muted-foreground">
                 <span className="flex items-center gap-2 bg-secondary/50 px-4 py-2 rounded-full border border-border/50">
                   <Users className="h-4 w-4 text-primary" /> 20 participants
                 </span>
@@ -63,7 +64,7 @@ const Index = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild className="btn-hero text-lg px-8 py-6 animate-pulse-glow">
+                <Button asChild className="btn-hero text-lg px-8 py-6">
                   <Link to="/apply">
                     Apply Now <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
@@ -74,158 +75,143 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Hero Image with decorations */}
+            {/* Hero Image */}
             <div className="relative">
               {/* Glowing backdrop */}
               <div className="absolute inset-0 bg-gradient-hero rounded-3xl blur-3xl opacity-20 animate-pulse"></div>
               
-              {/* Decorative corner elements */}
-              <div className="absolute -top-4 -left-4 w-16 h-16 border-l-2 border-t-2 border-primary/40 rounded-tl-2xl"></div>
-              <div className="absolute -bottom-4 -right-4 w-16 h-16 border-r-2 border-b-2 border-accent/40 rounded-br-2xl"></div>
+              {/* Rail frame corners */}
+              <div className="absolute -top-3 -left-3 w-12 h-12">
+                <div className="absolute top-0 left-0 w-full h-1 bg-primary/40 rounded-full" />
+                <div className="absolute top-0 left-0 h-full w-1 bg-primary/40 rounded-full" />
+              </div>
+              <div className="absolute -bottom-3 -right-3 w-12 h-12">
+                <div className="absolute bottom-0 right-0 w-full h-1 bg-accent/40 rounded-full" />
+                <div className="absolute bottom-0 right-0 h-full w-1 bg-accent/40 rounded-full" />
+              </div>
               
-              {/* Leaf decorations */}
-              <Leaf className="absolute -top-6 right-12 h-8 w-8 text-primary/30 animate-float" />
-              <Leaf className="absolute bottom-8 -left-6 h-6 w-6 text-primary/40 animate-float" style={{ animationDelay: '1s' }} />
+              {/* Small leaf accents */}
+              <Leaf className="absolute -top-4 right-16 h-6 w-6 text-primary/40 rotate-45 animate-float" />
+              <Leaf className="absolute bottom-12 -left-4 h-5 w-5 text-primary/30 -rotate-12 animate-float" style={{ animationDelay: '1.5s' }} />
               
               <img src={heroTrain} alt="Sustainability Express - Innovation on Rails" className="relative rounded-3xl shadow-2xl animate-float" />
             </div>
           </div>
         </div>
         
-        {/* Bottom rail track decoration */}
-        <div className="absolute bottom-0 left-0 right-0 h-8 overflow-hidden">
-          <div className="flex items-center justify-center gap-4 h-full opacity-20">
-            <div className="flex-1 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
-          </div>
-          <div className="absolute bottom-2 left-0 right-0 flex justify-between px-8">
-            {Array.from({ length: 30 }).map((_, i) => (
-              <div key={i} className="w-1 h-3 bg-muted-foreground/10 rounded-sm"></div>
-            ))}
-          </div>
+        {/* Bottom rail */}
+        <div className="absolute bottom-0 left-0 right-0 opacity-40">
+          <RailLine showTrain showLeaves />
         </div>
       </section>
 
       {/* What it is Section */}
-      <section className="py-24 bg-secondary/20 relative overflow-hidden">
-        {/* Rail pattern on sides */}
-        <RailPattern className="left-4 top-0 w-12 h-full opacity-30" />
-        <RailPattern className="right-4 top-0 w-12 h-full opacity-30" />
-        
-        <div className="container mx-auto px-4 relative z-10">
+      <RailSection 
+        className="py-24 bg-secondary/20" 
+        showSideRails
+        railVariant="subtle"
+      >
+        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Section decoration */}
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <div className="h-0.5 w-16 bg-gradient-to-r from-transparent to-primary"></div>
-              <Leaf className="h-6 w-6 text-primary" />
-              <div className="h-0.5 w-16 bg-gradient-to-l from-transparent to-primary"></div>
-            </div>
+            <SectionDivider icon={Leaf} className="mb-8" />
             
             <h2 className="text-4xl font-bold text-foreground mb-8">What it is</h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">A weekend hackathon hosted on a train, traveling Bucharest → Timisoara → Bucharest. Build practical, weekend-ready solutions that make train travel more sustainable and more loved.</p>
+            <p className="text-xl text-muted-foreground leading-relaxed mb-12">
+              A weekend hackathon hosted on a train, traveling Bucharest → Timisoara → Bucharest. 
+              Build practical, weekend-ready solutions that make train travel more sustainable and more loved.
+            </p>
             
             {/* Route visualization */}
-            <div className="mt-12 flex items-center justify-center gap-4 flex-wrap">
-              <div className="flex items-center gap-2 bg-card px-6 py-3 rounded-full border border-border">
-                <div className="w-3 h-3 rounded-full bg-primary animate-pulse"></div>
-                <span className="font-semibold text-foreground">Bucharest</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Train className="h-5 w-5 text-primary" />
-                <div className="w-12 h-0.5 bg-gradient-to-r from-primary to-accent"></div>
-                <Train className="h-5 w-5 text-primary" />
-              </div>
-              <div className="flex items-center gap-2 bg-card px-6 py-3 rounded-full border border-border">
-                <div className="w-3 h-3 rounded-full bg-accent animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-                <span className="font-semibold text-foreground">Timisoara</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Train className="h-5 w-5 text-primary" />
-                <div className="w-12 h-0.5 bg-gradient-to-r from-accent to-primary"></div>
-                <Train className="h-5 w-5 text-primary" />
-              </div>
-              <div className="flex items-center gap-2 bg-card px-6 py-3 rounded-full border border-border">
-                <div className="w-3 h-3 rounded-full bg-primary animate-pulse" style={{ animationDelay: '1s' }}></div>
-                <span className="font-semibold text-foreground">Bucharest</span>
-              </div>
-            </div>
+            <RouteVisualization stops={['Bucharest', 'Timisoara', 'Bucharest']} />
           </div>
         </div>
-      </section>
+      </RailSection>
 
       {/* Why Join Section */}
       <section className="py-24 relative overflow-hidden">
-        {/* Floating leaves background */}
-        <FloatingLeaves className="z-0 opacity-50" count={4} />
+        {/* Subtle side rails */}
+        <div className="absolute left-6 md:left-12 top-0 bottom-0 w-5 opacity-20">
+          <RailLine variant="vertical" showLeaves />
+        </div>
+        <div className="absolute right-6 md:right-12 top-0 bottom-0 w-5 opacity-15">
+          <RailLine variant="vertical" />
+        </div>
         
         <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center mb-16">
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <Leaf className="h-6 w-6 text-primary" />
-                <h2 className="text-4xl font-bold text-foreground">Why Join</h2>
-                <Leaf className="h-6 w-6 text-primary" />
+          <div className="text-center mb-16">
+            <SectionDivider icon={Train} className="mb-8" />
+            <h2 className="text-4xl font-bold text-foreground">Why Join</h2>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="card-elevated text-center group hover:scale-105 transition-transform duration-300 relative overflow-hidden">
+              {/* Rail accent top */}
+              <div className="absolute top-0 left-4 right-4 opacity-30">
+                <RailLine />
               </div>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <Card className="card-elevated text-center group hover:scale-105 transition-transform duration-300 relative overflow-hidden">
-                {/* Decorative corner */}
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full"></div>
-                <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center group-hover:animate-pulse-glow">
+              <div className="pt-4">
+                <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
                   <Lightbulb className="h-8 w-8 text-primary-foreground" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-4">Build a real prototype with on-train mentoring</h3>
                 <p className="text-muted-foreground">
                   Get hands-on mentoring while building something tangible that could actually change how people experience train travel.
                 </p>
-              </Card>
+              </div>
+            </Card>
 
-              <Card className="card-elevated text-center group hover:scale-105 transition-transform duration-300 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-accent/10 to-transparent rounded-bl-full"></div>
-                <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center group-hover:animate-pulse-glow">
+            <Card className="card-elevated text-center group hover:scale-105 transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute top-0 left-4 right-4 opacity-30">
+                <RailLine />
+              </div>
+              <div className="pt-4">
+                <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
                   <Users className="h-8 w-8 text-primary-foreground" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-4">Meet future co-founders and collaborators</h3>
                 <p className="text-muted-foreground">
                   Connect with passionate developers, designers, and entrepreneurs who share your vision for sustainable innovation.
                 </p>
-              </Card>
+              </div>
+            </Card>
 
-              <Card className="card-elevated text-center group hover:scale-105 transition-transform duration-300 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full"></div>
-                <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center group-hover:animate-pulse-glow">
+            <Card className="card-elevated text-center group hover:scale-105 transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute top-0 left-4 right-4 opacity-30">
+                <RailLine />
+              </div>
+              <div className="pt-4">
+                <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
                   <Leaf className="h-8 w-8 text-primary-foreground" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-4">Shape the future of sustainable mobility</h3>
                 <p className="text-muted-foreground">
                   Be part of the movement that makes eco-friendly travel the preferred choice for the next generation.
                 </p>
-              </Card>
-            </div>
+              </div>
+            </Card>
+          </div>
         </div>
       </section>
 
       {/* Timeline Section */}
-      <section className="py-24 bg-secondary/20 relative overflow-hidden">
-        {/* Track pattern background */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary"></div>
-        </div>
-        
-        <div className="container mx-auto px-4 relative z-10">
+      <RailSection 
+        className="py-24 bg-secondary/20" 
+        showSideRails
+        railVariant="subtle"
+      >
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <Train className="h-6 w-6 text-primary" />
-              <h2 className="text-4xl font-bold text-foreground">The Journey</h2>
-              <Train className="h-6 w-6 text-primary" />
-            </div>
+            <SectionDivider icon={Train} className="mb-8" />
+            <h2 className="text-4xl font-bold text-foreground mb-4">The Journey</h2>
             <p className="text-xl text-muted-foreground">3 steps to sustainable innovation</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="text-center relative">
-              {/* Connecting line to next step */}
-              <div className="hidden md:block absolute top-10 left-1/2 w-full h-0.5 bg-gradient-to-r from-primary to-primary/30"></div>
-              <div className="w-20 h-20 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center text-white font-bold text-2xl relative z-10 animate-pulse-glow">
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto relative">
+            {/* Connecting rail between steps */}
+            <JourneyRail steps={3} activeStep={1} />
+            
+            <div className="text-center relative z-10">
+              <div className="w-20 h-20 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center text-white font-bold text-2xl shadow-lg">
                 1
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Depart</h3>
@@ -234,9 +220,8 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="text-center relative">
-              <div className="hidden md:block absolute top-10 left-1/2 w-full h-0.5 bg-gradient-to-r from-primary to-primary/30"></div>
-              <div className="w-20 h-20 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center text-white font-bold text-2xl relative z-10 animate-pulse-glow" style={{ animationDelay: '0.5s' }}>
+            <div className="text-center relative z-10">
+              <div className="w-20 h-20 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center text-white font-bold text-2xl shadow-lg">
                 2
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Build</h3>
@@ -245,8 +230,8 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="text-center relative">
-              <div className="w-20 h-20 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center text-white font-bold text-2xl relative z-10 animate-pulse-glow" style={{ animationDelay: '1s' }}>
+            <div className="text-center relative z-10">
+              <div className="w-20 h-20 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center text-white font-bold text-2xl shadow-lg">
                 3
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Return with Impact</h3>
@@ -256,54 +241,61 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
+      </RailSection>
 
       {/* Themes Teaser */}
       <section className="py-24 relative overflow-hidden">
-        <CircuitLines className="right-0 top-0 w-64 h-64 text-primary/10" />
+        {/* Side rails */}
+        <div className="absolute left-6 md:left-12 top-0 bottom-0 w-5 opacity-20">
+          <RailLine variant="vertical" />
+        </div>
+        <div className="absolute right-6 md:right-12 top-0 bottom-0 w-5 opacity-15">
+          <RailLine variant="vertical" showLeaves />
+        </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <Zap className="h-6 w-6 text-accent" />
-              <h2 className="text-4xl font-bold text-foreground">Challenge Themes</h2>
-              <Zap className="h-6 w-6 text-accent" />
-            </div>
-            <p className="text-xl text-muted-foreground mb-8">Five focus areas for sustainable innovation</p>
+            <SectionDivider icon={Zap} className="mb-8" />
+            <h2 className="text-4xl font-bold text-foreground mb-4">Challenge Themes</h2>
+            <p className="text-xl text-muted-foreground">Five focus areas for sustainable innovation</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {[{
-            icon: Leaf,
-            title: 'Green Passenger Experience',
-            color: 'bg-green-500'
-          }, {
-            icon: Zap,
-            title: 'Smart Waste & Circular',
-            color: 'bg-blue-500'
-          }, {
-            icon: Lightbulb,
-            title: 'Eco-Nudges & Awareness',
-            color: 'bg-yellow-500'
-          }, {
-            icon: Users,
-            title: 'Community & Culture',
-            color: 'bg-purple-500'
-          }, {
-            icon: Train,
-            title: 'Digital Tools for Crew',
-            color: 'bg-orange-500'
-          }].map((theme, index) => {
-            const Icon = theme.icon;
-            return <Card key={index} className="p-6 text-center hover:shadow-card transition-all duration-300 group relative overflow-hidden hover:-translate-y-1">
-                  {/* Hover glow effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              icon: Leaf,
+              title: 'Green Passenger Experience',
+              color: 'bg-green-500'
+            }, {
+              icon: Zap,
+              title: 'Smart Waste & Circular',
+              color: 'bg-blue-500'
+            }, {
+              icon: Lightbulb,
+              title: 'Eco-Nudges & Awareness',
+              color: 'bg-yellow-500'
+            }, {
+              icon: Users,
+              title: 'Community & Culture',
+              color: 'bg-purple-500'
+            }, {
+              icon: Train,
+              title: 'Digital Tools for Crew',
+              color: 'bg-orange-500'
+            }].map((theme, index) => {
+              const Icon = theme.icon;
+              return (
+                <Card key={index} className="p-6 text-center hover:shadow-card transition-all duration-300 group relative overflow-hidden hover:-translate-y-1">
+                  {/* Rail accent */}
+                  <div className="absolute bottom-0 left-4 right-4 opacity-20">
+                    <RailLine />
+                  </div>
                   <div className={`w-12 h-12 ${theme.color} rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                     <Icon className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="font-semibold text-foreground">{theme.title}</h3>
-                </Card>;
-          })}
+                </Card>
+              );
+            })}
           </div>
           
           <div className="text-center mt-12">
@@ -319,16 +311,34 @@ const Index = () => {
 
       {/* Final CTA */}
       <section className="py-24 bg-primary relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-64 h-64 bg-white/20 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+        {/* Rail decorations in CTA */}
+        <div className="absolute top-0 left-0 right-0 opacity-20">
+          <div className="h-6 flex flex-col justify-between">
+            <div className="h-0.5 bg-white/30" />
+            <div className="flex justify-between px-8">
+              {Array.from({ length: 20 }).map((_, i) => (
+                <div key={i} className="w-1 h-3 bg-white/20 rounded-sm" />
+              ))}
+            </div>
+            <div className="h-0.5 bg-white/30" />
+          </div>
         </div>
         
-        {/* Floating leaves */}
-        <Leaf className="absolute top-10 left-10 h-12 w-12 text-white/20 animate-float" />
-        <Leaf className="absolute bottom-10 right-20 h-8 w-8 text-white/30 animate-float" style={{ animationDelay: '1s' }} />
-        <Train className="absolute top-20 right-10 h-10 w-10 text-white/20 animate-float" style={{ animationDelay: '0.5s' }} />
+        <div className="absolute bottom-0 left-0 right-0 opacity-20">
+          <div className="h-6 flex flex-col justify-between">
+            <div className="h-0.5 bg-white/30" />
+            <div className="flex justify-between px-8">
+              {Array.from({ length: 20 }).map((_, i) => (
+                <div key={i} className="w-1 h-3 bg-white/20 rounded-sm" />
+              ))}
+            </div>
+            <div className="h-0.5 bg-white/30" />
+          </div>
+        </div>
+        
+        {/* Subtle floating elements */}
+        <Leaf className="absolute top-12 left-12 h-10 w-10 text-white/15 rotate-45 animate-float" />
+        <Train className="absolute bottom-12 right-16 h-8 w-8 text-white/15 animate-float" style={{ animationDelay: '1s' }} />
         
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl font-bold text-white mb-6">Seats Are Limited</h2>
@@ -346,4 +356,5 @@ const Index = () => {
       <Footer />
     </div>;
 };
+
 export default Index;
