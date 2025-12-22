@@ -49,10 +49,10 @@ const Index = () => {
           <RailLine variant="vertical" />
         </div>
         
-        <div className="container mx-auto px-4 py-16 relative z-10">
+        <div className="relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Hero Text */}
-            <div className="space-y-8">
+            <div className="space-y-8 container mx-auto px-4 py-16 lg:pr-8">
               <div className="space-y-4">
                 {/* Rail accent line */}
                 <div className="w-32 mb-6">
@@ -97,27 +97,12 @@ const Index = () => {
             </div>
 
             {/* Hero Image */}
-            <div className="relative">
-              {/* Glowing backdrop */}
-              <div className="absolute inset-0 bg-gradient-hero rounded-3xl blur-3xl opacity-20 animate-pulse"></div>
-              
-              {/* Rail frame corners */}
-              <div className="absolute -top-3 -left-3 w-12 h-12">
-                <div className="absolute top-0 left-0 w-full h-1 bg-primary/40 rounded-full" />
-                <div className="absolute top-0 left-0 h-full w-1 bg-primary/40 rounded-full" />
-              </div>
-              <div className="absolute -bottom-3 -right-3 w-12 h-12">
-                <div className="absolute bottom-0 right-0 w-full h-1 bg-accent/40 rounded-full" />
-                <div className="absolute bottom-0 right-0 h-full w-1 bg-accent/40 rounded-full" />
-              </div>
-              
-              {/* Small leaf accents */}
-              <Leaf className="absolute -top-4 right-16 h-6 w-6 text-primary/40 rotate-45 animate-float" />
-              <Leaf className="absolute bottom-12 -left-4 h-5 w-5 text-primary/30 -rotate-12 animate-float" style={{
-              animationDelay: '1.5s'
-            }} />
-              
-              <img alt="Sustainability Express - Innovation on Rails" className="relative rounded-3xl shadow-2xl animate-float" src="/lovable-uploads/66b05ab1-f764-41c0-beb3-9ed6001b3eed.png" />
+            <div className="relative h-full">
+              <img 
+                alt="Sustainability Express - Innovation on Rails" 
+                className="w-full h-full object-cover lg:rounded-l-3xl lg:rounded-r-none rounded-3xl shadow-2xl min-h-[400px] lg:min-h-[600px]" 
+                src="/lovable-uploads/66b05ab1-f764-41c0-beb3-9ed6001b3eed.png" 
+              />
             </div>
           </div>
         </div>
