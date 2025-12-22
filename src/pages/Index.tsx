@@ -11,25 +11,16 @@ import SectionDivider from '@/components/decorative/SectionDivider';
 import RouteVisualization from '@/components/decorative/RouteVisualization';
 import JourneyRail from '@/components/decorative/JourneyRail';
 import ScrollProgressRail from '@/components/decorative/ScrollProgressRail';
-const sections = [{
-  id: 'hero',
-  label: 'Welcome'
-}, {
-  id: 'what-it-is',
-  label: 'What it is'
-}, {
-  id: 'why-join',
-  label: 'Why Join'
-}, {
-  id: 'journey',
-  label: 'The Journey'
-}, {
-  id: 'themes',
-  label: 'Themes'
-}, {
-  id: 'apply',
-  label: 'Apply'
-}];
+
+const sections = [
+  { id: 'hero', label: 'Welcome' },
+  { id: 'what-it-is', label: 'What it is' },
+  { id: 'why-join', label: 'Why Join' },
+  { id: 'journey', label: 'The Journey' },
+  { id: 'themes', label: 'Themes' },
+  { id: 'apply', label: 'Apply' },
+];
+
 const Index = () => {
   return <div className="min-h-screen bg-background">
       <Navigation />
@@ -49,10 +40,10 @@ const Index = () => {
           <RailLine variant="vertical" />
         </div>
         
-        <div className="relative z-10">
+        <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Hero Text */}
-            <div className="space-y-8 container mx-auto px-4 py-16 lg:pr-8">
+            <div className="space-y-8">
               <div className="space-y-4">
                 {/* Rail accent line */}
                 <div className="w-32 mb-6">
@@ -97,12 +88,25 @@ const Index = () => {
             </div>
 
             {/* Hero Image */}
-            <div className="relative h-full">
-              <img 
-                alt="Sustainability Express - Innovation on Rails" 
-                className="w-full h-full object-cover lg:rounded-l-3xl lg:rounded-r-none rounded-3xl shadow-2xl min-h-[400px] lg:min-h-[600px]" 
-                src="/lovable-uploads/66b05ab1-f764-41c0-beb3-9ed6001b3eed.png" 
-              />
+            <div className="relative">
+              {/* Glowing backdrop */}
+              <div className="absolute inset-0 bg-gradient-hero rounded-3xl blur-3xl opacity-20 animate-pulse"></div>
+              
+              {/* Rail frame corners */}
+              <div className="absolute -top-3 -left-3 w-12 h-12">
+                <div className="absolute top-0 left-0 w-full h-1 bg-primary/40 rounded-full" />
+                <div className="absolute top-0 left-0 h-full w-1 bg-primary/40 rounded-full" />
+              </div>
+              <div className="absolute -bottom-3 -right-3 w-12 h-12">
+                <div className="absolute bottom-0 right-0 w-full h-1 bg-accent/40 rounded-full" />
+                <div className="absolute bottom-0 right-0 h-full w-1 bg-accent/40 rounded-full" />
+              </div>
+              
+              {/* Small leaf accents */}
+              <Leaf className="absolute -top-4 right-16 h-6 w-6 text-primary/40 rotate-45 animate-float" />
+              <Leaf className="absolute bottom-12 -left-4 h-5 w-5 text-primary/30 -rotate-12 animate-float" style={{ animationDelay: '1.5s' }} />
+              
+              <img src={heroTrain} alt="Sustainability Express - Innovation on Rails" className="relative rounded-3xl shadow-2xl animate-float" />
             </div>
           </div>
         </div>
@@ -114,7 +118,12 @@ const Index = () => {
       </section>
 
       {/* What it is Section */}
-      <RailSection id="what-it-is" className="py-24 bg-secondary/20" showSideRails railVariant="subtle">
+      <RailSection 
+        id="what-it-is"
+        className="py-24 bg-secondary/20" 
+        showSideRails
+        railVariant="subtle"
+      >
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <SectionDivider icon={Leaf} className="mb-8" />
@@ -198,7 +207,12 @@ const Index = () => {
       </section>
 
       {/* Timeline Section */}
-      <RailSection id="journey" className="py-24 bg-secondary/20" showSideRails railVariant="subtle">
+      <RailSection 
+        id="journey"
+        className="py-24 bg-secondary/20"
+        showSideRails
+        railVariant="subtle"
+      >
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <SectionDivider icon={Train} className="mb-8" />
@@ -262,28 +276,29 @@ const Index = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {[{
-            icon: Leaf,
-            title: 'Green Passenger Experience',
-            color: 'bg-green-500'
-          }, {
-            icon: Zap,
-            title: 'Smart Waste & Circular',
-            color: 'bg-blue-500'
-          }, {
-            icon: Lightbulb,
-            title: 'Eco-Nudges & Awareness',
-            color: 'bg-yellow-500'
-          }, {
-            icon: Users,
-            title: 'Community & Culture',
-            color: 'bg-purple-500'
-          }, {
-            icon: Train,
-            title: 'Digital Tools for Crew',
-            color: 'bg-orange-500'
-          }].map((theme, index) => {
-            const Icon = theme.icon;
-            return <Card key={index} className="p-6 text-center hover:shadow-card transition-all duration-300 group relative overflow-hidden hover:-translate-y-1">
+              icon: Leaf,
+              title: 'Green Passenger Experience',
+              color: 'bg-green-500'
+            }, {
+              icon: Zap,
+              title: 'Smart Waste & Circular',
+              color: 'bg-blue-500'
+            }, {
+              icon: Lightbulb,
+              title: 'Eco-Nudges & Awareness',
+              color: 'bg-yellow-500'
+            }, {
+              icon: Users,
+              title: 'Community & Culture',
+              color: 'bg-purple-500'
+            }, {
+              icon: Train,
+              title: 'Digital Tools for Crew',
+              color: 'bg-orange-500'
+            }].map((theme, index) => {
+              const Icon = theme.icon;
+              return (
+                <Card key={index} className="p-6 text-center hover:shadow-card transition-all duration-300 group relative overflow-hidden hover:-translate-y-1">
                   {/* Rail accent */}
                   <div className="absolute bottom-0 left-4 right-4 opacity-20">
                     <RailLine />
@@ -292,8 +307,9 @@ const Index = () => {
                     <Icon className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="font-semibold text-foreground">{theme.title}</h3>
-                </Card>;
-          })}
+                </Card>
+              );
+            })}
           </div>
           
           <div className="text-center mt-12">
@@ -314,9 +330,9 @@ const Index = () => {
           <div className="h-6 flex flex-col justify-between">
             <div className="h-0.5 bg-white/30" />
             <div className="flex justify-between px-8">
-              {Array.from({
-              length: 20
-            }).map((_, i) => <div key={i} className="w-1 h-3 bg-white/20 rounded-sm" />)}
+              {Array.from({ length: 20 }).map((_, i) => (
+                <div key={i} className="w-1 h-3 bg-white/20 rounded-sm" />
+              ))}
             </div>
             <div className="h-0.5 bg-white/30" />
           </div>
@@ -326,9 +342,9 @@ const Index = () => {
           <div className="h-6 flex flex-col justify-between">
             <div className="h-0.5 bg-white/30" />
             <div className="flex justify-between px-8">
-              {Array.from({
-              length: 20
-            }).map((_, i) => <div key={i} className="w-1 h-3 bg-white/20 rounded-sm" />)}
+              {Array.from({ length: 20 }).map((_, i) => (
+                <div key={i} className="w-1 h-3 bg-white/20 rounded-sm" />
+              ))}
             </div>
             <div className="h-0.5 bg-white/30" />
           </div>
@@ -336,9 +352,7 @@ const Index = () => {
         
         {/* Subtle floating elements */}
         <Leaf className="absolute top-12 left-12 h-10 w-10 text-white/15 rotate-45 animate-float" />
-        <Train className="absolute bottom-12 right-16 h-8 w-8 text-white/15 animate-float" style={{
-        animationDelay: '1s'
-      }} />
+        <Train className="absolute bottom-12 right-16 h-8 w-8 text-white/15 animate-float" style={{ animationDelay: '1s' }} />
         
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl font-bold text-white mb-6">Seats Are Limited</h2>
@@ -356,4 +370,5 @@ const Index = () => {
       <Footer />
     </div>;
 };
+
 export default Index;
