@@ -4,6 +4,7 @@ import RailLine from './RailLine';
 interface RailSectionProps {
   children: React.ReactNode;
   className?: string;
+  id?: string;
   showSideRails?: boolean;
   showTopRail?: boolean;
   showBottomRail?: boolean;
@@ -13,6 +14,7 @@ interface RailSectionProps {
 const RailSection = ({ 
   children, 
   className,
+  id,
   showSideRails = false,
   showTopRail = false,
   showBottomRail = false,
@@ -21,7 +23,7 @@ const RailSection = ({
   const opacity = railVariant === 'subtle' ? 'opacity-40' : 'opacity-60';
   
   return (
-    <div className={cn('relative', className)}>
+    <section id={id} className={cn('relative', className)}>
       {/* Side rails */}
       {showSideRails && (
         <>
@@ -52,7 +54,7 @@ const RailSection = ({
       <div className="relative z-10">
         {children}
       </div>
-    </div>
+    </section>
   );
 };
 
