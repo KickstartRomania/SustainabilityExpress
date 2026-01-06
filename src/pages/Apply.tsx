@@ -22,8 +22,6 @@ const Apply = () => {
     portfolio: '',
     motivation: '',
     idea: '',
-    teamPreference: '',
-    teamName: '',
     accessibility: '',
     codeOfConduct: false,
     photoConsent: false,
@@ -221,47 +219,6 @@ const Apply = () => {
                       onChange={(e) => handleInputChange('idea', e.target.value)}
                       placeholder="Briefly describe any project idea you'd like to work on..."
                     />
-                  </div>
-
-                  {/* Team Preferences */}
-                  <div className="space-y-4">
-                    <Label>Team Preference *</Label>
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div className="flex items-center space-x-2">
-                        <input
-                          type="radio"
-                          id="team"
-                          name="teamPreference"
-                          value="team"
-                          onChange={(e) => handleInputChange('teamPreference', e.target.value)}
-                          className="focus-ring"
-                        />
-                        <Label htmlFor="team">I want to join/form a team</Label>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <input
-                          type="radio"
-                          id="solo"
-                          name="teamPreference"
-                          value="solo"
-                          onChange={(e) => handleInputChange('teamPreference', e.target.value)}
-                          className="focus-ring"
-                        />
-                        <Label htmlFor="solo">I prefer to work solo</Label>
-                      </div>
-                    </div>
-                    
-                    {formData.teamPreference === 'team' && (
-                      <div className="space-y-2">
-                        <Label htmlFor="teamName">Team Name (if you have one)</Label>
-                        <Input
-                          id="teamName"
-                          value={formData.teamName}
-                          onChange={(e) => handleInputChange('teamName', e.target.value)}
-                          placeholder="Leave blank if looking to join a team"
-                        />
-                      </div>
-                    )}
                   </div>
 
                   {/* Accessibility */}
