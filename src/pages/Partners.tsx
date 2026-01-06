@@ -216,11 +216,22 @@ const Partners = () => {
               <Button className="btn-hero text-xl px-12 py-6">
                 Partner with Us <ArrowRight className="ml-2 h-6 w-6" />
               </Button>
-              <a href="/Sustainability_Express_partners.pdf" download>
-                <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-                  Download Partnership Kit
-                </Button>
-              </a>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="text-lg px-8 py-6"
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/Sustainability_Express_partners.pdf';
+                  link.download = 'Sustainability_Express_partners.pdf';
+                  link.target = '_blank';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+              >
+                Download Partnership Kit
+              </Button>
             </div>
           </div>
         </div>
