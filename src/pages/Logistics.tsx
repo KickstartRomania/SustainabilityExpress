@@ -4,10 +4,8 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Coffee, Shield, Heart } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-
 const Logistics = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       <div className="pt-24 pb-16">
@@ -190,16 +188,7 @@ const Logistics = () => {
                 </ul>
               </Card>
               
-              <Card className="card-elevated">
-                <h3 className="text-lg font-bold text-foreground mb-4">🌱 Sustainability Kit</h3>
-                <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li>□ Reusable water bottle</li>
-                  <li>□ Reusable cup</li>
-                  <li>□ Healthy snacks</li>
-                  <li>□ Reusable utensils</li>
-                  <li>□ Small trash bag for sorting</li>
-                </ul>
-              </Card>
+              
             </div>
           </section>
 
@@ -219,8 +208,6 @@ const Logistics = () => {
       </div>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Logistics;
