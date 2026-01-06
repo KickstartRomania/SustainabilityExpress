@@ -6,51 +6,14 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
 const Mentors = () => {
-  // Placeholder mentor data - in a real app this would come from a CMS or API
-  const mentors = [
-    {
-      name: 'Dr. Elena Popescu',
-      role: 'Sustainability Director',
-      company: 'Astra Trans Carpatic',
-      expertise: ['Sustainable Transport', 'Green Operations', 'Rail Innovation'],
-      image: '/api/placeholder/150/150'
-    },
-    {
-      name: 'Andrei Ionescu',
-      role: 'Lead Developer',
-      company: 'TechForGood',
-      expertise: ['Mobile Apps', 'IoT', 'Environmental Tech'],
-      image: '/api/placeholder/150/150'
-    },
-    {
-      name: 'Maria Stanescu',
-      role: 'UX Design Lead',
-      company: 'GreenDesign Studio',
-      expertise: ['User Experience', 'Sustainable Design', 'Behavioral Psychology'],
-      image: '/api/placeholder/150/150'
-    },
-    {
-      name: 'Radu Gheorghiu',
-      role: 'Venture Partner',
-      company: 'EcoVentures',
-      expertise: ['Startup Funding', 'Business Strategy', 'Climate Tech'],
-      image: '/api/placeholder/150/150'
-    },
-    {
-      name: 'Carmen Dumitrescu',
-      role: 'Operations Manager',
-      company: 'Romanian Railways',
-      expertise: ['Railway Operations', 'Logistics', 'Efficiency Optimization'],
-      image: '/api/placeholder/150/150'
-    },
-    {
-      name: 'Vlad Petre',
-      role: 'Data Scientist',
-      company: 'TransportAI',
-      expertise: ['Machine Learning', 'Transportation Data', 'Predictive Analytics'],
-      image: '/api/placeholder/150/150'
-    }
-  ];
+  // Mentor data - add mentors here once the final list is confirmed
+  const mentors: Array<{
+    name: string;
+    role: string;
+    company: string;
+    expertise: string[];
+    image: string;
+  }> = [];
 
   return (
     <div className="min-h-screen bg-background">
@@ -67,7 +30,7 @@ const Mentors = () => {
             </p>
           </div>
 
-          {/* Mentor Grid */}
+          {/* Mentor Grid - Coming Soon */}
           <section className="mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-foreground mb-4">Meet Our Expert Panel</h2>
@@ -76,30 +39,40 @@ const Mentors = () => {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {mentors.map((mentor, index) => (
-                <Card key={index} className="card-elevated text-center group hover:scale-105 transition-transform duration-300">
-                  <div className="w-24 h-24 bg-primary/20 rounded-full mx-auto mb-6 flex items-center justify-center">
-                    <Users className="h-12 w-12 text-primary" />
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-foreground mb-2">{mentor.name}</h3>
-                  <p className="text-primary font-semibold mb-1">{mentor.role}</p>
-                  <p className="text-muted-foreground mb-4">{mentor.company}</p>
-                  
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    {mentor.expertise.map((skill, skillIndex) => (
-                      <span 
-                        key={skillIndex}
-                        className="px-3 py-1 bg-secondary text-secondary-foreground text-xs rounded-full"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </Card>
-              ))}
-            </div>
+            {mentors.length > 0 ? (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {mentors.map((mentor, index) => (
+                  <Card key={index} className="card-elevated text-center group hover:scale-105 transition-transform duration-300">
+                    <div className="w-24 h-24 bg-primary/20 rounded-full mx-auto mb-6 flex items-center justify-center">
+                      <Users className="h-12 w-12 text-primary" />
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-foreground mb-2">{mentor.name}</h3>
+                    <p className="text-primary font-semibold mb-1">{mentor.role}</p>
+                    <p className="text-muted-foreground mb-4">{mentor.company}</p>
+                    
+                    <div className="flex flex-wrap gap-2 justify-center">
+                      {mentor.expertise.map((skill, skillIndex) => (
+                        <span 
+                          key={skillIndex}
+                          className="px-3 py-1 bg-secondary text-secondary-foreground text-xs rounded-full"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </Card>
+                ))}
+              </div>
+            ) : (
+              <Card className="card-elevated text-center max-w-2xl mx-auto py-12">
+                <Users className="h-16 w-16 text-primary/50 mx-auto mb-6" />
+                <h3 className="text-2xl font-bold text-foreground mb-4">Coming Soon</h3>
+                <p className="text-muted-foreground">
+                  Our mentor and jury panel is being finalized. Check back soon to meet the experts who will guide your journey!
+                </p>
+              </Card>
+            )}
           </section>
 
           {/* Mentorship Process */}
