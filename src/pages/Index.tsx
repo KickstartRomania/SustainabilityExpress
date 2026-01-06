@@ -50,7 +50,7 @@ const Index = () => {
         </div>
         
         <div className="container mx-auto px-4 py-16 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[70vh] lg:min-h-[80vh]">
             {/* Hero Text */}
             <div className="space-y-8">
               <div className="space-y-4">
@@ -97,27 +97,24 @@ const Index = () => {
             </div>
 
             {/* Hero Image */}
-            <div className="relative">
-              {/* Glowing backdrop */}
-              <div className="absolute inset-0 bg-gradient-hero rounded-3xl blur-3xl opacity-20 animate-pulse"></div>
-              
-              {/* Rail frame corners */}
-              <div className="absolute -top-3 -left-3 w-12 h-12">
-                <div className="absolute top-0 left-0 w-full h-1 bg-primary/40 rounded-full" />
-                <div className="absolute top-0 left-0 h-full w-1 bg-primary/40 rounded-full" />
+            <div className="relative lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:w-1/2 lg:h-[120%] lg:-mr-12">
+              {/* Image with gradient mask for seamless blend */}
+              <div className="relative h-full overflow-hidden rounded-2xl lg:rounded-none lg:rounded-l-3xl">
+                <img 
+                  alt="Sustainability Express - Innovation on Rails" 
+                  className="w-full h-full object-cover" 
+                  src="/lovable-uploads/31752dd9-3c94-4627-a76e-99dbbef51f60.png" 
+                />
+                {/* Gradient overlays for seamless blending */}
+                <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent lg:block hidden" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+                <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-transparent" />
+                
+                {/* Rail track overlay at bottom */}
+                <div className="absolute bottom-0 left-0 right-0 h-8 opacity-40">
+                  <RailLine />
+                </div>
               </div>
-              <div className="absolute -bottom-3 -right-3 w-12 h-12">
-                <div className="absolute bottom-0 right-0 w-full h-1 bg-accent/40 rounded-full" />
-                <div className="absolute bottom-0 right-0 h-full w-1 bg-accent/40 rounded-full" />
-              </div>
-              
-              {/* Small leaf accents */}
-              <Leaf className="absolute -top-4 right-16 h-6 w-6 text-primary/40 rotate-45 animate-float" />
-              <Leaf className="absolute bottom-12 -left-4 h-5 w-5 text-primary/30 -rotate-12 animate-float" style={{
-              animationDelay: '1.5s'
-            }} />
-              
-              <img alt="Sustainability Express - Innovation on Rails" className="relative rounded-3xl shadow-2xl animate-float" src="/lovable-uploads/31752dd9-3c94-4627-a76e-99dbbef51f60.png" />
             </div>
           </div>
         </div>
