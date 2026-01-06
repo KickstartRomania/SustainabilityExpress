@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Laptop, Award, Clock, Target, Star } from 'lucide-react';
 import Navigation from '@/components/Navigation';
-
+import Footer from '@/components/Footer';
 const HowItWorks = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -224,6 +224,8 @@ const HowItWorks = () => {
           </div>
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 };
