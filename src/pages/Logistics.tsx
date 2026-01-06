@@ -165,7 +165,7 @@ const Logistics = () => {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               <Card className="card-elevated">
                 <h3 className="text-lg font-bold text-foreground mb-4">🔧 Tech Essentials</h3>
                 <ul className="space-y-2 text-muted-foreground text-sm">
