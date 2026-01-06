@@ -1,7 +1,7 @@
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Train, MapPin, Coffee, Shield, Heart } from 'lucide-react';
+import { ArrowRight, Coffee, Shield, Heart } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
@@ -20,31 +20,6 @@ const Logistics = () => {
               safety protocols, and what to expect during your 48 hours on rails.
             </p>
           </div>
-
-          {/* Train Partner */}
-          <section className="mb-20">
-            <div className="text-center mb-12">
-              <Train className="h-16 w-16 text-primary mx-auto mb-6" />
-              <h2 className="text-3xl font-bold text-foreground mb-4">Train Partner</h2>
-            </div>
-            
-            <Card className="card-elevated max-w-4xl mx-auto text-center">
-              <h3 className="text-2xl font-bold text-foreground mb-4">Astra Trans Carpatic</h3>
-              <p className="text-xl text-muted-foreground mb-6">
-                Special route coaches designed for innovation and collaboration
-              </p>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">Route</h4>
-                  <p className="text-muted-foreground">Bucharest ↔ Arad</p>
-                </div>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">Duration</h4>
-                  <p className="text-muted-foreground">48 hours total journey</p>
-                </div>
-              </div>
-            </Card>
-          </section>
 
           {/* Meals & Refreshments */}
           <section className="mb-20">
