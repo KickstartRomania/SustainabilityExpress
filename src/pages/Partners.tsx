@@ -9,7 +9,6 @@ import { ArrowRight, Train, Users, Zap, Globe, Handshake } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-
 const handleDownloadKit = async () => {
   try {
     const response = await fetch('/Sustainability_Express_partners.pdf');
@@ -27,9 +26,10 @@ const handleDownloadKit = async () => {
     window.open('/Sustainability_Express_partners.pdf', '_blank');
   }
 };
-
 const Partners = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [sponsorType, setSponsorType] = useState('');
   const [formData, setFormData] = useState({
@@ -37,18 +37,18 @@ const Partners = () => {
     lastName: '',
     email: '',
     phone: '',
-    company: '',
+    company: ''
   });
-
   const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData(prev => ({
+      ...prev,
+      [field]: value
+    }));
   };
-
   const openSponsorDialog = (type: string) => {
     setSponsorType(type);
     setIsDialogOpen(true);
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsDialogOpen(false);
@@ -57,16 +57,14 @@ const Partners = () => {
       lastName: '',
       email: '',
       phone: '',
-      company: '',
+      company: ''
     });
     toast({
       title: "Thanks for getting in touch!",
-      description: "We will reach out by email.",
+      description: "We will reach out by email."
     });
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
@@ -81,55 +79,24 @@ const Partners = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label htmlFor="firstName">First Name *</Label>
-                <Input
-                  id="firstName"
-                  value={formData.firstName}
-                  onChange={(e) => handleInputChange('firstName', e.target.value)}
-                  placeholder="First name"
-                  required
-                />
+                <Input id="firstName" value={formData.firstName} onChange={e => handleInputChange('firstName', e.target.value)} placeholder="First name" required />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="lastName">Last Name *</Label>
-                <Input
-                  id="lastName"
-                  value={formData.lastName}
-                  onChange={(e) => handleInputChange('lastName', e.target.value)}
-                  placeholder="Last name"
-                  required
-                />
+                <Input id="lastName" value={formData.lastName} onChange={e => handleInputChange('lastName', e.target.value)} placeholder="Last name" required />
               </div>
             </div>
             <div className="space-y-2">
               <Label htmlFor="email">Email *</Label>
-              <Input
-                id="email"
-                type="email"
-                value={formData.email}
-                onChange={(e) => handleInputChange('email', e.target.value)}
-                placeholder="your.email@company.com"
-                required
-              />
+              <Input id="email" type="email" value={formData.email} onChange={e => handleInputChange('email', e.target.value)} placeholder="your.email@company.com" required />
             </div>
             <div className="space-y-2">
               <Label htmlFor="phone">Phone Number *</Label>
-              <Input
-                id="phone"
-                value={formData.phone}
-                onChange={(e) => handleInputChange('phone', e.target.value)}
-                placeholder="+40 123 456 789"
-                required
-              />
+              <Input id="phone" value={formData.phone} onChange={e => handleInputChange('phone', e.target.value)} placeholder="+40 123 456 789" required />
             </div>
             <div className="space-y-2">
               <Label htmlFor="company">Company *</Label>
-              <Input
-                id="company"
-                value={formData.company}
-                onChange={(e) => handleInputChange('company', e.target.value)}
-                placeholder="Your company name"
-                required
-              />
+              <Input id="company" value={formData.company} onChange={e => handleInputChange('company', e.target.value)} placeholder="Your company name" required />
             </div>
             <Button type="submit" className="w-full btn-hero">
               Submit Inquiry
@@ -328,7 +295,7 @@ const Partners = () => {
                   </div>
                 </div>
                 <Button variant="outline" className="w-full" onClick={() => openSponsorDialog('Supporting Sponsor')}>
-                  Learn More
+                  Become Supporting Sponsor  
                 </Button>
               </Card>
             </div>
@@ -344,12 +311,7 @@ const Partners = () => {
               <Button className="btn-hero text-xl px-12 py-6" onClick={() => openSponsorDialog('Partnership')}>
                 Partner with Us <ArrowRight className="ml-2 h-6 w-6" />
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="text-lg px-8 py-6"
-                onClick={handleDownloadKit}
-              >
+              <Button variant="outline" size="lg" className="text-lg px-8 py-6" onClick={handleDownloadKit}>
                 Download Partnership Kit
               </Button>
             </div>
@@ -358,8 +320,6 @@ const Partners = () => {
       </div>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Partners;
