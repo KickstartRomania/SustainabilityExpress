@@ -7,8 +7,9 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/hooks/use-toast';
-import { ArrowRight, CheckCircle, Users, Lightbulb } from 'lucide-react';
+import { ArrowRight, CheckCircle, Users, Lightbulb, CreditCard } from 'lucide-react';
 import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 const Apply = () => {
   const { toast } = useToast();
@@ -38,6 +39,15 @@ const Apply = () => {
       toast({
         title: "Code of Conduct Required",
         description: "Please agree to the Code of Conduct to continue.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (!formData.photoConsent) {
+      toast({
+        title: "Photo Consent Required",
+        description: "Please agree to the photo/video consent to continue.",
         variant: "destructive",
       });
       return;
@@ -253,7 +263,7 @@ const Apply = () => {
                         onCheckedChange={(checked) => handleInputChange('photoConsent', checked === true)}
                       />
                       <Label htmlFor="photoConsent" className="text-sm leading-relaxed">
-                        I consent to being photographed/filmed for event documentation and marketing materials.
+                        I consent to being photographed/filmed for event documentation and marketing materials. *
                       </Label>
                     </div>
                   </div>
@@ -289,6 +299,15 @@ const Apply = () => {
                 </ul>
               </Card>
 
+              <Card className="card-elevated border-2 border-primary/20">
+                <CreditCard className="h-8 w-8 text-primary mb-4" />
+                <h3 className="text-xl font-bold text-foreground mb-3">Participation Fee</h3>
+                <div className="text-3xl font-bold text-primary mb-2">250 RON</div>
+                <p className="text-muted-foreground text-sm">
+                  Payment is required only after your application is accepted. You'll receive payment instructions via email.
+                </p>
+              </Card>
+
               <Card className="p-6 bg-gradient-hero text-white">
                 <h3 className="text-xl font-bold mb-3">Questions?</h3>
                 <p className="text-white/90 text-sm mb-4">
@@ -302,6 +321,7 @@ const Apply = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
