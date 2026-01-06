@@ -5,6 +5,24 @@ import { ArrowRight, Train, Users, Zap, Globe, Handshake } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
+const handleDownloadKit = async () => {
+  try {
+    const response = await fetch('/Sustainability_Express_partners.pdf');
+    const blob = await response.blob();
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'Sustainability_Express_partners.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
+  } catch (error) {
+    console.error('Download failed:', error);
+    window.open('/Sustainability_Express_partners.pdf', '_blank');
+  }
+};
+
 const Partners = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -220,15 +238,7 @@ const Partners = () => {
                 variant="outline" 
                 size="lg" 
                 className="text-lg px-8 py-6"
-                onClick={() => {
-                  const link = document.createElement('a');
-                  link.href = '/Sustainability_Express_partners.pdf';
-                  link.download = 'Sustainability_Express_partners.pdf';
-                  link.target = '_blank';
-                  document.body.appendChild(link);
-                  link.click();
-                  document.body.removeChild(link);
-                }}
+                onClick={handleDownloadKit}
               >
                 Download Partnership Kit
               </Button>
