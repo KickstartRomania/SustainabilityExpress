@@ -1,7 +1,12 @@
+import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Train, Users, Zap, Globe, Handshake } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
@@ -24,9 +29,114 @@ const handleDownloadKit = async () => {
 };
 
 const Partners = () => {
+  const { toast } = useToast();
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [sponsorType, setSponsorType] = useState('');
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    company: '',
+  });
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const openSponsorDialog = (type: string) => {
+    setSponsorType(type);
+    setIsDialogOpen(true);
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsDialogOpen(false);
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      company: '',
+    });
+    toast({
+      title: "Thanks for getting in touch!",
+      description: "We will reach out by email.",
+    });
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
+      
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>{sponsorType} Inquiry</DialogTitle>
+            <DialogDescription>
+              Fill out the form below and we'll get back to you about {sponsorType.toLowerCase()} opportunities.
+            </DialogDescription>
+          </DialogHeader>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <Label htmlFor="firstName">First Name *</Label>
+                <Input
+                  id="firstName"
+                  value={formData.firstName}
+                  onChange={(e) => handleInputChange('firstName', e.target.value)}
+                  placeholder="First name"
+                  required
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="lastName">Last Name *</Label>
+                <Input
+                  id="lastName"
+                  value={formData.lastName}
+                  onChange={(e) => handleInputChange('lastName', e.target.value)}
+                  placeholder="Last name"
+                  required
+                />
+              </div>
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="email">Email *</Label>
+              <Input
+                id="email"
+                type="email"
+                value={formData.email}
+                onChange={(e) => handleInputChange('email', e.target.value)}
+                placeholder="your.email@company.com"
+                required
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="phone">Phone Number *</Label>
+              <Input
+                id="phone"
+                value={formData.phone}
+                onChange={(e) => handleInputChange('phone', e.target.value)}
+                placeholder="+40 123 456 789"
+                required
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="company">Company *</Label>
+              <Input
+                id="company"
+                value={formData.company}
+                onChange={(e) => handleInputChange('company', e.target.value)}
+                placeholder="Your company name"
+                required
+              />
+            </div>
+            <Button type="submit" className="w-full btn-hero">
+              Submit Inquiry
+            </Button>
+          </form>
+        </DialogContent>
+      </Dialog>
       
       <div className="pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -188,7 +298,7 @@ const Partners = () => {
                     <span className="text-muted-foreground">Post-event networking session</span>
                   </div>
                 </div>
-                <Button className="w-full btn-hero">
+                <Button className="w-full btn-hero" onClick={() => openSponsorDialog('Title Sponsor')}>
                   Become Title Sponsor
                 </Button>
               </Card>
@@ -217,7 +327,7 @@ const Partners = () => {
                     <span className="text-muted-foreground">Event photos and highlights</span>
                   </div>
                 </div>
-                <Button variant="outline" className="w-full">
+                <Button variant="outline" className="w-full" onClick={() => openSponsorDialog('Supporting Sponsor')}>
                   Learn More
                 </Button>
               </Card>
@@ -231,7 +341,7 @@ const Partners = () => {
               Join leading organizations in supporting the next generation of sustainable transportation innovators.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="btn-hero text-xl px-12 py-6">
+              <Button className="btn-hero text-xl px-12 py-6" onClick={() => openSponsorDialog('Partnership')}>
                 Partner with Us <ArrowRight className="ml-2 h-6 w-6" />
               </Button>
               <Button 
