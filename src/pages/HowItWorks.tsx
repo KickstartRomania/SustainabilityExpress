@@ -5,8 +5,7 @@ import { ArrowRight, Users, Laptop, Award, Clock, Target, Star } from 'lucide-re
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 const HowItWorks = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       <div className="pt-24 pb-16">
@@ -99,22 +98,34 @@ const HowItWorks = () => {
           <section className="mb-20">
             <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Judging Criteria</h2>
             <div className="grid md:grid-cols-5 gap-6">
-              {[
-                { category: 'Impact', description: 'Potential to create meaningful change', icon: Target },
-                { category: 'Feasibility', description: 'Realistic implementation path', icon: Clock },
-                { category: 'Innovation', description: 'Creative approach to the problem', icon: Star },
-                { category: 'Prototype', description: 'Quality of working demonstration', icon: Laptop },
-                { category: 'Storytelling', description: 'Clear communication of vision', icon: Users },
-              ].map((criteria, index) => {
-                const Icon = criteria.icon;
-                return (
-                  <Card key={index} className="p-6 text-center hover:shadow-card transition-shadow duration-300">
+              {[{
+              category: 'Impact',
+              description: 'Potential to create meaningful change',
+              icon: Target
+            }, {
+              category: 'Feasibility',
+              description: 'Realistic implementation path',
+              icon: Clock
+            }, {
+              category: 'Innovation',
+              description: 'Creative approach to the problem',
+              icon: Star
+            }, {
+              category: 'Prototype',
+              description: 'Quality of working demonstration',
+              icon: Laptop
+            }, {
+              category: 'Storytelling',
+              description: 'Clear communication of vision',
+              icon: Users
+            }].map((criteria, index) => {
+              const Icon = criteria.icon;
+              return <Card key={index} className="p-6 text-center hover:shadow-card transition-shadow duration-300">
                     <Icon className="h-8 w-8 text-primary mx-auto mb-3" />
                     <h3 className="font-bold text-foreground mb-2">{criteria.category}</h3>
                     <p className="text-sm text-muted-foreground">{criteria.description}</p>
-                  </Card>
-                );
-              })}
+                  </Card>;
+            })}
             </div>
           </section>
 
@@ -187,7 +198,7 @@ const HowItWorks = () => {
                   <h3 className="text-xl font-bold text-foreground mb-4">Included</h3>
                   <ul className="space-y-2 text-muted-foreground">
                     <li>✅ Train seats and workspace</li>
-                    <li>✅ Venue space in Arad</li>
+                    <li>✅ Venue space in Timisoara</li>
                     <li>✅ All meals and coffee</li>
                     <li>✅ Wi-Fi (where available)</li>
                     <li>✅ On-board mentorship</li>
@@ -225,8 +236,6 @@ const HowItWorks = () => {
       </div>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default HowItWorks;
