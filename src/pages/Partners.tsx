@@ -216,9 +216,11 @@ const Partners = () => {
               <Button className="btn-hero text-xl px-12 py-6">
                 Partner with Us <ArrowRight className="ml-2 h-6 w-6" />
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-                Download Partnership Kit
-              </Button>
+              <a href="/Sustainability_Express_partners.pdf" download>
+                <Button variant="outline" size="lg" className="text-lg px-8 py-6">
+                  Download Partnership Kit
+                </Button>
+              </a>
             </div>
           </div>
         </div>
