@@ -36,85 +36,66 @@ const Index = () => {
       <ScrollProgressRail sections={sections} />
       
       {/* Hero Section */}
-      <section id="hero" className="relative pt-16 pb-32 overflow-hidden">
-      
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-hero opacity-5"></div>
+      <section id="hero" className="relative min-h-screen overflow-hidden">
+        {/* Full-bleed background image */}
+        <div className="absolute inset-0">
+          <img 
+            alt="Sustainability Express - Innovation on Rails" 
+            className="w-full h-full object-cover" 
+            src="/lovable-uploads/31752dd9-3c94-4627-a76e-99dbbef51f60.png" 
+          />
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/60" />
+        </div>
         
         {/* Side rails */}
-        <div className="absolute left-6 md:left-12 top-24 bottom-8 w-5 opacity-30">
+        <div className="absolute left-6 md:left-12 top-24 bottom-8 w-5 opacity-30 z-10">
           <RailLine variant="vertical" showLeaves />
         </div>
-        <div className="absolute right-6 md:right-12 top-24 bottom-8 w-5 opacity-20">
-          <RailLine variant="vertical" />
-        </div>
         
-        <div className="container mx-auto px-4 py-16 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[70vh] lg:min-h-[80vh]">
-            {/* Hero Text */}
-            <div className="space-y-8">
-              <div className="space-y-4">
-                {/* Rail accent line */}
-                <div className="w-32 mb-6">
-                  <RailLine />
-                </div>
-                
-                <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
-                  Sustainability Express
-                </h1>
-                <p className="text-2xl lg:text-3xl text-gradient font-semibold">
-                  Hackathon on Rails
-                </p>
-                <p className="text-xl text-muted-foreground max-w-lg">
-                  48 hours. On a moving train. Real solutions for greener travel.
-                </p>
-              </div>
-              
-              {/* Stats Strip */}
-              <div className="flex flex-wrap gap-4 text-sm font-medium text-muted-foreground">
-                <span className="flex items-center gap-2 bg-secondary/50 px-4 py-2 rounded-full border border-border/50">
-                  <Users className="h-4 w-4 text-primary" /> 20 participants
-                </span>
-                <span className="flex items-center gap-2 bg-secondary/50 px-4 py-2 rounded-full border border-border/50">
-                  <Lightbulb className="h-4 w-4 text-accent" /> Prototype-first
-                </span>
-                <span className="flex items-center gap-2 bg-secondary/50 px-4 py-2 rounded-full border border-border/50">
-                  <Train className="h-4 w-4 text-primary" /> Mentors on board
-                </span>
-              </div>
-
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild className="btn-hero text-lg px-8 py-6">
-                  <Link to="/apply">
-                    Apply Now <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 border-2">
-                  <Link to="/how-it-works">Learn More</Link>
-                </Button>
-              </div>
+        <div className="container mx-auto px-4 py-32 relative z-10 flex items-center min-h-screen">
+          <div className="max-w-2xl space-y-8">
+            {/* Rail accent line */}
+            <div className="w-32">
+              <RailLine />
+            </div>
+            
+            <div className="space-y-4">
+              <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
+                Sustainability Express
+              </h1>
+              <p className="text-2xl lg:text-3xl text-gradient font-semibold">
+                Hackathon on Rails
+              </p>
+              <p className="text-xl text-muted-foreground max-w-lg">
+                48 hours. On a moving train. Real solutions for greener travel.
+              </p>
+            </div>
+            
+            {/* Stats Strip */}
+            <div className="flex flex-wrap gap-4 text-sm font-medium">
+              <span className="flex items-center gap-2 bg-background/60 backdrop-blur-sm px-4 py-2 rounded-full border border-border/50 text-foreground">
+                <Users className="h-4 w-4 text-primary" /> 20 participants
+              </span>
+              <span className="flex items-center gap-2 bg-background/60 backdrop-blur-sm px-4 py-2 rounded-full border border-border/50 text-foreground">
+                <Lightbulb className="h-4 w-4 text-accent" /> Prototype-first
+              </span>
+              <span className="flex items-center gap-2 bg-background/60 backdrop-blur-sm px-4 py-2 rounded-full border border-border/50 text-foreground">
+                <Train className="h-4 w-4 text-primary" /> Mentors on board
+              </span>
             </div>
 
-            {/* Hero Image */}
-            <div className="relative lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:w-1/2 lg:h-[120%] lg:-mr-12">
-              {/* Image with gradient mask for seamless blend */}
-              <div className="relative h-full overflow-hidden rounded-2xl lg:rounded-none lg:rounded-l-3xl">
-                <img 
-                  alt="Sustainability Express - Innovation on Rails" 
-                  className="w-full h-full object-cover" 
-                  src="/lovable-uploads/31752dd9-3c94-4627-a76e-99dbbef51f60.png" 
-                />
-                {/* Gradient overlays for seamless blending */}
-                <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent lg:block hidden" />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
-                <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-transparent" />
-                
-                {/* Rail track overlay at bottom */}
-                <div className="absolute bottom-0 left-0 right-0 h-8 opacity-40">
-                  <RailLine />
-                </div>
-              </div>
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button asChild className="btn-hero text-lg px-8 py-6">
+                <Link to="/apply">
+                  Apply Now <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 border-2 bg-background/60 backdrop-blur-sm">
+                <Link to="/how-it-works">Learn More</Link>
+              </Button>
             </div>
           </div>
         </div>
