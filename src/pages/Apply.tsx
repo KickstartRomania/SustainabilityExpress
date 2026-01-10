@@ -11,6 +11,28 @@ import { ArrowRight, CheckCircle, Users, Lightbulb, CreditCard, Loader2 } from '
 import { supabase } from '@/integrations/supabase/client';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import { z } from 'zod';
+
+// Validation schema for application form
+const applicationSchema = z.object({
+  name: z.string().trim().min(2, 'Name must be at least 2 characters').max(100, 'Name must be less than 100 characters'),
+  email: z.string().trim().email('Please enter a valid email address').max(255, 'Email must be less than 255 characters'),
+  phone: z.string().trim().min(8, 'Phone must be at least 8 characters').max(20, 'Phone must be less than 20 characters'),
+  role: z.enum(['developer', 'designer', 'product', 'business', 'sustainability', 'other'], { 
+    errorMap: () => ({ message: 'Please select a role' }) 
+  }),
+  skillLevel: z.enum(['student', 'junior', 'mid', 'senior'], { 
+    errorMap: () => ({ message: 'Please select an experience level' }) 
+  }),
+  portfolio: z.string().trim().max(500, 'Portfolio URL must be less than 500 characters').optional().or(z.literal('')),
+  motivation: z.string().trim().min(10, 'Motivation must be at least 10 characters').max(250, 'Motivation must be less than 250 characters'),
+  idea: z.string().trim().max(500, 'Idea must be less than 500 characters').optional().or(z.literal('')),
+  accessibility: z.string().trim().max(500, 'Accessibility requirements must be less than 500 characters').optional().or(z.literal('')),
+  codeOfConduct: z.literal(true, { errorMap: () => ({ message: 'You must agree to the Code of Conduct' }) }),
+  photoConsent: z.literal(true, { errorMap: () => ({ message: 'You must consent to photos/videos' }) }),
+});
+
+type ApplicationFormData = z.infer<typeof applicationSchema>;
 
 const Apply = () => {
   const { toast } = useToast();
@@ -37,39 +59,35 @@ const Apply = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!formData.codeOfConduct) {
+    // Validate form data with Zod
+    const validationResult = applicationSchema.safeParse(formData);
+    
+    if (!validationResult.success) {
+      const firstError = validationResult.error.errors[0];
       toast({
-        title: "Code of Conduct Required",
-        description: "Please agree to the Code of Conduct to continue.",
+        title: "Validation Error",
+        description: firstError.message,
         variant: "destructive",
       });
       return;
     }
 
-    if (!formData.photoConsent) {
-      toast({
-        title: "Photo Consent Required",
-        description: "Please agree to the photo/video consent to continue.",
-        variant: "destructive",
-      });
-      return;
-    }
-
+    const validatedData = validationResult.data;
     setIsSubmitting(true);
 
     try {
       const { error } = await supabase.from('applications').insert({
-        name: formData.name.trim(),
-        email: formData.email.trim(),
-        phone: formData.phone.trim(),
-        role: formData.role,
-        skill_level: formData.skillLevel,
-        portfolio: formData.portfolio.trim() || null,
-        motivation: formData.motivation.trim(),
-        idea: formData.idea.trim() || null,
-        accessibility: formData.accessibility.trim() || null,
-        code_of_conduct: formData.codeOfConduct,
-        photo_consent: formData.photoConsent,
+        name: validatedData.name,
+        email: validatedData.email,
+        phone: validatedData.phone,
+        role: validatedData.role,
+        skill_level: validatedData.skillLevel,
+        portfolio: validatedData.portfolio || null,
+        motivation: validatedData.motivation,
+        idea: validatedData.idea || null,
+        accessibility: validatedData.accessibility || null,
+        code_of_conduct: validatedData.codeOfConduct,
+        photo_consent: validatedData.photoConsent,
       });
 
       if (error) throw error;
