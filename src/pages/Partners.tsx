@@ -9,6 +9,18 @@ import { ArrowRight, Train, Users, Zap, Globe, Handshake } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import { z } from 'zod';
+import { logError } from '@/lib/error-handler';
+
+// Validation schema for partner inquiry form
+const partnerInquirySchema = z.object({
+  firstName: z.string().trim().min(2, 'First name must be at least 2 characters').max(50, 'First name must be less than 50 characters'),
+  lastName: z.string().trim().min(2, 'Last name must be at least 2 characters').max(50, 'Last name must be less than 50 characters'),
+  email: z.string().trim().email('Please enter a valid email address').max(255, 'Email must be less than 255 characters'),
+  phone: z.string().trim().min(8, 'Phone must be at least 8 characters').max(20, 'Phone must be less than 20 characters'),
+  company: z.string().trim().min(2, 'Company name must be at least 2 characters').max(100, 'Company name must be less than 100 characters'),
+  sponsorType: z.string().min(1, 'Sponsor type is required').max(50, 'Sponsor type too long'),
+});
 const handleDownloadKit = async () => {
   try {
     const response = await fetch('/Sustainability_Express_partners.pdf');
@@ -22,7 +34,7 @@ const handleDownloadKit = async () => {
     document.body.removeChild(link);
     window.URL.revokeObjectURL(url);
   } catch (error) {
-    console.error('Download failed:', error);
+    logError(error, 'partner-kit-download');
     window.open('/Sustainability_Express_partners.pdf', '_blank');
   }
 };
@@ -51,6 +63,24 @@ const Partners = () => {
   };
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate form data with Zod
+    const validationResult = partnerInquirySchema.safeParse({
+      ...formData,
+      sponsorType,
+    });
+    
+    if (!validationResult.success) {
+      const firstError = validationResult.error.errors[0];
+      toast({
+        title: "Validation Error",
+        description: firstError.message,
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    // Form is valid, proceed with submission
     setIsDialogOpen(false);
     setFormData({
       firstName: '',

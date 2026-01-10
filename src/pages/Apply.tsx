@@ -12,6 +12,8 @@ import { supabase } from '@/integrations/supabase/client';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { z } from 'zod';
+import { logError } from '@/lib/error-handler';
+import { checkRateLimit, recordSubmission, formatResetTime } from '@/lib/rate-limiter';
 
 // Validation schema for application form
 const applicationSchema = z.object({
@@ -73,6 +75,19 @@ const Apply = () => {
     }
 
     const validatedData = validationResult.data;
+    
+    // Check rate limit before submission
+    const rateLimitResult = checkRateLimit('application_form', { maxSubmissions: 3, windowMs: 3600000 });
+    if (!rateLimitResult.allowed) {
+      const resetTimeStr = rateLimitResult.resetTime ? formatResetTime(rateLimitResult.resetTime) : 'later';
+      toast({
+        title: "Too Many Submissions",
+        description: `You can only submit 3 applications per hour. Please try again in ${resetTimeStr}.`,
+        variant: "destructive",
+      });
+      return;
+    }
+    
     setIsSubmitting(true);
 
     try {
@@ -92,13 +107,16 @@ const Apply = () => {
 
       if (error) throw error;
 
+      // Record successful submission for rate limiting
+      recordSubmission('application_form', 3600000);
+      
       setIsSubmitted(true);
       toast({
         title: "Application Submitted!",
         description: "We'll review your application and get back to you within 5-7 days.",
       });
     } catch (error) {
-      console.error('Error submitting application:', error);
+      logError(error, 'application-submission');
       toast({
         title: "Submission Failed",
         description: "There was an error submitting your application. Please try again.",
