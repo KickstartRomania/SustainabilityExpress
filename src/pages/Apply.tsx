@@ -7,13 +7,15 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/hooks/use-toast';
-import { ArrowRight, CheckCircle, Users, Lightbulb, CreditCard } from 'lucide-react';
+import { ArrowRight, CheckCircle, Users, Lightbulb, CreditCard, Loader2 } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
 const Apply = () => {
   const { toast } = useToast();
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -32,7 +34,7 @@ const Apply = () => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!formData.codeOfConduct) {
@@ -53,12 +55,40 @@ const Apply = () => {
       return;
     }
 
-    // Simulate form submission
-    setIsSubmitted(true);
-    toast({
-      title: "Application Submitted!",
-      description: "We'll review your application and get back to you within 5-7 days.",
-    });
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase.from('applications').insert({
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        phone: formData.phone.trim(),
+        role: formData.role,
+        skill_level: formData.skillLevel,
+        portfolio: formData.portfolio.trim() || null,
+        motivation: formData.motivation.trim(),
+        idea: formData.idea.trim() || null,
+        accessibility: formData.accessibility.trim() || null,
+        code_of_conduct: formData.codeOfConduct,
+        photo_consent: formData.photoConsent,
+      });
+
+      if (error) throw error;
+
+      setIsSubmitted(true);
+      toast({
+        title: "Application Submitted!",
+        description: "We'll review your application and get back to you within 5-7 days.",
+      });
+    } catch (error) {
+      console.error('Error submitting application:', error);
+      toast({
+        title: "Submission Failed",
+        description: "There was an error submitting your application. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
@@ -268,8 +298,17 @@ const Apply = () => {
                     </div>
                   </div>
 
-                  <Button type="submit" className="btn-hero w-full text-lg py-6">
-                    Submit Application <ArrowRight className="ml-2 h-5 w-5" />
+                  <Button type="submit" className="btn-hero w-full text-lg py-6" disabled={isSubmitting}>
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                        Submitting...
+                      </>
+                    ) : (
+                      <>
+                        Submit Application <ArrowRight className="ml-2 h-5 w-5" />
+                      </>
+                    )}
                   </Button>
                 </form>
               </Card>
