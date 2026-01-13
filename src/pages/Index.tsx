@@ -230,7 +230,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <SectionDivider icon={Train} className="mb-8" />
-            <h2 className="text-4xl font-bold text-foreground">Why Join</h2>
+            <h2 className="text-4xl font-bold text-foreground">Why come on board?</h2>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
