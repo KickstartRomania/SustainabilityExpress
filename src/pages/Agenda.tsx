@@ -151,14 +151,11 @@ const Agenda = () => {
               <Moon className="h-8 w-8 text-primary mb-4" />
               <h2 className="text-2xl font-bold text-foreground mb-6">Sleep Plan</h2>
               <div className="space-y-4 text-muted-foreground">
-                <p>
-                  Light sleepers should bring earplugs and eye masks. We designate quiet coaches after 00:30 
-                  for those who want to rest.
-                </p>
-                <p>
-                  Many participants choose to work through the night - it's part of the unique experience! 
-                  Coffee will be available throughout the journey.
-                </p>
+                <p>Sustainability Express is an intense, hands-on experience designed to stretch your creativity and teamwork skills. It’s up to you to manage your sleep and stay sharp to help your team finish the project on time.
+Many participants choose to work through the night. It's part of the unique experience! Coffee will be available throughout the journey.
+
+              </p>
+                <p>Many participants choose to work through the night. It's part of the unique experience! Coffee will be available throughout the journey.</p>
               </div>
             </Card>
           </div>
