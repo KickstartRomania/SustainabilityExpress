@@ -227,7 +227,7 @@ const Apply = () => {
                   {/* Professional Information */}
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <Label htmlFor="role">Primary Role *</Label>
+                      <Label htmlFor="role">You are: *</Label>
                       <Select onValueChange={(value) => handleInputChange('role', value)}>
                         <SelectTrigger>
                           <SelectValue placeholder="Select your primary role" />
