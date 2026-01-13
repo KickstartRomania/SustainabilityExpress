@@ -102,37 +102,6 @@ const Themes = () => {
             </div>
           </section>
 
-          {/* Inspiration */}
-          <section className="mb-16">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Need Inspiration?</h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                Think about your own train travel experiences. What could make them better?
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <Card className="card-elevated">
-                <h3 className="text-xl font-bold text-foreground mb-4">For Passengers</h3>
-                <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li>• Real-time sustainability impact tracking</li>
-                  <li>• Gamified waste reduction challenges</li>
-                  <li>• Community building apps for eco-travelers</li>
-                  <li>• Digital tools for seamless green journeys</li>
-                </ul>
-              </Card>
-              
-              <Card className="card-elevated">
-                <h3 className="text-xl font-bold text-foreground mb-4">For Operations</h3>
-                <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li>• Staff tools for resource optimization</li>
-                  <li>• Predictive maintenance for efficiency</li>
-                  <li>• Supply chain sustainability tracking</li>
-                  <li>• Energy consumption dashboards</li>
-                </ul>
-              </Card>
-            </div>
-          </section>
 
           {/* CTA */}
           <div className="text-center">
