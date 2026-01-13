@@ -1,7 +1,12 @@
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Lightbulb, Train, Leaf, Zap, Trophy, Code, Megaphone, Briefcase, GraduationCap } from 'lucide-react';
+import { ArrowRight, Users, Lightbulb, Train, Leaf, Zap, Trophy, Code, Megaphone, Briefcase, GraduationCap, Linkedin } from 'lucide-react';
+import razvanSuta from '@/assets/mentors/razvan-suta.jpeg';
+import aleodorTabarcea from '@/assets/mentors/aleodor-tabarcea.jpeg';
+import andreiMunteanu from '@/assets/mentors/andrei-munteanu.jpeg';
+import cosminPirvu from '@/assets/mentors/cosmin-pirvu.jpeg';
+import georgeBonea from '@/assets/mentors/george-bonea.jpeg';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import heroTrain from '@/assets/hero-train.jpg';
@@ -128,6 +133,158 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
           </div>
         </div>
       </RailSection>
+
+      {/* Mentors & Jury Section */}
+      <section id="mentors" className="py-24 relative overflow-hidden">
+        {/* Subtle side rails */}
+        <div className="absolute left-6 md:left-12 top-0 bottom-0 w-5 opacity-20">
+          <RailLine variant="vertical" />
+        </div>
+        <div className="absolute right-6 md:right-12 top-0 bottom-0 w-5 opacity-15">
+          <RailLine variant="vertical" showLeaves />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <SectionDivider icon={Users} className="mb-8" />
+            <h2 className="text-4xl font-bold text-foreground">Mentors & Jury</h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Răzvan Suta */}
+            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute top-0 left-4 right-4 opacity-30">
+                <RailLine />
+              </div>
+              <div className="pt-4 text-center">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
+                  <img src={razvanSuta} alt="Răzvan Suta" className="w-full h-full object-cover" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-1">Răzvan Suta</h3>
+                <p className="text-muted-foreground mb-3">Angel investor & VC</p>
+                <a 
+                  href="https://www.linkedin.com/in/razvansuta/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+                >
+                  <Linkedin className="h-5 w-5 text-primary" />
+                </a>
+              </div>
+            </Card>
+
+            {/* Aleodor Tăbârcea */}
+            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute top-0 left-4 right-4 opacity-30">
+                <RailLine />
+              </div>
+              <div className="pt-4 text-center">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
+                  <img src={aleodorTabarcea} alt="Aleodor Tăbârcea" className="w-full h-full object-cover" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-1">Aleodor Tăbârcea</h3>
+                <p className="text-muted-foreground mb-3">Engineering Manager @ Stripe</p>
+                <a 
+                  href="https://www.linkedin.com/in/aleodor-tabarcea/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+                >
+                  <Linkedin className="h-5 w-5 text-primary" />
+                </a>
+              </div>
+            </Card>
+
+            {/* Andrei Munteanu */}
+            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute top-0 left-4 right-4 opacity-30">
+                <RailLine />
+              </div>
+              <div className="pt-4 text-center">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
+                  <img src={andreiMunteanu} alt="Andrei Munteanu" className="w-full h-full object-cover" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-1">Andrei Munteanu</h3>
+                <p className="text-muted-foreground mb-3">CEO & Co-founder @ Cowork & Prow</p>
+                <a 
+                  href="https://www.linkedin.com/in/andreicosminmunteanu/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+                >
+                  <Linkedin className="h-5 w-5 text-primary" />
+                </a>
+              </div>
+            </Card>
+
+            {/* Adrian Gheorghe */}
+            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute top-0 left-4 right-4 opacity-30">
+                <RailLine />
+              </div>
+              <div className="pt-4 text-center">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20 bg-muted flex items-center justify-center">
+                  <Users className="h-12 w-12 text-muted-foreground" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-1">Adrian Gheorghe</h3>
+                <p className="text-muted-foreground mb-3">Startup Advisor @ Doers Ventures</p>
+                <a 
+                  href="https://www.linkedin.com/in/adrian-gheorghe/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+                >
+                  <Linkedin className="h-5 w-5 text-primary" />
+                </a>
+              </div>
+            </Card>
+
+            {/* Cosmin Pîrvu */}
+            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute top-0 left-4 right-4 opacity-30">
+                <RailLine />
+              </div>
+              <div className="pt-4 text-center">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
+                  <img src={cosminPirvu} alt="Cosmin Pîrvu" className="w-full h-full object-cover" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-1">Cosmin Pîrvu</h3>
+                <p className="text-muted-foreground mb-3">Startup Program Manager @ Veridion</p>
+                <a 
+                  href="https://www.linkedin.com/in/cosminpirvu/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+                >
+                  <Linkedin className="h-5 w-5 text-primary" />
+                </a>
+              </div>
+            </Card>
+
+            {/* George Bonea */}
+            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute top-0 left-4 right-4 opacity-30">
+                <RailLine />
+              </div>
+              <div className="pt-4 text-center">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
+                  <img src={georgeBonea} alt="George Bonea" className="w-full h-full object-cover" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-1">George Bonea</h3>
+                <p className="text-muted-foreground mb-3">Copywriter & Communication Consultant</p>
+                <a 
+                  href="https://www.linkedin.com/in/george-bonea-b0494b91/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+                >
+                  <Linkedin className="h-5 w-5 text-primary" />
+                </a>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
 
       {/* Who is it for Section */}
       <section id="who-is-it-for" className="py-24 relative overflow-hidden">
