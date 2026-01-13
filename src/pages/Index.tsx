@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Lightbulb, Train, Leaf, Zap } from 'lucide-react';
+import { ArrowRight, Users, Lightbulb, Train, Leaf, Zap, Trophy } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import heroTrain from '@/assets/hero-train.jpg';
@@ -77,10 +77,13 @@ const Index = () => {
                 <Users className="h-4 w-4 text-primary" /> 20 participants
               </span>
               <span className="flex items-center gap-2 bg-background/60 backdrop-blur-sm px-4 py-2 rounded-full border border-border/50 text-foreground">
-                <Lightbulb className="h-4 w-4 text-accent" /> Prototype-first
+                <Lightbulb className="h-4 w-4 text-accent" /> 10+ mentors
               </span>
               <span className="flex items-center gap-2 bg-background/60 backdrop-blur-sm px-4 py-2 rounded-full border border-border/50 text-foreground">
-                <Train className="h-4 w-4 text-primary" /> Mentors on board
+                <Train className="h-4 w-4 text-primary" /> Interdisciplinary teams
+              </span>
+              <span className="flex items-center gap-2 bg-background/60 backdrop-blur-sm px-4 py-2 rounded-full border border-border/50 text-foreground">
+                <Trophy className="h-4 w-4 text-accent" /> Prizes
               </span>
             </div>
 
