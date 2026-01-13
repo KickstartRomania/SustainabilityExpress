@@ -292,8 +292,8 @@ const Partners = () => {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-4 gap-8 max-w-7xl mx-auto items-start">
-              <Card className="card-elevated flex flex-col md:col-span-2 ring-2 ring-primary/20">
+            <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto items-start">
+              <Card className="card-elevated flex flex-col md:col-span-1 md:row-span-1 ring-2 ring-primary/20 scale-[1.02]">
                 <h3 className="text-2xl font-bold text-foreground mb-2">Title Sponsor</h3>
                 <p className="text-muted-foreground mb-6">Strategic leadership & maximum visibility</p>
                 <div className="space-y-4 mb-6 flex-1">
