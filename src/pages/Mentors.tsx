@@ -1,20 +1,64 @@
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Star, Plus } from 'lucide-react';
+import { ArrowRight, Users, Star, Plus, Linkedin } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
-const Mentors = () => {
-  // Mentor data - add mentors here once the final list is confirmed
-  const mentors: Array<{
-    name: string;
-    role: string;
-    company: string;
-    expertise: string[];
-    image: string;
-  }> = [];
+// Mentor images
+import razvanSuta from '@/assets/mentors/razvan-suta.jpeg';
+import aleodorTabarcea from '@/assets/mentors/aleodor-tabarcea.jpeg';
+import andreiMunteanu from '@/assets/mentors/andrei-munteanu.jpeg';
+import cosminPirvu from '@/assets/mentors/cosmin-pirvu.jpeg';
+import georgeBonea from '@/assets/mentors/george-bonea.jpeg';
+import adrianGheorghe from '@/assets/mentors/adrian-gheorghe.jpeg';
 
+const mentors = [
+  {
+    name: 'Răzvan Suta',
+    role: 'Angel investor & VC',
+    company: '',
+    image: razvanSuta,
+    linkedin: 'https://www.linkedin.com/in/razvansuta/',
+  },
+  {
+    name: 'Aleodor Tăbârcea',
+    role: 'Engineering Manager',
+    company: 'Stripe',
+    image: aleodorTabarcea,
+    linkedin: 'https://www.linkedin.com/in/aleodor-tabarcea/',
+  },
+  {
+    name: 'Andrei Munteanu',
+    role: 'CEO & Co-founder',
+    company: 'Cowork & Prow',
+    image: andreiMunteanu,
+    linkedin: 'https://www.linkedin.com/in/andreicosminmunteanu/',
+  },
+  {
+    name: 'Adrian Gheorghe',
+    role: 'Startup Advisor',
+    company: 'Doers Ventures',
+    image: adrianGheorghe,
+    linkedin: 'https://www.linkedin.com/in/adrian-gheorghe/',
+  },
+  {
+    name: 'Cosmin Pîrvu',
+    role: 'Startup Program Manager',
+    company: 'Veridion',
+    image: cosminPirvu,
+    linkedin: 'https://www.linkedin.com/in/cosminpirvu/',
+  },
+  {
+    name: 'George Bonea',
+    role: 'Copywriter &',
+    company: 'Communication Consultant',
+    image: georgeBonea,
+    linkedin: 'https://www.linkedin.com/in/george-bonea-b0494b91/',
+  },
+];
+
+const Mentors = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -30,7 +74,7 @@ const Mentors = () => {
             </p>
           </div>
 
-          {/* Mentor Grid - Coming Soon */}
+          {/* Mentor Grid */}
           <section className="mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-foreground mb-4">Meet Our Expert Panel</h2>
@@ -39,40 +83,28 @@ const Mentors = () => {
               </p>
             </div>
             
-            {mentors.length > 0 ? (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {mentors.map((mentor, index) => (
-                  <Card key={index} className="card-elevated text-center group hover:scale-105 transition-transform duration-300">
-                    <div className="w-24 h-24 bg-primary/20 rounded-full mx-auto mb-6 flex items-center justify-center">
-                      <Users className="h-12 w-12 text-primary" />
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {mentors.map((mentor, index) => (
+                <Card key={index} className="card-elevated text-center group hover:scale-[1.02] transition-transform duration-300">
+                  <div className="pt-4">
+                    <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
+                      <img src={mentor.image} alt={mentor.name} className="w-full h-full object-cover" />
                     </div>
-                    
-                    <h3 className="text-xl font-bold text-foreground mb-2">{mentor.name}</h3>
-                    <p className="text-primary font-semibold mb-1">{mentor.role}</p>
-                    <p className="text-muted-foreground mb-4">{mentor.company}</p>
-                    
-                    <div className="flex flex-wrap gap-2 justify-center">
-                      {mentor.expertise.map((skill, skillIndex) => (
-                        <span 
-                          key={skillIndex}
-                          className="px-3 py-1 bg-secondary text-secondary-foreground text-xs rounded-full"
-                        >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </Card>
-                ))}
-              </div>
-            ) : (
-              <Card className="card-elevated text-center max-w-2xl mx-auto py-12">
-                <Users className="h-16 w-16 text-primary/50 mx-auto mb-6" />
-                <h3 className="text-2xl font-bold text-foreground mb-4">Coming Soon</h3>
-                <p className="text-muted-foreground">
-                  Our mentor and jury panel is being finalized. Check back soon to meet the experts who will guide your journey!
-                </p>
-              </Card>
-            )}
+                    <h3 className="text-xl font-bold text-foreground mb-1">{mentor.name}</h3>
+                    <p className="text-muted-foreground text-sm">{mentor.role}</p>
+                    <p className="text-muted-foreground text-sm mb-3">{mentor.company || '\u00A0'}</p>
+                    <a 
+                      href={mentor.linkedin}
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+                    >
+                      <Linkedin className="h-5 w-5 text-primary" />
+                    </a>
+                  </div>
+                </Card>
+              ))}
+            </div>
           </section>
 
           {/* Mentorship Process */}
