@@ -366,13 +366,10 @@ const Apply = () => {
 
               <Card className="card-elevated">
                 <Lightbulb className="h-8 w-8 text-primary mb-4" />
-                <h3 className="text-xl font-bold text-foreground mb-4">Tips for Success</h3>
-                <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li>• Be specific about your motivation</li>
-                  <li>• Highlight relevant experience</li>
-                  <li>• Show enthusiasm for sustainability</li>
-                  <li>• Mention collaboration skills</li>
-                </ul>
+                <h3 className="text-xl font-bold text-foreground mb-4">Free for Teenagers (16-18 y.o.)</h3>
+                <p className="text-muted-foreground text-sm">
+                  Some of the spots reserved for teenagers are offered to our partners: Asociația Valentina, Cartea Daliei, Edu Up, and Alacrity.
+                </p>
               </Card>
 
               <Card className="card-elevated border-2 border-primary/20">
