@@ -240,12 +240,12 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 <RailLine />
               </div>
               <div className="pt-4">
-                <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <Lightbulb className="h-8 w-8 text-primary-foreground" />
+                <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center text-primary-foreground font-bold text-xl">
+                  1
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-4">Build a real prototype with on-train mentoring</h3>
+                <h3 className="text-xl font-bold text-foreground mb-4">Create Real Impact</h3>
                 <p className="text-muted-foreground">
-                  Get hands-on mentoring while building something tangible that could actually change how people experience train travel.
+                  Develop concrete, implementable solutions to sustainable challenges, ideas designed to move beyond theory and into real-world testing.
                 </p>
               </div>
             </Card>
@@ -255,12 +255,12 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 <RailLine />
               </div>
               <div className="pt-4">
-                <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <Users className="h-8 w-8 text-primary-foreground" />
+                <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center text-primary-foreground font-bold text-xl">
+                  2
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-4">Meet future co-founders and collaborators</h3>
+                <h3 className="text-xl font-bold text-foreground mb-4">Learn and Grow Fast</h3>
                 <p className="text-muted-foreground">
-                  Connect with passionate developers, designers, and entrepreneurs who share your vision for sustainable innovation.
+                  Gain hands-on skills through intensive workshops, mentorship, and teamwork across tech, business, and communication disciplines.
                 </p>
               </div>
             </Card>
@@ -270,12 +270,12 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 <RailLine />
               </div>
               <div className="pt-4">
-                <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <Leaf className="h-8 w-8 text-primary-foreground" />
+                <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center text-primary-foreground font-bold text-xl">
+                  3
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-4">Shape the future of sustainable mobility</h3>
+                <h3 className="text-xl font-bold text-foreground mb-4">Experience Innovation in Motion</h3>
                 <p className="text-muted-foreground">
-                  Be part of the movement that makes eco-friendly travel the preferred choice for the next generation.
+                  Join a unique on-train hackathon that brings together purpose-driven people for an unforgettable journey of collaboration and innovation.
                 </p>
               </div>
             </Card>
