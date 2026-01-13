@@ -27,6 +27,15 @@ import skillabLogo from '@/assets/partners/skillab.png';
 import hackingworkLogo from '@/assets/partners/hackingwork.png';
 import pozitivestiLogo from '@/assets/partners/pozitivesti.png';
 import stripeLogo from '@/assets/partners/stripe.png';
+import valentinaLogo from '@/assets/partners/valentina.png';
+import carteadalieiLogo from '@/assets/partners/carteadaliei.png';
+import howtowebLogo from '@/assets/partners/howtoweb.png';
+import vsfaLogo from '@/assets/partners/vsfa.png';
+import founderInstituteLogo from '@/assets/partners/founder-institute.png';
+import prowLogo from '@/assets/partners/prow.png';
+import amplifyOngLogo from '@/assets/partners/amplify-ong.png';
+import launchRomaniaLogo from '@/assets/partners/launch-romania.png';
+import eduupLogo from '@/assets/partners/eduup.png';
 
 const partners = [
   { name: 'Sameday', logo: samedayLogo },
@@ -37,6 +46,15 @@ const partners = [
   { name: 'Hacking Work', logo: hackingworkLogo },
   { name: 'Pozitivești', logo: pozitivestiLogo },
   { name: 'Stripe', logo: stripeLogo },
+  { name: 'Valentina România', logo: valentinaLogo },
+  { name: 'Cartea Daliei', logo: carteadalieiLogo },
+  { name: 'How to Web', logo: howtowebLogo },
+  { name: 'VSFA', logo: vsfaLogo },
+  { name: 'Founder Institute', logo: founderInstituteLogo },
+  { name: 'Prow', logo: prowLogo },
+  { name: 'AmpliFY ONG', logo: amplifyOngLogo },
+  { name: 'Launch Romania', logo: launchRomaniaLogo },
+  { name: 'EduUP', logo: eduupLogo },
 ];
 const sections = [{
   id: 'hero',
@@ -613,7 +631,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
               {partners.map((partner, index) => (
                 <div
                   key={`first-${index}`}
-                  className="flex-shrink-0 mx-4 w-32 h-20 flex items-center justify-center"
+                  className="flex-shrink-0 mx-3 w-24 h-14 flex items-center justify-center"
                 >
                   <img
                     src={partner.logo}
@@ -626,7 +644,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
               {partners.map((partner, index) => (
                 <div
                   key={`second-${index}`}
-                  className="flex-shrink-0 mx-4 w-32 h-20 flex items-center justify-center"
+                  className="flex-shrink-0 mx-3 w-24 h-14 flex items-center justify-center"
                 >
                   <img
                     src={partner.logo}
