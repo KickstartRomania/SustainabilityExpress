@@ -292,7 +292,7 @@ const Partners = () => {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
               <Card className="card-elevated">
                 <h3 className="text-2xl font-bold text-foreground mb-2">Title Sponsor</h3>
                 <p className="text-muted-foreground mb-6">Strategic leadership & maximum visibility</p>
@@ -332,6 +332,44 @@ const Partners = () => {
                 </div>
                 <Button className="w-full btn-hero" onClick={() => openSponsorDialog('Title Sponsor')}>
                   Become Title Sponsor
+                </Button>
+              </Card>
+
+              <Card className="card-elevated">
+                <h3 className="text-2xl font-bold text-foreground mb-2">Main Partner</h3>
+                <p className="text-muted-foreground mb-6">High visibility & active involvement</p>
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-muted-foreground">Logo placement on key communication materials</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-muted-foreground">Dedicated social media content highlighting the partnership</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-muted-foreground">Mentions in press releases and media coverage</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-muted-foreground">Opportunity to contribute mentors or speakers</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-muted-foreground">Access to solution summaries and participant talent pool</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-muted-foreground">Visibility in final presentations and demo day</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-muted-foreground">Inclusion in post-event impact and ESG reporting</span>
+                  </div>
+                </div>
+                <Button className="w-full btn-hero" onClick={() => openSponsorDialog('Main Partner')}>
+                  Become Main Partner
                 </Button>
               </Card>
 
