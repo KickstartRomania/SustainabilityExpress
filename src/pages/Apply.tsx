@@ -386,9 +386,11 @@ const Apply = () => {
                 <p className="text-white/90 text-sm mb-4">
                   Need help with your application or have specific questions about the event?
                 </p>
-                <Button variant="outline" className="w-full border-white text-white hover:bg-white hover:text-primary">
-                  Contact Us
-                </Button>
+                <a href="mailto:george@sustainabilityexpress.eu">
+                  <Button variant="outline" className="w-full border-white text-white hover:bg-white hover:text-primary">
+                    Contact Us
+                  </Button>
+                </a>
               </Card>
             </div>
           </div>
