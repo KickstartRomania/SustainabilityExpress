@@ -33,29 +33,67 @@ import eduupLogo from '@/assets/partners/eduup.png';
 import alacrityLogo from '@/assets/partners/alacrity.png';
 import curteaVecheLogo from '@/assets/partners/curtea-veche.png';
 import skvotLogo from '@/assets/partners/skvot.png';
-
-const partners = [
-  { name: 'Sameday', logo: samedayLogo },
-  { name: 'diARK', logo: diarkLogo },
-  { name: 'Bookster', logo: booksterLogo },
-  { name: 'PRO TV', logo: protvLogo },
-  { name: 'Skillab', logo: skillabLogo },
-  { name: 'Hacking Work', logo: hackingworkLogo },
-  { name: 'Pozitivești', logo: pozitivestiLogo },
-  { name: 'Stripe', logo: stripeLogo },
-  { name: 'Valentina România', logo: valentinaLogo },
-  { name: 'Cartea Daliei', logo: carteadalieiLogo },
-  { name: 'How to Web', logo: howtowebLogo },
-  { name: 'VSFA', logo: vsfaLogo },
-  { name: 'Founder Institute', logo: founderInstituteLogo },
-  { name: 'Prow', logo: prowLogo },
-  { name: 'AmpliFY ONG', logo: amplifyOngLogo },
-  { name: 'Launch Romania', logo: launchRomaniaLogo },
-  { name: 'EduUP', logo: eduupLogo },
-  { name: 'Alacrity', logo: alacrityLogo },
-  { name: 'Curtea Veche Publishing', logo: curteaVecheLogo },
-  { name: 'SKVOT', logo: skvotLogo },
-];
+const partners = [{
+  name: 'Sameday',
+  logo: samedayLogo
+}, {
+  name: 'diARK',
+  logo: diarkLogo
+}, {
+  name: 'Bookster',
+  logo: booksterLogo
+}, {
+  name: 'PRO TV',
+  logo: protvLogo
+}, {
+  name: 'Skillab',
+  logo: skillabLogo
+}, {
+  name: 'Hacking Work',
+  logo: hackingworkLogo
+}, {
+  name: 'Pozitivești',
+  logo: pozitivestiLogo
+}, {
+  name: 'Stripe',
+  logo: stripeLogo
+}, {
+  name: 'Valentina România',
+  logo: valentinaLogo
+}, {
+  name: 'Cartea Daliei',
+  logo: carteadalieiLogo
+}, {
+  name: 'How to Web',
+  logo: howtowebLogo
+}, {
+  name: 'VSFA',
+  logo: vsfaLogo
+}, {
+  name: 'Founder Institute',
+  logo: founderInstituteLogo
+}, {
+  name: 'Prow',
+  logo: prowLogo
+}, {
+  name: 'AmpliFY ONG',
+  logo: amplifyOngLogo
+}, {
+  name: 'Launch Romania',
+  logo: launchRomaniaLogo
+}, {
+  name: 'EduUP',
+  logo: eduupLogo
+}, {
+  name: 'Alacrity',
+  logo: alacrityLogo
+}, {
+  name: 'Curtea Veche Publishing',
+  logo: curteaVecheLogo
+}, {
+  name: 'SKVOT',
+  logo: skvotLogo
+}];
 
 // Validation schema for partner inquiry form
 const partnerInquirySchema = z.object({
@@ -64,7 +102,7 @@ const partnerInquirySchema = z.object({
   email: z.string().trim().email('Please enter a valid email address').max(255, 'Email must be less than 255 characters'),
   phone: z.string().trim().min(8, 'Phone must be at least 8 characters').max(20, 'Phone must be less than 20 characters'),
   company: z.string().trim().min(2, 'Company name must be at least 2 characters').max(100, 'Company name must be less than 100 characters'),
-  sponsorType: z.string().min(1, 'Sponsor type is required').max(50, 'Sponsor type too long'),
+  sponsorType: z.string().min(1, 'Sponsor type is required').max(50, 'Sponsor type too long')
 });
 const handleDownloadKit = async () => {
   try {
@@ -108,23 +146,22 @@ const Partners = () => {
   };
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validate form data with Zod
     const validationResult = partnerInquirySchema.safeParse({
       ...formData,
-      sponsorType,
+      sponsorType
     });
-    
     if (!validationResult.success) {
       const firstError = validationResult.error.errors[0];
       toast({
         title: "Validation Error",
         description: firstError.message,
-        variant: "destructive",
+        variant: "destructive"
       });
       return;
     }
-    
+
     // Form is valid, proceed with submission
     setIsDialogOpen(false);
     setFormData({
@@ -194,18 +231,9 @@ const Partners = () => {
           {/* Partner Logos Grid */}
           <section className="mb-20">
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
-              {partners.map((partner, index) => (
-                <div
-                  key={index}
-                  className="flex items-center justify-center h-20 hover:scale-105 transition-transform duration-300"
-                >
-                  <img
-                    src={partner.logo}
-                    alt={partner.name}
-                    className="max-w-full max-h-full object-contain rounded-lg"
-                  />
-                </div>
-              ))}
+              {partners.map((partner, index) => <div key={index} className="flex items-center justify-center h-20 hover:scale-105 transition-transform duration-300">
+                  <img src={partner.logo} alt={partner.name} className="max-w-full max-h-full object-contain rounded-lg" />
+                </div>)}
             </div>
           </section>
 
@@ -226,8 +254,8 @@ const Partners = () => {
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-4">Brand Association</h3>
                 <p className="text-muted-foreground">
-                  Associate your brand with innovation, sustainability, and cutting-edge technology 
-                  in the transportation sector.
+                  Connect your brand to meaningful innovation and sustainability, supporting ideas that turn ambition into real-world impact.
+
                 </p>
               </div>
 
@@ -237,8 +265,8 @@ const Partners = () => {
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-4">Talent Access</h3>
                 <p className="text-muted-foreground">
-                  Connect with top developers, designers, and entrepreneurs who are passionate 
-                  about sustainable solutions.
+                  Build relationships with next-generation talent combining technical expertise, creativity, and a strong sustainability mindset.
+
                 </p>
               </div>
 
@@ -248,8 +276,8 @@ const Partners = () => {
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-4">Innovation Pipeline</h3>
                 <p className="text-muted-foreground">
-                  Get early access to breakthrough ideas and solutions that could transform 
-                  your industry or create new opportunities.
+                  Gain early visibility into high-potential ideas and solutions that can unlock new opportunities across your industry.
+
                 </p>
               </div>
             </div>
