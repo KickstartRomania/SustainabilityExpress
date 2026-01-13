@@ -24,7 +24,7 @@ const FAQ = () => {
     },
     {
       question: "What about meals and dietary requirements?",
-      answer: "We provide 7 meals plus coffee throughout the journey. Let us know about dietary restrictions in your application. Bring a reusable bottle and cup - we offer rewards for sustainable choices!"
+      answer: "We provide 7 meals plus coffee throughout the journey. Let us know about dietary restrictions in your application. Bring a reusable bottle and cup."
     },
     {
       question: "Can I leave early or join late?",
