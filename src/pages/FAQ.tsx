@@ -20,7 +20,7 @@ const FAQ = () => {
     },
     {
       question: "Where will we sleep?",
-      answer: "The train has sleeping compartments, but light sleepers should bring earplugs and eye masks. We designate quiet coaches after midnight. Some participants prefer to work through the night!"
+      answer: "Each team is assigned a private sleeper compartment, which serves both as a workspace and a place to rest. Teams have full flexibility to organize their work and sleep schedules throughout the train journey."
     },
     {
       question: "What about meals and dietary requirements?",
