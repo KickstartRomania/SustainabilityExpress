@@ -292,11 +292,11 @@ const Partners = () => {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-              <Card className="card-elevated">
+            <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto items-start">
+              <Card className="card-elevated flex flex-col md:col-span-1 md:row-span-1 ring-2 ring-primary/20 scale-[1.02]">
                 <h3 className="text-2xl font-bold text-foreground mb-2">Title Sponsor</h3>
                 <p className="text-muted-foreground mb-6">Strategic leadership & maximum visibility</p>
-                <div className="space-y-4 mb-6">
+                <div className="space-y-4 mb-6 flex-1">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
                     <span className="text-muted-foreground">Brand integrated in the official event title ("Supported by")</span>
@@ -330,15 +330,15 @@ const Partners = () => {
                     <span className="text-muted-foreground">Access to full innovation outputs and co-branded impact reporting</span>
                   </div>
                 </div>
-                <Button className="w-full btn-hero" onClick={() => openSponsorDialog('Title Sponsor')}>
+                <Button className="w-full btn-hero mt-auto" onClick={() => openSponsorDialog('Title Sponsor')}>
                   Become Title Sponsor
                 </Button>
               </Card>
 
-              <Card className="card-elevated">
+              <Card className="card-elevated flex flex-col h-full">
                 <h3 className="text-2xl font-bold text-foreground mb-2">Main Partner</h3>
                 <p className="text-muted-foreground mb-6">High visibility & active involvement</p>
-                <div className="space-y-4 mb-6">
+                <div className="space-y-4 mb-6 flex-1">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
                     <span className="text-muted-foreground">Logo placement on key communication materials</span>
@@ -368,15 +368,15 @@ const Partners = () => {
                     <span className="text-muted-foreground">Inclusion in post-event impact and ESG reporting</span>
                   </div>
                 </div>
-                <Button className="w-full btn-hero" onClick={() => openSponsorDialog('Main Partner')}>
+                <Button className="w-full btn-hero mt-auto" onClick={() => openSponsorDialog('Main Partner')}>
                   Become Main Partner
                 </Button>
               </Card>
 
-              <Card className="card-elevated">
+              <Card className="card-elevated flex flex-col h-full">
                 <h3 className="text-2xl font-bold text-foreground mb-2">Supporting Partner</h3>
                 <p className="text-muted-foreground mb-6">Focused, flexible contribution</p>
-                <div className="space-y-4 mb-6">
+                <div className="space-y-4 mb-6 flex-1">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
                     <span className="text-muted-foreground">Support through services, technology, prizes, or in-kind contributions</span>
@@ -398,7 +398,7 @@ const Partners = () => {
                     <span className="text-muted-foreground">Association with sustainability, education, and innovation initiatives</span>
                   </div>
                 </div>
-                <Button variant="outline" className="w-full" onClick={() => openSponsorDialog('Supporting Sponsor')}>
+                <Button variant="outline" className="w-full mt-auto" onClick={() => openSponsorDialog('Supporting Sponsor')}>
                   Become Supporting Sponsor  
                 </Button>
               </Card>
