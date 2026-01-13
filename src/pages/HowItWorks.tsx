@@ -230,14 +230,14 @@ const HowItWorks = () => {
                 </div>
                 
                 <div>
-                  <h3 className="text-xl font-bold text-foreground mb-4">Bring Yourself</h3>
+                <h3 className="text-xl font-bold text-foreground mb-4">Bring Yourself</h3>
                   <ul className="space-y-2 text-muted-foreground">
-                    <li>​
-                  </li>
-                    <li>👕 Comfortable clothes for 48 hours</li>
-                    <li>🥤 Reusable bottle and cup</li>
-                    <li>🔧 Any hardware/sensors you need</li>
-                    <li>😴 Eye mask and earplugs (optional)</li>
+                    <li>💻 Laptop and charger</li>
+                    <li>👕 Comfortable clothes for the journey</li>
+                    <li>🔧 Any hardware you may need</li>
+                    <li>⚡ Lots of energy</li>
+                    <li>🎉 Enthusiasm</li>
+                    <li>🤝 An open, collaborative mindset</li>
                   </ul>
                 </div>
               </div>
