@@ -12,6 +12,51 @@ import Footer from '@/components/Footer';
 import { z } from 'zod';
 import { logError } from '@/lib/error-handler';
 
+// Partner logos
+import samedayLogo from '@/assets/partners/sameday.png';
+import diarkLogo from '@/assets/partners/diark.png';
+import booksterLogo from '@/assets/partners/bookster.png';
+import protvLogo from '@/assets/partners/protv.png';
+import skillabLogo from '@/assets/partners/skillab.png';
+import hackingworkLogo from '@/assets/partners/hackingwork.png';
+import pozitivestiLogo from '@/assets/partners/pozitivesti.png';
+import stripeLogo from '@/assets/partners/stripe.png';
+import valentinaLogo from '@/assets/partners/valentina.png';
+import carteadalieiLogo from '@/assets/partners/carteadaliei.png';
+import howtowebLogo from '@/assets/partners/howtoweb.png';
+import vsfaLogo from '@/assets/partners/vsfa.png';
+import founderInstituteLogo from '@/assets/partners/founder-institute.png';
+import prowLogo from '@/assets/partners/prow.png';
+import amplifyOngLogo from '@/assets/partners/amplify-ong.png';
+import launchRomaniaLogo from '@/assets/partners/launch-romania.png';
+import eduupLogo from '@/assets/partners/eduup.png';
+import skvotLogo from '@/assets/partners/skvot.png';
+import alacrityLogo from '@/assets/partners/alacrity.png';
+import curteaVecheLogo from '@/assets/partners/curtea-veche.png';
+
+const partners = [
+  { name: 'Sameday', logo: samedayLogo },
+  { name: 'diARK', logo: diarkLogo },
+  { name: 'Bookster', logo: booksterLogo },
+  { name: 'PRO TV', logo: protvLogo },
+  { name: 'Skillab', logo: skillabLogo },
+  { name: 'Hacking Work', logo: hackingworkLogo },
+  { name: 'Pozitivești', logo: pozitivestiLogo },
+  { name: 'Stripe', logo: stripeLogo },
+  { name: 'Valentina România', logo: valentinaLogo },
+  { name: 'Cartea Daliei', logo: carteadalieiLogo },
+  { name: 'How to Web', logo: howtowebLogo },
+  { name: 'VSFA', logo: vsfaLogo },
+  { name: 'Founder Institute', logo: founderInstituteLogo },
+  { name: 'Prow', logo: prowLogo },
+  { name: 'AmpliFY ONG', logo: amplifyOngLogo },
+  { name: 'Launch Romania', logo: launchRomaniaLogo },
+  { name: 'EduUP', logo: eduupLogo },
+  { name: 'SKVOT', logo: skvotLogo },
+  { name: 'Alacrity', logo: alacrityLogo },
+  { name: 'Curtea Veche Publishing', logo: curteaVecheLogo },
+];
+
 // Validation schema for partner inquiry form
 const partnerInquirySchema = z.object({
   firstName: z.string().trim().min(2, 'First name must be at least 2 characters').max(50, 'First name must be less than 50 characters'),
@@ -146,7 +191,24 @@ const Partners = () => {
             </p>
           </div>
 
-          {/* Partner Categories */}
+          {/* Partner Logos Grid */}
+          <section className="mb-20">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+              {partners.map((partner, index) => (
+                <div
+                  key={index}
+                  className="bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl p-4 flex items-center justify-center h-24 hover:border-primary/30 hover:bg-card/80 transition-all duration-300"
+                >
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </section>
+
           <section className="mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-foreground mb-4">Supporting Partners</h2>
