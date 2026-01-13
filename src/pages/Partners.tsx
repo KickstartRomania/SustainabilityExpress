@@ -32,6 +32,7 @@ import launchRomaniaLogo from '@/assets/partners/launch-romania.png';
 import eduupLogo from '@/assets/partners/eduup.png';
 import alacrityLogo from '@/assets/partners/alacrity.png';
 import curteaVecheLogo from '@/assets/partners/curtea-veche.png';
+import skvotLogo from '@/assets/partners/skvot.png';
 
 const partners = [
   { name: 'Sameday', logo: samedayLogo },
@@ -53,6 +54,7 @@ const partners = [
   { name: 'EduUP', logo: eduupLogo },
   { name: 'Alacrity', logo: alacrityLogo },
   { name: 'Curtea Veche Publishing', logo: curteaVecheLogo },
+  { name: 'SKVOT', logo: skvotLogo },
 ];
 
 // Validation schema for partner inquiry form
