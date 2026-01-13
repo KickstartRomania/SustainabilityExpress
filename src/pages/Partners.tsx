@@ -398,7 +398,7 @@ const Partners = () => {
                     <span className="text-muted-foreground">Association with sustainability, education, and innovation initiatives</span>
                   </div>
                 </div>
-                <Button variant="outline" className="w-full mt-auto" onClick={() => openSponsorDialog('Supporting Sponsor')}>
+                <Button className="w-full btn-hero mt-auto" onClick={() => openSponsorDialog('Supporting Sponsor')}>
                   Become Supporting Sponsor  
                 </Button>
               </Card>
