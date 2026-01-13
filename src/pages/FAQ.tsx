@@ -31,14 +31,6 @@ const FAQ = () => {
       answer: "Unfortunately, it's not possible to join after the train has departed. We encourage all participants to stay for the full duration of the program, as leaving early would disrupt the experience for both you and your team. It would also require stopping the train in the middle of nowhere for you to disembark."
     },
     {
-      question: "What are the safety protocols?",
-      answer: "We have staffed coaches throughout the journey, emergency contacts shared at boarding, and follow all Astra Trans Carpatic safety guidelines. Our Code of Conduct ensures a respectful environment for all participants."
-    },
-    {
-      question: "What should I pack for 48 hours?",
-      answer: "Essentials: laptop, charger, comfortable clothes, toiletries, any hardware/sensors you might need. Optional: pillow, earplugs, eye mask, snacks. We provide workspace, meals, and charging stations."
-    },
-    {
       question: "Are there prizes for winners?",
       answer: "Yes! Details will be announced closer to the event. Beyond prizes, you'll gain valuable connections, mentorship, potential co-founders, and the experience of building something meaningful in a unique environment."
     },
