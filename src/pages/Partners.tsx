@@ -374,27 +374,28 @@ const Partners = () => {
               </Card>
 
               <Card className="card-elevated">
-                <h3 className="text-2xl font-bold text-foreground mb-6">Supporting Sponsor</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-2">Supporting Partner</h3>
+                <p className="text-muted-foreground mb-6">Focused, flexible contribution</p>
                 <div className="space-y-4 mb-6">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span className="text-muted-foreground">Logo on website and materials</span>
+                    <span className="text-muted-foreground">Support through services, technology, prizes, or in-kind contributions</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span className="text-muted-foreground">Social media mentions</span>
+                    <span className="text-muted-foreground">Logo visibility on website, final presentations, and thank-you materials</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span className="text-muted-foreground">Branded swag distribution</span>
+                    <span className="text-muted-foreground">Brand mention in selected communication outputs</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span className="text-muted-foreground">Networking opportunities</span>
+                    <span className="text-muted-foreground">Presence during final pitches and networking moments</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span className="text-muted-foreground">Event photos and highlights</span>
+                    <span className="text-muted-foreground">Association with sustainability, education, and innovation initiatives</span>
                   </div>
                 </div>
                 <Button variant="outline" className="w-full" onClick={() => openSponsorDialog('Supporting Sponsor')}>
