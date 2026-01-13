@@ -72,7 +72,7 @@ const Index = () => {
             </div>
             
             {/* Stats Strip */}
-            <div className="grid grid-cols-2 gap-3 text-sm font-medium max-w-md">
+            <div className="flex flex-wrap gap-4 text-sm font-medium">
               <span className="flex items-center gap-2 bg-background/60 backdrop-blur-sm px-4 py-2 rounded-full border border-border/50 text-foreground">
                 <Users className="h-4 w-4 text-primary" /> 20 participants
               </span>
