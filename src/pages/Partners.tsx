@@ -193,16 +193,16 @@ const Partners = () => {
 
           {/* Partner Logos Grid */}
           <section className="mb-20">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
               {partners.map((partner, index) => (
                 <div
                   key={index}
-                  className="bg-card/50 backdrop-blur-sm border border-primary/10 rounded-xl p-4 flex items-center justify-center h-24 hover:border-primary/30 hover:bg-card/80 transition-all duration-300"
+                  className="flex items-center justify-center h-20 hover:scale-105 transition-transform duration-300"
                 >
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="max-w-full max-h-full object-contain"
+                    className="max-w-full max-h-full object-contain rounded-lg"
                   />
                 </div>
               ))}
