@@ -115,8 +115,12 @@ const Index = () => {
             
             <h2 className="text-4xl font-bold text-foreground mb-8">What it is</h2>
             <p className="text-xl text-muted-foreground leading-relaxed mb-12">
-              A weekend hackathon hosted on a train, traveling Bucharest → Timisoara → Bucharest. 
-              Build practical, weekend-ready solutions that make train travel more sustainable and more loved.
+              Sustainability Express is an on-train innovation journey turning sustainable challenges into real, testable solutions.
+
+Our first journey takes place on a train from Bucharest to Timișoara and back.
+
+48 hours, mostly on board, dedicated to creating implementable ideas that can change the world.
+
             </p>
             
             {/* Route visualization */}
