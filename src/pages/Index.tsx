@@ -625,68 +625,107 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
             <p className="text-xl text-muted-foreground">Supported by industry leaders committed to sustainable innovation</p>
           </div>
           
-          {/* Logo Slider - Two Rows */}
-          <div className="relative overflow-hidden">
+          {/* Train-Themed Logo Slider */}
+          <div className="relative overflow-hidden py-4">
             {/* Gradient masks */}
-            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10" />
-            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10" />
+            <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-background to-transparent z-10" />
+            <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-background to-transparent z-10" />
             
-            {/* Two-row scrolling container */}
-            <div className="space-y-2">
-              {/* First row - scrolls left */}
-              <div className="flex animate-scroll items-center">
-                {partners.slice(0, Math.ceil(partners.length / 2)).map((partner, index) => (
-                  <div
-                    key={`row1-first-${index}`}
-                    className="flex-shrink-0 w-32 h-16 flex items-center justify-center"
-                  >
-                    <img
-                      src={partner.logo}
-                      alt={partner.name}
-                      className="max-w-full max-h-full object-contain rounded-lg"
-                    />
-                  </div>
-                ))}
-                {partners.slice(0, Math.ceil(partners.length / 2)).map((partner, index) => (
-                  <div
-                    key={`row1-second-${index}`}
-                    className="flex-shrink-0 w-32 h-16 flex items-center justify-center"
-                  >
-                    <img
-                      src={partner.logo}
-                      alt={partner.name}
-                      className="max-w-full max-h-full object-contain rounded-lg"
-                    />
-                  </div>
-                ))}
+            {/* Two train tracks */}
+            <div className="space-y-6">
+              {/* First train track */}
+              <div className="relative">
+                {/* Rail track above */}
+                <div className="absolute -top-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+                <div className="absolute -top-3 left-0 right-0 flex justify-around">
+                  {[...Array(40)].map((_, i) => (
+                    <div key={`tie1-${i}`} className="w-1 h-2 bg-primary/20 rounded-sm" />
+                  ))}
+                </div>
+                
+                {/* Train cars - first row */}
+                <div className="flex animate-scroll items-center">
+                  {partners.slice(0, Math.ceil(partners.length / 2)).map((partner, index) => (
+                    <div key={`row1-first-${index}`} className="flex-shrink-0 flex items-center">
+                      {/* Train car */}
+                      <div className="w-36 h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative">
+                        {/* Wheel connectors */}
+                        <div className="absolute -bottom-1 left-4 w-3 h-3 rounded-full bg-primary/30 border border-primary/40" />
+                        <div className="absolute -bottom-1 right-4 w-3 h-3 rounded-full bg-primary/30 border border-primary/40" />
+                        <img
+                          src={partner.logo}
+                          alt={partner.name}
+                          className="max-w-[90%] max-h-[80%] object-contain"
+                        />
+                      </div>
+                      {/* Connector between cars */}
+                      <div className="w-2 h-1 bg-primary/40 rounded-full" />
+                    </div>
+                  ))}
+                  {partners.slice(0, Math.ceil(partners.length / 2)).map((partner, index) => (
+                    <div key={`row1-second-${index}`} className="flex-shrink-0 flex items-center">
+                      <div className="w-36 h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative">
+                        <div className="absolute -bottom-1 left-4 w-3 h-3 rounded-full bg-primary/30 border border-primary/40" />
+                        <div className="absolute -bottom-1 right-4 w-3 h-3 rounded-full bg-primary/30 border border-primary/40" />
+                        <img
+                          src={partner.logo}
+                          alt={partner.name}
+                          className="max-w-[90%] max-h-[80%] object-contain"
+                        />
+                      </div>
+                      <div className="w-2 h-1 bg-primary/40 rounded-full" />
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Rail track below */}
+                <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
               </div>
               
-              {/* Second row - scrolls right */}
-              <div className="flex animate-scroll-reverse items-center">
-                {partners.slice(Math.ceil(partners.length / 2)).map((partner, index) => (
-                  <div
-                    key={`row2-first-${index}`}
-                    className="flex-shrink-0 w-32 h-16 flex items-center justify-center"
-                  >
-                    <img
-                      src={partner.logo}
-                      alt={partner.name}
-                      className="max-w-full max-h-full object-contain rounded-lg"
-                    />
-                  </div>
-                ))}
-                {partners.slice(Math.ceil(partners.length / 2)).map((partner, index) => (
-                  <div
-                    key={`row2-second-${index}`}
-                    className="flex-shrink-0 w-32 h-16 flex items-center justify-center"
-                  >
-                    <img
-                      src={partner.logo}
-                      alt={partner.name}
-                      className="max-w-full max-h-full object-contain rounded-lg"
-                    />
-                  </div>
-                ))}
+              {/* Second train track */}
+              <div className="relative">
+                {/* Rail track above */}
+                <div className="absolute -top-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+                <div className="absolute -top-3 left-0 right-0 flex justify-around">
+                  {[...Array(40)].map((_, i) => (
+                    <div key={`tie2-${i}`} className="w-1 h-2 bg-primary/20 rounded-sm" />
+                  ))}
+                </div>
+                
+                {/* Train cars - second row (reverse direction) */}
+                <div className="flex animate-scroll-reverse items-center">
+                  {partners.slice(Math.ceil(partners.length / 2)).map((partner, index) => (
+                    <div key={`row2-first-${index}`} className="flex-shrink-0 flex items-center">
+                      <div className="w-36 h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative">
+                        <div className="absolute -bottom-1 left-4 w-3 h-3 rounded-full bg-primary/30 border border-primary/40" />
+                        <div className="absolute -bottom-1 right-4 w-3 h-3 rounded-full bg-primary/30 border border-primary/40" />
+                        <img
+                          src={partner.logo}
+                          alt={partner.name}
+                          className="max-w-[90%] max-h-[80%] object-contain"
+                        />
+                      </div>
+                      <div className="w-2 h-1 bg-primary/40 rounded-full" />
+                    </div>
+                  ))}
+                  {partners.slice(Math.ceil(partners.length / 2)).map((partner, index) => (
+                    <div key={`row2-second-${index}`} className="flex-shrink-0 flex items-center">
+                      <div className="w-36 h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative">
+                        <div className="absolute -bottom-1 left-4 w-3 h-3 rounded-full bg-primary/30 border border-primary/40" />
+                        <div className="absolute -bottom-1 right-4 w-3 h-3 rounded-full bg-primary/30 border border-primary/40" />
+                        <img
+                          src={partner.logo}
+                          alt={partner.name}
+                          className="max-w-[90%] max-h-[80%] object-contain"
+                        />
+                      </div>
+                      <div className="w-2 h-1 bg-primary/40 rounded-full" />
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Rail track below */}
+                <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
               </div>
             </div>
           </div>
