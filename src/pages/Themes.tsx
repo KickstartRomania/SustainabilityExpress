@@ -4,46 +4,30 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Leaf, Recycle, Lightbulb, Users, Settings } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-
 const Themes = () => {
-  const themes = [
-    {
-      icon: Leaf,
-      title: 'Green Passenger Experience',
-      description: 'Enhance the sustainability and comfort of the passenger journey'
-    },
-    {
-      icon: Recycle,
-      title: 'Smart Waste & Circular Solutions',
-      description: 'Innovative approaches to waste reduction and circular economy principles'
-    },
-    {
-      icon: Lightbulb,
-      title: 'Eco-Nudges & Awareness',
-      description: 'Behavioral interventions that promote sustainable travel choices'
-    },
-    {
-      icon: Users,
-      title: 'Community & Culture of Trains',
-      description: 'Building communities around sustainable rail travel'
-    },
-    {
-      icon: Settings,
-      title: 'Digital Tools for Crew & Operations',
-      description: 'Technology solutions to optimize train operations and reduce resource use'
-    }
-  ];
-
-  const hmwPrompts = [
-    'How might we reduce on-board waste in simple, testable ways?',
-    'How might we help passengers see the positive impact of choosing trains?',
-    'How might we make the journey smoother and greener through lightweight digital tools?',
-    'How might we grow a community of sustainability-minded travelers?',
-    'How might we support staff with quick wins that cut resource use?'
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const themes = [{
+    icon: Leaf,
+    title: 'Green Passenger Experience',
+    description: 'Enhance the sustainability and comfort of the passenger journey'
+  }, {
+    icon: Recycle,
+    title: 'Smart Waste & Circular Solutions',
+    description: 'Innovative approaches to waste reduction and circular economy principles'
+  }, {
+    icon: Lightbulb,
+    title: 'Eco-Nudges & Awareness',
+    description: 'Behavioral interventions that promote sustainable travel choices'
+  }, {
+    icon: Users,
+    title: 'Community & Culture of Trains',
+    description: 'Building communities around sustainable rail travel'
+  }, {
+    icon: Settings,
+    title: 'Digital Tools for Crew & Operations',
+    description: 'Technology solutions to optimize train operations and reduce resource use'
+  }];
+  const hmwPrompts = ['How might we reduce on-board waste in simple, testable ways?', 'How might we help passengers see the positive impact of choosing trains?', 'How might we make the journey smoother and greener through lightweight digital tools?', 'How might we grow a community of sustainability-minded travelers?', 'How might we support staff with quick wins that cut resource use?'];
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       <div className="pt-24 pb-16">
@@ -52,8 +36,8 @@ const Themes = () => {
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-foreground mb-6">Themes & Challenges</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Five focus areas for sustainable innovation. Choose your challenge and build solutions 
-              that can transform train travel for the better.
+              Six pathways to sustainable impact. Explore one of the challenge areas and turn bold ideas into solutions that can make sustainability real and actionable.
+
             </p>
           </div>
 
@@ -62,17 +46,15 @@ const Themes = () => {
             <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Broad Themes</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {themes.map((theme, index) => {
-                const Icon = theme.icon;
-                return (
-                  <Card key={index} className="card-elevated text-center hover:scale-105 transition-transform duration-300">
+              const Icon = theme.icon;
+              return <Card key={index} className="card-elevated text-center hover:scale-105 transition-transform duration-300">
                     <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
                       <Icon className="h-8 w-8 text-primary-foreground" />
                     </div>
                     <h3 className="text-xl font-bold text-foreground mb-4">{theme.title}</h3>
                     <p className="text-muted-foreground">{theme.description}</p>
-                  </Card>
-                );
-              })}
+                  </Card>;
+            })}
             </div>
           </section>
 
@@ -86,11 +68,9 @@ const Themes = () => {
             </div>
             
             <div className="max-w-4xl mx-auto space-y-4">
-              {hmwPrompts.map((prompt, index) => (
-                <Card key={index} className="p-6 border-l-4 border-l-primary hover:bg-card/80 transition-colors duration-300">
+              {hmwPrompts.map((prompt, index) => <Card key={index} className="p-6 border-l-4 border-l-primary hover:bg-card/80 transition-colors duration-300">
                   <p className="text-lg text-foreground font-medium">{prompt}</p>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </section>
 
@@ -181,8 +161,6 @@ const Themes = () => {
       </div>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Themes;
