@@ -299,23 +299,35 @@ const Partners = () => {
                 <div className="space-y-4 mb-6">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-muted-foreground">Logo on all event materials</span>
+                    <span className="text-muted-foreground">Brand integrated in the official event title ("Supported by")</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-muted-foreground">Speaking opportunity at opening</span>
+                    <span className="text-muted-foreground">Category exclusivity (e.g. banking, energy, telecom, mobility)</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-muted-foreground">Branded workspace area</span>
+                    <span className="text-muted-foreground">Priority logo placement across all online & offline materials</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-muted-foreground">Access to all participant data</span>
+                    <span className="text-muted-foreground">Seat on the jury and active role in defining evaluation criteria</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-muted-foreground">Post-event networking session</span>
+                    <span className="text-muted-foreground">Mentor or speaker role in workshops</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-muted-foreground">Priority rights to pilot winning solutions</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-muted-foreground">Strong presence in media content, PR, and social media storytelling</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-muted-foreground">Access to full innovation outputs and co-branded impact reporting</span>
                   </div>
                 </div>
                 <Button className="w-full btn-hero" onClick={() => openSponsorDialog('Title Sponsor')}>
