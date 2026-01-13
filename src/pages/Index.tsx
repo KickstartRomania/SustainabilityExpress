@@ -24,7 +24,6 @@ import diarkLogo from '@/assets/partners/diark.png';
 import booksterLogo from '@/assets/partners/bookster.png';
 import protvLogo from '@/assets/partners/protv.png';
 import skillabLogo from '@/assets/partners/skillab.png';
-import skvotLogo from '@/assets/partners/skvot.png';
 import hackingworkLogo from '@/assets/partners/hackingwork.png';
 import pozitivestiLogo from '@/assets/partners/pozitivesti.png';
 import stripeLogo from '@/assets/partners/stripe.png';
@@ -35,7 +34,6 @@ const partners = [
   { name: 'Bookster', logo: booksterLogo },
   { name: 'PRO TV', logo: protvLogo },
   { name: 'Skillab', logo: skillabLogo },
-  { name: 'SKVOT', logo: skvotLogo },
   { name: 'Hacking Work', logo: hackingworkLogo },
   { name: 'Pozitivești', logo: pozitivestiLogo },
   { name: 'Stripe', logo: stripeLogo },
