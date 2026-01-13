@@ -331,7 +331,7 @@ const Partners = () => {
                   </div>
                 </div>
                 <Button className="w-full btn-hero mt-auto" onClick={() => openSponsorDialog('Title Sponsor')}>
-                  Become Title Sponsor
+                  Become Title Partner
                 </Button>
               </Card>
 
