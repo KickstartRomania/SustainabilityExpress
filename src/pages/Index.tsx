@@ -625,40 +625,69 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
             <p className="text-xl text-muted-foreground">Supported by industry leaders committed to sustainable innovation</p>
           </div>
           
-          {/* Logo Slider */}
+          {/* Logo Slider - Two Rows */}
           <div className="relative overflow-hidden">
             {/* Gradient masks */}
             <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10" />
             <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10" />
             
-            {/* Scrolling container */}
-            <div className="flex animate-scroll items-center">
-              {/* First set of logos */}
-              {partners.map((partner, index) => (
-                <div
-                  key={`first-${index}`}
-                  className="flex-shrink-0 w-32 h-20 flex items-center justify-center"
-                >
-                  <img
-                    src={partner.logo}
-                    alt={partner.name}
-                    className="max-w-full max-h-full object-contain rounded-lg"
-                  />
-                </div>
-              ))}
-              {/* Duplicate set for seamless loop */}
-              {partners.map((partner, index) => (
-                <div
-                  key={`second-${index}`}
-                  className="flex-shrink-0 w-32 h-20 flex items-center justify-center"
-                >
-                  <img
-                    src={partner.logo}
-                    alt={partner.name}
-                    className="max-w-full max-h-full object-contain rounded-lg"
-                  />
-                </div>
-              ))}
+            {/* Two-row scrolling container */}
+            <div className="space-y-2">
+              {/* First row - scrolls left */}
+              <div className="flex animate-scroll items-center">
+                {partners.slice(0, Math.ceil(partners.length / 2)).map((partner, index) => (
+                  <div
+                    key={`row1-first-${index}`}
+                    className="flex-shrink-0 w-32 h-16 flex items-center justify-center"
+                  >
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className="max-w-full max-h-full object-contain rounded-lg"
+                    />
+                  </div>
+                ))}
+                {partners.slice(0, Math.ceil(partners.length / 2)).map((partner, index) => (
+                  <div
+                    key={`row1-second-${index}`}
+                    className="flex-shrink-0 w-32 h-16 flex items-center justify-center"
+                  >
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className="max-w-full max-h-full object-contain rounded-lg"
+                    />
+                  </div>
+                ))}
+              </div>
+              
+              {/* Second row - scrolls right */}
+              <div className="flex animate-scroll-reverse items-center">
+                {partners.slice(Math.ceil(partners.length / 2)).map((partner, index) => (
+                  <div
+                    key={`row2-first-${index}`}
+                    className="flex-shrink-0 w-32 h-16 flex items-center justify-center"
+                  >
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className="max-w-full max-h-full object-contain rounded-lg"
+                    />
+                  </div>
+                ))}
+                {partners.slice(Math.ceil(partners.length / 2)).map((partner, index) => (
+                  <div
+                    key={`row2-second-${index}`}
+                    className="flex-shrink-0 w-32 h-16 flex items-center justify-center"
+                  >
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className="max-w-full max-h-full object-contain rounded-lg"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
