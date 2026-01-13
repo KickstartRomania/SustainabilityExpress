@@ -138,12 +138,12 @@ const Agenda = () => {
               <Luggage className="h-8 w-8 text-primary mb-4" />
               <h2 className="text-2xl font-bold text-foreground mb-6">What to Bring</h2>
               <ul className="space-y-2 text-muted-foreground">
-                <li>📱 Laptop, charger, mobile hotspot/USB data</li>
-                <li>👕 Comfortable clothes for 48 hours</li>
-                <li>🥤 Reusable bottle and cup</li>
-                <li>🍿 Snacks (optional)</li>
-                <li>🔧 Any sensors you might need for your project</li>
-                <li>💼 Toiletries and personal items</li>
+                <li>💻 Laptop and charger</li>
+                <li>👕 Comfortable clothes for the journey</li>
+                <li>🔧 Any hardware you may need</li>
+                <li>⚡ Lots of energy</li>
+                <li>🎉 Enthusiasm</li>
+                <li>🤝 An open, collaborative mindset</li>
               </ul>
             </Card>
 
