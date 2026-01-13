@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Lightbulb, Train, Leaf, Zap, Trophy } from 'lucide-react';
+import { ArrowRight, Users, Lightbulb, Train, Leaf, Zap, Trophy, Code, Megaphone, Briefcase, GraduationCap } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import heroTrain from '@/assets/hero-train.jpg';
@@ -128,6 +128,94 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
           </div>
         </div>
       </RailSection>
+
+      {/* Who is it for Section */}
+      <section id="who-is-it-for" className="py-24 relative overflow-hidden">
+        {/* Subtle side rails */}
+        <div className="absolute left-6 md:left-12 top-0 bottom-0 w-5 opacity-20">
+          <RailLine variant="vertical" />
+        </div>
+        <div className="absolute right-6 md:right-12 top-0 bottom-0 w-5 opacity-15">
+          <RailLine variant="vertical" showLeaves />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <SectionDivider icon={Users} className="mb-8" />
+            <h2 className="text-4xl font-bold text-foreground">Who is it for?</h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute top-0 left-4 right-4 opacity-30">
+                <RailLine />
+              </div>
+              <div className="pt-4 flex gap-5">
+                <div className="w-14 h-14 bg-primary rounded-full flex-shrink-0 flex items-center justify-center">
+                  <Code className="h-7 w-7 text-primary-foreground" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Tech & Product Builders</h3>
+                  <p className="text-muted-foreground">
+                    Developers, engineers, or product profiles who want to design and prototype practical digital solutions for sustainable mobility challenges.
+                  </p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute top-0 left-4 right-4 opacity-30">
+                <RailLine />
+              </div>
+              <div className="pt-4 flex gap-5">
+                <div className="w-14 h-14 bg-accent rounded-full flex-shrink-0 flex items-center justify-center">
+                  <Megaphone className="h-7 w-7 text-accent-foreground" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Communication & Strategy Thinkers</h3>
+                  <p className="text-muted-foreground">
+                    Marketing, communication, or storytelling professionals interested in shaping how sustainability solutions are framed, explained, and pitched.
+                  </p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute top-0 left-4 right-4 opacity-30">
+                <RailLine />
+              </div>
+              <div className="pt-4 flex gap-5">
+                <div className="w-14 h-14 bg-primary rounded-full flex-shrink-0 flex items-center justify-center">
+                  <Briefcase className="h-7 w-7 text-primary-foreground" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Business & Entrepreneurship Profiles</h3>
+                  <p className="text-muted-foreground">
+                    People with a business, management, or startup background who want to turn ideas into viable, implementable concepts with real-world potential.
+                  </p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute top-0 left-4 right-4 opacity-30">
+                <RailLine />
+              </div>
+              <div className="pt-4 flex gap-5">
+                <div className="w-14 h-14 bg-accent rounded-full flex-shrink-0 flex items-center justify-center">
+                  <GraduationCap className="h-7 w-7 text-accent-foreground" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-foreground mb-2">High School Students (16–18)</h3>
+                  <p className="text-muted-foreground">
+                    Curious, motivated students passionate about sustainability and technology, eager to learn by working alongside professionals in a real innovation environment.
+                  </p>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
 
       {/* Why Join Section */}
       <section id="why-join" className="py-24 relative overflow-hidden">
