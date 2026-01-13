@@ -30,7 +30,7 @@ const Themes = () => {
     title: 'Education, Youth & Future Skills for Sustainability',
     description: 'Programs, tools, or experiences that build sustainability literacy, green skills, and future-ready mindsets, especially among young people.'
   }];
-  const hmwPrompts = ['How might we reduce on-board waste in simple, testable ways?', 'How might we help passengers see the positive impact of choosing trains?', 'How might we make the journey smoother and greener through lightweight digital tools?', 'How might we grow a community of sustainability-minded travelers?', 'How might we support staff with quick wins that cut resource use?'];
+  
   return <div className="min-h-screen bg-background">
       <Navigation />
       
@@ -62,21 +62,6 @@ const Themes = () => {
             </div>
           </section>
 
-          {/* HMW Prompts */}
-          <section className="mb-20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4">How Might We...?</h2>
-              <p className="text-xl text-muted-foreground">
-                Starter prompts to spark your innovation journey
-              </p>
-            </div>
-            
-            <div className="max-w-4xl mx-auto space-y-4">
-              {hmwPrompts.map((prompt, index) => <Card key={index} className="p-6 border-l-4 border-l-primary hover:bg-card/80 transition-colors duration-300">
-                  <p className="text-lg text-foreground font-medium">{prompt}</p>
-                </Card>)}
-            </div>
-          </section>
 
           {/* Challenge Guidelines */}
           <section className="mb-20 bg-secondary/50 rounded-3xl p-12">
