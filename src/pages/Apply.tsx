@@ -368,7 +368,7 @@ const Apply = () => {
                 <Lightbulb className="h-8 w-8 text-primary mb-4" />
                 <h3 className="text-xl font-bold text-foreground mb-4">Free for Teenagers (16-18 y.o.)</h3>
                 <p className="text-muted-foreground text-sm">
-                  Some of the spots reserved for teenagers are offered to our partners: Asociația Valentina, Cartea Daliei, Edu Up, and Alacrity.
+                  Some of the spots reserved for teenagers are offered to our partners: <a href="https://www.valentina-romania.ro/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Asociația Valentina</a>, <a href="https://www.carteadaliei.ro/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Cartea Daliei</a>, <a href="https://www.eduup.ro/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Edu Up</a>, and <a href="https://alacrity.education/en" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Alacrity</a>.
                 </p>
               </Card>
 
