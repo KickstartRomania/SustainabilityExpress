@@ -181,9 +181,9 @@ const Logistics = () => {
               <Card className="card-elevated">
                 <h3 className="text-lg font-bold text-foreground mb-4">👕 Personal Items</h3>
                 <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li>□ Comfortable clothes (48h)</li>
+                  <li>□ Comfortable clothes</li>
                   <li>□ Toiletries</li>
-                  <li>□ Earplugs & eye mask</li>
+                  <li>□ ID</li>
                   <li>□ Small pillow (optional)</li>
                   <li>□ Personal medications</li>
                 </ul>
