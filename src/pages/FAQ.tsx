@@ -7,8 +7,8 @@ import Navigation from '@/components/Navigation';
 const FAQ = () => {
   const faqs = [
     {
-      question: "What if I don't have a team?",
-      answer: "Perfect! Most participants join solo and form teams during Friday night icebreakers. We'll help match you with others based on complementary skills and shared interests."
+      question: "Can I work on a project alone, without a team?",
+      answer: "No. Sustainability Express is designed to bring together people from diverse backgrounds to encourage learning both from mentors and from fellow participants. All participants are required to work in teams and collaborate throughout the program."
     },
     {
       question: "What if I don't have coding experience?",
