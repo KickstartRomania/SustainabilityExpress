@@ -1,30 +1,34 @@
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Leaf, Recycle, Lightbulb, Users, Settings } from 'lucide-react';
+import { ArrowRight, Heart, Brain, Recycle, BarChart3, Users, GraduationCap } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 const Themes = () => {
   const themes = [{
-    icon: Leaf,
-    title: 'Green Passenger Experience',
-    description: 'Enhance the sustainability and comfort of the passenger journey'
+    icon: Heart,
+    title: 'Sustainable Lifestyles & Everyday Choices',
+    description: 'Solutions that help individuals and communities adopt more sustainable habits in daily life — from consumption and waste to energy and food.'
+  }, {
+    icon: Brain,
+    title: 'Climate Awareness & Behavior Change',
+    description: 'Ideas that translate climate challenges into clear, relatable actions, using nudges, storytelling, or incentives to drive long-term behavior change.'
   }, {
     icon: Recycle,
-    title: 'Smart Waste & Circular Solutions',
-    description: 'Innovative approaches to waste reduction and circular economy principles'
+    title: 'Circular Economy & Resource Efficiency',
+    description: 'Concepts focused on reducing waste, extending product lifecycles, and designing systems for reuse, repair, and responsible consumption.'
   }, {
-    icon: Lightbulb,
-    title: 'Eco-Nudges & Awareness',
-    description: 'Behavioral interventions that promote sustainable travel choices'
+    icon: BarChart3,
+    title: 'Digital Tools for Sustainability Impact',
+    description: 'Platforms or data-driven solutions that help people, organizations, or cities measure, understand, and reduce their environmental footprint.'
   }, {
     icon: Users,
-    title: 'Community & Culture of Trains',
-    description: 'Building communities around sustainable rail travel'
+    title: 'Community-Led Sustainability Solutions',
+    description: 'Initiatives that empower local communities, schools, or NGOs to co-create and implement sustainability projects with real local impact.'
   }, {
-    icon: Settings,
-    title: 'Digital Tools for Crew & Operations',
-    description: 'Technology solutions to optimize train operations and reduce resource use'
+    icon: GraduationCap,
+    title: 'Education, Youth & Future Skills for Sustainability',
+    description: 'Programs, tools, or experiences that build sustainability literacy, green skills, and future-ready mindsets, especially among young people.'
   }];
   const hmwPrompts = ['How might we reduce on-board waste in simple, testable ways?', 'How might we help passengers see the positive impact of choosing trains?', 'How might we make the journey smoother and greener through lightweight digital tools?', 'How might we grow a community of sustainability-minded travelers?', 'How might we support staff with quick wins that cut resource use?'];
   return <div className="min-h-screen bg-background">
