@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Lightbulb, Train, Leaf, Zap, Trophy, Code, Megaphone, Briefcase, GraduationCap, Linkedin } from 'lucide-react';
+import { ArrowRight, Users, Lightbulb, Train, Leaf, Zap, Trophy, Code, Megaphone, Briefcase, GraduationCap, Linkedin, Handshake } from 'lucide-react';
 import razvanSuta from '@/assets/mentors/razvan-suta.jpeg';
 import aleodorTabarcea from '@/assets/mentors/aleodor-tabarcea.jpeg';
 import andreiMunteanu from '@/assets/mentors/andrei-munteanu.jpeg';
@@ -17,6 +17,29 @@ import SectionDivider from '@/components/decorative/SectionDivider';
 import RouteVisualization from '@/components/decorative/RouteVisualization';
 import JourneyRail from '@/components/decorative/JourneyRail';
 import ScrollProgressRail from '@/components/decorative/ScrollProgressRail';
+
+// Partner logos
+import samedayLogo from '@/assets/partners/sameday.png';
+import diarkLogo from '@/assets/partners/diark.png';
+import booksterLogo from '@/assets/partners/bookster.png';
+import protvLogo from '@/assets/partners/protv.png';
+import skillabLogo from '@/assets/partners/skillab.png';
+import skvotLogo from '@/assets/partners/skvot.png';
+import hackingworkLogo from '@/assets/partners/hackingwork.png';
+import pozitivestiLogo from '@/assets/partners/pozitivesti.png';
+import stripeLogo from '@/assets/partners/stripe.png';
+
+const partners = [
+  { name: 'Sameday', logo: samedayLogo },
+  { name: 'diARK', logo: diarkLogo },
+  { name: 'Bookster', logo: booksterLogo },
+  { name: 'PRO TV', logo: protvLogo },
+  { name: 'Skillab', logo: skillabLogo },
+  { name: 'SKVOT', logo: skvotLogo },
+  { name: 'Hacking Work', logo: hackingworkLogo },
+  { name: 'Pozitivești', logo: pozitivestiLogo },
+  { name: 'Stripe', logo: stripeLogo },
+];
 const sections = [{
   id: 'hero',
   label: 'Welcome'
@@ -562,6 +585,62 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
           </div>
         </div>
       </RailSection>
+
+      {/* Partners Section */}
+      <section id="partners" className="py-24 relative overflow-hidden">
+        {/* Side rails */}
+        <div className="absolute left-6 md:left-12 top-0 bottom-0 w-5 opacity-20">
+          <RailLine variant="vertical" />
+        </div>
+        <div className="absolute right-6 md:right-12 top-0 bottom-0 w-5 opacity-15">
+          <RailLine variant="vertical" showLeaves />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-12">
+            <SectionDivider icon={Handshake} className="mb-8" />
+            <h2 className="text-4xl font-bold text-foreground mb-4">Our Partners</h2>
+            <p className="text-xl text-muted-foreground">Supported by industry leaders committed to sustainable innovation</p>
+          </div>
+          
+          {/* Logo Slider */}
+          <div className="relative overflow-hidden">
+            {/* Gradient masks */}
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10" />
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10" />
+            
+            {/* Scrolling container */}
+            <div className="flex animate-scroll">
+              {/* First set of logos */}
+              {partners.map((partner, index) => (
+                <div
+                  key={`first-${index}`}
+                  className="flex-shrink-0 w-48 h-32 mx-6 flex items-center justify-center bg-card rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow duration-300"
+                >
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+              ))}
+              {/* Duplicate set for seamless loop */}
+              {partners.map((partner, index) => (
+                <div
+                  key={`second-${index}`}
+                  className="flex-shrink-0 w-48 h-32 mx-6 flex items-center justify-center bg-card rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow duration-300"
+                >
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Themes Teaser */}
       <section id="themes" className="py-24 relative overflow-hidden">
