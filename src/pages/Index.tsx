@@ -186,7 +186,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-1">Aleodor Tăbârcea</h3>
                 <p className="text-muted-foreground text-sm">Engineering Manager</p>
-                <p className="text-muted-foreground text-sm mb-3">@ Stripe</p>
+                <p className="text-muted-foreground text-sm mb-3">Stripe</p>
                 <a 
                   href="https://www.linkedin.com/in/aleodor-tabarcea/" 
                   target="_blank" 
@@ -209,7 +209,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-1">Andrei Munteanu</h3>
                 <p className="text-muted-foreground text-sm">CEO & Co-founder</p>
-                <p className="text-muted-foreground text-sm mb-3">@ Cowork & Prow</p>
+                <p className="text-muted-foreground text-sm mb-3">Cowork & Prow</p>
                 <a 
                   href="https://www.linkedin.com/in/andreicosminmunteanu/" 
                   target="_blank" 
@@ -232,7 +232,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-1">Adrian Gheorghe</h3>
                 <p className="text-muted-foreground text-sm">Startup Advisor</p>
-                <p className="text-muted-foreground text-sm mb-3">@ Doers Ventures</p>
+                <p className="text-muted-foreground text-sm mb-3">Doers Ventures</p>
                 <a 
                   href="https://www.linkedin.com/in/adrian-gheorghe/" 
                   target="_blank" 
@@ -255,7 +255,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-1">Cosmin Pîrvu</h3>
                 <p className="text-muted-foreground text-sm">Startup Program Manager</p>
-                <p className="text-muted-foreground text-sm mb-3">@ Veridion</p>
+                <p className="text-muted-foreground text-sm mb-3">Veridion</p>
                 <a 
                   href="https://www.linkedin.com/in/cosminpirvu/" 
                   target="_blank" 
