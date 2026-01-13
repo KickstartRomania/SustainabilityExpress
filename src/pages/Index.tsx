@@ -161,7 +161,8 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                   <img src={razvanSuta} alt="Răzvan Suta" className="w-full h-full object-cover" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-1">Răzvan Suta</h3>
-                <p className="text-muted-foreground mb-3">Angel investor & VC</p>
+                <p className="text-muted-foreground text-sm">Angel investor & VC</p>
+                <p className="text-muted-foreground text-sm mb-3">&nbsp;</p>
                 <a 
                   href="https://www.linkedin.com/in/razvansuta/" 
                   target="_blank" 
@@ -183,7 +184,8 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                   <img src={aleodorTabarcea} alt="Aleodor Tăbârcea" className="w-full h-full object-cover" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-1">Aleodor Tăbârcea</h3>
-                <p className="text-muted-foreground mb-3">Engineering Manager @ Stripe</p>
+                <p className="text-muted-foreground text-sm">Engineering Manager</p>
+                <p className="text-muted-foreground text-sm mb-3">@ Stripe</p>
                 <a 
                   href="https://www.linkedin.com/in/aleodor-tabarcea/" 
                   target="_blank" 
@@ -205,7 +207,8 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                   <img src={andreiMunteanu} alt="Andrei Munteanu" className="w-full h-full object-cover" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-1">Andrei Munteanu</h3>
-                <p className="text-muted-foreground mb-3">CEO & Co-founder @ Cowork & Prow</p>
+                <p className="text-muted-foreground text-sm">CEO & Co-founder</p>
+                <p className="text-muted-foreground text-sm mb-3">@ Cowork & Prow</p>
                 <a 
                   href="https://www.linkedin.com/in/andreicosminmunteanu/" 
                   target="_blank" 
@@ -227,7 +230,8 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                   <Users className="h-12 w-12 text-muted-foreground" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-1">Adrian Gheorghe</h3>
-                <p className="text-muted-foreground mb-3">Startup Advisor @ Doers Ventures</p>
+                <p className="text-muted-foreground text-sm">Startup Advisor</p>
+                <p className="text-muted-foreground text-sm mb-3">@ Doers Ventures</p>
                 <a 
                   href="https://www.linkedin.com/in/adrian-gheorghe/" 
                   target="_blank" 
@@ -249,7 +253,8 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                   <img src={cosminPirvu} alt="Cosmin Pîrvu" className="w-full h-full object-cover" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-1">Cosmin Pîrvu</h3>
-                <p className="text-muted-foreground mb-3">Startup Program Manager @ Veridion</p>
+                <p className="text-muted-foreground text-sm">Startup Program Manager</p>
+                <p className="text-muted-foreground text-sm mb-3">@ Veridion</p>
                 <a 
                   href="https://www.linkedin.com/in/cosminpirvu/" 
                   target="_blank" 
@@ -271,7 +276,8 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                   <img src={georgeBonea} alt="George Bonea" className="w-full h-full object-cover" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-1">George Bonea</h3>
-                <p className="text-muted-foreground mb-3">Copywriter & Communication Consultant</p>
+                <p className="text-muted-foreground text-sm">Copywriter &</p>
+                <p className="text-muted-foreground text-sm mb-3">Communication Consultant</p>
                 <a 
                   href="https://www.linkedin.com/in/george-bonea-b0494b91/" 
                   target="_blank" 
