@@ -12,80 +12,64 @@ import andreiMunteanu from '@/assets/mentors/andrei-munteanu.jpeg';
 import cosminPirvu from '@/assets/mentors/cosmin-pirvu.jpeg';
 import georgeBonea from '@/assets/mentors/george-bonea.jpeg';
 import adrianGheorghe from '@/assets/mentors/adrian-gheorghe.jpeg';
-
-const mentors = [
-  {
-    name: 'Răzvan Suta',
-    role: 'Angel investor & VC',
-    company: '',
-    image: razvanSuta,
-    linkedin: 'https://www.linkedin.com/in/razvansuta/',
-  },
-  {
-    name: 'Aleodor Tăbârcea',
-    role: 'Engineering Manager',
-    company: 'Stripe',
-    image: aleodorTabarcea,
-    linkedin: 'https://www.linkedin.com/in/aleodor-tabarcea/',
-  },
-  {
-    name: 'Andrei Munteanu',
-    role: 'CEO & Co-founder',
-    company: 'Cowork & Prow',
-    image: andreiMunteanu,
-    linkedin: 'https://www.linkedin.com/in/andreicosminmunteanu/',
-  },
-  {
-    name: 'Adrian Gheorghe',
-    role: 'Startup Advisor',
-    company: 'Doers Ventures',
-    image: adrianGheorghe,
-    linkedin: 'https://www.linkedin.com/in/adrian-gheorghe/',
-  },
-  {
-    name: 'Cosmin Pîrvu',
-    role: 'Startup Program Manager',
-    company: 'Veridion',
-    image: cosminPirvu,
-    linkedin: 'https://www.linkedin.com/in/cosminpirvu/',
-  },
-  {
-    name: 'George Bonea',
-    role: 'Copywriter &',
-    company: 'Communication Consultant',
-    image: georgeBonea,
-    linkedin: 'https://www.linkedin.com/in/george-bonea-b0494b91/',
-  },
-];
-
+const mentors = [{
+  name: 'Răzvan Suta',
+  role: 'Angel investor & VC',
+  company: '',
+  image: razvanSuta,
+  linkedin: 'https://www.linkedin.com/in/razvansuta/'
+}, {
+  name: 'Aleodor Tăbârcea',
+  role: 'Engineering Manager',
+  company: 'Stripe',
+  image: aleodorTabarcea,
+  linkedin: 'https://www.linkedin.com/in/aleodor-tabarcea/'
+}, {
+  name: 'Andrei Munteanu',
+  role: 'CEO & Co-founder',
+  company: 'Cowork & Prow',
+  image: andreiMunteanu,
+  linkedin: 'https://www.linkedin.com/in/andreicosminmunteanu/'
+}, {
+  name: 'Adrian Gheorghe',
+  role: 'Startup Advisor',
+  company: 'Doers Ventures',
+  image: adrianGheorghe,
+  linkedin: 'https://www.linkedin.com/in/adrian-gheorghe/'
+}, {
+  name: 'Cosmin Pîrvu',
+  role: 'Startup Program Manager',
+  company: 'Veridion',
+  image: cosminPirvu,
+  linkedin: 'https://www.linkedin.com/in/cosminpirvu/'
+}, {
+  name: 'George Bonea',
+  role: 'Copywriter &',
+  company: 'Communication Consultant',
+  image: georgeBonea,
+  linkedin: 'https://www.linkedin.com/in/george-bonea-b0494b91/'
+}];
 const Mentors = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       <div className="pt-24 pb-16">
         <div className="container mx-auto px-4">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-foreground mb-6">Mentors & Jury</h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Learn from industry experts who will guide your innovation journey and 
-              evaluate the impact of your sustainable transportation solutions.
-            </p>
+            <h1 className="text-5xl font-bold text-foreground mb-6">Meet Our Expert Panel</h1>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Experienced professionals from sustainability, technology, design, and business</p>
           </div>
 
           {/* Mentor Grid */}
           <section className="mb-20">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Meet Our Expert Panel</h2>
-              <p className="text-lg text-muted-foreground">
-                Experienced professionals from sustainability, technology, design, and business
-              </p>
+              
+              
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {mentors.map((mentor, index) => (
-                <Card key={index} className="card-elevated text-center group hover:scale-[1.02] transition-transform duration-300">
+              {mentors.map((mentor, index) => <Card key={index} className="card-elevated text-center group hover:scale-[1.02] transition-transform duration-300">
                   <div className="pt-4">
                     <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
                       <img src={mentor.image} alt={mentor.name} className="w-full h-full object-cover" />
@@ -93,17 +77,11 @@ const Mentors = () => {
                     <h3 className="text-xl font-bold text-foreground mb-1">{mentor.name}</h3>
                     <p className="text-muted-foreground text-sm">{mentor.role}</p>
                     <p className="text-muted-foreground text-sm mb-3">{mentor.company || '\u00A0'}</p>
-                    <a 
-                      href={mentor.linkedin}
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
-                    >
+                    <a href={mentor.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
                       <Linkedin className="h-5 w-5 text-primary" />
                     </a>
                   </div>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </section>
 
@@ -239,8 +217,6 @@ const Mentors = () => {
       </div>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Mentors;
