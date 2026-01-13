@@ -114,14 +114,17 @@ const Index = () => {
             <SectionDivider icon={Leaf} className="mb-8" />
             
             <h2 className="text-4xl font-bold text-foreground mb-8">What it is</h2>
-            <p className="text-xl text-muted-foreground leading-relaxed mb-12">
-              Sustainability Express is an on-train innovation journey turning sustainable challenges into real, testable solutions.
-
-Our first journey takes place on a train from Bucharest to Timișoara and back.
-
-48 hours, mostly on board, dedicated to creating implementable ideas that can change the world.
-
-            </p>
+            <div className="text-xl text-muted-foreground leading-relaxed mb-12 space-y-6">
+              <p>
+                Sustainability Express is an on-train innovation journey turning sustainable challenges into real, testable solutions.
+              </p>
+              <p>
+                Our first journey takes place on a train from Bucharest to Timișoara and back.
+              </p>
+              <p>
+                48 hours, mostly on board, dedicated to creating implementable ideas that can change the world.
+              </p>
+            </div>
             
             {/* Route visualization */}
             <RouteVisualization stops={['Bucharest', 'Timisoara', 'Bucharest']} />
