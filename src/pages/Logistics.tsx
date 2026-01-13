@@ -180,7 +180,6 @@ const Logistics = () => {
               <Card className="card-elevated">
                 <h3 className="text-lg font-bold text-foreground mb-4">👕 Personal Items</h3>
                 <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li>□ Comfortable clothes (48h)</li>
                   <li>□ Toiletries</li>
                   <li>□ Earplugs & eye mask</li>
                   <li>□ Small pillow (optional)</li>
@@ -188,7 +187,17 @@ const Logistics = () => {
                 </ul>
               </Card>
               
-              
+              <Card className="card-elevated md:col-span-2">
+                <h3 className="text-lg font-bold text-foreground mb-4">🎒 Bring Yourself</h3>
+                <ul className="grid md:grid-cols-2 gap-2 text-muted-foreground text-sm">
+                  <li>□ 💻 Laptop and charger</li>
+                  <li>□ 👕 Comfortable clothes for the journey</li>
+                  <li>□ 🔧 Any hardware you may need</li>
+                  <li>□ ⚡ Lots of energy</li>
+                  <li>□ 🎉 Enthusiasm</li>
+                  <li>□ 🤝 An open, collaborative mindset</li>
+                </ul>
+              </Card>
             </div>
           </section>
 
