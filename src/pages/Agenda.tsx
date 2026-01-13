@@ -4,10 +4,8 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Clock, MapPin, Coffee, Luggage, Moon } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-
 const Agenda = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       <div className="pt-24 pb-16">
@@ -123,7 +121,7 @@ const Agenda = () => {
                   </div>
                   
                   <div className="flex items-start gap-4">
-                    <div className="w-20 text-sm font-medium text-muted-foreground pt-1">14:00</div>
+                    <div className="w-20 text-sm font-medium text-muted-foreground pt-1">17:00</div>
                     <div className="flex-1">
                       <h3 className="font-semibold text-foreground">Final Presentations & Awards</h3>
                       <p className="text-muted-foreground">Team pitches, jury deliberation, and celebration</p>
@@ -181,8 +179,6 @@ const Agenda = () => {
       </div>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Agenda;
