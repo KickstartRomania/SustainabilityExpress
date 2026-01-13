@@ -24,7 +24,7 @@ const applicationSchema = z.object({
   skillLevel: z.enum(['student', 'junior', 'mid', 'senior'], { 
     errorMap: () => ({ message: 'Please select an experience level' }) 
   }),
-  portfolio: z.string().trim().max(500, 'Portfolio URL must be less than 500 characters').optional().or(z.literal('')),
+  portfolio: z.string().trim().min(1, 'Portfolio/LinkedIn/GitHub is required').max(500, 'Portfolio URL must be less than 500 characters'),
   motivation: z.string().trim().min(10, 'Motivation must be at least 10 characters').max(250, 'Motivation must be less than 250 characters'),
   idea: z.string().trim().max(500, 'Idea must be less than 500 characters').optional().or(z.literal('')),
   accessibility: z.string().trim().max(500, 'Accessibility requirements must be less than 500 characters').optional().or(z.literal('')),
@@ -300,12 +300,13 @@ const Apply = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="portfolio">Portfolio/LinkedIn/GitHub</Label>
+                    <Label htmlFor="portfolio">Portfolio/LinkedIn/GitHub *</Label>
                     <Input
                       id="portfolio"
                       value={formData.portfolio}
                       onChange={(e) => handleInputChange('portfolio', e.target.value)}
                       placeholder="Link to your work or professional profile"
+                      required
                     />
                   </div>
 
