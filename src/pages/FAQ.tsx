@@ -16,7 +16,7 @@ const FAQ = () => {
     },
     {
       question: "How reliable is the internet on the train?",
-      answer: "Wi-Fi is available but can be intermittent. We recommend bringing a mobile hotspot or USB data plan as backup. Many participants use offline development tools and sync when connectivity improves."
+      answer: "Internet connectivity during the train journey may be inconsistent, whether you're using the onboard Wi-Fi or your personal hotspot. On the bright side, it's the perfect opportunity to unplug, relax, and focus on developing ideas away from online noise."
     },
     {
       question: "Where will we sleep?",
