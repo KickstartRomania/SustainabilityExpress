@@ -28,7 +28,7 @@ const FAQ = () => {
     },
     {
       question: "Can I leave early or join late?",
-      answer: "The experience is designed as a complete journey from Friday departure to Sunday arrival. Early departure is possible but you'll miss key parts of the program. Late joining isn't feasible due to train logistics."
+      answer: "Unfortunately, it's not possible to join after the train has departed. We encourage all participants to stay for the full duration of the program, as leaving early would disrupt the experience for both you and your team. It would also require stopping the train in the middle of nowhere for you to disembark."
     },
     {
       question: "What are the safety protocols?",
