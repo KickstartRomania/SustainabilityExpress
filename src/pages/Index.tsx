@@ -7,6 +7,7 @@ import aleodorTabarcea from '@/assets/mentors/aleodor-tabarcea.jpeg';
 import andreiMunteanu from '@/assets/mentors/andrei-munteanu.jpeg';
 import cosminPirvu from '@/assets/mentors/cosmin-pirvu.jpeg';
 import georgeBonea from '@/assets/mentors/george-bonea.jpeg';
+import adrianGheorghe from '@/assets/mentors/adrian-gheorghe.jpeg';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import heroTrain from '@/assets/hero-train.jpg';
@@ -227,8 +228,8 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 <RailLine />
               </div>
               <div className="pt-4 text-center">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20 bg-muted flex items-center justify-center">
-                  <Users className="h-12 w-12 text-muted-foreground" />
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
+                  <img src={adrianGheorghe} alt="Adrian Gheorghe" className="w-full h-full object-cover" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-1">Adrian Gheorghe</h3>
                 <p className="text-muted-foreground text-sm">Startup Advisor</p>
