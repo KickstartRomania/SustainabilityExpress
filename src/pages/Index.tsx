@@ -95,7 +95,7 @@ const Index = () => {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 border-2 bg-background/60 backdrop-blur-sm">
-                <Link to="/how-it-works">Learn More</Link>
+                <Link to="/how-it-works">Find Out More</Link>
               </Button>
             </div>
           </div>
