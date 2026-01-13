@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Lightbulb, Train, Leaf, Zap, Trophy, Code, Megaphone, Briefcase, GraduationCap, Linkedin, Handshake } from 'lucide-react';
+import { ArrowRight, Users, Lightbulb, Train, Leaf, Zap, Trophy, Code, Megaphone, Briefcase, GraduationCap, Linkedin, Handshake, Heart, Brain, Recycle, BarChart3 } from 'lucide-react';
 import razvanSuta from '@/assets/mentors/razvan-suta.jpeg';
 import aleodorTabarcea from '@/assets/mentors/aleodor-tabarcea.jpeg';
 import andreiMunteanu from '@/assets/mentors/andrei-munteanu.jpeg';
@@ -746,30 +746,28 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
           <div className="text-center mb-16">
             <SectionDivider icon={Zap} className="mb-8" />
             <h2 className="text-4xl font-bold text-foreground mb-4">Challenge Themes</h2>
-            <p className="text-xl text-muted-foreground">Five focus areas for sustainable innovation</p>
+            <p className="text-xl text-muted-foreground">Six pathways to sustainable impact</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {[{
-            icon: Leaf,
-            title: 'Green Passenger Experience',
-            color: 'bg-green-500'
+            icon: Heart,
+            title: 'Sustainable Lifestyles & Everyday Choices'
           }, {
-            icon: Zap,
-            title: 'Smart Waste & Circular',
-            color: 'bg-blue-500'
+            icon: Brain,
+            title: 'Climate Awareness & Behavior Change'
           }, {
-            icon: Lightbulb,
-            title: 'Eco-Nudges & Awareness',
-            color: 'bg-yellow-500'
+            icon: Recycle,
+            title: 'Circular Economy & Resource Efficiency'
+          }, {
+            icon: BarChart3,
+            title: 'Digital Tools for Sustainability Impact'
           }, {
             icon: Users,
-            title: 'Community & Culture',
-            color: 'bg-purple-500'
+            title: 'Community-Led Sustainability Solutions'
           }, {
-            icon: Train,
-            title: 'Digital Tools for Crew',
-            color: 'bg-orange-500'
+            icon: GraduationCap,
+            title: 'Education, Youth & Future Skills for Sustainability'
           }].map((theme, index) => {
             const Icon = theme.icon;
             return <Card key={index} className="p-6 text-center hover:shadow-card transition-all duration-300 group relative overflow-hidden hover:-translate-y-1">
@@ -777,8 +775,8 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                   <div className="absolute bottom-0 left-4 right-4 opacity-20">
                     <RailLine />
                   </div>
-                  <div className={`w-12 h-12 ${theme.color} rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                    <Icon className="h-6 w-6 text-white" />
+                  <div className="w-12 h-12 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Icon className="h-6 w-6 text-primary-foreground" />
                   </div>
                   <h3 className="font-semibold text-foreground">{theme.title}</h3>
                 </Card>;
