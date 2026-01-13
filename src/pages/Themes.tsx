@@ -47,7 +47,7 @@ const Themes = () => {
 
           {/* Broad Themes */}
           <section className="mb-20">
-            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Broad Themes</h2>
+            
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {themes.map((theme, index) => {
               const Icon = theme.icon;
