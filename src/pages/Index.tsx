@@ -39,11 +39,7 @@ const Index = () => {
       <section id="hero" className="relative min-h-screen overflow-hidden">
         {/* Full-bleed background image */}
         <div className="absolute inset-0">
-          <img 
-            alt="Sustainability Express - Innovation on Rails" 
-            className="w-full h-full object-cover" 
-            src="/lovable-uploads/31752dd9-3c94-4627-a76e-99dbbef51f60.png" 
-          />
+          <img alt="Sustainability Express - Innovation on Rails" className="w-full h-full object-cover" src="/lovable-uploads/31752dd9-3c94-4627-a76e-99dbbef51f60.png" />
           {/* Dark overlay for text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/60" />
@@ -66,10 +62,12 @@ const Index = () => {
                 Sustainability Express
               </h1>
               <p className="text-2xl lg:text-3xl text-gradient font-semibold">
-                Hackathon on Rails
+                From Point A to Solution Station.
+
               </p>
               <p className="text-xl text-muted-foreground max-w-lg">
-                48 hours. On a moving train. Real solutions for greener travel.
+                An on-train hackathon focused on real solutions.
+
               </p>
             </div>
             
