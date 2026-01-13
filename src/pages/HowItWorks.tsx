@@ -27,8 +27,8 @@ const HowItWorks = () => {
                 <Users className="h-12 w-12 text-primary mb-4" />
                 <h3 className="text-xl font-bold text-foreground mb-4">Team Formation</h3>
                 <p className="text-muted-foreground">
-                  Teams form Friday night during our icebreaker sessions. Come with an idea or join others — 
-                  we'll help you find the perfect match based on skills and interests.
+                  The journey starts together. On Friday night, ideas meet people, and we help form balanced teams with complementary skills and perspectives.
+
                 </p>
               </Card>
 
@@ -36,8 +36,8 @@ const HowItWorks = () => {
                 <Laptop className="h-12 w-12 text-primary mb-4" />
                 <h3 className="text-xl font-bold text-foreground mb-4">Build & Prototype</h3>
                 <p className="text-muted-foreground">
-                  Create a working prototype — an app demo, interactive dashboard, or campaign prototype. 
-                  Focus on solutions that are practical and weekend-implementable.
+                  Turn your idea into a tangible prototype (digital or strategic) prioritizing solutions that are realistic and testable.
+
                 </p>
               </Card>
 
@@ -45,8 +45,8 @@ const HowItWorks = () => {
                 <Award className="h-12 w-12 text-primary mb-4" />
                 <h3 className="text-xl font-bold text-foreground mb-4">Mentorship & Pitch</h3>
                 <p className="text-muted-foreground">
-                  Get guidance at mentorship checkpoints throughout the journey, then present your 
-                  solution to our expert jury on Sunday for awards and feedback.
+                  Refine your idea with expert guidance along the way, then pitch your solution to an experienced jury for feedback, recognition, and awards.
+
                 </p>
               </Card>
             </div>
@@ -62,9 +62,12 @@ const HowItWorks = () => {
                     <span className="text-white font-bold text-sm">1</span>
                   </div>
                   <div>
-                    <h3 className="font-bold text-foreground mb-2">3-5 Minute Pitch</h3>
+                    <h3 className="font-bold text-foreground mb-2">5-7 Minute Pitch
+                  </h3>
                     <p className="text-muted-foreground">
-                      Present your solution with a live demo, clickable mockup, or compelling video demonstration.
+                      Bring your solution to life through a live demo, interactive mockup, or a compelling presentation that clearly shows how it works and why it matters.
+
+
                     </p>
                   </div>
                 </div>
@@ -76,7 +79,12 @@ const HowItWorks = () => {
                   <div>
                     <h3 className="font-bold text-foreground mb-2">One-Page Summary</h3>
                     <p className="text-muted-foreground">
-                      Document your problem, solution, expected impact, and next steps in a clear, concise format.
+                      Capture your idea on a single page, outlining the problem, your solution, its expected impact, and the next steps toward real-world implementation.
+
+
+
+
+
                     </p>
                   </div>
                 </div>
@@ -85,10 +93,19 @@ const HowItWorks = () => {
               <div className="bg-card rounded-2xl p-6 border border-border">
                 <h4 className="font-bold text-foreground mb-4">💡 Pro Tips</h4>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Focus on user experience over complex backend</li>
-                  <li>• Test your idea with fellow participants early</li>
-                  <li>• Prepare backup plans for limited connectivity</li>
-                  <li>• Document your process for the presentation</li>
+                  <li>• Solve a real, well-defined problem.
+
+
+
+                </li>
+                  <li>• Design for feasibility, not complexity.
+
+                </li>
+                  <li>• Use mentors to validate key assumptions early.
+
+                </li>
+                  <li>• Show clear impact and next steps beyond the weekend.
+                </li>
                 </ul>
               </div>
             </div>
@@ -165,19 +182,25 @@ const HowItWorks = () => {
                   <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      Limited to 20-30 participants
+                      Limited to 20 participants
                     </li>
                     <li className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-accent rounded-full"></div>
                       Priority for diverse skill sets
+
+
+
+
                     </li>
                     <li className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-accent rounded-full"></div>
                       Focus on motivation and enthusiasm
+
                     </li>
                     <li className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      Review within 5-7 days of application
+                      Interdisciplinary teams with varied backgrounds
+
                     </li>
                     <li className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-accent rounded-full"></div>
@@ -209,7 +232,8 @@ const HowItWorks = () => {
                 <div>
                   <h3 className="text-xl font-bold text-foreground mb-4">Bring Yourself</h3>
                   <ul className="space-y-2 text-muted-foreground">
-                    <li>📱 Laptop, charger, mobile hotspot</li>
+                    <li>​
+                  </li>
                     <li>👕 Comfortable clothes for 48 hours</li>
                     <li>🥤 Reusable bottle and cup</li>
                     <li>🔧 Any hardware/sensors you need</li>
