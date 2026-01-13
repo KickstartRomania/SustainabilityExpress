@@ -20,9 +20,7 @@ const applicationSchema = z.object({
   name: z.string().trim().min(2, 'Name must be at least 2 characters').max(100, 'Name must be less than 100 characters'),
   email: z.string().trim().email('Please enter a valid email address').max(255, 'Email must be less than 255 characters'),
   phone: z.string().trim().min(8, 'Phone must be at least 8 characters').max(20, 'Phone must be less than 20 characters'),
-  role: z.enum(['developer', 'designer', 'product', 'business', 'sustainability', 'other'], { 
-    errorMap: () => ({ message: 'Please select a role' }) 
-  }),
+  role: z.string().min(1, 'Please select a role'),
   skillLevel: z.enum(['student', 'junior', 'mid', 'senior'], { 
     errorMap: () => ({ message: 'Please select an experience level' }) 
   }),
@@ -235,12 +233,44 @@ const Apply = () => {
                           <SelectValue placeholder="Select your primary role" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="developer">Developer</SelectItem>
-                          <SelectItem value="designer">Designer</SelectItem>
-                          <SelectItem value="product">Product Manager</SelectItem>
-                          <SelectItem value="business">Business/Marketing</SelectItem>
-                          <SelectItem value="sustainability">Sustainability Professional</SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
+                          {/* Tech roles */}
+                          <SelectItem value="software_developer">Software Developer / Engineer</SelectItem>
+                          <SelectItem value="web_developer">Web Developer (Frontend / Backend / Full Stack)</SelectItem>
+                          <SelectItem value="data_analyst">Data Analyst / Data Scientist</SelectItem>
+                          <SelectItem value="ai_ml_engineer">AI / Machine Learning Engineer</SelectItem>
+                          <SelectItem value="devops">DevOps / Cloud Engineer</SelectItem>
+                          <SelectItem value="qa_engineer">QA Engineer / Software Tester</SelectItem>
+                          <SelectItem value="cybersecurity">Cybersecurity Specialist</SelectItem>
+                          <SelectItem value="ux_ui_designer">UX / UI Designer</SelectItem>
+                          <SelectItem value="product_engineer">Product Engineer</SelectItem>
+                          <SelectItem value="it_support">IT Support / System Administrator</SelectItem>
+                          <SelectItem value="other_tech">Something else in Tech</SelectItem>
+                          {/* Business roles */}
+                          <SelectItem value="business_analyst">Business Analyst</SelectItem>
+                          <SelectItem value="product_manager">Product Manager</SelectItem>
+                          <SelectItem value="project_manager">Project Manager</SelectItem>
+                          <SelectItem value="operations_manager">Operations Manager</SelectItem>
+                          <SelectItem value="consultant">Strategy & Management Consultant</SelectItem>
+                          <SelectItem value="entrepreneur">Entrepreneur / Startup Founder</SelectItem>
+                          <SelectItem value="sales_bd">Sales Manager / Business Development</SelectItem>
+                          <SelectItem value="financial_analyst">Financial Analyst</SelectItem>
+                          <SelectItem value="investment_vc">Investment / Venture Capital Associate</SelectItem>
+                          <SelectItem value="supply_chain">Supply Chain & Logistics Specialist</SelectItem>
+                          <SelectItem value="other_business">Something else in Business area</SelectItem>
+                          {/* Communication roles */}
+                          <SelectItem value="marketing_specialist">Marketing Specialist</SelectItem>
+                          <SelectItem value="digital_marketing">Digital Marketing Manager</SelectItem>
+                          <SelectItem value="content_creator">Content Creator / Copywriter</SelectItem>
+                          <SelectItem value="social_media">Social Media Manager</SelectItem>
+                          <SelectItem value="brand_manager">Brand Manager</SelectItem>
+                          <SelectItem value="pr_communications">PR & Communications Specialist</SelectItem>
+                          <SelectItem value="community_manager">Community Manager</SelectItem>
+                          <SelectItem value="growth_marketer">Growth Marketer</SelectItem>
+                          <SelectItem value="employer_branding">Employer Branding Specialist</SelectItem>
+                          <SelectItem value="events_partnerships">Event & Partnerships Manager</SelectItem>
+                          <SelectItem value="other_communication">Something else in Communication</SelectItem>
+                          {/* Other */}
+                          <SelectItem value="teenager">Passionate teenager</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
