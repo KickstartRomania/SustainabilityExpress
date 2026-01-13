@@ -283,6 +283,63 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
         </div>
       </section>
 
+      {/* Why is it Different Section */}
+      <RailSection id="why-different" className="py-24 bg-secondary/20" showSideRails railVariant="subtle">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <SectionDivider icon={Zap} className="mb-8" />
+            <h2 className="text-4xl font-bold text-foreground">Why is it different?</h2>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="card-elevated text-center group hover:scale-105 transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute top-0 left-4 right-4 opacity-30">
+                <RailLine />
+              </div>
+              <div className="pt-4">
+                <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <Train className="h-8 w-8 text-primary-foreground" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-4">It Happens on a Moving Train</h3>
+                <p className="text-muted-foreground">
+                  Unlike classic hackathons, the entire experience unfolds on a night train, turning travel time into an intensive, distraction-free innovation space.
+                </p>
+              </div>
+            </Card>
+
+            <Card className="card-elevated text-center group hover:scale-105 transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute top-0 left-4 right-4 opacity-30">
+                <RailLine />
+              </div>
+              <div className="pt-4">
+                <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <Lightbulb className="h-8 w-8 text-primary-foreground" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-4">Built for Real-World Impact</h3>
+                <p className="text-muted-foreground">
+                  Ideas are designed from the start to be feasible, pilot-ready, and relevant for companies, public institutions, and NGOs — not just conceptual exercises.
+                </p>
+              </div>
+            </Card>
+
+            <Card className="card-elevated text-center group hover:scale-105 transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute top-0 left-4 right-4 opacity-30">
+                <RailLine />
+              </div>
+              <div className="pt-4">
+                <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <Users className="h-8 w-8 text-primary-foreground" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-4">Strong Follow-Up Mindset</h3>
+                <p className="text-muted-foreground">
+                  The project goes beyond the event itself, offering pathways for piloting, partnerships, and long-term collaboration with sponsors and stakeholders.
+                </p>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </RailSection>
+
       {/* Timeline Section */}
       <RailSection id="journey" className="py-24 bg-secondary/20" showSideRails railVariant="subtle">
         <div className="container mx-auto px-4">
