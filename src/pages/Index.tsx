@@ -610,17 +610,17 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
             <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10" />
             
             {/* Scrolling container */}
-            <div className="flex animate-scroll">
+            <div className="flex animate-scroll items-center">
               {/* First set of logos */}
               {partners.map((partner, index) => (
                 <div
                   key={`first-${index}`}
-                  className="flex-shrink-0 w-48 h-32 mx-6 flex items-center justify-center bg-card rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow duration-300"
+                  className="flex-shrink-0 mx-8"
                 >
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="max-w-full max-h-full object-contain"
+                    className="h-20 w-auto object-contain rounded-lg"
                   />
                 </div>
               ))}
@@ -628,12 +628,12 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
               {partners.map((partner, index) => (
                 <div
                   key={`second-${index}`}
-                  className="flex-shrink-0 w-48 h-32 mx-6 flex items-center justify-center bg-card rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow duration-300"
+                  className="flex-shrink-0 mx-8"
                 >
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="max-w-full max-h-full object-contain"
+                    className="h-20 w-auto object-contain rounded-lg"
                   />
                 </div>
               ))}
