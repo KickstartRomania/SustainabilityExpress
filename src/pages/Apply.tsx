@@ -386,7 +386,7 @@ const Apply = () => {
                 <p className="text-white/90 text-sm mb-4">
                   Need help with your application or have specific questions about the event?
                 </p>
-                <div className="flex flex-col gap-2">
+                <div className="flex gap-2">
                   <a href="mailto:george@sustainabilityexpress.eu">
                     <Button variant="outline" className="w-full border-white text-white hover:bg-white hover:text-primary">
                       Email Us
