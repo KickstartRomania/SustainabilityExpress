@@ -41,9 +41,10 @@ const Logistics = () => {
                 <div>
                   <h3 className="text-xl font-bold text-foreground mb-4">Sustainability Rewards</h3>
                   <div className="bg-primary/10 rounded-2xl p-4">
-                    <p className="text-foreground font-semibold mb-2">🌱 Bring Your Reusables!</p>
+                    <p className="text-foreground font-semibold mb-2">🌱 Be sustainable </p>
                     <p className="text-muted-foreground text-sm">
-                      Bring your own bottle and cup to earn special rewards and reduce waste on board.
+                      Bring your reusables. Win our deep respect.
+
                     </p>
                   </div>
                 </div>
