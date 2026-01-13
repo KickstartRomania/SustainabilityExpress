@@ -356,10 +356,11 @@ const Apply = () => {
                 <Users className="h-8 w-8 text-primary mb-4" />
                 <h3 className="text-xl font-bold text-foreground mb-4">Selection Process</h3>
                 <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li>• Limited to 20-30 participants</li>
-                  <li>• Priority for diverse skill combinations</li>
+                  <li>• Limited to 20 participants</li>
+                  <li>• Priority for diverse skill sets</li>
                   <li>• Focus on motivation and enthusiasm</li>
-                  <li>• Review within 5-7 days</li>
+                  <li>• Interdisciplinary teams with varied backgrounds</li>
+                  <li>• Confirmation includes next steps</li>
                 </ul>
               </Card>
 
