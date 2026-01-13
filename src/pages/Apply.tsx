@@ -234,7 +234,7 @@ const Apply = () => {
                         </SelectTrigger>
                         <SelectContent>
                           <SelectGroup>
-                            <SelectLabel className="font-bold text-foreground">Tech</SelectLabel>
+                            <SelectLabel className="font-bold text-primary-foreground bg-primary px-2 py-1 rounded -mx-1">Tech</SelectLabel>
                             <SelectItem value="software_developer">Software Developer / Engineer</SelectItem>
                             <SelectItem value="web_developer">Web Developer (Frontend / Backend / Full Stack)</SelectItem>
                             <SelectItem value="data_analyst">Data Analyst / Data Scientist</SelectItem>
@@ -248,7 +248,7 @@ const Apply = () => {
                             <SelectItem value="other_tech">Something else in Tech</SelectItem>
                           </SelectGroup>
                           <SelectGroup>
-                            <SelectLabel className="font-bold text-foreground">Business</SelectLabel>
+                            <SelectLabel className="font-bold text-primary-foreground bg-primary px-2 py-1 rounded -mx-1">Business</SelectLabel>
                             <SelectItem value="business_analyst">Business Analyst</SelectItem>
                             <SelectItem value="product_manager">Product Manager</SelectItem>
                             <SelectItem value="project_manager">Project Manager</SelectItem>
@@ -262,7 +262,7 @@ const Apply = () => {
                             <SelectItem value="other_business">Something else in Business area</SelectItem>
                           </SelectGroup>
                           <SelectGroup>
-                            <SelectLabel className="font-bold text-foreground">Communication</SelectLabel>
+                            <SelectLabel className="font-bold text-primary-foreground bg-primary px-2 py-1 rounded -mx-1">Communication</SelectLabel>
                             <SelectItem value="marketing_specialist">Marketing Specialist</SelectItem>
                             <SelectItem value="digital_marketing">Digital Marketing Manager</SelectItem>
                             <SelectItem value="content_creator">Content Creator / Copywriter</SelectItem>
