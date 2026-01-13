@@ -288,7 +288,7 @@ const Apply = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="idea">Got an idea to pitch? (optional)</Label>
+                    <Label htmlFor="idea">Which sustainability topics are you most passionate about? (optional)</Label>
                     <Textarea
                       id="idea"
                       value={formData.idea}
