@@ -276,6 +276,7 @@ const Apply = () => {
                             <SelectItem value="other_communication">Something else in Communication</SelectItem>
                           </SelectGroup>
                           <SelectGroup>
+                            <SelectLabel className="font-bold text-primary-foreground bg-primary px-2 py-1 rounded -mx-1">Teenager</SelectLabel>
                             <SelectItem value="teenager">Passionate teenager</SelectItem>
                           </SelectGroup>
                         </SelectContent>
