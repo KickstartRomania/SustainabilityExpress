@@ -36,6 +36,9 @@ import prowLogo from '@/assets/partners/prow.png';
 import amplifyOngLogo from '@/assets/partners/amplify-ong.png';
 import launchRomaniaLogo from '@/assets/partners/launch-romania.png';
 import eduupLogo from '@/assets/partners/eduup.png';
+import skvotLogo from '@/assets/partners/skvot.png';
+import alacrityLogo from '@/assets/partners/alacrity.png';
+import curteaVecheLogo from '@/assets/partners/curtea-veche.png';
 
 const partners = [
   { name: 'Sameday', logo: samedayLogo },
@@ -55,6 +58,9 @@ const partners = [
   { name: 'AmpliFY ONG', logo: amplifyOngLogo },
   { name: 'Launch Romania', logo: launchRomaniaLogo },
   { name: 'EduUP', logo: eduupLogo },
+  { name: 'SKVOT', logo: skvotLogo },
+  { name: 'Alacrity', logo: alacrityLogo },
+  { name: 'Curtea Veche Publishing', logo: curteaVecheLogo },
 ];
 const sections = [{
   id: 'hero',
