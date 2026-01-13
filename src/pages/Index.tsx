@@ -147,7 +147,8 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <SectionDivider icon={Users} className="mb-8" />
-            <h2 className="text-4xl font-bold text-foreground">Mentors & Jury</h2>
+            <h2 className="text-4xl font-bold text-foreground mb-4">Mentors & Jury</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">They are the mentors and industry professionals who will help turn your idea into reality and boost its chances of success.</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
