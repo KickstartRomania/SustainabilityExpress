@@ -615,12 +615,12 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
               {partners.map((partner, index) => (
                 <div
                   key={`first-${index}`}
-                  className="flex-shrink-0 mx-8"
+                  className="flex-shrink-0 mx-8 w-32 h-20 flex items-center justify-center"
                 >
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="h-20 w-auto object-contain rounded-lg"
+                    className="max-w-full max-h-full object-contain rounded-lg"
                   />
                 </div>
               ))}
@@ -628,12 +628,12 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
               {partners.map((partner, index) => (
                 <div
                   key={`second-${index}`}
-                  className="flex-shrink-0 mx-8"
+                  className="flex-shrink-0 mx-8 w-32 h-20 flex items-center justify-center"
                 >
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="h-20 w-auto object-contain rounded-lg"
+                    className="max-w-full max-h-full object-contain rounded-lg"
                   />
                 </div>
               ))}
