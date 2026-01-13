@@ -386,6 +386,15 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
               </p>
             </div>
           </div>
+          
+          <div className="text-center mt-12">
+            <Button asChild variant="outline" size="lg" className="group">
+              <Link to="/agenda">
+                See Full Agenda
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </RailSection>
 
