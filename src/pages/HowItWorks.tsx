@@ -14,8 +14,8 @@ const HowItWorks = () => {
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-foreground mb-6">How It Works</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              A unique hackathon experience where innovation meets sustainable travel. 
-              Here's everything you need to know about format, timeline, and expectations.
+              We turn the journey into the destination. Sustainability Express brings innovators on board a night train, combining intense teamwork, expert mentorship, and real-world challenges to transform bold ideas into feasible solutions for sustainable travel.
+
             </p>
           </div>
 
