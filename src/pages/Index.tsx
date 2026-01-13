@@ -357,9 +357,10 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
               <div className="w-20 h-20 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center text-white font-bold text-2xl shadow-lg">
                 1
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Depart</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-2">Departure & Ideation</h3>
+              <p className="text-sm font-medium text-primary mb-4">(Bucharest → Timișoara)</p>
               <p className="text-muted-foreground">
-                Friday 20:30 from Bucharest. Icebreakers, team formation, and late-night brainstorming as we roll towards Timisoara.
+                The journey starts on a night train where teams are formed, challenges are introduced, and the first ideas take shape during intensive on-board collaboration.
               </p>
             </div>
 
@@ -367,9 +368,10 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
               <div className="w-20 h-20 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center text-white font-bold text-2xl shadow-lg">
                 2
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Build</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-2">Deep Work & Mentorship</h3>
+              <p className="text-sm font-medium text-primary mb-4">(Timișoara)</p>
               <p className="text-muted-foreground">
-                Saturday in Timisoara: full hack day with mentorship. Evening departure back to Bucharest with overnight coding sprints.
+                A full day of workshops, expert mentorship, and team work focused on refining concepts, validating ideas, and preparing clear solution directions.
               </p>
             </div>
 
@@ -377,9 +379,10 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
               <div className="w-20 h-20 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center text-white font-bold text-2xl shadow-lg">
                 3
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Return with Impact</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-2">Prototyping & Final Pitches</h3>
+              <p className="text-sm font-medium text-primary mb-4">(Timișoara → Bucharest)</p>
               <p className="text-muted-foreground">
-                Sunday 14:00 final presentations & awards in Bucharest. Take home connections, prototypes, and inspiration.
+                Teams finalize prototypes and presentations on the return train, then pitch their solutions in Bucharest in front of a jury and partners.
               </p>
             </div>
           </div>
