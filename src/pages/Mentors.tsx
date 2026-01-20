@@ -83,6 +83,11 @@ const Mentors = () => {
                   </div>
                 </Card>)}
             </div>
+            
+            {/* More mentors announcement */}
+            <p className="text-center text-lg text-muted-foreground mt-12 italic">
+              ✨ More mentors to be announced soon...
+            </p>
           </section>
 
           {/* Mentorship Process */}
