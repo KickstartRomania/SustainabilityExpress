@@ -336,6 +336,11 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
               </div>
             </Card>
           </div>
+          
+          {/* More mentors announcement */}
+          <p className="text-center text-lg text-muted-foreground mt-12 italic">
+            ✨ More mentors to be announced soon...
+          </p>
         </div>
       </section>
 
