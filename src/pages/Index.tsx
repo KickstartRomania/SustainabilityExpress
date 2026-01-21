@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
@@ -88,6 +89,27 @@ const sections = [{
   label: 'Apply'
 }];
 const Index = () => {
+  const [isPartnersVisible, setIsPartnersVisible] = useState(false);
+  const partnersRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsPartnersVisible(true);
+          observer.disconnect(); // Only trigger once
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (partnersRef.current) {
+      observer.observe(partnersRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return <div className="min-h-screen bg-background">
       <Navigation />
       <ScrollProgressRail sections={sections} />
@@ -620,7 +642,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
       </RailSection>
 
       {/* Partners Section */}
-      <section id="partners" className="py-24 relative overflow-hidden">
+      <section ref={partnersRef} id="partners" className="py-24 relative overflow-hidden">
         {/* Side rails */}
         <div className="absolute left-6 md:left-12 top-0 bottom-0 w-5 opacity-20">
           <RailLine variant="vertical" />
@@ -655,7 +677,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 </div>
                 
                 {/* Train cars - first row: locomotive leads, nose pointing LEFT, moving LEFT */}
-                <div className="flex items-end pt-8 pb-4 animate-scroll-left">
+                <div className={`flex items-end pt-8 pb-4 ${isPartnersVisible ? 'animate-scroll-left' : ''}`}>
                   {/* PHINIA Locomotive - leading, nose pointing LEFT */}
                   <div className="flex-shrink-0 flex items-end">
                     <div className="w-48 h-24 bg-gradient-to-r from-primary/20 to-card/60 backdrop-blur-sm border-2 border-primary/40 rounded-lg flex items-center justify-center mx-1 relative shadow-lg shadow-primary/10">
@@ -738,7 +760,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 
                 {/* Train cars - second row: locomotive leads, moving LEFT to RIGHT */}
                 {/* Container starts at translateX(-100%), so RIGHTMOST element (locomotive) is at left viewport edge */}
-                <div className="flex items-end justify-end pt-8 pb-4 animate-train-enter-right">
+                <div className={`flex items-end justify-end pt-8 pb-4 ${isPartnersVisible ? 'animate-train-enter-right' : ''}`}>
                   {/* Wagons FIRST (leftmost in DOM) - they trail behind, enter viewport LAST */}
                   {[...row2Partners].reverse().map((partner, index) => (
                     <div key={`row2-${index}`} className="flex-shrink-0 flex items-end">
