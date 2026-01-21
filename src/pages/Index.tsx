@@ -721,7 +721,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
               </div>
               
               {/* Second train track - train comes from LEFT, moving RIGHT */}
-              <div className="relative">
+              <div className="relative overflow-hidden">
                 {/* Rail track above */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
                 <div className="absolute -top-1 left-0 right-0 flex justify-around">
@@ -732,7 +732,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 
                 {/* Train cars - second row: locomotive leads, moving LEFT to RIGHT */}
                 {/* Container starts at translateX(-100%), so RIGHTMOST element (locomotive) is at left viewport edge */}
-                <div className="flex items-end pt-8 pb-4" style={{ transform: 'translateX(calc(-100% + 12rem))' }}>
+                <div className="flex items-end pt-8 pb-4" style={{ transform: 'translateX(calc(-100% + 200px))' }}>
                   {/* Wagons FIRST (leftmost in DOM) - they trail behind, enter viewport LAST */}
                   {[...partners].reverse().map((partner, index) => (
                     <div key={`row2-${index}`} className="flex-shrink-0 flex items-end">
