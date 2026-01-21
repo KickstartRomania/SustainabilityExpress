@@ -192,7 +192,7 @@
   }
   
   .animate-train-enter-right {
-    animation: train-enter-right 40s linear infinite;
+    animation: train-enter-right 20s linear infinite;
   }
   
   .animate-scroll-left:hover,
