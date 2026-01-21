@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
@@ -18,7 +17,6 @@ import SectionDivider from '@/components/decorative/SectionDivider';
 import RouteVisualization from '@/components/decorative/RouteVisualization';
 import JourneyRail from '@/components/decorative/JourneyRail';
 import ScrollProgressRail from '@/components/decorative/ScrollProgressRail';
-import { useDragScroll } from '@/hooks/use-drag-scroll';
 // Partner logos
 import phiniaLogo from '@/assets/partners/phinia.png';
 import samedayLogo from '@/assets/partners/sameday.png';
@@ -84,19 +82,6 @@ const sections = [{
   label: 'Apply'
 }];
 const Index = () => {
-  const [isDragging1, setIsDragging1] = useState(false);
-  const [isDragging2, setIsDragging2] = useState(false);
-  
-  const dragScroll1 = useDragScroll<HTMLDivElement>({
-    onDragStart: () => setIsDragging1(true),
-    onDragEnd: () => setIsDragging1(false),
-  });
-  
-  const dragScroll2 = useDragScroll<HTMLDivElement>({
-    onDragStart: () => setIsDragging2(true),
-    onDragEnd: () => setIsDragging2(false),
-  });
-
   return <div className="min-h-screen bg-background">
       <Navigation />
       <ScrollProgressRail sections={sections} />
@@ -653,7 +638,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
             
             {/* Two train tracks */}
             <div className="space-y-8">
-              {/* First train track */}
+              {/* First train track - train comes from RIGHT, moving LEFT */}
               <div className="relative overflow-hidden">
                 {/* Rail track above */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
@@ -663,17 +648,12 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                   ))}
                 </div>
                 
-                {/* Train cars - first row with auto-scroll */}
-                <div 
-                  ref={dragScroll1.ref}
-                  {...dragScroll1.handlers}
-                  className={`flex items-end pt-8 pb-4 cursor-grab select-none scrollbar-hide overflow-x-auto ${isDragging1 ? '' : 'animate-scroll'}`}
-                  style={{ scrollBehavior: isDragging1 ? 'auto' : 'smooth' }}
-                >
-                  {/* PHINIA Locomotive - leading from left */}
+                {/* Train cars - first row: locomotive leads, nose pointing LEFT, moving LEFT */}
+                <div className="flex items-end pt-8 pb-4 animate-scroll">
+                  {/* PHINIA Locomotive - leading, nose pointing LEFT */}
                   <div className="flex-shrink-0 flex items-end">
                     <div className="w-48 h-24 bg-gradient-to-r from-primary/20 to-card/60 backdrop-blur-sm border-2 border-primary/40 rounded-lg flex items-center justify-center mx-1 relative shadow-lg shadow-primary/10">
-                      {/* Locomotive front nose */}
+                      {/* Locomotive front nose - on LEFT side (direction of travel) */}
                       <div className="absolute -left-3 top-1/2 -translate-y-1/2 w-3 h-12 bg-primary/30 rounded-l-full border-l-2 border-y-2 border-primary/40" />
                       {/* Smokestack */}
                       <div className="absolute -top-3 left-6 w-4 h-3 bg-primary/40 rounded-t-md" />
@@ -686,7 +666,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                       <img
                         src={phiniaLogo}
                         alt="PHINIA"
-                        className="max-w-[85%] max-h-[70%] object-contain pointer-events-none"
+                        className="max-w-[85%] max-h-[70%] object-contain"
                       />
                     </div>
                     {/* Connector to next car */}
@@ -703,7 +683,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                         <img
                           src={partner.logo}
                           alt={partner.name}
-                          className="max-w-[90%] max-h-[80%] object-contain pointer-events-none"
+                          className="max-w-[90%] max-h-[80%] object-contain"
                         />
                       </div>
                       {/* Connector between cars */}
@@ -720,7 +700,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                       <div className="absolute -bottom-2 left-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <div className="absolute -bottom-2 right-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <div className="absolute -bottom-2 right-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <img src={phiniaLogo} alt="PHINIA" className="max-w-[85%] max-h-[70%] object-contain pointer-events-none" />
+                      <img src={phiniaLogo} alt="PHINIA" className="max-w-[85%] max-h-[70%] object-contain" />
                     </div>
                     <div className="w-3 h-1.5 bg-primary/50 rounded-full mb-8" />
                   </div>
@@ -729,7 +709,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                       <div className="w-36 h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative">
                         <div className="absolute -bottom-2 left-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
                         <div className="absolute -bottom-2 right-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
-                        <img src={partner.logo} alt={partner.name} className="max-w-[90%] max-h-[80%] object-contain pointer-events-none" />
+                        <img src={partner.logo} alt={partner.name} className="max-w-[90%] max-h-[80%] object-contain" />
                       </div>
                       <div className="w-2 h-1 bg-primary/40 rounded-full mb-8" />
                     </div>
@@ -740,7 +720,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
               </div>
               
-              {/* Second train track */}
+              {/* Second train track - train comes from LEFT, moving RIGHT */}
               <div className="relative overflow-hidden">
                 {/* Rail track above */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
@@ -750,28 +730,12 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                   ))}
                 </div>
                 
-                {/* Train cars - second row with auto-scroll reverse */}
-                <div 
-                  ref={dragScroll2.ref}
-                  {...dragScroll2.handlers}
-                  className={`flex items-end pt-8 pb-4 cursor-grab select-none scrollbar-hide overflow-x-auto ${isDragging2 ? '' : 'animate-scroll-reverse'}`}
-                  style={{ scrollBehavior: isDragging2 ? 'auto' : 'smooth' }}
-                >
-                  {/* Regular wagons first, then PHINIA at the end (pulling from right) */}
-                  {partners.map((partner, index) => (
-                    <div key={`row2-first-${index}`} className="flex-shrink-0 flex items-end">
-                      <div className="w-36 h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative">
-                        <div className="absolute -bottom-2 left-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
-                        <div className="absolute -bottom-2 right-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
-                        <img src={partner.logo} alt={partner.name} className="max-w-[90%] max-h-[80%] object-contain pointer-events-none" />
-                      </div>
-                      <div className="w-2 h-1 bg-primary/40 rounded-full mb-8" />
-                    </div>
-                  ))}
-                  {/* PHINIA Locomotive - on the right, pulling wagons */}
-                  <div className="flex-shrink-0 flex items-end">
+                {/* Train cars - second row: locomotive leads, nose pointing RIGHT, moving RIGHT */}
+                <div className="flex items-end pt-8 pb-4 animate-scroll-reverse">
+                  {/* PHINIA Locomotive - leading, nose pointing RIGHT */}
+                  <div className="flex-shrink-0 flex items-end flex-row-reverse">
                     <div className="w-48 h-24 bg-gradient-to-l from-primary/20 to-card/60 backdrop-blur-sm border-2 border-primary/40 rounded-lg flex items-center justify-center mx-1 relative shadow-lg shadow-primary/10">
-                      {/* Locomotive front nose - on right side */}
+                      {/* Locomotive front nose - on RIGHT side (direction of travel) */}
                       <div className="absolute -right-3 top-1/2 -translate-y-1/2 w-3 h-12 bg-primary/30 rounded-r-full border-r-2 border-y-2 border-primary/40" />
                       {/* Smokestack */}
                       <div className="absolute -top-3 right-6 w-4 h-3 bg-primary/40 rounded-t-md" />
@@ -781,22 +745,25 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                       <div className="absolute -bottom-2 left-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <div className="absolute -bottom-2 right-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <div className="absolute -bottom-2 right-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <img src={phiniaLogo} alt="PHINIA" className="max-w-[85%] max-h-[70%] object-contain pointer-events-none" />
+                      <img src={phiniaLogo} alt="PHINIA" className="max-w-[85%] max-h-[70%] object-contain" />
                     </div>
+                    {/* Connector to next car */}
                     <div className="w-3 h-1.5 bg-primary/50 rounded-full mb-8" />
                   </div>
-                  {/* Duplicate for seamless loop */}
+                  
                   {partners.map((partner, index) => (
-                    <div key={`row2-second-${index}`} className="flex-shrink-0 flex items-end">
+                    <div key={`row2-first-${index}`} className="flex-shrink-0 flex items-end">
                       <div className="w-36 h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative">
                         <div className="absolute -bottom-2 left-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
                         <div className="absolute -bottom-2 right-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
-                        <img src={partner.logo} alt={partner.name} className="max-w-[90%] max-h-[80%] object-contain pointer-events-none" />
+                        <img src={partner.logo} alt={partner.name} className="max-w-[90%] max-h-[80%] object-contain" />
                       </div>
                       <div className="w-2 h-1 bg-primary/40 rounded-full mb-8" />
                     </div>
                   ))}
-                  <div className="flex-shrink-0 flex items-end">
+                  
+                  {/* Duplicate for seamless loop */}
+                  <div className="flex-shrink-0 flex items-end flex-row-reverse">
                     <div className="w-48 h-24 bg-gradient-to-l from-primary/20 to-card/60 backdrop-blur-sm border-2 border-primary/40 rounded-lg flex items-center justify-center mx-1 relative shadow-lg shadow-primary/10">
                       <div className="absolute -right-3 top-1/2 -translate-y-1/2 w-3 h-12 bg-primary/30 rounded-r-full border-r-2 border-y-2 border-primary/40" />
                       <div className="absolute -top-3 right-6 w-4 h-3 bg-primary/40 rounded-t-md" />
@@ -805,10 +772,21 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                       <div className="absolute -bottom-2 left-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <div className="absolute -bottom-2 right-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <div className="absolute -bottom-2 right-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <img src={phiniaLogo} alt="PHINIA" className="max-w-[85%] max-h-[70%] object-contain pointer-events-none" />
+                      <img src={phiniaLogo} alt="PHINIA" className="max-w-[85%] max-h-[70%] object-contain" />
                     </div>
                     <div className="w-3 h-1.5 bg-primary/50 rounded-full mb-8" />
                   </div>
+                  
+                  {partners.map((partner, index) => (
+                    <div key={`row2-second-${index}`} className="flex-shrink-0 flex items-end">
+                      <div className="w-36 h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative">
+                        <div className="absolute -bottom-2 left-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
+                        <div className="absolute -bottom-2 right-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
+                        <img src={partner.logo} alt={partner.name} className="max-w-[90%] max-h-[80%] object-contain" />
+                      </div>
+                      <div className="w-2 h-1 bg-primary/40 rounded-full mb-8" />
+                    </div>
+                  ))}
                 </div>
                 
                 {/* Rail track below */}
