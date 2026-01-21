@@ -19,6 +19,7 @@ import JourneyRail from '@/components/decorative/JourneyRail';
 import ScrollProgressRail from '@/components/decorative/ScrollProgressRail';
 // Partner logos
 import phiniaLogo from '@/assets/partners/phinia.png';
+import phiniaLocoLogo from '@/assets/sponsors/phinia-loco.png';
 import samedayLogo from '@/assets/partners/sameday.png';
 import diarkLogo from '@/assets/partners/diark.png';
 import booksterLogo from '@/assets/partners/bookster.png';
@@ -40,7 +41,8 @@ import alacrityLogo from '@/assets/partners/alacrity.png';
 import curteaVecheLogo from '@/assets/partners/curtea-veche.png';
 import skvotLogo from '@/assets/partners/skvot.png';
 
-const partners = [
+// Row 1 partners (first half)
+const row1Partners = [
   { name: 'Sameday', logo: samedayLogo },
   { name: 'diARK', logo: diarkLogo },
   { name: 'Bookster', logo: booksterLogo },
@@ -51,6 +53,10 @@ const partners = [
   { name: 'Stripe', logo: stripeLogo },
   { name: 'Valentina România', logo: valentinaLogo },
   { name: 'Cartea Daliei', logo: carteadalieiLogo },
+];
+
+// Row 2 partners (second half)
+const row2Partners = [
   { name: 'How to Web', logo: howtowebLogo },
   { name: 'VSFA', logo: vsfaLogo },
   { name: 'Founder Institute', logo: founderInstituteLogo },
@@ -664,16 +670,16 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                       <div className="absolute -bottom-2 right-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <div className="absolute -bottom-2 right-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <img
-                        src={phiniaLogo}
+                        src={phiniaLocoLogo}
                         alt="PHINIA"
-                        className="max-w-[85%] max-h-[70%] object-contain"
+                        className="w-full h-auto object-contain"
                       />
                     </div>
                     {/* Connector to next car */}
                     <div className="w-3 h-1.5 bg-primary/50 rounded-full mb-8" />
                   </div>
                   
-                  {partners.map((partner, index) => (
+                  {row1Partners.map((partner, index) => (
                     <div key={`row1-first-${index}`} className="flex-shrink-0 flex items-end">
                       {/* Train car */}
                       <div className="w-36 h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative">
@@ -700,11 +706,11 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                       <div className="absolute -bottom-2 left-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <div className="absolute -bottom-2 right-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <div className="absolute -bottom-2 right-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <img src={phiniaLogo} alt="PHINIA" className="max-w-[85%] max-h-[70%] object-contain" />
+                      <img src={phiniaLocoLogo} alt="PHINIA" className="w-full h-auto object-contain" />
                     </div>
                     <div className="w-3 h-1.5 bg-primary/50 rounded-full mb-8" />
                   </div>
-                  {partners.map((partner, index) => (
+                  {row1Partners.map((partner, index) => (
                     <div key={`row1-second-${index}`} className="flex-shrink-0 flex items-end">
                       <div className="w-36 h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative">
                         <div className="absolute -bottom-2 left-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
@@ -734,7 +740,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 {/* Container starts at translateX(-100%), so RIGHTMOST element (locomotive) is at left viewport edge */}
                 <div className="flex items-end justify-end pt-8 pb-4 animate-train-enter-right">
                   {/* Wagons FIRST (leftmost in DOM) - they trail behind, enter viewport LAST */}
-                  {[...partners].reverse().map((partner, index) => (
+                  {[...row2Partners].reverse().map((partner, index) => (
                     <div key={`row2-${index}`} className="flex-shrink-0 flex items-end">
                       <div className="w-2 h-1 bg-primary/40 rounded-full mb-8" />
                       <div className="w-36 h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative">
@@ -759,7 +765,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                       <div className="absolute -bottom-2 left-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <div className="absolute -bottom-2 right-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <div className="absolute -bottom-2 right-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <img src={phiniaLogo} alt="PHINIA" className="max-w-[85%] max-h-[70%] object-contain" />
+                      <img src={phiniaLocoLogo} alt="PHINIA" className="w-full h-auto object-contain" />
                     </div>
                   </div>
                 </div>
