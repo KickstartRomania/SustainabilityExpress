@@ -107,6 +107,24 @@ const Apply = () => {
 
       // Record successful submission for rate limiting
       recordSubmission('application_form', 3600000);
+
+      // Send to Make.com webhook (non-blocking - don't fail if webhook fails)
+      fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-to-make`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: validatedData.name,
+          email: validatedData.email,
+          phone: validatedData.phone,
+          role: validatedData.role,
+          skill_level: validatedData.skillLevel,
+          portfolio: validatedData.portfolio,
+          motivation: validatedData.motivation,
+          idea: validatedData.idea || null,
+          accessibility: validatedData.accessibility || null,
+          submitted_at: new Date().toISOString()
+        })
+      }).catch(err => console.error('Make.com webhook failed:', err));
       
       setIsSubmitted(true);
       toast({

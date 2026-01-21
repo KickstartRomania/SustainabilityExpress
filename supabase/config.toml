@@ -1,1 +1,4 @@
 project_id = "kqsaajgljywrdvptgabf"
+
+[functions.send-to-make]
+verify_jwt = false
