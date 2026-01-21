@@ -175,15 +175,17 @@
   }
   
   .animate-scroll {
-    animation: scroll 18s linear infinite;
+    animation: scroll 25s linear infinite;
   }
   
   .animate-scroll-reverse {
-    animation: scroll-reverse 18s linear infinite;
+    animation: scroll-reverse 25s linear infinite;
   }
   
   .animate-scroll:hover,
-  .animate-scroll-reverse:hover {
+  .animate-scroll-reverse:hover,
+  .animate-scroll.paused,
+  .animate-scroll-reverse.paused {
     animation-play-state: paused;
   }
   
