@@ -721,7 +721,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
               </div>
               
               {/* Second train track - train comes from LEFT, moving RIGHT */}
-              <div className="relative overflow-hidden">
+              <div className="relative">
                 {/* Rail track above */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
                 <div className="absolute -top-1 left-0 right-0 flex justify-around">
