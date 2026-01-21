@@ -19,6 +19,7 @@ import JourneyRail from '@/components/decorative/JourneyRail';
 import ScrollProgressRail from '@/components/decorative/ScrollProgressRail';
 
 // Partner logos
+import phiniaLogo from '@/assets/partners/phinia.png';
 import samedayLogo from '@/assets/partners/sameday.png';
 import diarkLogo from '@/assets/partners/diark.png';
 import booksterLogo from '@/assets/partners/bookster.png';
@@ -650,6 +651,33 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 
                 {/* Train cars - first row */}
                 <div className="flex animate-scroll items-center">
+                  {/* PHINIA Locomotive - Title Sponsor */}
+                  <div className="flex-shrink-0 flex items-center">
+                    <div className="w-48 h-24 bg-gradient-to-r from-primary/20 to-card/60 backdrop-blur-sm border-2 border-primary/40 rounded-lg flex items-center justify-center mx-1 relative shadow-lg shadow-primary/10">
+                      {/* Locomotive front nose */}
+                      <div className="absolute -left-3 top-1/2 -translate-y-1/2 w-3 h-12 bg-primary/30 rounded-l-full border-l-2 border-y-2 border-primary/40" />
+                      {/* Smokestack */}
+                      <div className="absolute -top-3 left-6 w-4 h-3 bg-primary/40 rounded-t-md" />
+                      <div className="absolute -top-5 left-6 w-4 h-2 bg-primary/30 rounded-full" />
+                      {/* Title Sponsor badge */}
+                      <div className="absolute -top-2 right-2 px-2 py-0.5 bg-primary text-primary-foreground text-[10px] font-bold rounded-full">
+                        TITLE SPONSOR
+                      </div>
+                      {/* Four wheels */}
+                      <div className="absolute -bottom-1.5 left-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
+                      <div className="absolute -bottom-1.5 left-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
+                      <div className="absolute -bottom-1.5 right-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
+                      <div className="absolute -bottom-1.5 right-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
+                      <img
+                        src={phiniaLogo}
+                        alt="PHINIA - Title Sponsor"
+                        className="max-w-[85%] max-h-[70%] object-contain"
+                      />
+                    </div>
+                    {/* Connector to next car */}
+                    <div className="w-3 h-1.5 bg-primary/50 rounded-full" />
+                  </div>
+                  
                   {partners.slice(0, Math.ceil(partners.length / 2)).map((partner, index) => (
                     <div key={`row1-first-${index}`} className="flex-shrink-0 flex items-center">
                       {/* Train car */}
@@ -667,6 +695,27 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                       <div className="w-2 h-1 bg-primary/40 rounded-full" />
                     </div>
                   ))}
+                  {/* Duplicate PHINIA locomotive for seamless loop */}
+                  <div className="flex-shrink-0 flex items-center">
+                    <div className="w-48 h-24 bg-gradient-to-r from-primary/20 to-card/60 backdrop-blur-sm border-2 border-primary/40 rounded-lg flex items-center justify-center mx-1 relative shadow-lg shadow-primary/10">
+                      <div className="absolute -left-3 top-1/2 -translate-y-1/2 w-3 h-12 bg-primary/30 rounded-l-full border-l-2 border-y-2 border-primary/40" />
+                      <div className="absolute -top-3 left-6 w-4 h-3 bg-primary/40 rounded-t-md" />
+                      <div className="absolute -top-5 left-6 w-4 h-2 bg-primary/30 rounded-full" />
+                      <div className="absolute -top-2 right-2 px-2 py-0.5 bg-primary text-primary-foreground text-[10px] font-bold rounded-full">
+                        TITLE SPONSOR
+                      </div>
+                      <div className="absolute -bottom-1.5 left-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
+                      <div className="absolute -bottom-1.5 left-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
+                      <div className="absolute -bottom-1.5 right-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
+                      <div className="absolute -bottom-1.5 right-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
+                      <img
+                        src={phiniaLogo}
+                        alt="PHINIA - Title Sponsor"
+                        className="max-w-[85%] max-h-[70%] object-contain"
+                      />
+                    </div>
+                    <div className="w-3 h-1.5 bg-primary/50 rounded-full" />
+                  </div>
                   {partners.slice(0, Math.ceil(partners.length / 2)).map((partner, index) => (
                     <div key={`row1-second-${index}`} className="flex-shrink-0 flex items-center">
                       <div className="w-36 h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative">
