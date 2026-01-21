@@ -20,7 +20,7 @@ import JourneyRail from '@/components/decorative/JourneyRail';
 import ScrollProgressRail from '@/components/decorative/ScrollProgressRail';
 // Partner logos
 import phiniaLogo from '@/assets/partners/phinia.png';
-import phiniaLocoLogo from '@/assets/sponsors/phinia-loco.png';
+import sustainabilityExpressLocoLogo from '@/assets/sponsors/sustainability-express-loco.png';
 import samedayLogo from '@/assets/partners/sameday.png';
 import diarkLogo from '@/assets/partners/diark.png';
 import booksterLogo from '@/assets/partners/bookster.png';
@@ -710,8 +710,8 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                       <div className="absolute -bottom-2 right-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <div className="absolute -bottom-2 right-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                           <img
-                            src={phiniaLocoLogo}
-                            alt="PHINIA"
+                            src={sustainabilityExpressLocoLogo}
+                            alt="Sustainability Express"
                             className="max-w-[80%] max-h-[60%] object-contain rounded-md"
                           />
                     </div>
@@ -792,7 +792,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                       <div className="absolute -bottom-2 left-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <div className="absolute -bottom-2 right-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <div className="absolute -bottom-2 right-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <img src={phiniaLocoLogo} alt="PHINIA" className="max-w-[80%] max-h-[60%] object-contain rounded-md" />
+                      <img src={sustainabilityExpressLocoLogo} alt="Sustainability Express" className="max-w-[80%] max-h-[60%] object-contain rounded-md" />
                     </div>
                   </div>
                 </div>
