@@ -691,11 +691,11 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                       <div className="absolute -bottom-2 left-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <div className="absolute -bottom-2 right-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <div className="absolute -bottom-2 right-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <img
-                        src={phiniaLocoLogo}
-                        alt="PHINIA"
-                        className="max-w-[80%] max-h-[60%] object-contain"
-                      />
+                          <img
+                            src={phiniaLocoLogo}
+                            alt="PHINIA"
+                            className="max-w-[80%] max-h-[60%] object-contain rounded-md"
+                          />
                     </div>
                     {/* Connector to next car */}
                     <div className="w-3 h-1.5 bg-primary/50 rounded-full mb-8" />
@@ -774,7 +774,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                       <div className="absolute -bottom-2 left-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <div className="absolute -bottom-2 right-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <div className="absolute -bottom-2 right-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <img src={phiniaLocoLogo} alt="PHINIA" className="max-w-[80%] max-h-[60%] object-contain" />
+                      <img src={phiniaLocoLogo} alt="PHINIA" className="max-w-[80%] max-h-[60%] object-contain rounded-md" />
                     </div>
                   </div>
                 </div>
