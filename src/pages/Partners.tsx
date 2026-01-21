@@ -229,28 +229,17 @@ const Partners = () => {
             </p>
           </div>
 
-          {/* Title Sponsor Section */}
+          {/* Main Sponsor Section */}
           <section className="mb-12">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold text-foreground mb-2">Title Sponsor</h2>
-              <p className="text-muted-foreground">Strategic leadership partner</p>
-            </div>
             <div className="flex justify-center">
               <div className="relative p-8 bg-gradient-to-br from-primary/10 to-card/60 rounded-2xl border-2 border-primary/30 shadow-lg shadow-primary/10 hover:scale-105 transition-transform duration-300">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground text-sm font-bold rounded-full">
-                  TITLE SPONSOR
-                </div>
-                <img src={phiniaLogo} alt="PHINIA - Title Sponsor" className="h-24 w-auto object-contain" />
+                <img src={phiniaLogo} alt="PHINIA" className="h-24 w-auto object-contain" />
               </div>
             </div>
           </section>
 
           {/* Partner Logos Grid */}
           <section className="mb-20">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold text-foreground mb-2">Partners</h2>
-              <p className="text-muted-foreground">Supporting organizations</p>
-            </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
               {partners.map((partner, index) => <div key={index} className="flex items-center justify-center h-20 hover:scale-105 transition-transform duration-300">
                   <img src={partner.logo} alt={partner.name} className="max-w-full max-h-full object-contain rounded-lg" />
