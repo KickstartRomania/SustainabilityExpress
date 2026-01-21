@@ -730,16 +730,16 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                   ))}
                 </div>
                 
-                {/* Train cars - second row: locomotive leads from RIGHT, nose pointing LEFT, moving LEFT */}
+                {/* Train cars - second row: locomotive leads from LEFT, nose pointing RIGHT, moving RIGHT */}
                 <div className="flex items-end pt-8 pb-4 animate-scroll-right">
-                  {/* PHINIA Locomotive - leading from right, nose pointing LEFT */}
+                  {/* PHINIA Locomotive - leading from left, nose pointing RIGHT */}
                   <div className="flex-shrink-0 flex items-end">
-                    <div className="w-48 h-24 bg-gradient-to-r from-primary/20 to-card/60 backdrop-blur-sm border-2 border-primary/40 rounded-lg flex items-center justify-center mx-1 relative shadow-lg shadow-primary/10">
-                      {/* Locomotive front nose - on LEFT side (direction of travel) */}
-                      <div className="absolute -left-3 top-1/2 -translate-y-1/2 w-3 h-12 bg-primary/30 rounded-l-full border-l-2 border-y-2 border-primary/40" />
+                    <div className="w-48 h-24 bg-gradient-to-l from-primary/20 to-card/60 backdrop-blur-sm border-2 border-primary/40 rounded-lg flex items-center justify-center mx-1 relative shadow-lg shadow-primary/10">
+                      {/* Locomotive front nose - on RIGHT side (direction of travel) */}
+                      <div className="absolute -right-3 top-1/2 -translate-y-1/2 w-3 h-12 bg-primary/30 rounded-r-full border-r-2 border-y-2 border-primary/40" />
                       {/* Smokestack */}
-                      <div className="absolute -top-3 left-6 w-4 h-3 bg-primary/40 rounded-t-md" />
-                      <div className="absolute -top-5 left-6 w-4 h-2 bg-primary/30 rounded-full" />
+                      <div className="absolute -top-3 right-6 w-4 h-3 bg-primary/40 rounded-t-md" />
+                      <div className="absolute -top-5 right-6 w-4 h-2 bg-primary/30 rounded-full" />
                       {/* Four wheels */}
                       <div className="absolute -bottom-2 left-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <div className="absolute -bottom-2 left-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
@@ -764,10 +764,10 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                   
                   {/* Duplicate for seamless loop */}
                   <div className="flex-shrink-0 flex items-end">
-                    <div className="w-48 h-24 bg-gradient-to-r from-primary/20 to-card/60 backdrop-blur-sm border-2 border-primary/40 rounded-lg flex items-center justify-center mx-1 relative shadow-lg shadow-primary/10">
-                      <div className="absolute -left-3 top-1/2 -translate-y-1/2 w-3 h-12 bg-primary/30 rounded-l-full border-l-2 border-y-2 border-primary/40" />
-                      <div className="absolute -top-3 left-6 w-4 h-3 bg-primary/40 rounded-t-md" />
-                      <div className="absolute -top-5 left-6 w-4 h-2 bg-primary/30 rounded-full" />
+                    <div className="w-48 h-24 bg-gradient-to-l from-primary/20 to-card/60 backdrop-blur-sm border-2 border-primary/40 rounded-lg flex items-center justify-center mx-1 relative shadow-lg shadow-primary/10">
+                      <div className="absolute -right-3 top-1/2 -translate-y-1/2 w-3 h-12 bg-primary/30 rounded-r-full border-r-2 border-y-2 border-primary/40" />
+                      <div className="absolute -top-3 right-6 w-4 h-3 bg-primary/40 rounded-t-md" />
+                      <div className="absolute -top-5 right-6 w-4 h-2 bg-primary/30 rounded-full" />
                       <div className="absolute -bottom-2 left-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <div className="absolute -bottom-2 left-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <div className="absolute -bottom-2 right-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
