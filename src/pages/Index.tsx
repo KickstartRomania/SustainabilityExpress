@@ -732,7 +732,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 
                 {/* Train cars - second row: locomotive leads, moving LEFT to RIGHT */}
                 {/* Container starts at translateX(-100%), so RIGHTMOST element (locomotive) is at left viewport edge */}
-                <div className="flex items-end pt-8 pb-4" style={{ transform: 'translateX(calc(-100% + 200px))' }}>
+                <div className="flex items-end justify-end pt-8 pb-4">
                   {/* Wagons FIRST (leftmost in DOM) - they trail behind, enter viewport LAST */}
                   {[...partners].reverse().map((partner, index) => (
                     <div key={`row2-${index}`} className="flex-shrink-0 flex items-end">
