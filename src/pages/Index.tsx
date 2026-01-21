@@ -208,170 +208,6 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
         </div>
       </RailSection>
 
-      {/* Mentors & Jury Section */}
-      <section id="mentors" className="py-24 relative overflow-hidden">
-        {/* Subtle side rails */}
-        <div className="absolute left-6 md:left-12 top-0 bottom-0 w-5 opacity-20">
-          <RailLine variant="vertical" />
-        </div>
-        <div className="absolute right-6 md:right-12 top-0 bottom-0 w-5 opacity-15">
-          <RailLine variant="vertical" showLeaves />
-        </div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <SectionDivider icon={Users} className="mb-8" />
-            <h2 className="text-4xl font-bold text-foreground mb-4">Mentors & Jury</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">They are the mentors and industry professionals who will help turn your idea into reality and boost its chances of success.</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Răzvan Suta */}
-            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
-              <div className="absolute top-0 left-4 right-4 opacity-30">
-                <RailLine />
-              </div>
-              <div className="pt-4 text-center">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
-                  <img src={razvanSuta} alt="Răzvan Suta" className="w-full h-full object-cover" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-1">Răzvan Suta</h3>
-                <p className="text-muted-foreground text-sm">Angel investor & VC</p>
-                <p className="text-muted-foreground text-sm mb-3">&nbsp;</p>
-                <a 
-                  href="https://www.linkedin.com/in/razvansuta/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
-                >
-                  <Linkedin className="h-5 w-5 text-primary" />
-                </a>
-              </div>
-            </Card>
-
-            {/* Aleodor Tăbârcea */}
-            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
-              <div className="absolute top-0 left-4 right-4 opacity-30">
-                <RailLine />
-              </div>
-              <div className="pt-4 text-center">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
-                  <img src={aleodorTabarcea} alt="Aleodor Tăbârcea" className="w-full h-full object-cover" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-1">Aleodor Tăbârcea</h3>
-                <p className="text-muted-foreground text-sm">Engineering Manager</p>
-                <p className="text-muted-foreground text-sm mb-3">Stripe</p>
-                <a 
-                  href="https://www.linkedin.com/in/aleodor-tabarcea/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
-                >
-                  <Linkedin className="h-5 w-5 text-primary" />
-                </a>
-              </div>
-            </Card>
-
-            {/* Andrei Munteanu */}
-            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
-              <div className="absolute top-0 left-4 right-4 opacity-30">
-                <RailLine />
-              </div>
-              <div className="pt-4 text-center">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
-                  <img src={andreiMunteanu} alt="Andrei Munteanu" className="w-full h-full object-cover" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-1">Andrei Munteanu</h3>
-                <p className="text-muted-foreground text-sm">CEO & Co-founder</p>
-                <p className="text-muted-foreground text-sm mb-3">Cowork & Prow</p>
-                <a 
-                  href="https://www.linkedin.com/in/andreicosminmunteanu/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
-                >
-                  <Linkedin className="h-5 w-5 text-primary" />
-                </a>
-              </div>
-            </Card>
-
-            {/* Adrian Gheorghe */}
-            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
-              <div className="absolute top-0 left-4 right-4 opacity-30">
-                <RailLine />
-              </div>
-              <div className="pt-4 text-center">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
-                  <img src={adrianGheorghe} alt="Adrian Gheorghe" className="w-full h-full object-cover" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-1">Adrian Gheorghe</h3>
-                <p className="text-muted-foreground text-sm">Startup Advisor</p>
-                <p className="text-muted-foreground text-sm mb-3">Doers Ventures</p>
-                <a 
-                  href="https://www.linkedin.com/in/adrian-gheorghe/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
-                >
-                  <Linkedin className="h-5 w-5 text-primary" />
-                </a>
-              </div>
-            </Card>
-
-            {/* Cosmin Pîrvu */}
-            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
-              <div className="absolute top-0 left-4 right-4 opacity-30">
-                <RailLine />
-              </div>
-              <div className="pt-4 text-center">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
-                  <img src={cosminPirvu} alt="Cosmin Pîrvu" className="w-full h-full object-cover" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-1">Cosmin Pîrvu</h3>
-                <p className="text-muted-foreground text-sm">Startup Program Manager</p>
-                <p className="text-muted-foreground text-sm mb-3">Veridion</p>
-                <a 
-                  href="https://www.linkedin.com/in/cosminpirvu/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
-                >
-                  <Linkedin className="h-5 w-5 text-primary" />
-                </a>
-              </div>
-            </Card>
-
-            {/* George Bonea */}
-            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
-              <div className="absolute top-0 left-4 right-4 opacity-30">
-                <RailLine />
-              </div>
-              <div className="pt-4 text-center">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
-                  <img src={georgeBonea} alt="George Bonea" className="w-full h-full object-cover" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-1">George Bonea</h3>
-                <p className="text-muted-foreground text-sm">Copywriter &</p>
-                <p className="text-muted-foreground text-sm mb-3">Communication Consultant</p>
-                <a 
-                  href="https://www.linkedin.com/in/george-bonea-b0494b91/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
-                >
-                  <Linkedin className="h-5 w-5 text-primary" />
-                </a>
-              </div>
-            </Card>
-          </div>
-          
-          {/* More mentors announcement */}
-          <p className="text-center text-lg text-muted-foreground mt-12 italic">
-            ✨ More mentors to be announced soon...
-          </p>
-        </div>
-      </section>
-
       {/* Who is it for Section */}
       <section id="who-is-it-for" className="py-24 relative overflow-hidden">
         {/* Subtle side rails */}
@@ -582,6 +418,170 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
           </div>
         </div>
       </RailSection>
+
+      {/* Mentors & Jury Section */}
+      <section id="mentors" className="py-24 relative overflow-hidden">
+        {/* Subtle side rails */}
+        <div className="absolute left-6 md:left-12 top-0 bottom-0 w-5 opacity-20">
+          <RailLine variant="vertical" />
+        </div>
+        <div className="absolute right-6 md:right-12 top-0 bottom-0 w-5 opacity-15">
+          <RailLine variant="vertical" showLeaves />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <SectionDivider icon={Users} className="mb-8" />
+            <h2 className="text-4xl font-bold text-foreground mb-4">Mentors & Jury</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">They are the mentors and industry professionals who will help turn your idea into reality and boost its chances of success.</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Răzvan Suta */}
+            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute top-0 left-4 right-4 opacity-30">
+                <RailLine />
+              </div>
+              <div className="pt-4 text-center">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
+                  <img src={razvanSuta} alt="Răzvan Suta" className="w-full h-full object-cover" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-1">Răzvan Suta</h3>
+                <p className="text-muted-foreground text-sm">Angel investor & VC</p>
+                <p className="text-muted-foreground text-sm mb-3">&nbsp;</p>
+                <a 
+                  href="https://www.linkedin.com/in/razvansuta/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+                >
+                  <Linkedin className="h-5 w-5 text-primary" />
+                </a>
+              </div>
+            </Card>
+
+            {/* Aleodor Tăbârcea */}
+            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute top-0 left-4 right-4 opacity-30">
+                <RailLine />
+              </div>
+              <div className="pt-4 text-center">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
+                  <img src={aleodorTabarcea} alt="Aleodor Tăbârcea" className="w-full h-full object-cover" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-1">Aleodor Tăbârcea</h3>
+                <p className="text-muted-foreground text-sm">Engineering Manager</p>
+                <p className="text-muted-foreground text-sm mb-3">Stripe</p>
+                <a 
+                  href="https://www.linkedin.com/in/aleodor-tabarcea/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+                >
+                  <Linkedin className="h-5 w-5 text-primary" />
+                </a>
+              </div>
+            </Card>
+
+            {/* Andrei Munteanu */}
+            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute top-0 left-4 right-4 opacity-30">
+                <RailLine />
+              </div>
+              <div className="pt-4 text-center">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
+                  <img src={andreiMunteanu} alt="Andrei Munteanu" className="w-full h-full object-cover" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-1">Andrei Munteanu</h3>
+                <p className="text-muted-foreground text-sm">CEO & Co-founder</p>
+                <p className="text-muted-foreground text-sm mb-3">Cowork & Prow</p>
+                <a 
+                  href="https://www.linkedin.com/in/andreicosminmunteanu/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+                >
+                  <Linkedin className="h-5 w-5 text-primary" />
+                </a>
+              </div>
+            </Card>
+
+            {/* Adrian Gheorghe */}
+            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute top-0 left-4 right-4 opacity-30">
+                <RailLine />
+              </div>
+              <div className="pt-4 text-center">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
+                  <img src={adrianGheorghe} alt="Adrian Gheorghe" className="w-full h-full object-cover" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-1">Adrian Gheorghe</h3>
+                <p className="text-muted-foreground text-sm">Startup Advisor</p>
+                <p className="text-muted-foreground text-sm mb-3">Doers Ventures</p>
+                <a 
+                  href="https://www.linkedin.com/in/adrian-gheorghe/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+                >
+                  <Linkedin className="h-5 w-5 text-primary" />
+                </a>
+              </div>
+            </Card>
+
+            {/* Cosmin Pîrvu */}
+            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute top-0 left-4 right-4 opacity-30">
+                <RailLine />
+              </div>
+              <div className="pt-4 text-center">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
+                  <img src={cosminPirvu} alt="Cosmin Pîrvu" className="w-full h-full object-cover" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-1">Cosmin Pîrvu</h3>
+                <p className="text-muted-foreground text-sm">Startup Program Manager</p>
+                <p className="text-muted-foreground text-sm mb-3">Veridion</p>
+                <a 
+                  href="https://www.linkedin.com/in/cosminpirvu/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+                >
+                  <Linkedin className="h-5 w-5 text-primary" />
+                </a>
+              </div>
+            </Card>
+
+            {/* George Bonea */}
+            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
+              <div className="absolute top-0 left-4 right-4 opacity-30">
+                <RailLine />
+              </div>
+              <div className="pt-4 text-center">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
+                  <img src={georgeBonea} alt="George Bonea" className="w-full h-full object-cover" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-1">George Bonea</h3>
+                <p className="text-muted-foreground text-sm">Copywriter &</p>
+                <p className="text-muted-foreground text-sm mb-3">Communication Consultant</p>
+                <a 
+                  href="https://www.linkedin.com/in/george-bonea-b0494b91/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+                >
+                  <Linkedin className="h-5 w-5 text-primary" />
+                </a>
+              </div>
+            </Card>
+          </div>
+          
+          {/* More mentors announcement */}
+          <p className="text-center text-lg text-muted-foreground mt-12 italic">
+            ✨ More mentors to be announced soon...
+          </p>
+        </div>
+      </section>
 
       {/* Timeline Section */}
       <RailSection id="journey" className="py-24 bg-secondary/20" showSideRails railVariant="subtle">
