@@ -167,10 +167,10 @@
   
   @keyframes scroll-right {
     0% {
-      transform: translateX(-200%);
+      transform: translateX(calc(-100% - 100vw));
     }
     100% {
-      transform: translateX(100%);
+      transform: translateX(100vw);
     }
   }
   
