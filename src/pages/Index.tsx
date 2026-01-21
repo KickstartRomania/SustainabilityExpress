@@ -718,20 +718,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                       <div className="w-2 h-1 bg-primary/40 rounded-full mb-8" />
                     </div>
                   ))}
-                  {/* Duplicate for seamless loop */}
-                  <div className="flex-shrink-0 flex items-end">
-                    <div className="w-48 h-24 bg-gradient-to-r from-primary/20 to-card/60 backdrop-blur-sm border-2 border-primary/40 rounded-lg flex items-center justify-center mx-1 relative shadow-lg shadow-primary/10">
-                      <div className="absolute -left-3 top-1/2 -translate-y-1/2 w-3 h-12 bg-primary/30 rounded-l-full border-l-2 border-y-2 border-primary/40" />
-                      <div className="absolute -top-3 left-6 w-4 h-3 bg-primary/40 rounded-t-md" />
-                      <div className="absolute -top-5 left-6 w-4 h-2 bg-primary/30 rounded-full" />
-                      <div className="absolute -bottom-2 left-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <div className="absolute -bottom-2 left-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <div className="absolute -bottom-2 right-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <div className="absolute -bottom-2 right-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <img src={phiniaLocoLogo} alt="PHINIA" className="max-w-[80%] max-h-[60%] object-contain" />
-                    </div>
-                    <div className="w-3 h-1.5 bg-primary/50 rounded-full mb-8" />
-                  </div>
+                  {/* Duplicate wagons for seamless loop */}
                   {row1Partners.map((partner, index) => (
                     <div key={`row1-second-${index}`} className="flex-shrink-0 flex items-end">
                       <div className="w-36 h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative">
