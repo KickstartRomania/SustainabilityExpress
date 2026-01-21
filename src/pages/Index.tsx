@@ -359,6 +359,15 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
               </div>
             </Card>
           </div>
+          
+          {/* Mobile-only Apply CTA */}
+          <div className="text-center mt-12 md:hidden">
+            <Button asChild className="btn-hero text-lg px-8 py-6">
+              <Link to="/apply">
+                Apply Now <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -630,13 +639,22 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
             </div>
           </div>
           
-          <div className="text-center mt-12">
+          <div className="text-center mt-12 space-y-4">
             <Button asChild variant="outline" size="lg" className="group">
               <Link to="/agenda">
                 See Full Agenda
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
+            
+            {/* Mobile-only Apply CTA */}
+            <div className="md:hidden">
+              <Button asChild className="btn-hero text-lg px-8 py-6">
+                <Link to="/apply">
+                  Apply Now <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </RailSection>
