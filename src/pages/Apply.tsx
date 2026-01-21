@@ -113,11 +113,18 @@ const Apply = () => {
         title: "Application Submitted!",
         description: "We'll review your application and get back to you within 5-7 days.",
       });
-    } catch (error) {
+    } catch (error: unknown) {
       logError(error, 'application-submission');
+      
+      // Check if this is a rate limit error from the database trigger
+      const errorMessage = error instanceof Error ? error.message : String(error);
+      const isRateLimitError = errorMessage.includes('Rate limit exceeded');
+      
       toast({
-        title: "Submission Failed",
-        description: "There was an error submitting your application. Please try again.",
+        title: isRateLimitError ? "Too Many Submissions" : "Submission Failed",
+        description: isRateLimitError 
+          ? "You can only submit 3 applications per hour. Please try again later."
+          : "There was an error submitting your application. Please try again.",
         variant: "destructive",
       });
     } finally {
