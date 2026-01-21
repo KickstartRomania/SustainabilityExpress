@@ -649,7 +649,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 </div>
                 
                 {/* Train cars - first row: locomotive leads, nose pointing LEFT, moving LEFT */}
-                <div className="flex items-end pt-8 pb-4 animate-scroll">
+                <div className="flex items-end pt-8 pb-4 animate-scroll-left">
                   {/* PHINIA Locomotive - leading, nose pointing LEFT */}
                   <div className="flex-shrink-0 flex items-end">
                     <div className="w-48 h-24 bg-gradient-to-r from-primary/20 to-card/60 backdrop-blur-sm border-2 border-primary/40 rounded-lg flex items-center justify-center mx-1 relative shadow-lg shadow-primary/10">
@@ -731,7 +731,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 </div>
                 
                 {/* Train cars - second row: locomotive leads, nose pointing RIGHT, moving RIGHT */}
-                <div className="flex items-end pt-8 pb-4 animate-scroll-reverse">
+                <div className="flex items-end pt-8 pb-4 animate-scroll-right">
                   {/* PHINIA Locomotive - leading, nose pointing RIGHT */}
                   <div className="flex-shrink-0 flex items-end flex-row-reverse">
                     <div className="w-48 h-24 bg-gradient-to-l from-primary/20 to-card/60 backdrop-blur-sm border-2 border-primary/40 rounded-lg flex items-center justify-center mx-1 relative shadow-lg shadow-primary/10">
