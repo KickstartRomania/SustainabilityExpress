@@ -1,7 +1,9 @@
+import { useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Lightbulb, Train, Leaf, Zap, Trophy, Code, Megaphone, Briefcase, GraduationCap, Linkedin, Handshake, Heart, Brain, Recycle, BarChart3 } from 'lucide-react';
+import { useDragScroll } from '@/hooks/use-drag-scroll';
 import razvanSuta from '@/assets/mentors/razvan-suta.jpeg';
 import aleodorTabarcea from '@/assets/mentors/aleodor-tabarcea.jpeg';
 import andreiMunteanu from '@/assets/mentors/andrei-munteanu.jpeg';
@@ -83,6 +85,9 @@ const sections = [{
   label: 'Apply'
 }];
 const Index = () => {
+  const dragScroll1 = useDragScroll();
+  const dragScroll2 = useDragScroll();
+  
   return <div className="min-h-screen bg-background">
       <Navigation />
       <ScrollProgressRail sections={sections} />
@@ -632,11 +637,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
           </div>
           
           {/* Train-Themed Logo Slider */}
-          <div className="relative overflow-hidden py-4">
-            {/* Gradient masks */}
-            <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-background to-transparent z-10" />
-            <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-background to-transparent z-10" />
-            
+          <div className="relative py-4">
             {/* Two train tracks */}
             <div className="space-y-6">
               {/* First train track */}
@@ -649,9 +650,14 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                   ))}
                 </div>
                 
-                {/* Train cars - first row */}
-                <div className="flex animate-scroll items-center">
-                  {/* PHINIA Locomotive */}
+                {/* Train cars - first row (draggable) */}
+                <div 
+                  ref={dragScroll1.ref}
+                  {...dragScroll1.handlers}
+                  className="flex items-center overflow-x-auto scrollbar-hide pb-2"
+                  style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                >
+                  {/* PHINIA Locomotive - leading from left */}
                   <div className="flex-shrink-0 flex items-center">
                     <div className="w-48 h-24 bg-gradient-to-r from-primary/20 to-card/60 backdrop-blur-sm border-2 border-primary/40 rounded-lg flex items-center justify-center mx-1 relative shadow-lg shadow-primary/10">
                       {/* Locomotive front nose */}
@@ -659,11 +665,11 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                       {/* Smokestack */}
                       <div className="absolute -top-3 left-6 w-4 h-3 bg-primary/40 rounded-t-md" />
                       <div className="absolute -top-5 left-6 w-4 h-2 bg-primary/30 rounded-full" />
-                      {/* Four wheels */}
-                      <div className="absolute -bottom-1.5 left-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <div className="absolute -bottom-1.5 left-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <div className="absolute -bottom-1.5 right-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <div className="absolute -bottom-1.5 right-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
+                      {/* Four wheels - aligned with cart wheels */}
+                      <div className="absolute -bottom-1 left-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
+                      <div className="absolute -bottom-1 left-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
+                      <div className="absolute -bottom-1 right-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
+                      <div className="absolute -bottom-1 right-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <img
                         src={phiniaLogo}
                         alt="PHINIA"
@@ -674,13 +680,13 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                     <div className="w-3 h-1.5 bg-primary/50 rounded-full" />
                   </div>
                   
-                  {partners.slice(0, Math.ceil(partners.length / 2)).map((partner, index) => (
-                    <div key={`row1-first-${index}`} className="flex-shrink-0 flex items-center">
+                  {partners.map((partner, index) => (
+                    <div key={`row1-${index}`} className="flex-shrink-0 flex items-center">
                       {/* Train car */}
                       <div className="w-36 h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative">
-                        {/* Wheel connectors */}
-                        <div className="absolute -bottom-1 left-4 w-3 h-3 rounded-full bg-primary/30 border border-primary/40" />
-                        <div className="absolute -bottom-1 right-4 w-3 h-3 rounded-full bg-primary/30 border border-primary/40" />
+                        {/* Wheel connectors - aligned */}
+                        <div className="absolute -bottom-1 left-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
+                        <div className="absolute -bottom-1 right-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
                         <img
                           src={partner.logo}
                           alt={partner.name}
@@ -688,38 +694,6 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                         />
                       </div>
                       {/* Connector between cars */}
-                      <div className="w-2 h-1 bg-primary/40 rounded-full" />
-                    </div>
-                  ))}
-                  {/* Duplicate PHINIA locomotive for seamless loop */}
-                  <div className="flex-shrink-0 flex items-center">
-                    <div className="w-48 h-24 bg-gradient-to-r from-primary/20 to-card/60 backdrop-blur-sm border-2 border-primary/40 rounded-lg flex items-center justify-center mx-1 relative shadow-lg shadow-primary/10">
-                      <div className="absolute -left-3 top-1/2 -translate-y-1/2 w-3 h-12 bg-primary/30 rounded-l-full border-l-2 border-y-2 border-primary/40" />
-                      <div className="absolute -top-3 left-6 w-4 h-3 bg-primary/40 rounded-t-md" />
-                      <div className="absolute -top-5 left-6 w-4 h-2 bg-primary/30 rounded-full" />
-                      <div className="absolute -bottom-1.5 left-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <div className="absolute -bottom-1.5 left-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <div className="absolute -bottom-1.5 right-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <div className="absolute -bottom-1.5 right-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <img
-                        src={phiniaLogo}
-                        alt="PHINIA"
-                        className="max-w-[85%] max-h-[70%] object-contain"
-                      />
-                    </div>
-                    <div className="w-3 h-1.5 bg-primary/50 rounded-full" />
-                  </div>
-                  {partners.slice(0, Math.ceil(partners.length / 2)).map((partner, index) => (
-                    <div key={`row1-second-${index}`} className="flex-shrink-0 flex items-center">
-                      <div className="w-36 h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative">
-                        <div className="absolute -bottom-1 left-4 w-3 h-3 rounded-full bg-primary/30 border border-primary/40" />
-                        <div className="absolute -bottom-1 right-4 w-3 h-3 rounded-full bg-primary/30 border border-primary/40" />
-                        <img
-                          src={partner.logo}
-                          alt={partner.name}
-                          className="max-w-[90%] max-h-[80%] object-contain"
-                        />
-                      </div>
                       <div className="w-2 h-1 bg-primary/40 rounded-full" />
                     </div>
                   ))}
@@ -739,72 +713,51 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                   ))}
                 </div>
                 
-                {/* Train cars - second row (reverse direction) */}
-                <div className="flex animate-scroll-reverse items-center">
-                  {/* PHINIA Locomotive on second row */}
-                  <div className="flex-shrink-0 flex items-center">
-                    <div className="w-48 h-24 bg-gradient-to-r from-primary/20 to-card/60 backdrop-blur-sm border-2 border-primary/40 rounded-lg flex items-center justify-center mx-1 relative shadow-lg shadow-primary/10">
+                {/* Train cars - second row (draggable, PHINIA on right pulling wagons) */}
+                <div 
+                  ref={dragScroll2.ref}
+                  {...dragScroll2.handlers}
+                  className="flex items-center overflow-x-auto scrollbar-hide pb-2 flex-row-reverse"
+                  style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                >
+                  {/* PHINIA Locomotive - on the right, pulling wagons */}
+                  <div className="flex-shrink-0 flex items-center flex-row-reverse">
+                    <div className="w-48 h-24 bg-gradient-to-l from-primary/20 to-card/60 backdrop-blur-sm border-2 border-primary/40 rounded-lg flex items-center justify-center mx-1 relative shadow-lg shadow-primary/10">
+                      {/* Locomotive front nose - on right side */}
                       <div className="absolute -right-3 top-1/2 -translate-y-1/2 w-3 h-12 bg-primary/30 rounded-r-full border-r-2 border-y-2 border-primary/40" />
+                      {/* Smokestack */}
                       <div className="absolute -top-3 right-6 w-4 h-3 bg-primary/40 rounded-t-md" />
                       <div className="absolute -top-5 right-6 w-4 h-2 bg-primary/30 rounded-full" />
-                      <div className="absolute -bottom-1.5 left-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <div className="absolute -bottom-1.5 left-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <div className="absolute -bottom-1.5 right-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <div className="absolute -bottom-1.5 right-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
+                      {/* Four wheels - aligned with cart wheels */}
+                      <div className="absolute -bottom-1 left-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
+                      <div className="absolute -bottom-1 left-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
+                      <div className="absolute -bottom-1 right-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
+                      <div className="absolute -bottom-1 right-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <img
                         src={phiniaLogo}
                         alt="PHINIA"
                         className="max-w-[85%] max-h-[70%] object-contain"
                       />
                     </div>
+                    {/* Connector to wagons */}
                     <div className="w-3 h-1.5 bg-primary/50 rounded-full" />
                   </div>
                   
-                  {partners.slice(Math.ceil(partners.length / 2)).map((partner, index) => (
-                    <div key={`row2-first-${index}`} className="flex-shrink-0 flex items-center">
+                  {partners.map((partner, index) => (
+                    <div key={`row2-${index}`} className="flex-shrink-0 flex items-center">
+                      {/* Connector between cars */}
+                      <div className="w-2 h-1 bg-primary/40 rounded-full" />
+                      {/* Train car */}
                       <div className="w-36 h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative">
-                        <div className="absolute -bottom-1 left-4 w-3 h-3 rounded-full bg-primary/30 border border-primary/40" />
-                        <div className="absolute -bottom-1 right-4 w-3 h-3 rounded-full bg-primary/30 border border-primary/40" />
+                        {/* Wheel connectors - aligned */}
+                        <div className="absolute -bottom-1 left-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
+                        <div className="absolute -bottom-1 right-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
                         <img
                           src={partner.logo}
                           alt={partner.name}
                           className="max-w-[90%] max-h-[80%] object-contain"
                         />
                       </div>
-                      <div className="w-2 h-1 bg-primary/40 rounded-full" />
-                    </div>
-                  ))}
-                  
-                  {/* Duplicate PHINIA locomotive for seamless loop on row 2 */}
-                  <div className="flex-shrink-0 flex items-center">
-                    <div className="w-48 h-24 bg-gradient-to-r from-primary/20 to-card/60 backdrop-blur-sm border-2 border-primary/40 rounded-lg flex items-center justify-center mx-1 relative shadow-lg shadow-primary/10">
-                      <div className="absolute -right-3 top-1/2 -translate-y-1/2 w-3 h-12 bg-primary/30 rounded-r-full border-r-2 border-y-2 border-primary/40" />
-                      <div className="absolute -top-3 right-6 w-4 h-3 bg-primary/40 rounded-t-md" />
-                      <div className="absolute -top-5 right-6 w-4 h-2 bg-primary/30 rounded-full" />
-                      <div className="absolute -bottom-1.5 left-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <div className="absolute -bottom-1.5 left-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <div className="absolute -bottom-1.5 right-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <div className="absolute -bottom-1.5 right-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                      <img
-                        src={phiniaLogo}
-                        alt="PHINIA"
-                        className="max-w-[85%] max-h-[70%] object-contain"
-                      />
-                    </div>
-                    <div className="w-3 h-1.5 bg-primary/50 rounded-full" />
-                  </div>
-                  {partners.slice(Math.ceil(partners.length / 2)).map((partner, index) => (
-                    <div key={`row2-second-${index}`} className="flex-shrink-0 flex items-center">
-                      <div className="w-36 h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative">
-                        <div className="absolute -bottom-1 left-4 w-3 h-3 rounded-full bg-primary/30 border border-primary/40" />
-                        <div className="absolute -bottom-1 right-4 w-3 h-3 rounded-full bg-primary/30 border border-primary/40" />
-                        <img
-                          src={partner.logo}
-                          alt={partner.name}
-                          className="max-w-[90%] max-h-[80%] object-contain"
-                        />
-                      </div>
-                      <div className="w-2 h-1 bg-primary/40 rounded-full" />
                     </div>
                   ))}
                 </div>
