@@ -14,11 +14,16 @@ import { logError } from "@/lib/error-handler";
 import { ArrowRight, CheckCircle, Loader2 } from "lucide-react";
 
 const mentorApplicationSchema = z.object({
-  name: z
+  firstName: z
     .string()
     .trim()
-    .min(2, "Name must be at least 2 characters")
-    .max(100, "Name must be less than 100 characters"),
+    .min(1, "First name is required")
+    .max(50, "First name must be less than 50 characters"),
+  lastName: z
+    .string()
+    .trim()
+    .min(1, "Last name is required")
+    .max(50, "Last name must be less than 50 characters"),
   email: z
     .string()
     .trim()
@@ -53,7 +58,8 @@ const MentorApply = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState<MentorApplicationFormData>({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
     linkedin: "",
     phone: "",
@@ -83,8 +89,9 @@ const MentorApply = () => {
 
     try {
       const validated = validationResult.data;
+      const fullName = `${validated.firstName} ${validated.lastName}`.trim();
       const { error } = await supabase.from("mentor_applications").insert({
-        name: validated.name,
+        name: fullName,
         email: validated.email,
         linkedin: validated.linkedin,
         phone: validated.phone,
@@ -164,42 +171,31 @@ const MentorApply = () => {
               <h2 className="text-2xl font-bold text-foreground mb-8">Mentor sign-up</h2>
 
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Full Name *</Label>
+                    <Label htmlFor="firstName">First Name *</Label>
                     <Input
-                      id="name"
-                      value={formData.name}
-                      onChange={(e) => handleInputChange("name", e.target.value)}
-                      placeholder="Your full name"
+                      id="firstName"
+                      value={formData.firstName}
+                      onChange={(e) => handleInputChange("firstName", e.target.value)}
+                      placeholder="Your first name"
                       required
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email *</Label>
+                    <Label htmlFor="lastName">Last Name *</Label>
                     <Input
-                      id="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) => handleInputChange("email", e.target.value)}
-                      placeholder="your.email@example.com"
+                      id="lastName"
+                      value={formData.lastName}
+                      onChange={(e) => handleInputChange("lastName", e.target.value)}
+                      placeholder="Your last name"
                       required
                     />
                   </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="linkedin">LinkedIn *</Label>
-                    <Input
-                      id="linkedin"
-                      value={formData.linkedin}
-                      onChange={(e) => handleInputChange("linkedin", e.target.value)}
-                      placeholder="https://www.linkedin.com/in/username"
-                      required
-                    />
-                  </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="phone">Phone number *</Label>
@@ -211,6 +207,29 @@ const MentorApply = () => {
                       required
                     />
                   </div>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email *</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={(e) => handleInputChange("email", e.target.value)}
+                    placeholder="your.email@example.com"
+                    required
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="linkedin">LinkedIn *</Label>
+                  <Input
+                    id="linkedin"
+                    value={formData.linkedin}
+                    onChange={(e) => handleInputChange("linkedin", e.target.value)}
+                    placeholder="https://www.linkedin.com/in/username"
+                    required
+                  />
                 </div>
 
                 <div className="space-y-2">
