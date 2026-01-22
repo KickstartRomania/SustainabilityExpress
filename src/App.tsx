@@ -12,6 +12,7 @@ import Logistics from "./pages/Logistics";
 import Mentors from "./pages/Mentors";
 import Partners from "./pages/Partners";
 import Apply from "./pages/Apply";
+import MentorApply from "./pages/MentorApply";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/mentors" element={<Mentors />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/apply" element={<Apply />} />
+          <Route path="/mentor-apply" element={<MentorApply />} />
           <Route path="/faq" element={<FAQ />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

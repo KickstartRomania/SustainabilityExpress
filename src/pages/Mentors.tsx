@@ -196,8 +196,10 @@ const Mentors = () => {
                 Join our mentor network and help shape the future of sustainable transportation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="btn-hero">
-                  Apply as Mentor <ArrowRight className="ml-2 h-5 w-5" />
+                <Button asChild className="btn-hero">
+                  <Link to="/mentor-apply">
+                    Apply as Mentor <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
                 </Button>
                 <Button variant="outline" size="lg">
                   Learn More
