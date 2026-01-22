@@ -17,7 +17,8 @@ import { checkRateLimit, recordSubmission, formatResetTime } from '@/lib/rate-li
 
 // Validation schema for application form
 const applicationSchema = z.object({
-  name: z.string().trim().min(2, 'Name must be at least 2 characters').max(100, 'Name must be less than 100 characters'),
+  firstName: z.string().trim().min(1, 'First name is required').max(50, 'First name must be less than 50 characters'),
+  lastName: z.string().trim().min(1, 'Last name is required').max(50, 'Last name must be less than 50 characters'),
   email: z.string().trim().email('Please enter a valid email address').max(255, 'Email must be less than 255 characters'),
   phone: z.string().trim().min(8, 'Phone must be at least 8 characters').max(20, 'Phone must be less than 20 characters'),
   role: z.string().min(1, 'Please select a role'),
@@ -39,7 +40,8 @@ const Apply = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
     phone: '',
     role: '',
@@ -89,8 +91,9 @@ const Apply = () => {
     setIsSubmitting(true);
 
     try {
+      const fullName = `${validatedData.firstName} ${validatedData.lastName}`.trim();
       const { error } = await supabase.from('applications').insert({
-        name: validatedData.name,
+        name: fullName,
         email: validatedData.email,
         phone: validatedData.phone,
         role: validatedData.role,
@@ -113,7 +116,7 @@ const Apply = () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          name: validatedData.name,
+          name: fullName,
           email: validatedData.email,
           phone: validatedData.phone,
           role: validatedData.role,
@@ -215,16 +218,29 @@ const Apply = () => {
                   {/* Personal Information */}
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <Label htmlFor="name">Full Name *</Label>
+                      <Label htmlFor="firstName">First Name *</Label>
                       <Input
-                        id="name"
-                        value={formData.name}
-                        onChange={(e) => handleInputChange('name', e.target.value)}
-                        placeholder="Your full name"
+                        id="firstName"
+                        value={formData.firstName}
+                        onChange={(e) => handleInputChange('firstName', e.target.value)}
+                        placeholder="Your first name"
                         required
                       />
                     </div>
                     
+                    <div className="space-y-2">
+                      <Label htmlFor="lastName">Last Name *</Label>
+                      <Input
+                        id="lastName"
+                        value={formData.lastName}
+                        onChange={(e) => handleInputChange('lastName', e.target.value)}
+                        placeholder="Your last name"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="email">Email Address *</Label>
                       <Input
@@ -236,17 +252,17 @@ const Apply = () => {
                         required
                       />
                     </div>
-                  </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number *</Label>
-                    <Input
-                      id="phone"
-                      value={formData.phone}
-                      onChange={(e) => handleInputChange('phone', e.target.value)}
-                      placeholder="+40 123 456 789"
-                      required
-                    />
+                    <div className="space-y-2">
+                      <Label htmlFor="phone">Phone Number *</Label>
+                      <Input
+                        id="phone"
+                        value={formData.phone}
+                        onChange={(e) => handleInputChange('phone', e.target.value)}
+                        placeholder="+40 123 456 789"
+                        required
+                      />
+                    </div>
                   </div>
 
                   {/* Professional Information */}
