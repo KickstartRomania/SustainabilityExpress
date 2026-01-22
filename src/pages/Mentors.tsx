@@ -16,12 +16,14 @@ import georgeBonea from '@/assets/mentors/george-bonea.jpeg';
 import adrianGheorghe from '@/assets/mentors/adrian-gheorghe.jpeg';
 import catalinAnghel from '@/assets/mentors/catalin-anghel.jpeg';
 import maximRotaru from '@/assets/mentors/maxim-rotaru.jpeg';
+import raduTiciu from '@/assets/mentors/radu-ticiu.jpeg';
+import iuliaAndritoiuCaizer from '@/assets/mentors/iulia-andritoiu-caizer.jpeg';
 type Mentor = {
   name: string;
   role: string;
   company?: string;
   image: string;
-  linkedin: string;
+  linkedin?: string;
 };
 
 // NOTE: New mentor photos weren't found in the workspace upload bucket during this edit,
@@ -59,6 +61,12 @@ const mentors: Mentor[] = [
     linkedin: 'https://www.linkedin.com/in/andreicosminmunteanu/',
   },
   {
+    name: 'Radu Ticiu',
+    role: 'Co-founder',
+    company: 'Growceanu',
+    image: raduTiciu,
+  },
+  {
     name: 'Razvan Suta',
     role: 'Angel investor & VC',
     company: '',
@@ -73,6 +81,19 @@ const mentors: Mentor[] = [
     linkedin: 'https://www.linkedin.com/in/adrian-gheorghe/',
   },
   {
+    name: 'Iulia Andritoiu Caizer',
+    role: 'CEO and co-founder',
+    company: 'QuickLegal',
+    image: iuliaAndritoiuCaizer,
+  },
+  {
+    name: 'Catalin Anghel',
+    role: 'Founder',
+    company: 'Cautcurier',
+    image: catalinAnghel,
+    linkedin: 'https://www.linkedin.com/in/catalin-anghel-v/',
+  },
+  {
     name: 'Cosmin Pirvu',
     role: 'Startup Program Manager',
     company: 'Veridion',
@@ -85,13 +106,6 @@ const mentors: Mentor[] = [
     company: 'Communication Consultant',
     image: georgeBonea,
     linkedin: 'https://www.linkedin.com/in/george-bonea-b0494b91/',
-  },
-  {
-    name: 'Catalin Anghel',
-    role: 'Founder',
-    company: 'Cautcurier',
-    image: catalinAnghel,
-    linkedin: 'https://www.linkedin.com/in/catalin-anghel-v/',
   },
   {
     name: 'Maxim Rotaru',
@@ -136,7 +150,7 @@ const Mentors = () => {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
               {renderedMentors.map((mentor, index) => {
               const visibilityClass = expanded ? 'block' : index < defaultVisible.base ? 'block' : index < defaultVisible.md ? 'hidden md:block' : index < defaultVisible.lg ? 'hidden lg:block' : 'hidden';
-              return <Card key={mentor.linkedin} className={`card-elevated text-center group transition-transform duration-300 hover:scale-[1.01] ${visibilityClass}`}>
+              return <Card key={`${mentor.name}-${mentor.company ?? ''}`} className={`card-elevated text-center group transition-transform duration-300 hover:scale-[1.01] ${visibilityClass}`}>
                     <div className="p-4">
                       <div className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-primary/20">
                         <img src={mentor.image} alt={mentor.name} loading="lazy" className="w-full h-full object-cover" />
@@ -144,9 +158,9 @@ const Mentors = () => {
                       <h3 className="text-base md:text-lg font-bold text-foreground leading-snug mb-1">{mentor.name}</h3>
                       <p className="text-muted-foreground text-xs md:text-sm">{mentor.role}</p>
                       <p className="text-muted-foreground text-xs md:text-sm mb-3">{mentor.company || '\u00A0'}</p>
-                      <a href={mentor.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`Open ${mentor.name} on LinkedIn`} className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
-                        <Linkedin className="h-4 w-4 text-primary" />
-                      </a>
+                      {mentor.linkedin ? <a href={mentor.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`Open ${mentor.name} on LinkedIn`} className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
+                          <Linkedin className="h-4 w-4 text-primary" />
+                        </a> : null}
                     </div>
                   </Card>;
             })}
