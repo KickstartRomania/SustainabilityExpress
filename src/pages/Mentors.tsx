@@ -1,9 +1,10 @@
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Star, Plus, Linkedin } from 'lucide-react';
+import { ArrowRight, Star, Plus, Linkedin, ChevronDown, ChevronUp } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import { useMemo, useState } from 'react';
 
 // Mentor images
 import razvanSuta from '@/assets/mentors/razvan-suta.jpeg';
@@ -12,44 +13,105 @@ import andreiMunteanu from '@/assets/mentors/andrei-munteanu.jpeg';
 import cosminPirvu from '@/assets/mentors/cosmin-pirvu.jpeg';
 import georgeBonea from '@/assets/mentors/george-bonea.jpeg';
 import adrianGheorghe from '@/assets/mentors/adrian-gheorghe.jpeg';
-const mentors = [{
-  name: 'Răzvan Suta',
-  role: 'Angel investor & VC',
-  company: '',
-  image: razvanSuta,
-  linkedin: 'https://www.linkedin.com/in/razvansuta/'
-}, {
-  name: 'Aleodor Tabarcea',
-  role: 'Engineering Manager',
-  company: 'Stripe',
-  image: aleodorTabarcea,
-  linkedin: 'https://www.linkedin.com/in/aleodor-tabarcea/'
-}, {
-  name: 'Andrei Munteanu',
-  role: 'CEO & Co-founder',
-  company: 'Cowork & Prow',
-  image: andreiMunteanu,
-  linkedin: 'https://www.linkedin.com/in/andreicosminmunteanu/'
-}, {
-  name: 'Adrian Gheorghe',
-  role: 'Startup Advisor',
-  company: 'Doers Ventures',
-  image: adrianGheorghe,
-  linkedin: 'https://www.linkedin.com/in/adrian-gheorghe/'
-}, {
-  name: 'Cosmin Pîrvu',
-  role: 'Startup Program Manager',
-  company: 'Veridion',
-  image: cosminPirvu,
-  linkedin: 'https://www.linkedin.com/in/cosminpirvu/'
-}, {
-  name: 'George Bonea',
-  role: 'Copywriter &',
-  company: 'Communication Consultant',
-  image: georgeBonea,
-  linkedin: 'https://www.linkedin.com/in/george-bonea-b0494b91/'
-}];
+type Mentor = {
+  name: string;
+  role: string;
+  company?: string;
+  image: string;
+  linkedin: string;
+};
+
+// NOTE: New mentor photos weren't found in the workspace upload bucket during this edit,
+// so these 3 use /placeholder.svg for now. Re-upload and I’ll swap them in.
+const mentors: Mentor[] = [
+  // Requested order:
+  // 1. Aleodor
+  // 2. Alexandra
+  // 3. Andrei Munteanu
+  // 4. Razvan
+  // 5. Adrian Gheorghe
+  // 6. Cosmin
+  // 7. George
+  // 8. Catalin
+  // 9. Maxim
+  {
+    name: 'Aleodor Tabarcea',
+    role: 'Engineering Manager',
+    company: 'Stripe',
+    image: aleodorTabarcea,
+    linkedin: 'https://www.linkedin.com/in/aleodor-tabarcea/',
+  },
+  {
+    name: 'Alexandra Jivan',
+    role: 'Partner',
+    company: 'LegalFor',
+    image: '/placeholder.svg',
+    linkedin: 'https://www.linkedin.com/in/alexandra-jivan-451794127/',
+  },
+  {
+    name: 'Andrei Munteanu',
+    role: 'CEO & Co-founder',
+    company: 'Cowork & Prow',
+    image: andreiMunteanu,
+    linkedin: 'https://www.linkedin.com/in/andreicosminmunteanu/',
+  },
+  {
+    name: 'Razvan Suta',
+    role: 'Angel investor & VC',
+    company: '',
+    image: razvanSuta,
+    linkedin: 'https://www.linkedin.com/in/razvansuta/',
+  },
+  {
+    name: 'Adrian Gheorghe',
+    role: 'Startup Advisor',
+    company: 'Doers Ventures',
+    image: adrianGheorghe,
+    linkedin: 'https://www.linkedin.com/in/adrian-gheorghe/',
+  },
+  {
+    name: 'Cosmin Pirvu',
+    role: 'Startup Program Manager',
+    company: 'Veridion',
+    image: cosminPirvu,
+    linkedin: 'https://www.linkedin.com/in/cosminpirvu/',
+  },
+  {
+    name: 'George Bonea',
+    role: 'Copywriter &',
+    company: 'Communication Consultant',
+    image: georgeBonea,
+    linkedin: 'https://www.linkedin.com/in/george-bonea-b0494b91/',
+  },
+  {
+    name: 'Catalin Anghel',
+    role: 'Founder',
+    company: 'Cautcurier',
+    image: '/placeholder.svg',
+    linkedin: 'https://www.linkedin.com/in/catalin-anghel-v/',
+  },
+  {
+    name: 'Maxim Rotaru',
+    role: 'CEO & Founder',
+    company: 'Webamboos',
+    image: '/placeholder.svg',
+    linkedin: 'https://www.linkedin.com/in/maxim-rotaru/',
+  },
+];
 const Mentors = () => {
+  const [expanded, setExpanded] = useState(false);
+
+  // Default visible mentors: 8 on desktop (lg), fewer on smaller screens.
+  // We use CSS to hide extra items per breakpoint.
+  const defaultVisible = {
+    base: 4,
+    md: 6,
+    lg: 8,
+  };
+
+  const shouldShowToggle = mentors.length > defaultVisible.lg;
+  const renderedMentors = useMemo(() => mentors, []);
+
   return <div className="min-h-screen bg-background">
       <Navigation />
       
@@ -68,26 +130,33 @@ const Mentors = () => {
               
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {mentors.map((mentor, index) => <Card key={index} className="card-elevated text-center group hover:scale-[1.02] transition-transform duration-300">
-                  <div className="pt-4">
-                    <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
-                      <img src={mentor.image} alt={mentor.name} className="w-full h-full object-cover" />
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
+              {renderedMentors.map((mentor, index) => {
+              const visibilityClass = expanded ? 'block' : index < defaultVisible.base ? 'block' : index < defaultVisible.md ? 'hidden md:block' : index < defaultVisible.lg ? 'hidden lg:block' : 'hidden';
+              return <Card key={mentor.linkedin} className={`card-elevated text-center group transition-transform duration-300 hover:scale-[1.01] ${visibilityClass}`}>
+                    <div className="p-4">
+                      <div className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-primary/20">
+                        <img src={mentor.image} alt={mentor.name} loading="lazy" className="w-full h-full object-cover" />
+                      </div>
+                      <h3 className="text-base md:text-lg font-bold text-foreground leading-snug mb-1">{mentor.name}</h3>
+                      <p className="text-muted-foreground text-xs md:text-sm">{mentor.role}</p>
+                      <p className="text-muted-foreground text-xs md:text-sm mb-3">{mentor.company || '\u00A0'}</p>
+                      <a href={mentor.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`Open ${mentor.name} on LinkedIn`} className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
+                        <Linkedin className="h-4 w-4 text-primary" />
+                      </a>
                     </div>
-                    <h3 className="text-xl font-bold text-foreground mb-1">{mentor.name}</h3>
-                    <p className="text-muted-foreground text-sm">{mentor.role}</p>
-                    <p className="text-muted-foreground text-sm mb-3">{mentor.company || '\u00A0'}</p>
-                    <a href={mentor.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
-                      <Linkedin className="h-5 w-5 text-primary" />
-                    </a>
-                  </div>
-                </Card>)}
+                  </Card>;
+            })}
             </div>
+
+            {shouldShowToggle && <div className="mt-10 flex justify-center">
+                <Button variant="outline" onClick={() => setExpanded(v => !v)}>
+                  {expanded ? <>Show less <ChevronUp className="ml-2 h-4 w-4" /></> : <>Show more <ChevronDown className="ml-2 h-4 w-4" /></>}
+                </Button>
+              </div>}
             
             {/* More mentors announcement */}
-            <p className="text-center text-lg text-muted-foreground mt-12 italic">
-              ✨ More mentors to be announced soon...
-            </p>
+            <p className="text-center text-lg text-muted-foreground mt-12 italic">✨ More mentors to be announced soon...</p>
           </section>
 
           {/* Mentorship Process */}
