@@ -201,9 +201,6 @@ const Mentors = () => {
                     Apply as Mentor <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg">
-                  Learn More
-                </Button>
               </div>
             </Card>
           </section>
