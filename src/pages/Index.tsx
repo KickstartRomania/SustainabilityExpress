@@ -2,13 +2,89 @@ import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Lightbulb, Train, Leaf, Zap, Trophy, Code, Megaphone, Briefcase, GraduationCap, Linkedin, Handshake, Heart, Brain, Recycle, BarChart3 } from 'lucide-react';
+import { ArrowRight, Users, Lightbulb, Train, Leaf, Zap, Trophy, Code, Megaphone, Briefcase, GraduationCap, Linkedin, Handshake, Heart, Brain, Recycle, BarChart3, ChevronDown, ChevronUp } from 'lucide-react';
 import razvanSuta from '@/assets/mentors/razvan-suta.jpeg';
 import aleodorTabarcea from '@/assets/mentors/aleodor-tabarcea.jpeg';
 import andreiMunteanu from '@/assets/mentors/andrei-munteanu.jpeg';
 import cosminPirvu from '@/assets/mentors/cosmin-pirvu.jpeg';
 import georgeBonea from '@/assets/mentors/george-bonea.jpeg';
 import adrianGheorghe from '@/assets/mentors/adrian-gheorghe.jpeg';
+
+type Mentor = {
+  name: string;
+  role: string;
+  company?: string;
+  image: string;
+  linkedin: string;
+};
+
+// NOTE: New mentor photos are temporarily placeholders on the homepage.
+// If you re-upload again and they appear in the workspace, I’ll wire them in.
+const mentors: Mentor[] = [
+  {
+    name: 'Aleodor Tabarcea',
+    role: 'Engineering Manager',
+    company: 'Stripe',
+    image: aleodorTabarcea,
+    linkedin: 'https://www.linkedin.com/in/aleodor-tabarcea/',
+  },
+  {
+    name: 'Alexandra Jivan',
+    role: 'Partner',
+    company: 'LegalFor',
+    image: '/placeholder.svg',
+    linkedin: 'https://www.linkedin.com/in/alexandra-jivan-451794127/',
+  },
+  {
+    name: 'Andrei Munteanu',
+    role: 'CEO & Co-founder',
+    company: 'Cowork & Prow',
+    image: andreiMunteanu,
+    linkedin: 'https://www.linkedin.com/in/andreicosminmunteanu/',
+  },
+  {
+    name: 'Razvan Suta',
+    role: 'Angel investor & VC',
+    company: '',
+    image: razvanSuta,
+    linkedin: 'https://www.linkedin.com/in/razvansuta/',
+  },
+  {
+    name: 'Adrian Gheorghe',
+    role: 'Startup Advisor',
+    company: 'Doers Ventures',
+    image: adrianGheorghe,
+    linkedin: 'https://www.linkedin.com/in/adrian-gheorghe/',
+  },
+  {
+    name: 'Cosmin Pirvu',
+    role: 'Startup Program Manager',
+    company: 'Veridion',
+    image: cosminPirvu,
+    linkedin: 'https://www.linkedin.com/in/cosminpirvu/',
+  },
+  {
+    name: 'George Bonea',
+    role: 'Copywriter &',
+    company: 'Communication Consultant',
+    image: georgeBonea,
+    linkedin: 'https://www.linkedin.com/in/george-bonea-b0494b91/',
+  },
+  {
+    name: 'Catalin Anghel',
+    role: 'Founder',
+    company: 'Cautcurier',
+    image: '/placeholder.svg',
+    linkedin: 'https://www.linkedin.com/in/catalin-anghel-v/',
+  },
+  {
+    name: 'Maxim Rotaru',
+    role: 'CEO & Founder',
+    company: 'Webamboos',
+    image: '/placeholder.svg',
+    linkedin: 'https://www.linkedin.com/in/maxim-rotaru/',
+  },
+];
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import heroTrain from '@/assets/hero-train.jpg';
@@ -128,6 +204,7 @@ const sections = [{
 }];
 const Index = () => {
   const [isPartnersVisible, setIsPartnersVisible] = useState(false);
+  const [mentorsExpanded, setMentorsExpanded] = useState(false);
   const partnersRef = useRef<HTMLElement>(null);
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
@@ -478,115 +555,33 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">They are the mentors and industry professionals who will help turn your idea into reality and boost its chances of success.</p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Răzvan Suta */}
-            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
-              <div className="absolute top-0 left-4 right-4 opacity-30">
-                <RailLine />
-              </div>
-              <div className="pt-4 text-center">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
-                  <img src={razvanSuta} alt="Răzvan Suta" className="w-full h-full object-cover" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-1">Răzvan Suta</h3>
-                <p className="text-muted-foreground text-sm">Angel investor & VC</p>
-                <p className="text-muted-foreground text-sm mb-3">&nbsp;</p>
-                <a href="https://www.linkedin.com/in/razvansuta/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
-                  <Linkedin className="h-5 w-5 text-primary" />
-                </a>
-              </div>
-            </Card>
-
-            {/* Aleodor Tăbârcea */}
-            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
-              <div className="absolute top-0 left-4 right-4 opacity-30">
-                <RailLine />
-              </div>
-              <div className="pt-4 text-center">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
-                  <img src={aleodorTabarcea} alt="Aleodor Tăbârcea" className="w-full h-full object-cover" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-1">Aleodor Tabarcea</h3>
-                <p className="text-muted-foreground text-sm">Engineering Manager</p>
-                <p className="text-muted-foreground text-sm mb-3">Stripe</p>
-                <a href="https://www.linkedin.com/in/aleodor-tabarcea/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
-                  <Linkedin className="h-5 w-5 text-primary" />
-                </a>
-              </div>
-            </Card>
-
-            {/* Andrei Munteanu */}
-            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
-              <div className="absolute top-0 left-4 right-4 opacity-30">
-                <RailLine />
-              </div>
-              <div className="pt-4 text-center">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
-                  <img src={andreiMunteanu} alt="Andrei Munteanu" className="w-full h-full object-cover" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-1">Andrei Munteanu</h3>
-                <p className="text-muted-foreground text-sm">CEO & Co-founder</p>
-                <p className="text-muted-foreground text-sm mb-3">Cowork & Prow</p>
-                <a href="https://www.linkedin.com/in/andreicosminmunteanu/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
-                  <Linkedin className="h-5 w-5 text-primary" />
-                </a>
-              </div>
-            </Card>
-
-            {/* Adrian Gheorghe */}
-            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
-              <div className="absolute top-0 left-4 right-4 opacity-30">
-                <RailLine />
-              </div>
-              <div className="pt-4 text-center">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
-                  <img src={adrianGheorghe} alt="Adrian Gheorghe" className="w-full h-full object-cover" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-1">Adrian Gheorghe</h3>
-                <p className="text-muted-foreground text-sm">Startup Advisor</p>
-                <p className="text-muted-foreground text-sm mb-3">Doers Ventures</p>
-                <a href="https://www.linkedin.com/in/adrian-gheorghe/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
-                  <Linkedin className="h-5 w-5 text-primary" />
-                </a>
-              </div>
-            </Card>
-
-            {/* Cosmin Pîrvu */}
-            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
-              <div className="absolute top-0 left-4 right-4 opacity-30">
-                <RailLine />
-              </div>
-              <div className="pt-4 text-center">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
-                  <img src={cosminPirvu} alt="Cosmin Pîrvu" className="w-full h-full object-cover" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-1">Cosmin Pîrvu</h3>
-                <p className="text-muted-foreground text-sm">Startup Program Manager</p>
-                <p className="text-muted-foreground text-sm mb-3">Veridion</p>
-                <a href="https://www.linkedin.com/in/cosminpirvu/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
-                  <Linkedin className="h-5 w-5 text-primary" />
-                </a>
-              </div>
-            </Card>
-
-            {/* George Bonea */}
-            <Card className="card-elevated group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden">
-              <div className="absolute top-0 left-4 right-4 opacity-30">
-                <RailLine />
-              </div>
-              <div className="pt-4 text-center">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
-                  <img src={georgeBonea} alt="George Bonea" className="w-full h-full object-cover" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-1">George Bonea</h3>
-                <p className="text-muted-foreground text-sm">Copywriter &</p>
-                <p className="text-muted-foreground text-sm mb-3">Communication Consultant</p>
-                <a href="https://www.linkedin.com/in/george-bonea-b0494b91/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
-                  <Linkedin className="h-5 w-5 text-primary" />
-                </a>
-              </div>
-            </Card>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
+            {mentors.map((mentor, index) => {
+            const visibilityClass = mentorsExpanded ? 'block' : index < 4 ? 'block' : index < 6 ? 'hidden md:block' : index < 8 ? 'hidden lg:block' : 'hidden';
+            return <Card key={mentor.linkedin} className={`card-elevated group transition-transform duration-300 hover:scale-[1.01] relative overflow-hidden ${visibilityClass}`}>
+                  <div className="absolute top-0 left-4 right-4 opacity-30">
+                    <RailLine />
+                  </div>
+                  <div className="p-4 text-center">
+                    <div className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-primary/20">
+                      <img src={mentor.image} alt={mentor.name} loading="lazy" className="w-full h-full object-cover" />
+                    </div>
+                    <h3 className="text-base md:text-lg font-bold text-foreground leading-snug mb-1">{mentor.name}</h3>
+                    <p className="text-muted-foreground text-xs md:text-sm">{mentor.role}</p>
+                    <p className="text-muted-foreground text-xs md:text-sm mb-3">{mentor.company || '\u00A0'}</p>
+                    <a href={mentor.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`Open ${mentor.name} on LinkedIn`} className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
+                      <Linkedin className="h-4 w-4 text-primary" />
+                    </a>
+                  </div>
+                </Card>;
+          })}
           </div>
+
+          {mentors.length > 8 && <div className="mt-10 flex justify-center">
+              <Button variant="outline" onClick={() => setMentorsExpanded(v => !v)}>
+                {mentorsExpanded ? <>Show less <ChevronUp className="ml-2 h-4 w-4" /></> : <>Show more <ChevronDown className="ml-2 h-4 w-4" /></>}
+              </Button>
+            </div>}
           
           {/* More mentors announcement */}
           <p className="text-center text-lg text-muted-foreground mt-12 italic">
