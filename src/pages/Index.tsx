@@ -43,32 +43,70 @@ import curteaVecheLogo from '@/assets/partners/curtea-veche.png';
 import skvotLogo from '@/assets/partners/skvot.png';
 
 // Row 1 partners (first half)
-const row1Partners = [
-  { name: 'Sameday', logo: samedayLogo },
-  { name: 'diARK', logo: diarkLogo },
-  { name: 'Bookster', logo: booksterLogo },
-  { name: 'PRO TV', logo: protvLogo },
-  { name: 'Skillab', logo: skillabLogo },
-  { name: 'Hacking Work', logo: hackingworkLogo },
-  { name: 'Pozitivești', logo: pozitivestiLogo },
-  { name: 'Stripe', logo: stripeLogo },
-  { name: 'Valentina România', logo: valentinaLogo },
-  { name: 'Cartea Daliei', logo: carteadalieiLogo },
-];
+const row1Partners = [{
+  name: 'Sameday',
+  logo: samedayLogo
+}, {
+  name: 'diARK',
+  logo: diarkLogo
+}, {
+  name: 'Bookster',
+  logo: booksterLogo
+}, {
+  name: 'PRO TV',
+  logo: protvLogo
+}, {
+  name: 'Skillab',
+  logo: skillabLogo
+}, {
+  name: 'Hacking Work',
+  logo: hackingworkLogo
+}, {
+  name: 'Pozitivești',
+  logo: pozitivestiLogo
+}, {
+  name: 'Stripe',
+  logo: stripeLogo
+}, {
+  name: 'Valentina România',
+  logo: valentinaLogo
+}, {
+  name: 'Cartea Daliei',
+  logo: carteadalieiLogo
+}];
 
 // Row 2 partners (second half)
-const row2Partners = [
-  { name: 'How to Web', logo: howtowebLogo },
-  { name: 'VSFA', logo: vsfaLogo },
-  { name: 'Founder Institute', logo: founderInstituteLogo },
-  { name: 'Prow', logo: prowLogo },
-  { name: 'AmpliFY ONG', logo: amplifyOngLogo },
-  { name: 'Launch Romania', logo: launchRomaniaLogo },
-  { name: 'EduUP', logo: eduupLogo },
-  { name: 'Alacrity', logo: alacrityLogo },
-  { name: 'Curtea Veche Publishing', logo: curteaVecheLogo },
-  { name: 'SKVOT', logo: skvotLogo },
-];
+const row2Partners = [{
+  name: 'How to Web',
+  logo: howtowebLogo
+}, {
+  name: 'VSFA',
+  logo: vsfaLogo
+}, {
+  name: 'Founder Institute',
+  logo: founderInstituteLogo
+}, {
+  name: 'Prow',
+  logo: prowLogo
+}, {
+  name: 'AmpliFY ONG',
+  logo: amplifyOngLogo
+}, {
+  name: 'Launch Romania',
+  logo: launchRomaniaLogo
+}, {
+  name: 'EduUP',
+  logo: eduupLogo
+}, {
+  name: 'Alacrity',
+  logo: alacrityLogo
+}, {
+  name: 'Curtea Veche Publishing',
+  logo: curteaVecheLogo
+}, {
+  name: 'SKVOT',
+  logo: skvotLogo
+}];
 const sections = [{
   id: 'hero',
   label: 'Welcome'
@@ -91,25 +129,20 @@ const sections = [{
 const Index = () => {
   const [isPartnersVisible, setIsPartnersVisible] = useState(false);
   const partnersRef = useRef<HTMLElement>(null);
-
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsPartnersVisible(true);
-          observer.disconnect(); // Only trigger once
-        }
-      },
-      { threshold: 0.2 }
-    );
-
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setIsPartnersVisible(true);
+        observer.disconnect(); // Only trigger once
+      }
+    }, {
+      threshold: 0.2
+    });
     if (partnersRef.current) {
       observer.observe(partnersRef.current);
     }
-
     return () => observer.disconnect();
   }, []);
-
   return <div className="min-h-screen bg-background">
       <Navigation />
       <ScrollProgressRail sections={sections} />
@@ -458,12 +491,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 <h3 className="text-xl font-bold text-foreground mb-1">Răzvan Suta</h3>
                 <p className="text-muted-foreground text-sm">Angel investor & VC</p>
                 <p className="text-muted-foreground text-sm mb-3">&nbsp;</p>
-                <a 
-                  href="https://www.linkedin.com/in/razvansuta/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
-                >
+                <a href="https://www.linkedin.com/in/razvansuta/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
                   <Linkedin className="h-5 w-5 text-primary" />
                 </a>
               </div>
@@ -478,15 +506,10 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary/20">
                   <img src={aleodorTabarcea} alt="Aleodor Tăbârcea" className="w-full h-full object-cover" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-1">Aleodor Tăbârcea</h3>
+                <h3 className="text-xl font-bold text-foreground mb-1">Aleodor Tabarcea</h3>
                 <p className="text-muted-foreground text-sm">Engineering Manager</p>
                 <p className="text-muted-foreground text-sm mb-3">Stripe</p>
-                <a 
-                  href="https://www.linkedin.com/in/aleodor-tabarcea/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
-                >
+                <a href="https://www.linkedin.com/in/aleodor-tabarcea/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
                   <Linkedin className="h-5 w-5 text-primary" />
                 </a>
               </div>
@@ -504,12 +527,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 <h3 className="text-xl font-bold text-foreground mb-1">Andrei Munteanu</h3>
                 <p className="text-muted-foreground text-sm">CEO & Co-founder</p>
                 <p className="text-muted-foreground text-sm mb-3">Cowork & Prow</p>
-                <a 
-                  href="https://www.linkedin.com/in/andreicosminmunteanu/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
-                >
+                <a href="https://www.linkedin.com/in/andreicosminmunteanu/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
                   <Linkedin className="h-5 w-5 text-primary" />
                 </a>
               </div>
@@ -527,12 +545,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 <h3 className="text-xl font-bold text-foreground mb-1">Adrian Gheorghe</h3>
                 <p className="text-muted-foreground text-sm">Startup Advisor</p>
                 <p className="text-muted-foreground text-sm mb-3">Doers Ventures</p>
-                <a 
-                  href="https://www.linkedin.com/in/adrian-gheorghe/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
-                >
+                <a href="https://www.linkedin.com/in/adrian-gheorghe/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
                   <Linkedin className="h-5 w-5 text-primary" />
                 </a>
               </div>
@@ -550,12 +563,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 <h3 className="text-xl font-bold text-foreground mb-1">Cosmin Pîrvu</h3>
                 <p className="text-muted-foreground text-sm">Startup Program Manager</p>
                 <p className="text-muted-foreground text-sm mb-3">Veridion</p>
-                <a 
-                  href="https://www.linkedin.com/in/cosminpirvu/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
-                >
+                <a href="https://www.linkedin.com/in/cosminpirvu/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
                   <Linkedin className="h-5 w-5 text-primary" />
                 </a>
               </div>
@@ -573,12 +581,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 <h3 className="text-xl font-bold text-foreground mb-1">George Bonea</h3>
                 <p className="text-muted-foreground text-sm">Copywriter &</p>
                 <p className="text-muted-foreground text-sm mb-3">Communication Consultant</p>
-                <a 
-                  href="https://www.linkedin.com/in/george-bonea-b0494b91/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
-                >
+                <a href="https://www.linkedin.com/in/george-bonea-b0494b91/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
                   <Linkedin className="h-5 w-5 text-primary" />
                 </a>
               </div>
@@ -689,9 +692,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 {/* Rail track above */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
                 <div className="absolute -top-1 left-0 right-0 flex justify-around">
-                  {[...Array(40)].map((_, i) => (
-                    <div key={`tie1-${i}`} className="w-1 h-2 bg-primary/20 rounded-sm" />
-                  ))}
+                  {[...Array(40)].map((_, i) => <div key={`tie1-${i}`} className="w-1 h-2 bg-primary/20 rounded-sm" />)}
                 </div>
                 
                 {/* Train cars - first row: locomotive leads, nose pointing LEFT, moving LEFT */}
@@ -709,11 +710,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                       <div className="absolute -bottom-2 left-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <div className="absolute -bottom-2 right-10 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
                       <div className="absolute -bottom-2 right-3 w-4 h-4 rounded-full bg-primary/40 border-2 border-primary/50" />
-                          <img
-                            src={sustainabilityExpressLocoLogo}
-                            alt="Sustainability Express"
-                            className="max-w-[80%] max-h-[60%] object-contain rounded-md"
-                          />
+                          <img src={sustainabilityExpressLocoLogo} alt="Sustainability Express" className="max-w-[80%] max-h-[60%] object-contain rounded-md" />
                     </div>
                     {/* Connector to next car */}
                     <div className="w-3 h-1.5 bg-primary/50 rounded-full mb-8" />
@@ -724,43 +721,31 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                     <div className="w-36 h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative">
                       <div className="absolute -bottom-2 left-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
                       <div className="absolute -bottom-2 right-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
-                      <img
-                        src={phiniaLogo}
-                        alt="PHINIA"
-                        className="max-w-[90%] max-h-[80%] object-contain rounded-md"
-                      />
+                      <img src={phiniaLogo} alt="PHINIA" className="max-w-[90%] max-h-[80%] object-contain rounded-md" />
                     </div>
                     <div className="w-2 h-1 bg-primary/40 rounded-full mb-8" />
                   </div>
                   
-                  {row1Partners.map((partner, index) => (
-                    <div key={`row1-first-${index}`} className="flex-shrink-0 flex items-end">
+                  {row1Partners.map((partner, index) => <div key={`row1-first-${index}`} className="flex-shrink-0 flex items-end">
                       {/* Train car */}
                       <div className="w-36 h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative">
                         {/* Wheel connectors */}
                         <div className="absolute -bottom-2 left-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
                         <div className="absolute -bottom-2 right-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
-                        <img
-                          src={partner.logo}
-                          alt={partner.name}
-                          className="max-w-[90%] max-h-[80%] object-contain rounded-md"
-                        />
+                        <img src={partner.logo} alt={partner.name} className="max-w-[90%] max-h-[80%] object-contain rounded-md" />
                       </div>
                       {/* Connector between cars */}
                       <div className="w-2 h-1 bg-primary/40 rounded-full mb-8" />
-                    </div>
-                  ))}
+                    </div>)}
                   {/* Duplicate wagons for seamless loop */}
-                  {row1Partners.map((partner, index) => (
-                    <div key={`row1-second-${index}`} className="flex-shrink-0 flex items-end">
+                  {row1Partners.map((partner, index) => <div key={`row1-second-${index}`} className="flex-shrink-0 flex items-end">
                       <div className="w-36 h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative">
                         <div className="absolute -bottom-2 left-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
                         <div className="absolute -bottom-2 right-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
                         <img src={partner.logo} alt={partner.name} className="max-w-[90%] max-h-[80%] object-contain rounded-md" />
                       </div>
                       <div className="w-2 h-1 bg-primary/40 rounded-full mb-8" />
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
                 
                 {/* Rail track below */}
@@ -772,25 +757,21 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 {/* Rail track above */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
                 <div className="absolute -top-1 left-0 right-0 flex justify-around">
-                  {[...Array(40)].map((_, i) => (
-                    <div key={`tie2-${i}`} className="w-1 h-2 bg-primary/20 rounded-sm" />
-                  ))}
+                  {[...Array(40)].map((_, i) => <div key={`tie2-${i}`} className="w-1 h-2 bg-primary/20 rounded-sm" />)}
                 </div>
                 
                 {/* Train cars - second row: locomotive leads, moving LEFT to RIGHT */}
                 {/* Container starts at translateX(-100%), so RIGHTMOST element (locomotive) is at left viewport edge */}
                 <div className={`flex items-end justify-end pt-8 pb-4 ${isPartnersVisible ? 'animate-train-enter-right' : ''}`}>
                   {/* Wagons FIRST (leftmost in DOM) - they trail behind, enter viewport LAST */}
-                  {[...row2Partners].reverse().map((partner, index) => (
-                    <div key={`row2-${index}`} className="flex-shrink-0 flex items-end">
+                  {[...row2Partners].reverse().map((partner, index) => <div key={`row2-${index}`} className="flex-shrink-0 flex items-end">
                       <div className="w-2 h-1 bg-primary/40 rounded-full mb-8" />
                       <div className="w-36 h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative">
                         <div className="absolute -bottom-2 left-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
                         <div className="absolute -bottom-2 right-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
                         <img src={partner.logo} alt={partner.name} className="max-w-[90%] max-h-[80%] object-contain rounded-md" />
                       </div>
-                    </div>
-                  ))}
+                    </div>)}
                   
                   {/* PHINIA Locomotive LAST (rightmost in DOM) - enters viewport FIRST from left edge */}
                   <div className="flex-shrink-0 flex items-end">
