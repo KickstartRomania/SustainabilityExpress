@@ -14,6 +14,8 @@ import andreiMunteanu from '@/assets/mentors/andrei-munteanu.jpeg';
 import cosminPirvu from '@/assets/mentors/cosmin-pirvu.jpeg';
 import georgeBonea from '@/assets/mentors/george-bonea.jpeg';
 import adrianGheorghe from '@/assets/mentors/adrian-gheorghe.jpeg';
+import catalinAnghel from '@/assets/mentors/catalin-anghel.jpeg';
+import maximRotaru from '@/assets/mentors/maxim-rotaru.jpeg';
 type Mentor = {
   name: string;
   role: string;
@@ -88,14 +90,14 @@ const mentors: Mentor[] = [
     name: 'Catalin Anghel',
     role: 'Founder',
     company: 'Cautcurier',
-    image: '/placeholder.svg',
+    image: catalinAnghel,
     linkedin: 'https://www.linkedin.com/in/catalin-anghel-v/',
   },
   {
     name: 'Maxim Rotaru',
     role: 'CEO & Founder',
     company: 'Webamboos',
-    image: '/placeholder.svg',
+    image: maximRotaru,
     linkedin: 'https://www.linkedin.com/in/maxim-rotaru/',
   },
 ];
