@@ -52,6 +52,7 @@ const mentors: Mentor[] = [
     role: 'Co-founder',
     company: 'Growceanu',
     image: raduTiciu,
+    linkedin: 'https://www.linkedin.com/in/raduticiu/',
   },
   {
     name: 'Razvan Suta',
@@ -72,6 +73,7 @@ const mentors: Mentor[] = [
     role: 'CEO and co-founder',
     company: 'QuickLegal',
     image: iuliaAndritoiuCaizer,
+    linkedin: 'https://www.linkedin.com/in/iulia-caizer/',
   },
   {
     name: 'Catalin Anghel',
