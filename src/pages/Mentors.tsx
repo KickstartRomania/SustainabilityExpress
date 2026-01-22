@@ -19,7 +19,7 @@ const mentors = [{
   image: razvanSuta,
   linkedin: 'https://www.linkedin.com/in/razvansuta/'
 }, {
-  name: 'Aleodor Tăbârcea',
+  name: 'Aleodor Tabarcea',
   role: 'Engineering Manager',
   company: 'Stripe',
   image: aleodorTabarcea,
