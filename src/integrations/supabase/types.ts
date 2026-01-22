@@ -65,6 +65,39 @@ export type Database = {
         }
         Relationships: []
       }
+      mentor_applications: {
+        Row: {
+          background: string
+          based_in: string
+          created_at: string
+          email: string
+          id: string
+          linkedin: string
+          name: string
+          phone: string
+        }
+        Insert: {
+          background: string
+          based_in: string
+          created_at?: string
+          email: string
+          id?: string
+          linkedin: string
+          name: string
+          phone: string
+        }
+        Update: {
+          background?: string
+          based_in?: string
+          created_at?: string
+          email?: string
+          id?: string
+          linkedin?: string
+          name?: string
+          phone?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           id: string
