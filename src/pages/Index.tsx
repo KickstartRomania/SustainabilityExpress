@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Lightbulb, Train, Leaf, Zap, Trophy, Code, Megaphone, Briefcase, GraduationCap, Linkedin, Handshake, Heart, Brain, Recycle, BarChart3, ChevronDown, ChevronUp } from 'lucide-react';
 import razvanSuta from '@/assets/mentors/razvan-suta.jpeg';
 import aleodorTabarcea from '@/assets/mentors/aleodor-tabarcea.jpeg';
+import alexandraJivan from '@/assets/mentors/alexandra-jivan.jpeg';
 import andreiMunteanu from '@/assets/mentors/andrei-munteanu.jpeg';
 import cosminPirvu from '@/assets/mentors/cosmin-pirvu.jpeg';
 import georgeBonea from '@/assets/mentors/george-bonea.jpeg';
@@ -32,7 +33,7 @@ const mentors: Mentor[] = [
     name: 'Alexandra Jivan',
     role: 'Partner',
     company: 'LegalFor',
-    image: '/placeholder.svg',
+    image: alexandraJivan,
     linkedin: 'https://www.linkedin.com/in/alexandra-jivan-451794127/',
   },
   {
