@@ -116,7 +116,8 @@ const Apply = () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          name: fullName,
+          firstName: validatedData.firstName,
+          lastName: validatedData.lastName,
           email: validatedData.email,
           phone: validatedData.phone,
           role: validatedData.role,
