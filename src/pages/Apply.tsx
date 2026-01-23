@@ -15,7 +15,6 @@ import { z } from 'zod';
 import { logError } from '@/lib/error-handler';
 import { checkRateLimit, recordSubmission, formatResetTime } from '@/lib/rate-limiter';
 import { PhoneInput } from 'react-international-phone';
-import 'react-international-phone/style.css';
 
 // Validation schema for application form
 const applicationSchema = z.object({

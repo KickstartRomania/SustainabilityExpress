@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { z } from "zod";
 import { PhoneInput } from 'react-international-phone';
-import 'react-international-phone/style.css';
 
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
