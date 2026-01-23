@@ -293,23 +293,30 @@
   }
   
   .react-international-phone-input-container .react-international-phone-country-selector-dropdown {
-    @apply bg-popover border border-border rounded-md shadow-lg z-50 max-h-64 overflow-y-auto;
+    @apply border border-border rounded-md shadow-lg z-50 max-h-64 overflow-y-auto;
+    background-color: hsl(220 13% 9%) !important;
   }
   
   .react-international-phone-input-container .react-international-phone-country-selector-dropdown__list-item {
-    @apply px-3 py-2 cursor-pointer text-foreground hover:bg-secondary;
+    @apply px-3 py-2 cursor-pointer;
+    background-color: hsl(220 13% 9%) !important;
+    color: hsl(0 0% 95%) !important;
+  }
+  
+  .react-international-phone-input-container .react-international-phone-country-selector-dropdown__list-item:hover {
+    background-color: hsl(220 13% 15%) !important;
   }
   
   .react-international-phone-input-container .react-international-phone-country-selector-dropdown__list-item--focused,
   .react-international-phone-input-container .react-international-phone-country-selector-dropdown__list-item--selected {
-    @apply bg-secondary;
+    background-color: hsl(220 13% 18%) !important;
   }
   
   .react-international-phone-input-container .react-international-phone-country-selector-dropdown__list-item-country-name {
-    @apply text-foreground;
+    color: hsl(0 0% 95%) !important;
   }
   
   .react-international-phone-input-container .react-international-phone-country-selector-dropdown__list-item-dial-code {
-    @apply text-muted-foreground;
+    color: hsl(0 0% 65%) !important;
   }
 }
