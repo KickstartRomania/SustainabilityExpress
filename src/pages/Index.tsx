@@ -14,6 +14,7 @@ import catalinAnghel from '@/assets/mentors/catalin-anghel.jpeg';
 import maximRotaru from '@/assets/mentors/maxim-rotaru.jpeg';
 import raduTiciu from '@/assets/mentors/radu-ticiu.jpeg';
 import iuliaAndritoiuCaizer from '@/assets/mentors/iulia-andritoiu-caizer.jpeg';
+import ralucaMessai from '@/assets/mentors/raluca-messai.jpeg';
 
 type Mentor = {
   name: string;
@@ -34,11 +35,11 @@ const mentors: Mentor[] = [
     linkedin: 'https://www.linkedin.com/in/aleodor-tabarcea/',
   },
   {
-    name: 'Alexandra Jivan',
-    role: 'Partner',
-    company: 'LegalFor',
-    image: alexandraJivan,
-    linkedin: 'https://www.linkedin.com/in/alexandra-jivan-451794127/',
+    name: 'Raluca Messai',
+    role: 'Entrepreneur & Brand strategist',
+    company: 'diARK',
+    image: ralucaMessai,
+    linkedin: 'https://www.linkedin.com/in/ralucamessai/',
   },
   {
     name: 'Andrei Munteanu',
@@ -81,6 +82,13 @@ const mentors: Mentor[] = [
     company: 'Cautcurier',
     image: catalinAnghel,
     linkedin: 'https://www.linkedin.com/in/catalin-anghel-v/',
+  },
+  {
+    name: 'Alexandra Jivan',
+    role: 'Partner',
+    company: 'LegalFor',
+    image: alexandraJivan,
+    linkedin: 'https://www.linkedin.com/in/alexandra-jivan-451794127/',
   },
   {
     name: 'Cosmin Pirvu',
