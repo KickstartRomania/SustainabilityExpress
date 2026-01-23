@@ -197,6 +197,17 @@ const MentorApply = () => {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="email">Email *</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={(e) => handleInputChange("email", e.target.value)}
+                      placeholder="your.email@example.com"
+                      required
+                    />
+                  </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="phone">Phone number *</Label>
@@ -206,18 +217,6 @@ const MentorApply = () => {
                       onChange={(phone) => handleInputChange("phone", phone)}
                     />
                   </div>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email *</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => handleInputChange("email", e.target.value)}
-                    placeholder="your.email@example.com"
-                    required
-                  />
                 </div>
 
                 <div className="space-y-2">
