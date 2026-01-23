@@ -90,9 +90,9 @@ const MentorApply = () => {
 
     try {
       const validated = validationResult.data;
-      const fullName = `${validated.firstName} ${validated.lastName}`.trim();
       const { error } = await supabase.from("mentor_applications").insert({
-        name: fullName,
+        first_name: validated.firstName,
+        last_name: validated.lastName,
         email: validated.email,
         linkedin: validated.linkedin,
         phone: validated.phone,

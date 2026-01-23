@@ -20,10 +20,11 @@ export type Database = {
           code_of_conduct: boolean
           created_at: string
           email: string
+          first_name: string
           id: string
           idea: string | null
+          last_name: string
           motivation: string
-          name: string
           phone: string
           photo_consent: boolean
           portfolio: string | null
@@ -36,10 +37,11 @@ export type Database = {
           code_of_conduct?: boolean
           created_at?: string
           email: string
+          first_name: string
           id?: string
           idea?: string | null
+          last_name: string
           motivation: string
-          name: string
           phone: string
           photo_consent?: boolean
           portfolio?: string | null
@@ -52,10 +54,11 @@ export type Database = {
           code_of_conduct?: boolean
           created_at?: string
           email?: string
+          first_name?: string
           id?: string
           idea?: string | null
+          last_name?: string
           motivation?: string
-          name?: string
           phone?: string
           photo_consent?: boolean
           portfolio?: string | null
@@ -71,9 +74,10 @@ export type Database = {
           based_in: string
           created_at: string
           email: string
+          first_name: string
           id: string
+          last_name: string
           linkedin: string
-          name: string
           phone: string
         }
         Insert: {
@@ -81,9 +85,10 @@ export type Database = {
           based_in: string
           created_at?: string
           email: string
+          first_name: string
           id?: string
+          last_name: string
           linkedin: string
-          name: string
           phone: string
         }
         Update: {
@@ -91,9 +96,10 @@ export type Database = {
           based_in?: string
           created_at?: string
           email?: string
+          first_name?: string
           id?: string
+          last_name?: string
           linkedin?: string
-          name?: string
           phone?: string
         }
         Relationships: []

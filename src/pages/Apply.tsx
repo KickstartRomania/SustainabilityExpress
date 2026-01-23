@@ -92,9 +92,9 @@ const Apply = () => {
     setIsSubmitting(true);
 
     try {
-      const fullName = `${validatedData.firstName} ${validatedData.lastName}`.trim();
       const { error } = await supabase.from('applications').insert({
-        name: fullName,
+        first_name: validatedData.firstName,
+        last_name: validatedData.lastName,
         email: validatedData.email,
         phone: validatedData.phone,
         role: validatedData.role,
