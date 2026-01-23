@@ -14,13 +14,15 @@ import Footer from '@/components/Footer';
 import { z } from 'zod';
 import { logError } from '@/lib/error-handler';
 import { checkRateLimit, recordSubmission, formatResetTime } from '@/lib/rate-limiter';
+import { PhoneInput } from 'react-international-phone';
+import 'react-international-phone/style.css';
 
 // Validation schema for application form
 const applicationSchema = z.object({
   firstName: z.string().trim().min(1, 'First name is required').max(50, 'First name must be less than 50 characters'),
   lastName: z.string().trim().min(1, 'Last name is required').max(50, 'Last name must be less than 50 characters'),
   email: z.string().trim().email('Please enter a valid email address').max(255, 'Email must be less than 255 characters'),
-  phone: z.string().trim().min(8, 'Phone must be at least 8 characters').max(20, 'Phone must be less than 20 characters'),
+  phone: z.string().trim().regex(/^\+[1-9]\d{7,14}$/, 'Please enter a valid phone number with country code (e.g., +40750728423)').max(16, 'Phone number is too long'),
   role: z.string().min(1, 'Please select a role'),
   skillLevel: z.enum(['student', 'junior', 'mid', 'senior'], { 
     errorMap: () => ({ message: 'Please select an experience level' }) 
@@ -256,12 +258,17 @@ const Apply = () => {
 
                     <div className="space-y-2">
                       <Label htmlFor="phone">Phone Number *</Label>
-                      <Input
-                        id="phone"
+                      <PhoneInput
+                        defaultCountry="ro"
                         value={formData.phone}
-                        onChange={(e) => handleInputChange('phone', e.target.value)}
-                        placeholder="+40 123 456 789"
-                        required
+                        onChange={(phone) => handleInputChange('phone', phone)}
+                        inputClassName="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                        countrySelectorStyleProps={{
+                          buttonClassName: "h-10 rounded-l-md border border-input bg-background px-3 hover:bg-secondary",
+                          dropdownStyleProps: {
+                            className: "bg-popover border border-border rounded-md shadow-lg z-50"
+                          }
+                        }}
                       />
                     </div>
                   </div>

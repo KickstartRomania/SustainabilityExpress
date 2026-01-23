@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { z } from "zod";
+import { PhoneInput } from 'react-international-phone';
+import 'react-international-phone/style.css';
 
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -37,8 +39,8 @@ const mentorApplicationSchema = z.object({
   phone: z
     .string()
     .trim()
-    .min(8, "Phone must be at least 8 characters")
-    .max(25, "Phone must be less than 25 characters"),
+    .regex(/^\+[1-9]\d{7,14}$/, 'Please enter a valid phone number with country code (e.g., +40750728423)')
+    .max(16, 'Phone number is too long'),
   basedIn: z
     .string()
     .trim()
@@ -199,12 +201,17 @@ const MentorApply = () => {
 
                   <div className="space-y-2">
                     <Label htmlFor="phone">Phone number *</Label>
-                    <Input
-                      id="phone"
+                    <PhoneInput
+                      defaultCountry="ro"
                       value={formData.phone}
-                      onChange={(e) => handleInputChange("phone", e.target.value)}
-                      placeholder="+40 123 456 789"
-                      required
+                      onChange={(phone) => handleInputChange("phone", phone)}
+                      inputClassName="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                      countrySelectorStyleProps={{
+                        buttonClassName: "h-10 rounded-l-md border border-input bg-background px-3 hover:bg-secondary",
+                        dropdownStyleProps: {
+                          className: "bg-popover border border-border rounded-md shadow-lg z-50"
+                        }
+                      }}
                     />
                   </div>
                 </div>
