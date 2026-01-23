@@ -19,6 +19,7 @@ import maximRotaru from '@/assets/mentors/maxim-rotaru.jpeg';
 import raduTiciu from '@/assets/mentors/radu-ticiu.jpeg';
 import iuliaAndritoiuCaizer from '@/assets/mentors/iulia-andritoiu-caizer.jpeg';
 import ralucaMessai from '@/assets/mentors/raluca-messai.jpeg';
+import andreeaNicolae from '@/assets/mentors/andreea-nicolae.jpeg';
 
 type Mentor = {
   name: string;
@@ -89,6 +90,13 @@ const mentors: Mentor[] = [
     company: 'QuickLegal',
     image: iuliaAndritoiuCaizer,
     linkedin: 'https://www.linkedin.com/in/iulia-caizer/',
+  },
+  {
+    name: 'Andreea (Oproiu) Nicolae',
+    role: 'Head of MarCom',
+    company: 'How to Web',
+    image: andreeaNicolae,
+    linkedin: 'https://www.linkedin.com/in/andreea-oproiu/',
   },
   {
     name: 'Catalin Anghel',
