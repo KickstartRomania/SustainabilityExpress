@@ -16,7 +16,6 @@ import raduTiciu from '@/assets/mentors/radu-ticiu.jpeg';
 import iuliaAndritoiuCaizer from '@/assets/mentors/iulia-andritoiu-caizer.jpeg';
 import ralucaMessai from '@/assets/mentors/raluca-messai.jpeg';
 import andreeaNicolae from '@/assets/mentors/andreea-nicolae.jpeg';
-
 type Mentor = {
   name: string;
   role: string;
@@ -27,99 +26,85 @@ type Mentor = {
 
 // NOTE: New mentor photos are temporarily placeholders on the homepage.
 // If you re-upload again and they appear in the workspace, I’ll wire them in.
-const mentors: Mentor[] = [
-  {
-    name: 'Aleodor Tabarcea',
-    role: 'Engineering Manager',
-    company: 'Stripe',
-    image: aleodorTabarcea,
-    linkedin: 'https://www.linkedin.com/in/aleodor-tabarcea/',
-  },
-  {
-    name: 'Raluca Messai',
-    role: 'Entrepreneur & Brand strategist',
-    company: 'diARK',
-    image: ralucaMessai,
-    linkedin: 'https://www.linkedin.com/in/ralucamessai/',
-  },
-  {
-    name: 'Andrei Munteanu',
-    role: 'CEO & Co-founder',
-    company: 'Cowork & Prow',
-    image: andreiMunteanu,
-    linkedin: 'https://www.linkedin.com/in/andreicosminmunteanu/',
-  },
-  {
-    name: 'Radu Ticiu',
-    role: 'Co-founder',
-    company: 'Growceanu',
-    image: raduTiciu,
-    linkedin: 'https://www.linkedin.com/in/raduticiu/',
-  },
-  {
-    name: 'Razvan Suta',
-    role: 'Angel investor & VC',
-    company: '',
-    image: razvanSuta,
-    linkedin: 'https://www.linkedin.com/in/razvansuta/',
-  },
-  {
-    name: 'Adrian Gheorghe',
-    role: 'Startup Advisor',
-    company: 'Doers Ventures',
-    image: adrianGheorghe,
-    linkedin: 'https://www.linkedin.com/in/adrian-gheorghe/',
-  },
-  {
-    name: 'Iulia Andritoiu Caizer',
-    role: 'CEO and co-founder',
-    company: 'QuickLegal',
-    image: iuliaAndritoiuCaizer,
-    linkedin: 'https://www.linkedin.com/in/iulia-caizer/',
-  },
-  {
-    name: 'Andreea (Oproiu) Nicolae',
-    role: 'Head of MarCom',
-    company: 'How to Web',
-    image: andreeaNicolae,
-    linkedin: 'https://www.linkedin.com/in/andreea-oproiu/',
-  },
-  {
-    name: 'Catalin Anghel',
-    role: 'Founder',
-    company: 'Cautcurier',
-    image: catalinAnghel,
-    linkedin: 'https://www.linkedin.com/in/catalin-anghel-v/',
-  },
-  {
-    name: 'Alexandra Jivan',
-    role: 'Partner',
-    company: 'LegalFor',
-    image: alexandraJivan,
-    linkedin: 'https://www.linkedin.com/in/alexandra-jivan-451794127/',
-  },
-  {
-    name: 'Cosmin Pirvu',
-    role: 'Startup Program Manager',
-    company: 'Veridion',
-    image: cosminPirvu,
-    linkedin: 'https://www.linkedin.com/in/cosminpirvu/',
-  },
-  {
-    name: 'George Bonea',
-    role: 'Copywriter &',
-    company: 'Communication Consultant',
-    image: georgeBonea,
-    linkedin: 'https://www.linkedin.com/in/george-bonea-b0494b91/',
-  },
-  {
-    name: 'Maxim Rotaru',
-    role: 'CEO & Founder',
-    company: 'Webamboos',
-    image: maximRotaru,
-    linkedin: 'https://www.linkedin.com/in/maxim-rotaru/',
-  },
-];
+const mentors: Mentor[] = [{
+  name: 'Aleodor Tabarcea',
+  role: 'Engineering Manager',
+  company: 'Stripe',
+  image: aleodorTabarcea,
+  linkedin: 'https://www.linkedin.com/in/aleodor-tabarcea/'
+}, {
+  name: 'Raluca Messai',
+  role: 'Entrepreneur & Brand strategist',
+  company: 'diARK',
+  image: ralucaMessai,
+  linkedin: 'https://www.linkedin.com/in/ralucamessai/'
+}, {
+  name: 'Andrei Munteanu',
+  role: 'CEO & Co-founder',
+  company: 'Cowork & Prow',
+  image: andreiMunteanu,
+  linkedin: 'https://www.linkedin.com/in/andreicosminmunteanu/'
+}, {
+  name: 'Radu Ticiu',
+  role: 'Co-founder',
+  company: 'Growceanu',
+  image: raduTiciu,
+  linkedin: 'https://www.linkedin.com/in/raduticiu/'
+}, {
+  name: 'Razvan Suta',
+  role: 'Angel investor & VC',
+  company: '',
+  image: razvanSuta,
+  linkedin: 'https://www.linkedin.com/in/razvansuta/'
+}, {
+  name: 'Adrian Gheorghe',
+  role: 'Startup Advisor',
+  company: 'Doers Ventures',
+  image: adrianGheorghe,
+  linkedin: 'https://www.linkedin.com/in/adrian-gheorghe/'
+}, {
+  name: 'Iulia Andritoiu Caizer',
+  role: 'CEO and co-founder',
+  company: 'QuickLegal',
+  image: iuliaAndritoiuCaizer,
+  linkedin: 'https://www.linkedin.com/in/iulia-caizer/'
+}, {
+  name: 'Andreea (Oproiu) Nicolae',
+  role: 'Head of MarCom',
+  company: 'How to Web',
+  image: andreeaNicolae,
+  linkedin: 'https://www.linkedin.com/in/andreea-oproiu/'
+}, {
+  name: 'Catalin Anghel',
+  role: 'Founder',
+  company: 'Cautcurier',
+  image: catalinAnghel,
+  linkedin: 'https://www.linkedin.com/in/catalin-anghel-v/'
+}, {
+  name: 'Alexandra Jivan',
+  role: 'Partner',
+  company: 'LegalFor',
+  image: alexandraJivan,
+  linkedin: 'https://www.linkedin.com/in/alexandra-jivan-451794127/'
+}, {
+  name: 'Cosmin Pirvu',
+  role: 'Startup Program Manager',
+  company: 'Veridion',
+  image: cosminPirvu,
+  linkedin: 'https://www.linkedin.com/in/cosminpirvu/'
+}, {
+  name: 'George Bonea',
+  role: 'Copywriter &',
+  company: 'Communication Consultant',
+  image: georgeBonea,
+  linkedin: 'https://www.linkedin.com/in/george-bonea-b0494b91/'
+}, {
+  name: 'Maxim Rotaru',
+  role: 'CEO & Founder',
+  company: 'Webamboos',
+  image: maximRotaru,
+  linkedin: 'https://www.linkedin.com/in/maxim-rotaru/'
+}];
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import heroTrain from '@/assets/hero-train.jpg';
@@ -392,7 +377,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 <RailLine />
               </div>
               <div className="pt-4 flex gap-5">
-                <div className="w-14 h-14 bg-accent rounded-full flex-shrink-0 flex items-center justify-center">
+                <div className="w-14 h-14 rounded-full flex-shrink-0 flex items-center justify-center bg-primary">
                   <Megaphone className="h-7 w-7 text-accent-foreground" />
                 </div>
                 <div>
@@ -426,7 +411,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 <RailLine />
               </div>
               <div className="pt-4 flex gap-5">
-                <div className="w-14 h-14 bg-accent rounded-full flex-shrink-0 flex items-center justify-center">
+                <div className="w-14 h-14 rounded-full flex-shrink-0 flex items-center justify-center bg-primary">
                   <GraduationCap className="h-7 w-7 text-accent-foreground" />
                 </div>
                 <div>
