@@ -27,6 +27,7 @@ type Mentor = {
   company?: string;
   image: string;
   linkedin?: string;
+  imagePosition?: string;
 };
 
 // NOTE: New mentor photos weren't found in the workspace upload bucket during this edit,
@@ -76,6 +77,7 @@ const mentors: Mentor[] = [
     company: '',
     image: razvanSuta,
     linkedin: 'https://www.linkedin.com/in/razvansuta/',
+    imagePosition: 'object-[center_25%]',
   },
   {
     name: 'Adrian Gheorghe',
@@ -172,7 +174,7 @@ const Mentors = () => {
               return <Card key={`${mentor.name}-${mentor.company ?? ''}`} className={`card-elevated text-center group transition-transform duration-300 hover:scale-[1.01] ${visibilityClass}`}>
                     <div className="p-4">
                       <div className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-primary/20">
-                        <img src={mentor.image} alt={mentor.name} loading="lazy" className="w-full h-full object-cover" />
+                        <img src={mentor.image} alt={mentor.name} loading="lazy" className={`w-full h-full object-cover ${mentor.imagePosition || ''}`} />
                       </div>
                       <h3 className="text-base md:text-lg font-bold text-foreground leading-snug mb-1">{mentor.name}</h3>
                       <p className="text-muted-foreground text-xs md:text-sm">{mentor.role}</p>
