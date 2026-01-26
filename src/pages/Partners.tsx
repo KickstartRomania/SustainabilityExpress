@@ -27,7 +27,7 @@ import carteadalieiLogo from '@/assets/partners/carteadaliei.png';
 import howtowebLogo from '@/assets/partners/howtoweb.png';
 import vsfaLogo from '@/assets/partners/vsfa.png';
 import founderInstituteLogo from '@/assets/partners/founder-institute.png';
-import prowLogo from '@/assets/partners/prow.png';
+
 import amplifyOngLogo from '@/assets/partners/amplify-ong.png';
 import launchRomaniaLogo from '@/assets/partners/launch-romania.png';
 import eduupLogo from '@/assets/partners/eduup.png';
@@ -73,9 +73,6 @@ const partners = [{
 }, {
   name: 'Founder Institute',
   logo: founderInstituteLogo
-}, {
-  name: 'Prow',
-  logo: prowLogo
 }, {
   name: 'AmpliFY ONG',
   logo: amplifyOngLogo
