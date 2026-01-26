@@ -10,7 +10,7 @@ import { useMemo, useState } from 'react';
 import razvanSuta from '@/assets/mentors/razvan-suta.jpeg';
 import aleodorTabarcea from '@/assets/mentors/aleodor-tabarcea.jpeg';
 import alexandraJivan from '@/assets/mentors/alexandra-jivan.jpeg';
-import andreiMunteanu from '@/assets/mentors/andrei-munteanu.jpeg';
+
 import cosminPirvu from '@/assets/mentors/cosmin-pirvu.jpeg';
 import georgeBonea from '@/assets/mentors/george-bonea.jpeg';
 import adrianGheorghe from '@/assets/mentors/adrian-gheorghe.jpeg';
@@ -56,13 +56,6 @@ const mentors: Mentor[] = [
     company: 'diARK',
     image: ralucaMessai,
     linkedin: 'https://www.linkedin.com/in/ralucamessai/',
-  },
-  {
-    name: 'Andrei Munteanu',
-    role: 'CEO & Co-founder',
-    company: 'Cowork & Prow',
-    image: andreiMunteanu,
-    linkedin: 'https://www.linkedin.com/in/andreicosminmunteanu/',
   },
   {
     name: 'Radu Ticiu',
