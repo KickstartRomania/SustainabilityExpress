@@ -6,7 +6,6 @@ import { ArrowRight, Users, Lightbulb, Train, Leaf, Zap, Trophy, Code, Megaphone
 import razvanSuta from '@/assets/mentors/razvan-suta.jpeg';
 import aleodorTabarcea from '@/assets/mentors/aleodor-tabarcea.jpeg';
 import alexandraJivan from '@/assets/mentors/alexandra-jivan.jpeg';
-
 import cosminPirvu from '@/assets/mentors/cosmin-pirvu.jpeg';
 import georgeBonea from '@/assets/mentors/george-bonea.jpeg';
 import adrianGheorghe from '@/assets/mentors/adrian-gheorghe.jpeg';
@@ -126,7 +125,6 @@ import carteadalieiLogo from '@/assets/partners/carteadaliei.png';
 import howtowebLogo from '@/assets/partners/howtoweb.png';
 import vsfaLogo from '@/assets/partners/vsfa.png';
 import founderInstituteLogo from '@/assets/partners/founder-institute.png';
-
 import amplifyOngLogo from '@/assets/partners/amplify-ong.png';
 import launchRomaniaLogo from '@/assets/partners/launch-romania.png';
 import eduupLogo from '@/assets/partners/eduup.png';
@@ -261,7 +259,7 @@ const Index = () => {
             
             <div className="space-y-4">
               <span className="inline-block bg-primary/20 text-primary px-4 py-2 rounded-full text-lg font-semibold border border-primary/30">
-                3-5 April 2025
+                3-5 April 2026
               </span>
               <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
                 Sustainability Express
