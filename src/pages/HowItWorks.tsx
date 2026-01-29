@@ -12,10 +12,12 @@ const HowItWorks = () => {
         <div className="container mx-auto px-4">
           {/* Header */}
           <div className="text-center mb-16">
+            <span className="inline-block bg-primary/20 text-primary px-4 py-2 rounded-full text-lg font-semibold border border-primary/30 mb-6">
+              3-5 April 2026
+            </span>
             <h1 className="text-5xl font-bold text-foreground mb-6">How It Works</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               We turn the journey into the destination. Sustainability Express brings innovators on board a night train, combining intense teamwork, expert mentorship, and real-world challenges to transform bold ideas into feasible solutions for sustainable travel.
-
             </p>
           </div>
 
