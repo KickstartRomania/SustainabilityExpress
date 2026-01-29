@@ -260,6 +260,9 @@ const Index = () => {
             </div>
             
             <div className="space-y-4">
+              <span className="inline-block bg-primary/20 text-primary px-4 py-2 rounded-full text-lg font-semibold border border-primary/30">
+                3-5 April 2025
+              </span>
               <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
                 Sustainability Express
               </h1>
