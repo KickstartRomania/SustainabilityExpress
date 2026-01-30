@@ -439,8 +439,8 @@ const Apply = () => {
                   <li>• Limited to 20 participants</li>
                   <li>• Priority for diverse skill sets</li>
                   <li>• Focus on motivation and enthusiasm</li>
-                  <li>• Interdisciplinary teams with varied backgrounds</li>
-                  <li>• Confirmation includes next steps</li>
+                  <li>• Applications reviewed on an ongoing basis</li>
+                  <li>• Accepted participants announced starting second week of March</li>
                 </ul>
               </Card>
 
