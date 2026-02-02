@@ -15,7 +15,6 @@ import { supabase } from '@/integrations/supabase/client';
 
 // Partner logos
 import phiniaLogo from '@/assets/partners/phinia.png';
-import samedayLogo from '@/assets/partners/sameday.png';
 import diarkLogo from '@/assets/partners/diark.png';
 import booksterLogo from '@/assets/partners/bookster.png';
 
@@ -46,10 +45,9 @@ const partners = [{
   name: 'PHINIA',
   logo: phiniaLogo
 }, {
-  name: 'Sameday',
-  logo: samedayLogo
-}, {
   name: 'diARK',
+  logo: diarkLogo
+}, {
   logo: diarkLogo
 }, {
   name: 'Bookster',
