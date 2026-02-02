@@ -34,6 +34,13 @@ import eduupLogo from '@/assets/partners/eduup.png';
 import alacrityLogo from '@/assets/partners/alacrity.png';
 import curteaVecheLogo from '@/assets/partners/curtea-veche.png';
 import skvotLogo from '@/assets/partners/skvot.png';
+import cariereLogo from '@/assets/partners/cariere.png';
+import bizLogo from '@/assets/partners/biz.png';
+import iqadsLogo from '@/assets/partners/iqads.png';
+import zileNoptiLogo from '@/assets/partners/zile-nopti.png';
+import smarkLogo from '@/assets/partners/smark.png';
+import buletinBucurestiLogo from '@/assets/partners/buletin-bucuresti.png';
+import coworkTimisoaraLogo from '@/assets/partners/cowork-timisoara.png';
 const partners = [{
   name: 'Sameday',
   logo: samedayLogo
@@ -91,6 +98,27 @@ const partners = [{
 }, {
   name: 'SKVOT',
   logo: skvotLogo
+}, {
+  name: 'Cariere',
+  logo: cariereLogo
+}, {
+  name: 'Biz',
+  logo: bizLogo
+}, {
+  name: 'IQads',
+  logo: iqadsLogo
+}, {
+  name: 'Zile și Nopți',
+  logo: zileNoptiLogo
+}, {
+  name: 'SMARK',
+  logo: smarkLogo
+}, {
+  name: 'Buletin de București',
+  logo: buletinBucurestiLogo
+}, {
+  name: 'CO-work Timișoara',
+  logo: coworkTimisoaraLogo
 }];
 
 // Validation schema for partner inquiry form
@@ -237,8 +265,8 @@ const Partners = () => {
 
           {/* Partner Logos Grid */}
           <section className="mb-20">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
-              {partners.map((partner, index) => <div key={index} className="flex items-center justify-center h-20 hover:scale-105 transition-transform duration-300">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-4">
+              {partners.map((partner, index) => <div key={index} className="flex items-center justify-center h-16 hover:scale-105 transition-transform duration-300">
                   <img src={partner.logo} alt={partner.name} className="max-w-full max-h-full object-contain rounded-lg" />
                 </div>)}
             </div>
