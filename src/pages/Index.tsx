@@ -115,7 +115,7 @@ import sustainabilityExpressLocoLogo from '@/assets/sponsors/sustainability-expr
 import samedayLogo from '@/assets/partners/sameday.png';
 import diarkLogo from '@/assets/partners/diark.png';
 import booksterLogo from '@/assets/partners/bookster.png';
-import protvLogo from '@/assets/partners/protv.png';
+
 import skillabLogo from '@/assets/partners/skillab.png';
 import hackingworkLogo from '@/assets/partners/hackingwork.png';
 import pozitivestiLogo from '@/assets/partners/pozitivesti.png';
@@ -139,8 +139,11 @@ import smarkLogo from '@/assets/partners/smark.png';
 import buletinBucurestiLogo from '@/assets/partners/buletin-bucuresti.png';
 import coworkTimisoaraLogo from '@/assets/partners/cowork-timisoara.png';
 
-// Row 1 partners (first half - 13 partners)
+// Row 1 partners (first half - 13 partners including PHINIA)
 const row1Partners = [{
+  name: 'PHINIA',
+  logo: phiniaLogo
+}, {
   name: 'Sameday',
   logo: samedayLogo
 }, {
@@ -149,9 +152,6 @@ const row1Partners = [{
 }, {
   name: 'Bookster',
   logo: booksterLogo
-}, {
-  name: 'PRO TV',
-  logo: protvLogo
 }, {
   name: 'Skillab',
   logo: skillabLogo
@@ -751,16 +751,6 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                     </div>
                     {/* Connector to next car */}
                     <div className="w-3 h-1.5 bg-primary/50 rounded-full mb-8" />
-                  </div>
-                  
-                  {/* PHINIA wagon - first car after locomotive */}
-                  <div className="flex-shrink-0 flex items-end">
-                    <div className="w-36 h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative">
-                      <div className="absolute -bottom-2 left-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
-                      <div className="absolute -bottom-2 right-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
-                      <img src={phiniaLogo} alt="PHINIA" className="max-w-[90%] max-h-[80%] object-contain rounded-md" />
-                    </div>
-                    <div className="w-2 h-1 bg-primary/40 rounded-full mb-8" />
                   </div>
                   
                   {row1Partners.map((partner, index) => <div key={`row1-first-${index}`} className="flex-shrink-0 flex items-end">

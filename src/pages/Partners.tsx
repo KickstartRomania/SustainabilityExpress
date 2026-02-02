@@ -18,7 +18,7 @@ import phiniaLogo from '@/assets/partners/phinia.png';
 import samedayLogo from '@/assets/partners/sameday.png';
 import diarkLogo from '@/assets/partners/diark.png';
 import booksterLogo from '@/assets/partners/bookster.png';
-import protvLogo from '@/assets/partners/protv.png';
+
 import skillabLogo from '@/assets/partners/skillab.png';
 import hackingworkLogo from '@/assets/partners/hackingwork.png';
 import pozitivestiLogo from '@/assets/partners/pozitivesti.png';
@@ -43,6 +43,9 @@ import smarkLogo from '@/assets/partners/smark.png';
 import buletinBucurestiLogo from '@/assets/partners/buletin-bucuresti.png';
 import coworkTimisoaraLogo from '@/assets/partners/cowork-timisoara.png';
 const partners = [{
+  name: 'PHINIA',
+  logo: phiniaLogo
+}, {
   name: 'Sameday',
   logo: samedayLogo
 }, {
@@ -51,9 +54,6 @@ const partners = [{
 }, {
   name: 'Bookster',
   logo: booksterLogo
-}, {
-  name: 'PRO TV',
-  logo: protvLogo
 }, {
   name: 'Skillab',
   logo: skillabLogo
@@ -286,15 +286,6 @@ const Partners = () => {
               the future of sustainable transportation and innovation.
             </p>
           </div>
-
-          {/* Main Sponsor Section */}
-          <section className="mb-12">
-            <div className="flex justify-center">
-              <div className="relative p-8 bg-gradient-to-br from-primary/10 to-card/60 rounded-2xl border-2 border-primary/30 shadow-lg shadow-primary/10 hover:scale-105 transition-transform duration-300">
-                <img src={phiniaLogo} alt="PHINIA" className="h-24 w-auto object-contain" />
-              </div>
-            </div>
-          </section>
 
           {/* Partner Logos Grid */}
           <section className="mb-20">
