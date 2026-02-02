@@ -48,8 +48,6 @@ const partners = [{
   name: 'diARK',
   logo: diarkLogo
 }, {
-  logo: diarkLogo
-}, {
   name: 'Bookster',
   logo: booksterLogo
 }, {

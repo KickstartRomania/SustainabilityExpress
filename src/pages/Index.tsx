@@ -146,8 +146,6 @@ const row1Partners = [{
   name: 'diARK',
   logo: diarkLogo
 }, {
-  logo: diarkLogo
-}, {
   name: 'Bookster',
   logo: booksterLogo
 }, {
