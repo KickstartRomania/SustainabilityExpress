@@ -131,8 +131,15 @@ import eduupLogo from '@/assets/partners/eduup.png';
 import alacrityLogo from '@/assets/partners/alacrity.png';
 import curteaVecheLogo from '@/assets/partners/curtea-veche.png';
 import skvotLogo from '@/assets/partners/skvot.png';
+import cariereLogo from '@/assets/partners/cariere.png';
+import bizLogo from '@/assets/partners/biz.png';
+import iqadsLogo from '@/assets/partners/iqads.png';
+import zileNoptiLogo from '@/assets/partners/zile-nopti.png';
+import smarkLogo from '@/assets/partners/smark.png';
+import buletinBucurestiLogo from '@/assets/partners/buletin-bucuresti.png';
+import coworkTimisoaraLogo from '@/assets/partners/cowork-timisoara.png';
 
-// Row 1 partners (first half)
+// Row 1 partners (first half - 13 partners)
 const row1Partners = [{
   name: 'Sameday',
   logo: samedayLogo
@@ -163,9 +170,18 @@ const row1Partners = [{
 }, {
   name: 'Cartea Daliei',
   logo: carteadalieiLogo
+}, {
+  name: 'Cariere',
+  logo: cariereLogo
+}, {
+  name: 'Biz',
+  logo: bizLogo
+}, {
+  name: 'IQads',
+  logo: iqadsLogo
 }];
 
-// Row 2 partners (second half)
+// Row 2 partners (second half - 13 partners)
 const row2Partners = [{
   name: 'How to Web',
   logo: howtowebLogo
@@ -193,6 +209,18 @@ const row2Partners = [{
 }, {
   name: 'SKVOT',
   logo: skvotLogo
+}, {
+  name: 'Zile și Nopți',
+  logo: zileNoptiLogo
+}, {
+  name: 'SMARK',
+  logo: smarkLogo
+}, {
+  name: 'Buletin de București',
+  logo: buletinBucurestiLogo
+}, {
+  name: 'CO-work Timișoara',
+  logo: coworkTimisoaraLogo
 }];
 const sections = [{
   id: 'hero',
