@@ -5,12 +5,13 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Train, Users, Zap, Globe, Handshake } from 'lucide-react';
+import { ArrowRight, Train, Users, Zap, Globe, Handshake, Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { z } from 'zod';
 import { logError } from '@/lib/error-handler';
+import { supabase } from '@/integrations/supabase/client';
 
 // Partner logos
 import phiniaLogo from '@/assets/partners/phinia.png';
@@ -152,6 +153,7 @@ const Partners = () => {
     toast
   } = useToast();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [sponsorType, setSponsorType] = useState('');
   const [formData, setFormData] = useState({
     firstName: '',
@@ -170,7 +172,7 @@ const Partners = () => {
     setSponsorType(type);
     setIsDialogOpen(true);
   };
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     // Validate form data with Zod
@@ -188,19 +190,43 @@ const Partners = () => {
       return;
     }
 
-    // Form is valid, proceed with submission
-    setIsDialogOpen(false);
-    setFormData({
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      company: ''
-    });
-    toast({
-      title: "Thanks for getting in touch!",
-      description: "We will reach out by email."
-    });
+    setIsSubmitting(true);
+
+    try {
+      const validated = validationResult.data;
+      const { error } = await supabase.from("partner_inquiries").insert({
+        first_name: validated.firstName,
+        last_name: validated.lastName,
+        email: validated.email,
+        phone: validated.phone,
+        company: validated.company,
+        sponsor_type: validated.sponsorType,
+      });
+
+      if (error) throw error;
+
+      setIsDialogOpen(false);
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        company: ''
+      });
+      toast({
+        title: "Thanks for getting in touch!",
+        description: "We will reach out by email."
+      });
+    } catch (error: unknown) {
+      logError(error, 'partner-inquiry-submission');
+      toast({
+        title: "Submission Failed",
+        description: "There was an error submitting your inquiry. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   return <div className="min-h-screen bg-background">
       <Navigation />
@@ -236,8 +262,15 @@ const Partners = () => {
               <Label htmlFor="company">Company *</Label>
               <Input id="company" value={formData.company} onChange={e => handleInputChange('company', e.target.value)} placeholder="Your company name" required />
             </div>
-            <Button type="submit" className="w-full btn-hero">
-              Submit Inquiry
+            <Button type="submit" className="w-full btn-hero" disabled={isSubmitting}>
+              {isSubmitting ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Submitting...
+                </>
+              ) : (
+                'Submit Inquiry'
+              )}
             </Button>
           </form>
         </DialogContent>

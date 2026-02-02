@@ -104,6 +104,39 @@ export type Database = {
         }
         Relationships: []
       }
+      partner_inquiries: {
+        Row: {
+          company: string
+          created_at: string
+          email: string
+          first_name: string
+          id: string
+          last_name: string
+          phone: string
+          sponsor_type: string
+        }
+        Insert: {
+          company: string
+          created_at?: string
+          email: string
+          first_name: string
+          id?: string
+          last_name: string
+          phone: string
+          sponsor_type: string
+        }
+        Update: {
+          company?: string
+          created_at?: string
+          email?: string
+          first_name?: string
+          id?: string
+          last_name?: string
+          phone?: string
+          sponsor_type?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           id: string
