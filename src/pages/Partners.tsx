@@ -265,8 +265,8 @@ const Partners = () => {
 
           {/* Partner Logos Grid */}
           <section className="mb-20">
-            <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8 gap-2">
-              {partners.map((partner, index) => <div key={index} className="flex items-center justify-center h-20 hover:scale-105 transition-transform duration-300">
+            <div className="flex flex-wrap justify-center gap-2">
+              {partners.map((partner, index) => <div key={index} className="flex items-center justify-center w-28 h-20 hover:scale-105 transition-transform duration-300">
                   <img src={partner.logo} alt={partner.name} className="max-w-full max-h-full object-contain rounded-lg" />
                 </div>)}
             </div>
