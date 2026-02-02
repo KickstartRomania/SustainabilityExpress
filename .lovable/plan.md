@@ -1,37 +1,24 @@
 
-# Fix Partner Logo Grid Spacing
 
-## Problem
-The partner logos grid currently spans the full container width, causing the grid cells to stretch horizontally. While `gap-4` provides equal 16px spacing in both directions, the stretched cells make the horizontal gaps *appear* larger than the vertical ones.
+# Update SKVOT Logo
+
+## Current State
+The project has an existing `skvot.png` file at `src/assets/partners/skvot.png`. The new logo you uploaded has not been added to the project.
 
 ## Solution
-Constrain the grid section to a narrower width so the logo containers fit more naturally. This will make the visual spacing between columns match the spacing between rows.
+Replace the current SKVOT logo with the new one you've provided.
 
 ## Changes
 
-### File: `src/pages/Partners.tsx`
+### Step 1: Copy the new logo to the project
+- Copy `user-uploads://Frame_40546-2.png` to `src/assets/partners/skvot.png` (replacing the existing file)
 
-1. **Add max-width constraint to the grid section**
-   - Wrap the grid in a container with `max-w-5xl mx-auto` (or similar) to limit the width
-   - This prevents the grid from stretching across the full container width
-   - The logos will be closer together horizontally, matching the row spacing
+### Step 2: No code changes needed
+- Both `src/pages/Partners.tsx` and `src/pages/Index.tsx` already import from `@/assets/partners/skvot.png`
+- The new logo will automatically appear everywhere SKVOT is displayed
 
-2. **Optionally adjust the gap**
-   - If needed, can fine-tune the gap value (e.g., `gap-6` for more breathing room)
+## Result
+The updated SKVOT logo (with the globe/arrow icon and text) will appear on:
+- Partners page grid
+- Homepage train animation
 
-## Technical Details
-
-The current code:
-```tsx
-<section className="mb-20">
-  <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8 gap-4">
-```
-
-Will be updated to:
-```tsx
-<section className="mb-20">
-  <div className="max-w-5xl mx-auto">
-    <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8 gap-4">
-```
-
-This constrains the grid to approximately 1024px width, making the horizontal spacing visually match the vertical spacing while maintaining center alignment.
