@@ -1,35 +1,32 @@
 
 
-# Remove Sameday from Website
+# Fix Duplicate diARK Entry
 
-## Overview
-Remove all references to the Sameday partner from across the website, including the Partners page, homepage train animation, and the asset file.
+## Problem
+The diARK logo appears twice on both the Partners page and the Homepage train animation. This was caused by a merge error during the Sameday removal.
+
+## Current State (Incorrect)
+Both `Partners.tsx` and `Index.tsx` have:
+```javascript
+}, {
+  name: 'diARK',
+  logo: diarkLogo
+}, {
+  logo: diarkLogo   // ← Duplicate entry (missing name property)
+}, {
+  name: 'Bookster',
+```
 
 ## Changes Required
 
 ### 1. Partners Page (`src/pages/Partners.tsx`)
-
-**Remove import statement:**
-- Line 18: Remove `import samedayLogo from '@/assets/partners/sameday.png';`
-
-**Update partners array:**
-- Remove the Sameday entry from the partners array (lines 48-51)
-- The order will now be: PHINIA, diARK, Bookster, Skillab, and the rest
+- Remove the duplicate entry at lines 51-52 (`{ logo: diarkLogo }`)
+- Keep only the correct entry with both `name` and `logo`
 
 ### 2. Homepage (`src/pages/Index.tsx`)
+- Remove the duplicate entry at lines 149-150 (`{ logo: diarkLogo }`)
+- Keep only the correct entry with both `name` and `logo`
 
-**Remove import statement:**
-- Line 115: Remove `import samedayLogo from '@/assets/partners/sameday.png';`
-
-**Update row1Partners array:**
-- Remove the Sameday entry (lines 147-149)
-- This will remove Sameday from the train animation
-
-### 3. Delete Asset File
-- Remove `src/assets/partners/sameday.png` from the project
-
-## Technical Notes
-- No database changes required - partners are stored as hardcoded arrays in the frontend
-- The train animation will automatically adjust since it loops through the partner arrays
-- Total partners will decrease from 26 to 25
+## Result
+diARK will appear only once on both pages, in its proper position after PHINIA.
 
