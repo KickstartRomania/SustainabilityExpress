@@ -1,24 +1,35 @@
 
 
-# Update SKVOT Logo
+# Remove Sameday from Website
 
-## Current State
-The project has an existing `skvot.png` file at `src/assets/partners/skvot.png`. The new logo you uploaded has not been added to the project.
+## Overview
+Remove all references to the Sameday partner from across the website, including the Partners page, homepage train animation, and the asset file.
 
-## Solution
-Replace the current SKVOT logo with the new one you've provided.
+## Changes Required
 
-## Changes
+### 1. Partners Page (`src/pages/Partners.tsx`)
 
-### Step 1: Copy the new logo to the project
-- Copy `user-uploads://Frame_40546-2.png` to `src/assets/partners/skvot.png` (replacing the existing file)
+**Remove import statement:**
+- Line 18: Remove `import samedayLogo from '@/assets/partners/sameday.png';`
 
-### Step 2: No code changes needed
-- Both `src/pages/Partners.tsx` and `src/pages/Index.tsx` already import from `@/assets/partners/skvot.png`
-- The new logo will automatically appear everywhere SKVOT is displayed
+**Update partners array:**
+- Remove the Sameday entry from the partners array (lines 48-51)
+- The order will now be: PHINIA, diARK, Bookster, Skillab, and the rest
 
-## Result
-The updated SKVOT logo (with the globe/arrow icon and text) will appear on:
-- Partners page grid
-- Homepage train animation
+### 2. Homepage (`src/pages/Index.tsx`)
+
+**Remove import statement:**
+- Line 115: Remove `import samedayLogo from '@/assets/partners/sameday.png';`
+
+**Update row1Partners array:**
+- Remove the Sameday entry (lines 147-149)
+- This will remove Sameday from the train animation
+
+### 3. Delete Asset File
+- Remove `src/assets/partners/sameday.png` from the project
+
+## Technical Notes
+- No database changes required - partners are stored as hardcoded arrays in the frontend
+- The train animation will automatically adjust since it loops through the partner arrays
+- Total partners will decrease from 26 to 25
 
