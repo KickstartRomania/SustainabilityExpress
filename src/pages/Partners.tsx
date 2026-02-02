@@ -265,7 +265,7 @@ const Partners = () => {
 
           {/* Partner Logos Grid */}
           <section className="mb-20">
-            <div className="flex flex-wrap justify-center gap-2">
+            <div className="flex flex-wrap justify-start gap-2">
               {partners.map((partner, index) => <div key={index} className="flex items-center justify-center w-28 h-20 hover:scale-105 transition-transform duration-300">
                   <img src={partner.logo} alt={partner.name} className="max-w-full max-h-full object-contain rounded-lg" />
                 </div>)}
