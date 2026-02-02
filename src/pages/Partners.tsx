@@ -33,7 +33,7 @@ import launchRomaniaLogo from '@/assets/partners/launch-romania.png';
 import eduupLogo from '@/assets/partners/eduup.png';
 import alacrityLogo from '@/assets/partners/alacrity.png';
 import curteaVecheLogo from '@/assets/partners/curtea-veche.png';
-
+import skvotLogo from '@/assets/partners/skvot.png';
 import cariereLogo from '@/assets/partners/cariere.png';
 import bizLogo from '@/assets/partners/biz.png';
 import iqadsLogo from '@/assets/partners/iqads.png';
@@ -95,6 +95,9 @@ const partners = [{
 }, {
   name: 'Curtea Veche Publishing',
   logo: curteaVecheLogo
+}, {
+  name: 'SKVOT',
+  logo: skvotLogo
 }, {
   name: 'Cariere',
   logo: cariereLogo
