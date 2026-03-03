@@ -137,6 +137,7 @@ import zileNoptiLogo from '@/assets/partners/zile-nopti.png';
 import smarkLogo from '@/assets/partners/smark.png';
 import buletinBucurestiLogo from '@/assets/partners/buletin-bucuresti.png';
 import coworkTimisoaraLogo from '@/assets/partners/cowork-timisoara.png';
+import autonomLogo from '@/assets/partners/autonom.png';
 
 // Row 1 partners (first half - 13 partners including PHINIA)
 const row1Partners = [{
@@ -179,6 +180,9 @@ const row1Partners = [{
 
 // Row 2 partners (second half - 13 partners)
 const row2Partners = [{
+  name: 'Autonom',
+  logo: autonomLogo
+}, {
   name: 'How to Web',
   logo: howtowebLogo
 }, {
