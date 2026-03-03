@@ -41,6 +41,7 @@ import zileNoptiLogo from '@/assets/partners/zile-nopti.png';
 import smarkLogo from '@/assets/partners/smark.png';
 import buletinBucurestiLogo from '@/assets/partners/buletin-bucuresti.png';
 import coworkTimisoaraLogo from '@/assets/partners/cowork-timisoara.png';
+import autonomLogo from '@/assets/partners/autonom.png';
 const partners = [{
   name: 'PHINIA',
   logo: phiniaLogo
@@ -116,6 +117,9 @@ const partners = [{
 }, {
   name: 'CO-work Timișoara',
   logo: coworkTimisoaraLogo
+}, {
+  name: 'Autonom',
+  logo: autonomLogo
 }];
 
 // Validation schema for partner inquiry form
