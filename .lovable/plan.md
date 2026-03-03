@@ -1,32 +1,18 @@
 
 
-# Fix Duplicate diARK Entry
-
-## Problem
-The diARK logo appears twice on both the Partners page and the Homepage train animation. This was caused by a merge error during the Sameday removal.
-
-## Current State (Incorrect)
-Both `Partners.tsx` and `Index.tsx` have:
-```javascript
-}, {
-  name: 'diARK',
-  logo: diarkLogo
-}, {
-  logo: diarkLogo   // ← Duplicate entry (missing name property)
-}, {
-  name: 'Bookster',
-```
+# Add Autonom Partner Logo
 
 ## Changes Required
 
-### 1. Partners Page (`src/pages/Partners.tsx`)
-- Remove the duplicate entry at lines 51-52 (`{ logo: diarkLogo }`)
-- Keep only the correct entry with both `name` and `logo`
+### 1. Copy the uploaded logo to assets
+- Copy `user-uploads://Frame_40557.png` to `src/assets/partners/autonom.png`
 
-### 2. Homepage (`src/pages/Index.tsx`)
-- Remove the duplicate entry at lines 149-150 (`{ logo: diarkLogo }`)
-- Keep only the correct entry with both `name` and `logo`
+### 2. Partners Page (`src/pages/Partners.tsx`)
+- Add import: `import autonomLogo from '@/assets/partners/autonom.png';`
+- Add `{ name: 'Autonom', logo: autonomLogo }` to the `partners` array
 
-## Result
-diARK will appear only once on both pages, in its proper position after PHINIA.
+### 3. Homepage (`src/pages/Index.tsx`)
+- Add import: `import autonomLogo from '@/assets/partners/autonom.png';`
+- Insert `{ name: 'Autonom', logo: autonomLogo }` as the **first entry** in `row2Partners`, before "How to Web"
+- Since row 2 animates right-to-left with the locomotive on the right, being first in the array places Autonom right after the locomotive
 
