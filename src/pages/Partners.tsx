@@ -295,9 +295,7 @@ const Partners = () => {
           <section className="mb-20">
             <div className="max-w-5xl mx-auto">
               <div className="flex justify-center mb-8">
-                <div className="h-20 w-20 flex items-center justify-center bg-card border rounded-xl p-3">
-                  <img src={protvLogo} alt="Pro TV" className="max-w-full max-h-full object-contain" />
-                </div>
+                <img src={protvLogo} alt="Pro TV" className="h-16 object-contain rounded-xl" />
               </div>
               <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8 gap-4">
                 {partners.filter(p => p.name !== 'Pro TV').map((partner, index) => <div key={index} className="flex items-center justify-center h-20 hover:scale-105 transition-transform duration-300">
