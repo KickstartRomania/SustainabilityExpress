@@ -138,9 +138,14 @@ import smarkLogo from '@/assets/partners/smark.png';
 import buletinBucurestiLogo from '@/assets/partners/buletin-bucuresti.png';
 import coworkTimisoaraLogo from '@/assets/partners/cowork-timisoara.png';
 import autonomLogo from '@/assets/partners/autonom.png';
+import protvLogo from '@/assets/partners/protv.png';
 
-// Row 1 partners (first half - 13 partners including PHINIA)
+// Row 1 partners (first half - including ProTV as main sponsor and PHINIA)
 const row1Partners = [{
+  name: 'Pro TV',
+  logo: protvLogo,
+  wide: true
+}, {
   name: 'PHINIA',
   logo: phiniaLogo
 }, {
@@ -755,7 +760,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                   
                   {row1Partners.map((partner, index) => <div key={`row1-first-${index}`} className="flex-shrink-0 flex items-end">
                       {/* Train car */}
-                      <div className="w-36 h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative">
+                      <div className={`${partner.wide ? 'w-52' : 'w-36'} h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative`}>
                         {/* Wheel connectors */}
                         <div className="absolute -bottom-2 left-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
                         <div className="absolute -bottom-2 right-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
@@ -766,7 +771,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                     </div>)}
                   {/* Duplicate wagons for seamless loop */}
                   {row1Partners.map((partner, index) => <div key={`row1-second-${index}`} className="flex-shrink-0 flex items-end">
-                      <div className="w-36 h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative">
+                      <div className={`${partner.wide ? 'w-52' : 'w-36'} h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative`}>
                         <div className="absolute -bottom-2 left-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
                         <div className="absolute -bottom-2 right-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
                         <img src={partner.logo} alt={partner.name} className="max-w-[90%] max-h-[80%] object-contain rounded-md" />
