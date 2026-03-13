@@ -21,6 +21,11 @@ import iuliaAndritoiuCaizer from '@/assets/mentors/iulia-andritoiu-caizer.jpeg';
 import ralucaMessai from '@/assets/mentors/raluca-messai.jpeg';
 import andreeaNicolae from '@/assets/mentors/andreea-nicolae.jpeg';
 
+// Judge images
+import hanaanYaseen from '@/assets/judges/hanaan-yaseen.jpg';
+import gratianMihailescu from '@/assets/judges/gratian-mihailescu.png';
+import loredanaGavrilescu from '@/assets/judges/loredana-gavrilescu.png';
+
 type Mentor = {
   name: string;
   role: string;
