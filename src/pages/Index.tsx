@@ -138,9 +138,14 @@ import smarkLogo from '@/assets/partners/smark.png';
 import buletinBucurestiLogo from '@/assets/partners/buletin-bucuresti.png';
 import coworkTimisoaraLogo from '@/assets/partners/cowork-timisoara.png';
 import autonomLogo from '@/assets/partners/autonom.png';
+import protvLogo from '@/assets/partners/protv.png';
 
-// Row 1 partners (first half - 13 partners including PHINIA)
+// Row 1 partners (first half - including ProTV as main sponsor and PHINIA)
 const row1Partners = [{
+  name: 'Pro TV',
+  logo: protvLogo,
+  wide: true
+}, {
   name: 'PHINIA',
   logo: phiniaLogo
 }, {
