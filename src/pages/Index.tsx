@@ -183,8 +183,12 @@ const row1Partners = [{
   logo: iqadsLogo
 }];
 
-// Row 2 partners (second half - 13 partners)
+// Row 2 partners (second half - including ProTV as main sponsor)
 const row2Partners = [{
+  name: 'Pro TV',
+  logo: protvLogo,
+  wide: true
+}, {
   name: 'Autonom',
   logo: autonomLogo
 }, {
