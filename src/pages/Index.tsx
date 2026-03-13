@@ -183,8 +183,12 @@ const row1Partners = [{
   logo: iqadsLogo
 }];
 
-// Row 2 partners (second half - 13 partners)
+// Row 2 partners (second half - including ProTV as main sponsor)
 const row2Partners = [{
+  name: 'Pro TV',
+  logo: protvLogo,
+  wide: true
+}, {
   name: 'Autonom',
   logo: autonomLogo
 }, {
@@ -798,7 +802,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                   {/* Wagons FIRST (leftmost in DOM) - they trail behind, enter viewport LAST */}
                   {[...row2Partners].reverse().map((partner, index) => <div key={`row2-${index}`} className="flex-shrink-0 flex items-end">
                       <div className="w-2 h-1 bg-primary/40 rounded-full mb-8" />
-                      <div className="w-36 h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative">
+                      <div className={`${partner.wide ? 'w-52' : 'w-36'} h-20 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg flex items-center justify-center mx-1 relative`}>
                         <div className="absolute -bottom-2 left-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
                         <div className="absolute -bottom-2 right-4 w-4 h-4 rounded-full bg-primary/30 border border-primary/40" />
                         <img src={partner.logo} alt={partner.name} className="max-w-[90%] max-h-[80%] object-contain rounded-md" />
