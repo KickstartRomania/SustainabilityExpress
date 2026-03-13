@@ -21,6 +21,11 @@ import iuliaAndritoiuCaizer from '@/assets/mentors/iulia-andritoiu-caizer.jpeg';
 import ralucaMessai from '@/assets/mentors/raluca-messai.jpeg';
 import andreeaNicolae from '@/assets/mentors/andreea-nicolae.jpeg';
 
+// Judge images
+import hanaanYaseen from '@/assets/judges/hanaan-yaseen.jpg';
+import gratianMihailescu from '@/assets/judges/gratian-mihailescu.png';
+import loredanaGavrilescu from '@/assets/judges/loredana-gavrilescu.png';
+
 type Mentor = {
   name: string;
   role: string;
@@ -129,6 +134,37 @@ const mentors: Mentor[] = [
     linkedin: 'https://www.linkedin.com/in/maxim-rotaru/',
   },
 ];
+const judges: Mentor[] = [
+  {
+    name: 'Hanaan Yaseen',
+    role: 'Strategy and ESG Manager',
+    company: 'Pro TV',
+    image: hanaanYaseen,
+    linkedin: 'https://www.linkedin.com/in/hanaan-yaseen-phd-64263933/',
+  },
+  {
+    name: 'Raluca Messai',
+    role: 'Founder',
+    company: 'diARK',
+    image: ralucaMessai,
+    linkedin: 'https://www.linkedin.com/in/ralucamessai/',
+  },
+  {
+    name: 'Gratian Mihailescu',
+    role: 'Founder',
+    company: 'UrbanizeHub',
+    image: gratianMihailescu,
+    linkedin: 'https://www.linkedin.com/in/gratianmihailescu/',
+  },
+  {
+    name: 'Loredana Gavrilescu',
+    role: 'Startup Ecosystem Coordinator',
+    company: 'Iceberg',
+    image: loredanaGavrilescu,
+    linkedin: 'https://www.linkedin.com/in/loredana-gavrilescu-startup-consultant/',
+  },
+];
+
 const Mentors = () => {
   const [expanded, setExpanded] = useState(false);
 
@@ -154,11 +190,39 @@ const Mentors = () => {
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Experienced professionals from sustainability, technology, design, and business</p>
           </div>
 
+          {/* Judges Grid */}
+          <section className="mb-20">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-foreground mb-4">Judges</h2>
+              <p className="text-lg text-muted-foreground">The panel evaluating your solutions</p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
+              {judges.map((judge) => (
+                <Card key={judge.name} className="card-elevated text-center group transition-transform duration-300 hover:scale-[1.01]">
+                  <div className="p-4">
+                    <div className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-primary/20">
+                      <img src={judge.image} alt={judge.name} loading="lazy" className={`w-full h-full object-cover ${judge.imagePosition || ''}`} />
+                    </div>
+                    <h3 className="text-base md:text-lg font-bold text-foreground leading-snug mb-1">{judge.name}</h3>
+                    <p className="text-muted-foreground text-xs md:text-sm">{judge.role}</p>
+                    <p className="text-muted-foreground text-xs md:text-sm mb-3">{judge.company || '\u00A0'}</p>
+                    {judge.linkedin ? (
+                      <a href={judge.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`Open ${judge.name} on LinkedIn`} className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
+                        <Linkedin className="h-4 w-4 text-primary" />
+                      </a>
+                    ) : null}
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </section>
+
           {/* Mentor Grid */}
           <section className="mb-20">
             <div className="text-center mb-12">
-              
-              
+              <h2 className="text-3xl font-bold text-foreground mb-4">Mentors</h2>
+              <p className="text-lg text-muted-foreground">Guiding you throughout the hackathon journey</p>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
