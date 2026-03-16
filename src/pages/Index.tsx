@@ -103,7 +103,6 @@ const mentors: Mentor[] = [{
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import heroTrain from '@/assets/hero-train.jpg';
-import heroUnderline from '@/assets/hero-underline.png';
 import RailLine from '@/components/decorative/RailLine';
 import RailSection from '@/components/decorative/RailSection';
 import SectionDivider from '@/components/decorative/SectionDivider';
@@ -301,7 +300,6 @@ const Index = () => {
               </span>
               <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
                 Sustainability Express
-                <img src={heroUnderline} alt="" className="ml-auto w-[55%] mt-1" />
               </h1>
               <p className="text-2xl lg:text-3xl text-gradient font-semibold">
                 From Point A to Solution Station.
