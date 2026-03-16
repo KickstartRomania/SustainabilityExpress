@@ -27,7 +27,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src={logoFull} alt="Sustainability Express" className="h-10" />
+            <img src={logoNav} alt="Sustainability Express" className="h-10" />
           </Link>
 
           {/* Desktop Navigation */}
