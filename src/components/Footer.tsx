@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Train, Mail, MapPin } from 'lucide-react';
-import logoIcon from '@/assets/logo.png';
+import logoIcon from '@/assets/logo-full.png';
 const Footer = () => {
   return <footer className="bg-background text-white py-16">
       <div className="container mx-auto px-4">
