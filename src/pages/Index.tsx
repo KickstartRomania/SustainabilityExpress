@@ -303,7 +303,7 @@ const Index = () => {
                 <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
                   Sustainability Express
                 </h1>
-                <div className="flex justify-end">
+                <div className="flex justify-start">
                   <img src={supportedBySvg} alt="Supported by PRO.TV" className="h-auto mt-1" style={{ width: '55%', maxWidth: '210px' }} />
                 </div>
               </div>
