@@ -301,6 +301,7 @@ const Index = () => {
               <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
                 Sustainability Express
               </h1>
+              <img src={supportedBySvg} alt="Supported by PRO.TV" className="h-auto mt-1" style={{ width: '210px', marginLeft: 'auto', marginRight: '0', maxWidth: '100%' }} />
               <p className="text-2xl lg:text-3xl text-gradient font-semibold">
                 From Point A to Solution Station.
 
