@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
-import logoFull from '@/assets/logo-full.png';
+import logoNav from '@/assets/logo-nav.png';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +27,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src={logoFull} alt="Sustainability Express" className="h-10" />
+            <img src={logoNav} alt="Sustainability Express" className="h-10" />
           </Link>
 
           {/* Desktop Navigation */}
