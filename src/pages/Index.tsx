@@ -301,6 +301,7 @@ const Index = () => {
               </span>
               <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
                 Sustainability Express
+                <img src={heroUnderline} alt="" className="ml-auto w-[55%] mt-1" />
               </h1>
               <p className="text-2xl lg:text-3xl text-gradient font-semibold">
                 From Point A to Solution Station.
