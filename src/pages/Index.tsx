@@ -103,6 +103,7 @@ const mentors: Mentor[] = [{
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import heroTrain from '@/assets/hero-train.jpg';
+import supportedBySvg from '@/assets/supported-by.svg';
 import RailLine from '@/components/decorative/RailLine';
 import RailSection from '@/components/decorative/RailSection';
 import SectionDivider from '@/components/decorative/SectionDivider';
@@ -298,9 +299,14 @@ const Index = () => {
               <span className="inline-block bg-primary/20 text-primary px-4 py-2 rounded-full text-lg font-semibold border border-primary/30">
                 3-5 April 2026
               </span>
-              <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
-                Sustainability Express
-              </h1>
+              <div>
+                <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
+                  Sustainability Express
+                </h1>
+                <div className="flex justify-end">
+                  <img src={supportedBySvg} alt="Supported by PRO.TV" className="h-auto mt-1" style={{ width: '55%', maxWidth: '210px' }} />
+                </div>
+              </div>
               <p className="text-2xl lg:text-3xl text-gradient font-semibold">
                 From Point A to Solution Station.
 
