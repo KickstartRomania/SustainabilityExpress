@@ -7,9 +7,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <img src={logoIcon} alt="Sustainability Express" className="h-10 w-10" />
-              <span className="font-bold text-xl">Sustainability Express</span>
+            <div className="flex items-center">
+              <img src={logoIcon} alt="Sustainability Express" className="h-12" />
             </div>
             <p className="text-white/80 text-sm">
               Innovation on rails. Building sustainable solutions for the future of travel.
