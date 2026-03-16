@@ -103,6 +103,7 @@ const mentors: Mentor[] = [{
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import heroTrain from '@/assets/hero-train.jpg';
+import supportedBySvg from '@/assets/supported-by.svg';
 import RailLine from '@/components/decorative/RailLine';
 import RailSection from '@/components/decorative/RailSection';
 import SectionDivider from '@/components/decorative/SectionDivider';
