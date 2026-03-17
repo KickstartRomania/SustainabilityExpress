@@ -1,10 +1,10 @@
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Star, Plus, Linkedin, ChevronDown, ChevronUp } from 'lucide-react';
+import { ArrowRight, Star, Plus, Linkedin } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 // Mentor images
 import razvanSuta from '@/assets/mentors/razvan-suta.jpeg';
@@ -171,17 +171,6 @@ const judges: Mentor[] = [
 ];
 
 const Mentors = () => {
-  const [expanded, setExpanded] = useState(false);
-
-  // Default visible mentors: 8 on desktop (lg), fewer on smaller screens.
-  // We use CSS to hide extra items per breakpoint.
-  const defaultVisible = {
-    base: 4,
-    md: 6,
-    lg: 8,
-  };
-
-  const shouldShowToggle = mentors.length > defaultVisible.lg;
   const renderedMentors = useMemo(() => mentors, []);
 
   return <div className="min-h-screen bg-background">
@@ -231,9 +220,8 @@ const Mentors = () => {
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
-              {renderedMentors.map((mentor, index) => {
-              const visibilityClass = expanded ? 'block' : index < defaultVisible.base ? 'block' : index < defaultVisible.md ? 'hidden md:block' : index < defaultVisible.lg ? 'hidden lg:block' : 'hidden';
-              return <Card key={`${mentor.name}-${mentor.company ?? ''}`} className={`card-elevated text-center group transition-transform duration-300 hover:scale-[1.01] ${visibilityClass}`}>
+              {renderedMentors.map((mentor) => (
+                <Card key={`${mentor.name}-${mentor.company ?? ''}`} className="card-elevated text-center group transition-transform duration-300 hover:scale-[1.01]">
                     <div className="p-4">
                       <div className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-primary/20">
                         <img src={mentor.image} alt={mentor.name} loading="lazy" className={`w-full h-full object-cover ${mentor.imagePosition || ''}`} />
@@ -245,15 +233,10 @@ const Mentors = () => {
                           <Linkedin className="h-4 w-4 text-primary" />
                         </a> : null}
                     </div>
-                  </Card>;
-            })}
+                  </Card>
+              ))}
             </div>
 
-            {shouldShowToggle && <div className="mt-10 flex justify-center">
-                <Button variant="outline" onClick={() => setExpanded(v => !v)}>
-                  {expanded ? <>Show less <ChevronUp className="ml-2 h-4 w-4" /></> : <>Show more <ChevronDown className="ml-2 h-4 w-4" /></>}
-                </Button>
-              </div>}
             
             {/* More mentors announcement */}
             <p className="text-center text-lg text-muted-foreground mt-12 italic">✨ More mentors to be announced soon...</p>
