@@ -232,6 +232,9 @@ const row2Partners = [{
 }, {
   name: 'CO-work Timișoara',
   logo: coworkTimisoaraLogo
+}, {
+  name: 'MP',
+  logo: mpLogo
 }];
 const sections = [{
   id: 'hero',

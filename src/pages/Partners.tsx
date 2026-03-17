@@ -125,6 +125,9 @@ const partners = [{
 }, {
   name: 'Autonom',
   logo: autonomLogo
+}, {
+  name: 'MP',
+  logo: mpLogo
 }];
 
 // Validation schema for partner inquiry form
