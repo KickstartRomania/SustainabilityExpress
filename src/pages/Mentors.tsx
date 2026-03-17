@@ -171,17 +171,6 @@ const judges: Mentor[] = [
 ];
 
 const Mentors = () => {
-  const [expanded, setExpanded] = useState(false);
-
-  // Default visible mentors: 8 on desktop (lg), fewer on smaller screens.
-  // We use CSS to hide extra items per breakpoint.
-  const defaultVisible = {
-    base: 4,
-    md: 6,
-    lg: 8,
-  };
-
-  const shouldShowToggle = mentors.length > defaultVisible.lg;
   const renderedMentors = useMemo(() => mentors, []);
 
   return <div className="min-h-screen bg-background">
