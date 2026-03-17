@@ -139,6 +139,37 @@ const mentors: Mentor[] = [
   },
 ];
 
+const judges: Mentor[] = [
+  {
+    name: 'Hanaan Yaseen',
+    role: 'Strategy and ESG Manager',
+    company: 'Pro TV',
+    image: hanaanYaseen,
+    linkedin: 'https://www.linkedin.com/in/hanaan-yaseen-phd-64263933/',
+  },
+  {
+    name: 'Raluca Messai',
+    role: 'Founder',
+    company: 'diARK',
+    image: ralucaMessai,
+    linkedin: 'https://www.linkedin.com/in/ralucamessai/',
+  },
+  {
+    name: 'Gratian Mihailescu',
+    role: 'Founder',
+    company: 'UrbanizeHub',
+    image: gratianMihailescu,
+    linkedin: 'https://www.linkedin.com/in/gratianmihailescu/',
+  },
+  {
+    name: 'Loredana Gavrilescu',
+    role: 'Startup Ecosystem Coordinator',
+    company: 'Iceberg',
+    image: loredanaGavrilescu,
+    linkedin: 'https://www.linkedin.com/in/loredana-gavrilescu-startup-consultant/',
+  },
+];
+
 const Mentors = () => {
   const [expanded, setExpanded] = useState(false);
 

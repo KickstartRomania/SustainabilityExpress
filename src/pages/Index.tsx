@@ -112,6 +112,90 @@ const mentors: Mentor[] = [{
   image: maximRotaru,
   linkedin: 'https://www.linkedin.com/in/maxim-rotaru/'
 }];
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
+import heroTrain from '@/assets/hero-train.jpg';
+import supportedBySvg from '@/assets/supported-by.svg';
+import RailLine from '@/components/decorative/RailLine';
+import RailSection from '@/components/decorative/RailSection';
+import SectionDivider from '@/components/decorative/SectionDivider';
+import RouteVisualization from '@/components/decorative/RouteVisualization';
+import JourneyRail from '@/components/decorative/JourneyRail';
+import ScrollProgressRail from '@/components/decorative/ScrollProgressRail';
+// Partner logos
+import phiniaLogo from '@/assets/partners/phinia-new.png';
+import sustainabilityExpressLocoLogo from '@/assets/sponsors/sustainability-express-loco.png';
+import diarkLogo from '@/assets/partners/diark.png';
+import booksterLogo from '@/assets/partners/bookster.png';
+import skillabLogo from '@/assets/partners/skillab.png';
+import hackingworkLogo from '@/assets/partners/hackingwork.png';
+import pozitivestiLogo from '@/assets/partners/pozitivesti.png';
+import stripeLogo from '@/assets/partners/stripe.png';
+import valentinaLogo from '@/assets/partners/valentina.png';
+import carteadalieiLogo from '@/assets/partners/carteadaliei.png';
+import howtowebLogo from '@/assets/partners/howtoweb.png';
+import vsfaLogo from '@/assets/partners/vsfa.png';
+import founderInstituteLogo from '@/assets/partners/founder-institute.png';
+import amplifyOngLogo from '@/assets/partners/amplify-ong.png';
+import launchRomaniaLogo from '@/assets/partners/launch-romania.png';
+import eduupLogo from '@/assets/partners/eduup.png';
+import alacrityLogo from '@/assets/partners/alacrity.png';
+import curteaVecheLogo from '@/assets/partners/curtea-veche.png';
+import skvotLogo from '@/assets/partners/skvot.png';
+import cariereLogo from '@/assets/partners/cariere.png';
+import bizLogo from '@/assets/partners/biz.png';
+import iqadsLogo from '@/assets/partners/iqads.png';
+import zileNoptiLogo from '@/assets/partners/zile-nopti.png';
+import smarkLogo from '@/assets/partners/smark.png';
+import buletinBucurestiLogo from '@/assets/partners/buletin-bucuresti.png';
+import coworkTimisoaraLogo from '@/assets/partners/cowork-timisoara.png';
+import autonomLogo from '@/assets/partners/autonom.png';
+import protvLogo from '@/assets/partners/protv.png';
+import mpLogo from '@/assets/partners/mp.png';
+
+// Row 1 partners (first half - including ProTV as main sponsor and PHINIA)
+const row1Partners = [{
+  name: 'Pro TV',
+  logo: protvLogo,
+  wide: true
+}, {
+  name: 'PHINIA',
+  logo: phiniaLogo
+}, {
+  name: 'diARK',
+  logo: diarkLogo
+}, {
+  name: 'Bookster',
+  logo: booksterLogo
+}, {
+  name: 'Skillab',
+  logo: skillabLogo
+}, {
+  name: 'Hacking Work',
+  logo: hackingworkLogo
+}, {
+  name: 'Pozitivești',
+  logo: pozitivestiLogo
+}, {
+  name: 'Stripe',
+  logo: stripeLogo
+}, {
+  name: 'Valentina România',
+  logo: valentinaLogo
+}, {
+  name: 'Cartea Daliei',
+  logo: carteadalieiLogo
+}, {
+  name: 'Cariere',
+  logo: cariereLogo
+}, {
+  name: 'Biz',
+  logo: bizLogo
+}, {
+  name: 'IQads',
+  logo: iqadsLogo
+}];
+
 // Row 2 partners (second half - including ProTV as main sponsor)
 const row2Partners = [{
   name: 'Pro TV',
