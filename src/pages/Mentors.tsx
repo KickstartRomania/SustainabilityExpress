@@ -237,11 +237,6 @@ const Mentors = () => {
               ))}
             </div>
 
-            {shouldShowToggle && <div className="mt-10 flex justify-center">
-                <Button variant="outline" onClick={() => setExpanded(v => !v)}>
-                  {expanded ? <>Show less <ChevronUp className="ml-2 h-4 w-4" /></> : <>Show more <ChevronDown className="ml-2 h-4 w-4" /></>}
-                </Button>
-              </div>}
             
             {/* More mentors announcement */}
             <p className="text-center text-lg text-muted-foreground mt-12 italic">✨ More mentors to be announced soon...</p>
