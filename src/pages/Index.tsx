@@ -15,6 +15,8 @@ import raduTiciu from '@/assets/mentors/radu-ticiu.jpeg';
 import iuliaAndritoiuCaizer from '@/assets/mentors/iulia-andritoiu-caizer.jpeg';
 import ralucaMessai from '@/assets/mentors/raluca-messai.jpeg';
 import andreeaNicolae from '@/assets/mentors/andreea-nicolae.jpeg';
+import stefaniaDuta from '@/assets/mentors/stefania-duta.png';
+import nicoletaPirvu from '@/assets/mentors/nicoleta-pirvu.png';
 type Mentor = {
   name: string;
   role: string;
@@ -24,26 +26,36 @@ type Mentor = {
   imagePosition?: string;
 };
 
-// NOTE: New mentor photos are temporarily placeholders on the homepage.
-// If you re-upload again and they appear in the workspace, I’ll wire them in.
 const mentors: Mentor[] = [{
-  name: 'Aleodor Tabarcea',
-  role: 'Engineering Manager',
-  company: 'Stripe',
-  image: aleodorTabarcea,
-  linkedin: 'https://www.linkedin.com/in/aleodor-tabarcea/'
-}, {
   name: 'Raluca Messai',
   role: 'Entrepreneur & Brand strategist',
   company: 'diARK',
   image: ralucaMessai,
   linkedin: 'https://www.linkedin.com/in/ralucamessai/'
 }, {
+  name: 'Aleodor Tabarcea',
+  role: 'Engineering Manager',
+  company: 'Stripe',
+  image: aleodorTabarcea,
+  linkedin: 'https://www.linkedin.com/in/aleodor-tabarcea/'
+}, {
+  name: 'Iulia Andritoiu Caizer',
+  role: 'CEO and co-founder',
+  company: 'QuickLegal',
+  image: iuliaAndritoiuCaizer,
+  linkedin: 'https://www.linkedin.com/in/iulia-caizer/'
+}, {
   name: 'Radu Ticiu',
   role: 'Co-founder',
   company: 'Growceanu',
   image: raduTiciu,
   linkedin: 'https://www.linkedin.com/in/raduticiu/'
+}, {
+  name: 'Andreea (Oproiu) Nicolae',
+  role: 'Head of MarCom',
+  company: 'How to Web',
+  image: andreeaNicolae,
+  linkedin: 'https://www.linkedin.com/in/andreea-oproiu/'
 }, {
   name: 'Razvan Suta',
   role: 'Angel investor & VC',
@@ -52,23 +64,23 @@ const mentors: Mentor[] = [{
   linkedin: 'https://www.linkedin.com/in/razvansuta/',
   imagePosition: 'object-[center_25%]'
 }, {
+  name: 'Alexandra Jivan',
+  role: 'Partner',
+  company: 'LegalFor',
+  image: alexandraJivan,
+  linkedin: 'https://www.linkedin.com/in/alexandra-jivan-451794127/'
+}, {
   name: 'Adrian Gheorghe',
   role: 'Startup Advisor',
   company: 'Doers Ventures',
   image: adrianGheorghe,
   linkedin: 'https://www.linkedin.com/in/adrian-gheorghe/'
 }, {
-  name: 'Iulia Andritoiu Caizer',
-  role: 'CEO and co-founder',
-  company: 'QuickLegal',
-  image: iuliaAndritoiuCaizer,
-  linkedin: 'https://www.linkedin.com/in/iulia-caizer/'
-}, {
-  name: 'Andreea (Oproiu) Nicolae',
-  role: 'Head of MarCom',
-  company: 'How to Web',
-  image: andreeaNicolae,
-  linkedin: 'https://www.linkedin.com/in/andreea-oproiu/'
+  name: 'Stefania Duta',
+  role: 'HR Manager',
+  company: 'MIGSO-PCUBED',
+  image: stefaniaDuta,
+  linkedin: 'https://www.linkedin.com/in/stefania-duta/'
 }, {
   name: 'Catalin Anghel',
   role: 'Founder',
@@ -76,11 +88,11 @@ const mentors: Mentor[] = [{
   image: catalinAnghel,
   linkedin: 'https://www.linkedin.com/in/catalin-anghel-v/'
 }, {
-  name: 'Alexandra Jivan',
-  role: 'Partner',
-  company: 'LegalFor',
-  image: alexandraJivan,
-  linkedin: 'https://www.linkedin.com/in/alexandra-jivan-451794127/'
+  name: 'Nicoleta Pirvu',
+  role: 'Investor Relationship Manager',
+  company: 'How to Web',
+  image: nicoletaPirvu,
+  linkedin: 'https://www.linkedin.com/in/nicoletapirvu/'
 }, {
   name: 'Cosmin Pirvu',
   role: 'Startup Program Manager',
@@ -100,91 +112,6 @@ const mentors: Mentor[] = [{
   image: maximRotaru,
   linkedin: 'https://www.linkedin.com/in/maxim-rotaru/'
 }];
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import heroTrain from '@/assets/hero-train.jpg';
-import supportedBySvg from '@/assets/supported-by.svg';
-import RailLine from '@/components/decorative/RailLine';
-import RailSection from '@/components/decorative/RailSection';
-import SectionDivider from '@/components/decorative/SectionDivider';
-import RouteVisualization from '@/components/decorative/RouteVisualization';
-import JourneyRail from '@/components/decorative/JourneyRail';
-import ScrollProgressRail from '@/components/decorative/ScrollProgressRail';
-// Partner logos
-import phiniaLogo from '@/assets/partners/phinia-new.png';
-import sustainabilityExpressLocoLogo from '@/assets/sponsors/sustainability-express-loco.png';
-import diarkLogo from '@/assets/partners/diark.png';
-import booksterLogo from '@/assets/partners/bookster.png';
-
-import skillabLogo from '@/assets/partners/skillab.png';
-import hackingworkLogo from '@/assets/partners/hackingwork.png';
-import pozitivestiLogo from '@/assets/partners/pozitivesti.png';
-import stripeLogo from '@/assets/partners/stripe.png';
-import valentinaLogo from '@/assets/partners/valentina.png';
-import carteadalieiLogo from '@/assets/partners/carteadaliei.png';
-import howtowebLogo from '@/assets/partners/howtoweb.png';
-import vsfaLogo from '@/assets/partners/vsfa.png';
-import founderInstituteLogo from '@/assets/partners/founder-institute.png';
-import amplifyOngLogo from '@/assets/partners/amplify-ong.png';
-import launchRomaniaLogo from '@/assets/partners/launch-romania.png';
-import eduupLogo from '@/assets/partners/eduup.png';
-import alacrityLogo from '@/assets/partners/alacrity.png';
-import curteaVecheLogo from '@/assets/partners/curtea-veche.png';
-import skvotLogo from '@/assets/partners/skvot.png';
-import cariereLogo from '@/assets/partners/cariere.png';
-import bizLogo from '@/assets/partners/biz.png';
-import iqadsLogo from '@/assets/partners/iqads.png';
-import zileNoptiLogo from '@/assets/partners/zile-nopti.png';
-import smarkLogo from '@/assets/partners/smark.png';
-import buletinBucurestiLogo from '@/assets/partners/buletin-bucuresti.png';
-import coworkTimisoaraLogo from '@/assets/partners/cowork-timisoara.png';
-import autonomLogo from '@/assets/partners/autonom.png';
-import protvLogo from '@/assets/partners/protv.png';
-import mpLogo from '@/assets/partners/mp.png';
-
-// Row 1 partners (first half - including ProTV as main sponsor and PHINIA)
-const row1Partners = [{
-  name: 'Pro TV',
-  logo: protvLogo,
-  wide: true
-}, {
-  name: 'PHINIA',
-  logo: phiniaLogo
-}, {
-  name: 'diARK',
-  logo: diarkLogo
-}, {
-  name: 'Bookster',
-  logo: booksterLogo
-}, {
-  name: 'Skillab',
-  logo: skillabLogo
-}, {
-  name: 'Hacking Work',
-  logo: hackingworkLogo
-}, {
-  name: 'Pozitivești',
-  logo: pozitivestiLogo
-}, {
-  name: 'Stripe',
-  logo: stripeLogo
-}, {
-  name: 'Valentina România',
-  logo: valentinaLogo
-}, {
-  name: 'Cartea Daliei',
-  logo: carteadalieiLogo
-}, {
-  name: 'Cariere',
-  logo: cariereLogo
-}, {
-  name: 'Biz',
-  logo: bizLogo
-}, {
-  name: 'IQads',
-  logo: iqadsLogo
-}];
-
 // Row 2 partners (second half - including ProTV as main sponsor)
 const row2Partners = [{
   name: 'Pro TV',
