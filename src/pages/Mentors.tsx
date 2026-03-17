@@ -220,9 +220,8 @@ const Mentors = () => {
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
-              {renderedMentors.map((mentor, index) => {
-              const visibilityClass = expanded ? 'block' : index < defaultVisible.base ? 'block' : index < defaultVisible.md ? 'hidden md:block' : index < defaultVisible.lg ? 'hidden lg:block' : 'hidden';
-              return <Card key={`${mentor.name}-${mentor.company ?? ''}`} className={`card-elevated text-center group transition-transform duration-300 hover:scale-[1.01] ${visibilityClass}`}>
+              {renderedMentors.map((mentor) => (
+                <Card key={`${mentor.name}-${mentor.company ?? ''}`} className="card-elevated text-center group transition-transform duration-300 hover:scale-[1.01]">
                     <div className="p-4">
                       <div className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-primary/20">
                         <img src={mentor.image} alt={mentor.name} loading="lazy" className={`w-full h-full object-cover ${mentor.imagePosition || ''}`} />
