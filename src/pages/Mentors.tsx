@@ -233,8 +233,8 @@ const Mentors = () => {
                           <Linkedin className="h-4 w-4 text-primary" />
                         </a> : null}
                     </div>
-                  </Card>;
-            })}
+                  </Card>
+              ))}
             </div>
 
             {shouldShowToggle && <div className="mt-10 flex justify-center">
