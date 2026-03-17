@@ -43,6 +43,7 @@ import buletinBucurestiLogo from '@/assets/partners/buletin-bucuresti.png';
 import coworkTimisoaraLogo from '@/assets/partners/cowork-timisoara.png';
 import autonomLogo from '@/assets/partners/autonom.png';
 import protvLogo from '@/assets/partners/protv.png';
+import mpLogo from '@/assets/partners/mp.png';
 const partners = [{
   name: 'Pro TV',
   logo: protvLogo
