@@ -15,6 +15,8 @@ import raduTiciu from '@/assets/mentors/radu-ticiu.jpeg';
 import iuliaAndritoiuCaizer from '@/assets/mentors/iulia-andritoiu-caizer.jpeg';
 import ralucaMessai from '@/assets/mentors/raluca-messai.jpeg';
 import andreeaNicolae from '@/assets/mentors/andreea-nicolae.jpeg';
+import stefaniaDuta from '@/assets/mentors/stefania-duta.png';
+import nicoletaPirvu from '@/assets/mentors/nicoleta-pirvu.png';
 type Mentor = {
   name: string;
   role: string;
@@ -24,26 +26,36 @@ type Mentor = {
   imagePosition?: string;
 };
 
-// NOTE: New mentor photos are temporarily placeholders on the homepage.
-// If you re-upload again and they appear in the workspace, I’ll wire them in.
 const mentors: Mentor[] = [{
-  name: 'Aleodor Tabarcea',
-  role: 'Engineering Manager',
-  company: 'Stripe',
-  image: aleodorTabarcea,
-  linkedin: 'https://www.linkedin.com/in/aleodor-tabarcea/'
-}, {
   name: 'Raluca Messai',
   role: 'Entrepreneur & Brand strategist',
   company: 'diARK',
   image: ralucaMessai,
   linkedin: 'https://www.linkedin.com/in/ralucamessai/'
 }, {
+  name: 'Aleodor Tabarcea',
+  role: 'Engineering Manager',
+  company: 'Stripe',
+  image: aleodorTabarcea,
+  linkedin: 'https://www.linkedin.com/in/aleodor-tabarcea/'
+}, {
+  name: 'Iulia Andritoiu Caizer',
+  role: 'CEO and co-founder',
+  company: 'QuickLegal',
+  image: iuliaAndritoiuCaizer,
+  linkedin: 'https://www.linkedin.com/in/iulia-caizer/'
+}, {
   name: 'Radu Ticiu',
   role: 'Co-founder',
   company: 'Growceanu',
   image: raduTiciu,
   linkedin: 'https://www.linkedin.com/in/raduticiu/'
+}, {
+  name: 'Andreea (Oproiu) Nicolae',
+  role: 'Head of MarCom',
+  company: 'How to Web',
+  image: andreeaNicolae,
+  linkedin: 'https://www.linkedin.com/in/andreea-oproiu/'
 }, {
   name: 'Razvan Suta',
   role: 'Angel investor & VC',
@@ -52,23 +64,23 @@ const mentors: Mentor[] = [{
   linkedin: 'https://www.linkedin.com/in/razvansuta/',
   imagePosition: 'object-[center_25%]'
 }, {
+  name: 'Alexandra Jivan',
+  role: 'Partner',
+  company: 'LegalFor',
+  image: alexandraJivan,
+  linkedin: 'https://www.linkedin.com/in/alexandra-jivan-451794127/'
+}, {
   name: 'Adrian Gheorghe',
   role: 'Startup Advisor',
   company: 'Doers Ventures',
   image: adrianGheorghe,
   linkedin: 'https://www.linkedin.com/in/adrian-gheorghe/'
 }, {
-  name: 'Iulia Andritoiu Caizer',
-  role: 'CEO and co-founder',
-  company: 'QuickLegal',
-  image: iuliaAndritoiuCaizer,
-  linkedin: 'https://www.linkedin.com/in/iulia-caizer/'
-}, {
-  name: 'Andreea (Oproiu) Nicolae',
-  role: 'Head of MarCom',
-  company: 'How to Web',
-  image: andreeaNicolae,
-  linkedin: 'https://www.linkedin.com/in/andreea-oproiu/'
+  name: 'Stefania Duta',
+  role: 'HR Manager',
+  company: 'MIGSO-PCUBED',
+  image: stefaniaDuta,
+  linkedin: 'https://www.linkedin.com/in/stefania-duta/'
 }, {
   name: 'Catalin Anghel',
   role: 'Founder',
@@ -76,11 +88,11 @@ const mentors: Mentor[] = [{
   image: catalinAnghel,
   linkedin: 'https://www.linkedin.com/in/catalin-anghel-v/'
 }, {
-  name: 'Alexandra Jivan',
-  role: 'Partner',
-  company: 'LegalFor',
-  image: alexandraJivan,
-  linkedin: 'https://www.linkedin.com/in/alexandra-jivan-451794127/'
+  name: 'Nicoleta Pirvu',
+  role: 'Investor Relationship Manager',
+  company: 'How to Web',
+  image: nicoletaPirvu,
+  linkedin: 'https://www.linkedin.com/in/nicoletapirvu/'
 }, {
   name: 'Cosmin Pirvu',
   role: 'Startup Program Manager',
@@ -115,7 +127,6 @@ import phiniaLogo from '@/assets/partners/phinia-new.png';
 import sustainabilityExpressLocoLogo from '@/assets/sponsors/sustainability-express-loco.png';
 import diarkLogo from '@/assets/partners/diark.png';
 import booksterLogo from '@/assets/partners/bookster.png';
-
 import skillabLogo from '@/assets/partners/skillab.png';
 import hackingworkLogo from '@/assets/partners/hackingwork.png';
 import pozitivestiLogo from '@/assets/partners/pozitivesti.png';
