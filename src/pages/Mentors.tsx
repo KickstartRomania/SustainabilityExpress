@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Plus, Linkedin, ChevronDown, ChevronUp } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 // Mentor images
 import razvanSuta from '@/assets/mentors/razvan-suta.jpeg';
