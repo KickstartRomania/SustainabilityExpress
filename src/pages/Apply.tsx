@@ -129,7 +129,7 @@ const Apply = () => {
           accessibility: validatedData.accessibility || null,
           submitted_at: new Date().toISOString()
         })
-      }).catch(err => console.error('n8n webhook failed:', err));
+      }).catch(err => console.error('Make.com webhook failed:', err));
       
       setIsSubmitted(true);
       toast({
