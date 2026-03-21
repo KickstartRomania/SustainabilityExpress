@@ -2,3 +2,6 @@ project_id = "kqsaajgljywrdvptgabf"
 
 [functions.send-to-make]
 verify_jwt = false
+
+[functions.send-to-n8n]
+verify_jwt = false
