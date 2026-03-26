@@ -140,6 +140,27 @@ const mentors: Mentor[] = [
     image: maximRotaru,
     linkedin: 'https://www.linkedin.com/in/maxim-rotaru/',
   },
+  {
+    name: 'Radu-Cristian Gheorghe',
+    role: 'Sustainability Specialist',
+    company: 'Autonom Group',
+    image: raduCristianGheorghe,
+    linkedin: 'https://www.linkedin.com/in/radu-cristian-gheorghe-3b1230339/',
+  },
+  {
+    name: 'Toma Grozavescu',
+    role: 'Founder',
+    company: 'SMARTERS',
+    image: tomaGrozavescu,
+    linkedin: 'https://www.linkedin.com/in/tomagrozavescu/',
+  },
+  {
+    name: 'Zoltan-Cristian Bereczki',
+    role: 'Co-Founder & Co-CEO',
+    company: 'Synerb',
+    image: zoltanBereczki,
+    linkedin: 'https://www.linkedin.com/in/zbereczki/',
+  },
 ];
 
 const judges: Mentor[] = [
