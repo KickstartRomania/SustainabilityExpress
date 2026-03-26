@@ -17,6 +17,9 @@ import ralucaMessai from '@/assets/mentors/raluca-messai.jpeg';
 import andreeaNicolae from '@/assets/mentors/andreea-nicolae.jpeg';
 import stefaniaDuta from '@/assets/mentors/stefania-duta.png';
 import nicoletaPirvu from '@/assets/mentors/nicoleta-pirvu.png';
+import raduCristianGheorghe from '@/assets/mentors/radu-cristian-gheorghe.png';
+import tomaGrozavescu from '@/assets/mentors/toma-grozavescu.png';
+import zoltanBereczki from '@/assets/mentors/zoltan-bereczki.png';
 type Mentor = {
   name: string;
   role: string;
