@@ -20,6 +20,7 @@ import nicoletaPirvu from '@/assets/mentors/nicoleta-pirvu.png';
 import raduCristianGheorghe from '@/assets/mentors/radu-cristian-gheorghe.png';
 import tomaGrozavescu from '@/assets/mentors/toma-grozavescu.png';
 import zoltanBereczki from '@/assets/mentors/zoltan-bereczki.png';
+import alexandruGolub from '@/assets/mentors/alexandru-golub.png';
 type Mentor = {
   name: string;
   role: string;
@@ -132,6 +133,12 @@ const mentors: Mentor[] = [{
   company: 'Synerb',
   image: zoltanBereczki,
   linkedin: 'https://www.linkedin.com/in/zbereczki/'
+}, {
+  name: 'Alexandru Golub',
+  role: 'Co-Founder',
+  company: 'Pupsi',
+  image: alexandruGolub,
+  linkedin: 'https://www.linkedin.com/in/golubalexandru/'
 }];
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
