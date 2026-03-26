@@ -29,7 +29,7 @@ import alexandruGolub from '@/assets/mentors/alexandru-golub.png';
 
 // Judge images
 import hanaanYaseen from '@/assets/judges/hanaan-yaseen.jpg';
-import gratianMihailescu from '@/assets/judges/gratian-mihailescu.png';
+import samuelStancu from '@/assets/judges/samuel-stancu.png';
 import loredanaGavrilescu from '@/assets/judges/loredana-gavrilescu.png';
 
 type Mentor = {
@@ -187,11 +187,11 @@ const judges: Mentor[] = [
     linkedin: 'https://www.linkedin.com/in/ralucamessai/',
   },
   {
-    name: 'Gratian Mihailescu',
-    role: 'Founder',
+    name: 'Samuel Stancu',
+    role: 'Head of Urbanism Division',
     company: 'UrbanizeHub',
-    image: gratianMihailescu,
-    linkedin: 'https://www.linkedin.com/in/gratianmihailescu/',
+    image: samuelStancu,
+    linkedin: 'https://www.linkedin.com/in/samuelstancu/',
   },
   {
     name: 'Loredana Gavrilescu',
