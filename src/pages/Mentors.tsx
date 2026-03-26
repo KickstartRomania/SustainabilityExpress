@@ -187,11 +187,11 @@ const judges: Mentor[] = [
     linkedin: 'https://www.linkedin.com/in/ralucamessai/',
   },
   {
-    name: 'Gratian Mihailescu',
-    role: 'Founder',
+    name: 'Samuel Stancu',
+    role: 'Head of Urbanism Division',
     company: 'UrbanizeHub',
-    image: gratianMihailescu,
-    linkedin: 'https://www.linkedin.com/in/gratianmihailescu/',
+    image: samuelStancu,
+    linkedin: 'https://www.linkedin.com/in/samuelstancu/',
   },
   {
     name: 'Loredana Gavrilescu',
