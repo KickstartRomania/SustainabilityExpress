@@ -29,7 +29,7 @@ import alexandruGolub from '@/assets/mentors/alexandru-golub.png';
 
 // Judge images
 import hanaanYaseen from '@/assets/judges/hanaan-yaseen.jpg';
-import gratianMihailescu from '@/assets/judges/gratian-mihailescu.png';
+import samuelStancu from '@/assets/judges/samuel-stancu.png';
 import loredanaGavrilescu from '@/assets/judges/loredana-gavrilescu.png';
 
 type Mentor = {
