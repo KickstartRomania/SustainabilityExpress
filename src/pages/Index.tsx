@@ -133,6 +133,12 @@ const mentors: Mentor[] = [{
   company: 'Synerb',
   image: zoltanBereczki,
   linkedin: 'https://www.linkedin.com/in/zbereczki/'
+}, {
+  name: 'Alexandru Golub',
+  role: 'Co-Founder',
+  company: 'Pupsi',
+  image: alexandruGolub,
+  linkedin: 'https://www.linkedin.com/in/golubalexandru/'
 }];
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';

@@ -162,6 +162,13 @@ const mentors: Mentor[] = [
     image: zoltanBereczki,
     linkedin: 'https://www.linkedin.com/in/zbereczki/',
   },
+  {
+    name: 'Alexandru Golub',
+    role: 'Co-Founder',
+    company: 'Pupsi',
+    image: alexandruGolub,
+    linkedin: 'https://www.linkedin.com/in/golubalexandru/',
+  },
 ];
 
 const judges: Mentor[] = [
