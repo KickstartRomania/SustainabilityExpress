@@ -23,6 +23,8 @@ import zoltanBereczki from '@/assets/mentors/zoltan-bereczki.png';
 import alexandruGolub from '@/assets/mentors/alexandru-golub.png';
 import mihaiBurada from '@/assets/mentors/mihai-burada.png';
 import tiberiuLepadatu from '@/assets/mentors/tiberiu-lepadatu.png';
+import cosminBolocan from '@/assets/mentors/cosmin-bolocan.png';
+import nickUngureanu from '@/assets/mentors/nick-ungureanu.png';
 type Mentor = {
   name: string;
   role: string;
