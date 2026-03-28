@@ -22,6 +22,7 @@ import tomaGrozavescu from '@/assets/mentors/toma-grozavescu.png';
 import zoltanBereczki from '@/assets/mentors/zoltan-bereczki.png';
 import alexandruGolub from '@/assets/mentors/alexandru-golub.png';
 import mihaiBurada from '@/assets/mentors/mihai-burada.png';
+import tiberiuLepadatu from '@/assets/mentors/tiberiu-lepadatu.png';
 type Mentor = {
   name: string;
   role: string;
@@ -146,6 +147,12 @@ const mentors: Mentor[] = [{
   company: 'TREE',
   image: mihaiBurada,
   linkedin: 'https://www.linkedin.com/in/mihai-burada-741b9b14/',
+}, {
+  name: 'Tiberiu Lepadatu',
+  role: 'Lead Engineer',
+  company: 'Propevo',
+  image: tiberiuLepadatu,
+  linkedin: 'https://www.linkedin.com/in/tiberiu-lepadatu-7975bab1/',
 }];
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
