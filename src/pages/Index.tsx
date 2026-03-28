@@ -21,6 +21,7 @@ import raduCristianGheorghe from '@/assets/mentors/radu-cristian-gheorghe.png';
 import tomaGrozavescu from '@/assets/mentors/toma-grozavescu.png';
 import zoltanBereczki from '@/assets/mentors/zoltan-bereczki.png';
 import alexandruGolub from '@/assets/mentors/alexandru-golub.png';
+import mihaiBurada from '@/assets/mentors/mihai-burada.png';
 type Mentor = {
   name: string;
   role: string;
@@ -139,6 +140,11 @@ const mentors: Mentor[] = [{
   company: 'Pupsi',
   image: alexandruGolub,
   linkedin: 'https://www.linkedin.com/in/golubalexandru/'
+}, {
+  name: 'Mihai Burada',
+  role: 'Urban Planning Specialist',
+  company: 'TREE',
+  image: mihaiBurada,
 }];
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
