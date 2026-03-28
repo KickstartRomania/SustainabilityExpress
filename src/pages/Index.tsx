@@ -147,6 +147,12 @@ const mentors: Mentor[] = [{
   company: 'TREE',
   image: mihaiBurada,
   linkedin: 'https://www.linkedin.com/in/mihai-burada-741b9b14/',
+}, {
+  name: 'Tiberiu Lepadatu',
+  role: 'Lead Engineer',
+  company: 'Propevo',
+  image: tiberiuLepadatu,
+  linkedin: 'https://www.linkedin.com/in/tiberiu-lepadatu-7975bab1/',
 }];
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
