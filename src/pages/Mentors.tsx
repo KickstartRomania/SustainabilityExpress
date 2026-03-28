@@ -170,6 +170,12 @@ const mentors: Mentor[] = [
     image: alexandruGolub,
     linkedin: 'https://www.linkedin.com/in/golubalexandru/',
   },
+  {
+    name: 'Mihai Burada',
+    role: 'Urban Planning Specialist',
+    company: 'TREE',
+    image: mihaiBurada,
+  },
 ];
 
 const judges: Mentor[] = [

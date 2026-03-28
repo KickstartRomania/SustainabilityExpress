@@ -140,6 +140,11 @@ const mentors: Mentor[] = [{
   company: 'Pupsi',
   image: alexandruGolub,
   linkedin: 'https://www.linkedin.com/in/golubalexandru/'
+}, {
+  name: 'Mihai Burada',
+  role: 'Urban Planning Specialist',
+  company: 'TREE',
+  image: mihaiBurada,
 }];
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
