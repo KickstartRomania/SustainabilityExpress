@@ -27,6 +27,7 @@ import tomaGrozavescu from '@/assets/mentors/toma-grozavescu.png';
 import zoltanBereczki from '@/assets/mentors/zoltan-bereczki.png';
 import alexandruGolub from '@/assets/mentors/alexandru-golub.png';
 import mihaiBurada from '@/assets/mentors/mihai-burada.png';
+import tiberiuLepadatu from '@/assets/mentors/tiberiu-lepadatu.png';
 
 // Judge images
 import hanaanYaseen from '@/assets/judges/hanaan-yaseen.jpg';
