@@ -21,6 +21,7 @@ import raduCristianGheorghe from '@/assets/mentors/radu-cristian-gheorghe.png';
 import tomaGrozavescu from '@/assets/mentors/toma-grozavescu.png';
 import zoltanBereczki from '@/assets/mentors/zoltan-bereczki.png';
 import alexandruGolub from '@/assets/mentors/alexandru-golub.png';
+import mihaiBurada from '@/assets/mentors/mihai-burada.png';
 type Mentor = {
   name: string;
   role: string;
