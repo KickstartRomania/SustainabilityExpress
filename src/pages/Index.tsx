@@ -155,6 +155,18 @@ const mentors: Mentor[] = [{
   company: 'Propevo',
   image: tiberiuLepadatu,
   linkedin: 'https://www.linkedin.com/in/tiberiu-lepadatu-7975bab1/',
+}, {
+  name: 'Cosmin Bolocan',
+  role: 'Co-founder',
+  company: 'Brewtifi',
+  image: cosminBolocan,
+  linkedin: 'https://www.linkedin.com/in/petre-cosmin-vlad-bolocan/',
+}, {
+  name: 'Nick Ungureanu',
+  role: 'Sustainable Production Specialist',
+  company: 'ProTV',
+  image: nickUngureanu,
+  linkedin: 'https://www.linkedin.com/in/nick-ungureanu-6211ba214/',
 }];
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
