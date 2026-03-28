@@ -145,6 +145,7 @@ const mentors: Mentor[] = [{
   role: 'Urban Planning Specialist',
   company: 'TREE',
   image: mihaiBurada,
+  linkedin: 'https://www.linkedin.com/in/mihai-burada-741b9b14/',
 }];
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
