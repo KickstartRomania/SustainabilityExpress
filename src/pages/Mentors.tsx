@@ -228,7 +228,7 @@ const judges: Mentor[] = [
   {
     name: 'Loredana Gavrilescu',
     role: 'Startup Ecosystem Coordinator',
-    company: 'Iceberg',
+    company: 'Iceberg Plus',
     image: loredanaGavrilescu,
     linkedin: 'https://www.linkedin.com/in/loredana-gavrilescu-startup-consultant/',
   },
