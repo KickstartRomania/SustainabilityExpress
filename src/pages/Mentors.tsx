@@ -235,7 +235,7 @@ const judges: Mentor[] = [
 ];
 
 const Mentors = () => {
-  const renderedMentors = useMemo(() => mentors, []);
+  const renderedMentors = useMemo(() => mentors.filter(m => !['Catalin Anghel', 'Alexandra Jivan'].includes(m.name)), []);
 
   return <div className="min-h-screen bg-background">
       <Navigation />
