@@ -91,10 +91,9 @@ const Onboard = () => {
             <h2 className="text-3xl font-bold text-foreground mb-8 text-center">The Weekend</h2>
 
             <Tabs defaultValue="friday" className="w-full">
-              <TabsList className="grid w-full grid-cols-4 mb-6">
+              <TabsList className="grid w-full grid-cols-3 mb-6">
                 <TabsTrigger value="friday">Friday</TabsTrigger>
                 <TabsTrigger value="saturday">Saturday</TabsTrigger>
-                <TabsTrigger value="satnight">Sat Night</TabsTrigger>
                 <TabsTrigger value="sunday">Sunday</TabsTrigger>
               </TabsList>
 
@@ -137,6 +136,7 @@ const Onboard = () => {
                       { time: '09:00', title: 'Arrive Timișoara', desc: 'Transfer to venue, breakfast, workspace setup' },
                       { time: '10:00', title: 'Full build day', desc: 'Mentors, workshops, prototyping' },
                       { time: '20:00', title: 'Depart Timișoara', desc: 'Board train back to Bucharest' },
+                      { time: '00:30', title: 'Midnight coding sprints', desc: 'Overnight development on the train (quiet coach available)' },
                     ].map((item) => (
                       <div key={item.time} className="flex items-start gap-4">
                         <div className="w-16 text-sm font-medium text-muted-foreground pt-0.5">{item.time}</div>
@@ -146,24 +146,6 @@ const Onboard = () => {
                         </div>
                       </div>
                     ))}
-                  </div>
-                </Card>
-              </TabsContent>
-
-              <TabsContent value="satnight">
-                <Card className="card-elevated">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
-                      <Moon className="h-5 w-5 text-accent-foreground" />
-                    </div>
-                    <h3 className="text-xl font-bold text-foreground">Saturday Night</h3>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-16 text-sm font-medium text-muted-foreground pt-0.5">00:30</div>
-                    <div className="flex-1">
-                      <h4 className="font-semibold text-foreground text-sm">Midnight coding sprints</h4>
-                      <p className="text-muted-foreground text-sm">Overnight development on the train (quiet coach available)</p>
-                    </div>
                   </div>
                 </Card>
               </TabsContent>
