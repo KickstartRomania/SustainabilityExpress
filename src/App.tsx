@@ -14,6 +14,7 @@ import Partners from "./pages/Partners";
 import Apply from "./pages/Apply";
 import MentorApply from "./pages/MentorApply";
 import FAQ from "./pages/FAQ";
+import Onboard from "./pages/Onboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
