@@ -90,104 +90,115 @@ const Onboard = () => {
           <div className="max-w-4xl mx-auto mb-20">
             <h2 className="text-3xl font-bold text-foreground mb-8 text-center">The Weekend</h2>
 
-            <div className="space-y-8">
-              {/* Friday */}
-              <Card className="card-elevated">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                    <Clock className="h-6 w-6 text-primary-foreground" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground">Friday — Departure</h3>
-                </div>
-                <div className="space-y-4">
-                  {[
-                    { time: '18:00', title: 'Pre-boarding meetup', desc: 'Café near Gara de Nord (mandatory)' },
-                    { time: '19:30', title: 'Boarding', desc: 'Check-in & welcome packages' },
-                    { time: '20:30', title: 'Train departs Bucharest', desc: 'IR 11501 — icebreakers & challenge reveal' },
-                  ].map((item) => (
-                    <div key={item.time} className="flex items-start gap-4">
-                      <div className="w-20 text-sm font-medium text-muted-foreground pt-1">{item.time}</div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-foreground">{item.title}</h4>
-                        <p className="text-muted-foreground">{item.desc}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </Card>
+            <Tabs defaultValue="friday" className="w-full">
+              <TabsList className="grid w-full grid-cols-4 mb-6">
+                <TabsTrigger value="friday">Friday</TabsTrigger>
+                <TabsTrigger value="saturday">Saturday</TabsTrigger>
+                <TabsTrigger value="satnight">Sat Night</TabsTrigger>
+                <TabsTrigger value="sunday">Sunday</TabsTrigger>
+              </TabsList>
 
-              {/* Saturday */}
-              <Card className="card-elevated">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                    <MapPin className="h-6 w-6 text-primary-foreground" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground">Saturday — Full Build Day</h3>
-                </div>
-                <div className="space-y-4">
-                  {[
-                    { time: '09:00', title: 'Arrive Timișoara', desc: 'Transfer to venue, breakfast, workspace setup' },
-                    { time: '10:00', title: 'Full build day', desc: 'Mentors, workshops, prototyping' },
-                    { time: '20:00', title: 'Depart Timișoara', desc: 'Board train back to Bucharest' },
-                  ].map((item) => (
-                    <div key={item.time} className="flex items-start gap-4">
-                      <div className="w-20 text-sm font-medium text-muted-foreground pt-1">{item.time}</div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-foreground">{item.title}</h4>
-                        <p className="text-muted-foreground">{item.desc}</p>
-                      </div>
+              <TabsContent value="friday">
+                <Card className="card-elevated">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                      <Clock className="h-5 w-5 text-primary-foreground" />
                     </div>
-                  ))}
-                </div>
-              </Card>
-
-              {/* Saturday Night */}
-              <Card className="card-elevated">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
-                    <Moon className="h-6 w-6 text-accent-foreground" />
+                    <h3 className="text-xl font-bold text-foreground">Friday — Departure</h3>
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground">Saturday Night</h3>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-20 text-sm font-medium text-muted-foreground pt-1">00:30</div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-foreground">Midnight coding sprints</h4>
-                    <p className="text-muted-foreground">Overnight development on the train (quiet coach available)</p>
-                  </div>
-                </div>
-              </Card>
-
-              {/* Sunday */}
-              <Card className="card-elevated">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                    <Trophy className="h-6 w-6 text-primary-foreground" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground">Sunday — Demo Day</h3>
-                </div>
-                <div className="space-y-4">
-                  {[
-                    { time: '08:30', title: 'Arrive Bucharest', desc: 'Back at Gara de Nord' },
-                    { time: '09:00', title: 'Tura de duminică', desc: 'Group morning activity' },
-                    { time: '10:00', title: 'Transfer to Supertree', desc: 'Move to Demo Day venue' },
-                    { time: '11:00', title: 'Working session', desc: 'Final polish & presentation prep' },
-                    { time: '13:30', title: 'Doors open for guests', desc: 'Friends, family, and community join' },
-                    { time: '14:00', title: 'Demo Day', desc: 'Pitches, jury deliberation & awards' },
-                    { time: '15:30', title: 'Networking', desc: 'Mingle with mentors, jury & guests' },
-                    { time: '16:30', title: 'Space free', desc: 'Event wraps up' },
-                  ].map((item) => (
-                    <div key={item.time} className="flex items-start gap-4">
-                      <div className="w-20 text-sm font-medium text-muted-foreground pt-1">{item.time}</div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-foreground">{item.title}</h4>
-                        <p className="text-muted-foreground">{item.desc}</p>
+                  <div className="space-y-3">
+                    {[
+                      { time: '18:00', title: 'Pre-boarding meetup', desc: 'Café near Gara de Nord (mandatory)' },
+                      { time: '19:30', title: 'Boarding', desc: 'Check-in & welcome packages' },
+                      { time: '20:30', title: 'Train departs Bucharest', desc: 'IR 11501 — icebreakers & challenge reveal' },
+                    ].map((item) => (
+                      <div key={item.time} className="flex items-start gap-4">
+                        <div className="w-16 text-sm font-medium text-muted-foreground pt-0.5">{item.time}</div>
+                        <div className="flex-1">
+                          <h4 className="font-semibold text-foreground text-sm">{item.title}</h4>
+                          <p className="text-muted-foreground text-sm">{item.desc}</p>
+                        </div>
                       </div>
+                    ))}
+                  </div>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="saturday">
+                <Card className="card-elevated">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                      <MapPin className="h-5 w-5 text-primary-foreground" />
                     </div>
-                  ))}
-                </div>
-              </Card>
-            </div>
+                    <h3 className="text-xl font-bold text-foreground">Saturday — Full Build Day</h3>
+                  </div>
+                  <div className="space-y-3">
+                    {[
+                      { time: '09:00', title: 'Arrive Timișoara', desc: 'Transfer to venue, breakfast, workspace setup' },
+                      { time: '10:00', title: 'Full build day', desc: 'Mentors, workshops, prototyping' },
+                      { time: '20:00', title: 'Depart Timișoara', desc: 'Board train back to Bucharest' },
+                    ].map((item) => (
+                      <div key={item.time} className="flex items-start gap-4">
+                        <div className="w-16 text-sm font-medium text-muted-foreground pt-0.5">{item.time}</div>
+                        <div className="flex-1">
+                          <h4 className="font-semibold text-foreground text-sm">{item.title}</h4>
+                          <p className="text-muted-foreground text-sm">{item.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="satnight">
+                <Card className="card-elevated">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
+                      <Moon className="h-5 w-5 text-accent-foreground" />
+                    </div>
+                    <h3 className="text-xl font-bold text-foreground">Saturday Night</h3>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-16 text-sm font-medium text-muted-foreground pt-0.5">00:30</div>
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-foreground text-sm">Midnight coding sprints</h4>
+                      <p className="text-muted-foreground text-sm">Overnight development on the train (quiet coach available)</p>
+                    </div>
+                  </div>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="sunday">
+                <Card className="card-elevated">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                      <Trophy className="h-5 w-5 text-primary-foreground" />
+                    </div>
+                    <h3 className="text-xl font-bold text-foreground">Sunday — Demo Day</h3>
+                  </div>
+                  <div className="space-y-3">
+                    {[
+                      { time: '08:30', title: 'Arrive Bucharest', desc: 'Back at Gara de Nord' },
+                      { time: '09:00', title: 'Tura de duminică', desc: 'Group morning activity' },
+                      { time: '10:00', title: 'Transfer to Supertree', desc: 'Move to Demo Day venue' },
+                      { time: '11:00', title: 'Working session', desc: 'Final polish & presentation prep' },
+                      { time: '13:30', title: 'Doors open for guests', desc: 'Friends, family, and community join' },
+                      { time: '14:00', title: 'Demo Day', desc: 'Pitches, jury deliberation & awards' },
+                      { time: '15:30', title: 'Networking', desc: 'Mingle with mentors, jury & guests' },
+                      { time: '16:30', title: 'Space free', desc: 'Event wraps up' },
+                    ].map((item) => (
+                      <div key={item.time} className="flex items-start gap-4">
+                        <div className="w-16 text-sm font-medium text-muted-foreground pt-0.5">{item.time}</div>
+                        <div className="flex-1">
+                          <h4 className="font-semibold text-foreground text-sm">{item.title}</h4>
+                          <p className="text-muted-foreground text-sm">{item.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </Card>
+              </TabsContent>
+            </Tabs>
           </div>
 
           {/* ───── SECTION 2: YOUR COHORT ───── */}
