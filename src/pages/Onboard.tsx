@@ -1,0 +1,255 @@
+import { Card } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Clock, MapPin, ArrowRight, Train, Moon, Star, Trophy, Lightbulb, Target, Wrench, MessageSquare } from 'lucide-react';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
+
+const backgroundColors: Record<string, string> = {
+  Tech: 'bg-[#d6f5e3] text-green-800',
+  Business: 'bg-[#E6F1FB] text-blue-800',
+  Creative: 'bg-[#FAEEDA] text-amber-800',
+  'High School': 'bg-[#FDECEA] text-red-800',
+};
+
+const teams = [
+  {
+    name: 'Team Argeș',
+    members: [
+      { name: 'Stefan Ciobanu', background: 'Tech' },
+      { name: 'Auras Vlase', background: 'Business' },
+      { name: 'Serena Stoica', background: 'Creative' },
+      { name: 'Adriana Moise', background: 'High School' },
+    ],
+  },
+  {
+    name: 'Team Olt',
+    members: [
+      { name: 'Andrei Stroescu', background: 'Tech' },
+      { name: 'Dan Popescu', background: 'Business' },
+      { name: 'Ana Maria Dragan', background: 'Creative' },
+      { name: 'Andrei Pana', background: 'High School' },
+    ],
+  },
+  {
+    name: 'Team Jiu',
+    members: [
+      { name: 'Omid Ghozatlou', background: 'Tech' },
+      { name: 'Ioana Bitoleanu', background: 'Business' },
+      { name: 'Andrei Bucureci', background: 'Creative' },
+      { name: 'Alexandru Despina', background: 'High School' },
+    ],
+  },
+  {
+    name: 'Team Timiș',
+    members: [
+      { name: 'Ludovico Cesaro', background: 'Tech' },
+      { name: 'Emil Boncea', background: 'Business' },
+      { name: 'Diana-Roberta Micu', background: 'Creative' },
+      { name: 'Alexandru-Valentin Grigorescu', background: 'High School' },
+    ],
+  },
+  {
+    name: 'Team Dunărea',
+    members: [
+      { name: 'Laurentiu Toader', background: 'Tech' },
+      { name: 'Adriana Moima', background: 'Business' },
+      { name: 'Gabriela Caragata', background: 'Creative' },
+      { name: 'Andrei Gagiu', background: 'High School' },
+    ],
+  },
+];
+
+const criteria = [
+  { icon: Target, title: 'Impact', description: 'Potential to create meaningful change' },
+  { icon: Wrench, title: 'Feasibility', description: 'Realistic implementation path' },
+  { icon: Lightbulb, title: 'Innovation', description: 'Creative approach to the problem' },
+  { icon: Star, title: 'Prototype', description: 'Quality of working demonstration' },
+  { icon: MessageSquare, title: 'Storytelling', description: 'Clear communication of vision' },
+];
+
+const Onboard = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      <Navigation />
+
+      <div className="pt-24 pb-16">
+        <div className="container mx-auto px-4">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <span className="inline-block bg-primary/20 text-primary px-4 py-2 rounded-full text-lg font-semibold border border-primary/30 mb-6">
+              25–27 April 2025
+            </span>
+            <h1 className="text-5xl font-bold text-foreground mb-4">Welcome Aboard</h1>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Everything you need to know for your Sustainability Express journey.
+            </p>
+          </div>
+
+          {/* ───── SECTION 1: THE WEEKEND ───── */}
+          <div className="max-w-4xl mx-auto mb-20">
+            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">The Weekend</h2>
+
+            <div className="space-y-8">
+              {/* Friday */}
+              <Card className="card-elevated">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                    <Clock className="h-6 w-6 text-primary-foreground" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground">Friday — Departure</h3>
+                </div>
+                <div className="space-y-4">
+                  {[
+                    { time: '18:00', title: 'Pre-boarding meetup', desc: 'Café near Gara de Nord (mandatory)' },
+                    { time: '19:30', title: 'Boarding', desc: 'Check-in & welcome packages' },
+                    { time: '20:30', title: 'Train departs Bucharest', desc: 'IR 11501 — icebreakers & challenge reveal' },
+                  ].map((item) => (
+                    <div key={item.time} className="flex items-start gap-4">
+                      <div className="w-20 text-sm font-medium text-muted-foreground pt-1">{item.time}</div>
+                      <div className="flex-1">
+                        <h4 className="font-semibold text-foreground">{item.title}</h4>
+                        <p className="text-muted-foreground">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+
+              {/* Saturday */}
+              <Card className="card-elevated">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                    <MapPin className="h-6 w-6 text-primary-foreground" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground">Saturday — Full Build Day</h3>
+                </div>
+                <div className="space-y-4">
+                  {[
+                    { time: '09:00', title: 'Arrive Timișoara', desc: 'Transfer to venue, breakfast, workspace setup' },
+                    { time: '10:00', title: 'Full build day', desc: 'Mentors, workshops, prototyping' },
+                    { time: '20:00', title: 'Depart Timișoara', desc: 'Board train back to Bucharest' },
+                  ].map((item) => (
+                    <div key={item.time} className="flex items-start gap-4">
+                      <div className="w-20 text-sm font-medium text-muted-foreground pt-1">{item.time}</div>
+                      <div className="flex-1">
+                        <h4 className="font-semibold text-foreground">{item.title}</h4>
+                        <p className="text-muted-foreground">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+
+              {/* Saturday Night */}
+              <Card className="card-elevated">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                    <Moon className="h-6 w-6 text-accent-foreground" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground">Saturday Night</h3>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-20 text-sm font-medium text-muted-foreground pt-1">00:30</div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-foreground">Midnight coding sprints</h4>
+                    <p className="text-muted-foreground">Overnight development on the train (quiet coach available)</p>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Sunday */}
+              <Card className="card-elevated">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                    <Trophy className="h-6 w-6 text-primary-foreground" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground">Sunday — Demo Day</h3>
+                </div>
+                <div className="space-y-4">
+                  {[
+                    { time: '08:30', title: 'Arrive Bucharest', desc: 'Back at Gara de Nord' },
+                    { time: '09:00', title: 'Tura de duminică', desc: 'Group morning activity' },
+                    { time: '10:00', title: 'Transfer to Supertree', desc: 'Move to Demo Day venue' },
+                    { time: '11:00', title: 'Working session', desc: 'Final polish & presentation prep' },
+                    { time: '13:30', title: 'Doors open for guests', desc: 'Friends, family, and community join' },
+                    { time: '14:00', title: 'Demo Day', desc: 'Pitches, jury deliberation & awards' },
+                    { time: '15:30', title: 'Networking', desc: 'Mingle with mentors, jury & guests' },
+                    { time: '16:30', title: 'Space free', desc: 'Event wraps up' },
+                  ].map((item) => (
+                    <div key={item.time} className="flex items-start gap-4">
+                      <div className="w-20 text-sm font-medium text-muted-foreground pt-1">{item.time}</div>
+                      <div className="flex-1">
+                        <h4 className="font-semibold text-foreground">{item.title}</h4>
+                        <p className="text-muted-foreground">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+            </div>
+          </div>
+
+          {/* ───── SECTION 2: YOUR COHORT ───── */}
+          <div className="mb-20">
+            <h2 className="text-3xl font-bold text-foreground mb-4 text-center">Your Cohort</h2>
+            <div className="flex justify-center gap-3 flex-wrap mb-8">
+              {Object.entries(backgroundColors).map(([label, cls]) => (
+                <span key={label} className={`${cls} px-3 py-1 rounded-full text-xs font-semibold`}>
+                  {label}
+                </span>
+              ))}
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {teams.map((team) => (
+                <Card key={team.name} className="card-elevated">
+                  <div className="flex items-center gap-3 mb-5">
+                    <Train className="h-5 w-5 text-primary" />
+                    <h3 className="text-xl font-bold text-foreground">{team.name}</h3>
+                  </div>
+                  <ul className="space-y-3">
+                    {team.members.map((m) => (
+                      <li key={m.name} className="flex items-center justify-between gap-2">
+                        <span className="text-foreground text-sm">{m.name}</span>
+                        <Badge className={`${backgroundColors[m.background]} border-0 text-xs shrink-0`}>
+                          {m.background}
+                        </Badge>
+                      </li>
+                    ))}
+                  </ul>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* ───── SECTION 3: HOW YOU'LL BE JUDGED ───── */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">How You'll Be Judged</h2>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-5xl mx-auto mb-8">
+              {criteria.map((c) => (
+                <Card key={c.title} className="card-elevated text-center">
+                  <c.icon className="h-8 w-8 text-primary mx-auto mb-3" />
+                  <h3 className="font-bold text-foreground mb-1">{c.title}</h3>
+                  <p className="text-muted-foreground text-sm">{c.description}</p>
+                </Card>
+              ))}
+            </div>
+
+            <Card className="card-elevated max-w-3xl mx-auto text-center">
+              <p className="text-muted-foreground">
+                Each team delivers a <span className="text-foreground font-semibold">5–7 minute pitch</span> and a{' '}
+                <span className="text-foreground font-semibold">one-page summary</span> by{' '}
+                <span className="text-primary font-semibold">Sunday 17:00</span>.
+              </p>
+            </Card>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Onboard;
