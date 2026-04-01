@@ -601,9 +601,9 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
           {/* Mobile-only Apply CTA */}
           <div className="text-center mt-12 md:hidden">
             <Button asChild className="btn-hero text-lg px-8 py-6">
-              <Link to="/apply">
-                Apply Now <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+              <a href="https://luma.com/lxs8xxfm" target="_blank" rel="noopener noreferrer">
+                Join Demo Day <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
             </Button>
           </div>
         </div>
