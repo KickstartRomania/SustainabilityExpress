@@ -265,8 +265,8 @@ const Mentors = () => {
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 max-w-6xl mx-auto">
               {judges.map((judge) => (
                 <Card key={judge.name} className="card-elevated text-center group transition-transform duration-300 hover:scale-[1.01]">
-                  <div className="p-4">
-                    <div className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-primary/20">
+                  <div className="p-3">
+                    <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-2 rounded-full overflow-hidden border-2 border-primary/20">
                       <img src={judge.image} alt={judge.name} loading="lazy" className={`w-full h-full object-cover ${judge.imagePosition || ''}`} />
                     </div>
                     <h3 className="text-base md:text-lg font-bold text-foreground leading-snug mb-1">{judge.name}</h3>
