@@ -82,9 +82,9 @@ const Navigation = () => {
               ))}
               <div className="pt-4">
                 <Button asChild className="btn-hero w-full">
-                  <Link to="/apply" onClick={() => setIsOpen(false)}>
-                    Apply Now
-                  </Link>
+                  <a href="https://luma.com/lxs8xxfm" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
+                    Join Demo Day
+                  </a>
                 </Button>
               </div>
             </div>

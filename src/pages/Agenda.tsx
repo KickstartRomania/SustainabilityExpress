@@ -167,9 +167,9 @@ const Agenda = () => {
               Pack light, think big, and prepare for 48 hours of innovation on rails.
             </p>
             <Button asChild className="btn-hero text-xl px-12 py-6">
-              <Link to="/apply">
-                Apply Now <ArrowRight className="ml-2 h-6 w-6" />
-              </Link>
+              <a href="https://luma.com/lxs8xxfm" target="_blank" rel="noopener noreferrer">
+                Join Demo Day <ArrowRight className="ml-2 h-6 w-6" />
+              </a>
             </Button>
           </div>
         </div>

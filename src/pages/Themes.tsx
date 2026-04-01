@@ -110,9 +110,9 @@ const Themes = () => {
               Join us on the rails and help shape the future of sustainable transportation.
             </p>
             <Button asChild className="btn-hero text-xl px-12 py-6">
-              <Link to="/apply">
-                Start Building <ArrowRight className="ml-2 h-6 w-6" />
-              </Link>
+              <a href="https://luma.com/lxs8xxfm" target="_blank" rel="noopener noreferrer">
+                Join Demo Day <ArrowRight className="ml-2 h-6 w-6" />
+              </a>
             </Button>
           </div>
         </div>

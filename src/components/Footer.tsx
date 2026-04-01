@@ -30,9 +30,9 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/apply" className="text-white/80 hover:text-white transition-colors">
-                  Apply Now
-                </Link>
+                <a href="https://luma.com/lxs8xxfm" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">
+                  Join Demo Day
+                </a>
               </li>
               <li>
                 <Link to="/faq" className="text-white/80 hover:text-white transition-colors">
