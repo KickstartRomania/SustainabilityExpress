@@ -219,6 +219,13 @@ const judges: Mentor[] = [
     linkedin: 'https://www.linkedin.com/in/ralucamessai/',
   },
   {
+    name: 'Aleodor Tabarcea',
+    role: 'Engineering Manager',
+    company: 'Stripe',
+    image: aleodorTabarcea,
+    linkedin: 'https://www.linkedin.com/in/aleodor-tabarcea/',
+  },
+  {
     name: 'Samuel Stancu',
     role: 'Head of Urbanism Division',
     company: 'UrbanizeHub',
