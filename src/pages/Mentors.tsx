@@ -47,20 +47,6 @@ type Mentor = {
 
 const mentors: Mentor[] = [
   {
-    name: 'Raluca Messai',
-    role: 'Entrepreneur & Brand strategist',
-    company: 'diARK',
-    image: ralucaMessai,
-    linkedin: 'https://www.linkedin.com/in/ralucamessai/',
-  },
-  {
-    name: 'Aleodor Tabarcea',
-    role: 'Engineering Manager',
-    company: 'Stripe',
-    image: aleodorTabarcea,
-    linkedin: 'https://www.linkedin.com/in/aleodor-tabarcea/',
-  },
-  {
     name: 'Iulia Andritoiu Caizer',
     role: 'CEO and co-founder',
     company: 'QuickLegal',
@@ -165,6 +151,20 @@ const mentors: Mentor[] = [
     company: 'Synerb',
     image: zoltanBereczki,
     linkedin: 'https://www.linkedin.com/in/zbereczki/',
+  },
+  {
+    name: 'Raluca Messai',
+    role: 'Entrepreneur & Brand strategist',
+    company: 'diARK',
+    image: ralucaMessai,
+    linkedin: 'https://www.linkedin.com/in/ralucamessai/',
+  },
+  {
+    name: 'Aleodor Tabarcea',
+    role: 'Engineering Manager',
+    company: 'Stripe',
+    image: aleodorTabarcea,
+    linkedin: 'https://www.linkedin.com/in/aleodor-tabarcea/',
   },
   {
     name: 'Alexandru Golub',
