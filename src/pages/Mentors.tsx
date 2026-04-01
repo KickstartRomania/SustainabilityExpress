@@ -265,13 +265,13 @@ const Mentors = () => {
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 max-w-6xl mx-auto">
               {judges.map((judge) => (
                 <Card key={judge.name} className="card-elevated text-center group transition-transform duration-300 hover:scale-[1.01]">
-                  <div className="px-2 py-3">
-                    <div className="w-14 h-14 md:w-16 md:h-16 mx-auto mb-2 rounded-full overflow-hidden border-2 border-primary/20">
+                  <div className="p-3">
+                    <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-2 rounded-full overflow-hidden border-2 border-primary/20">
                       <img src={judge.image} alt={judge.name} loading="lazy" className={`w-full h-full object-cover ${judge.imagePosition || ''}`} />
                     </div>
-                    <h3 className="text-sm md:text-base font-bold text-foreground leading-tight mb-0.5">{judge.name}</h3>
-                    <p className="text-muted-foreground text-xs leading-tight">{judge.role}</p>
-                    <p className="text-muted-foreground text-xs leading-tight mb-2">{judge.company || '\u00A0'}</p>
+                    <h3 className="text-base md:text-lg font-bold text-foreground leading-snug mb-1">{judge.name}</h3>
+                    <p className="text-muted-foreground text-xs md:text-sm">{judge.role}</p>
+                    <p className="text-muted-foreground text-xs md:text-sm mb-3">{judge.company || '\u00A0'}</p>
                     {judge.linkedin ? (
                       <a href={judge.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`Open ${judge.name} on LinkedIn`} className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
                         <Linkedin className="h-4 w-4 text-primary" />
