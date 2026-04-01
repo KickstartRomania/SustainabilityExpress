@@ -2,21 +2,21 @@
 
 ## Problem
 
-The judge cards still have large internal padding because the `card-elevated` CSS class applies `p-8` (2rem / 32px) padding. The `px-1 py-2` you added is on an inner `<div>`, but the outer `Card` with `card-elevated` already adds significant padding around everything.
+Judge cards have `!py-4` (16px vertical padding) while mentor cards have `card-elevated` (`p-8` = 32px) plus an inner `p-4` wrapper, giving them significantly more top/bottom padding. The judge cards look cramped vertically by comparison.
 
-## Solution
+## Fix
 
-Override the `card-elevated` padding specifically on the judge cards by adding a padding override class directly on the `Card` element.
+Change the judge card padding from `!py-4` to `!py-8` to match the mentor cards' vertical padding, while keeping `!px-2` for the tight horizontal spacing.
 
-### Changes in `src/pages/Mentors.tsx`
-
-On the judge `Card` element, add `!p-2` (or `!p-3`) to override the `p-8` from `card-elevated`:
+### Change in `src/pages/Mentors.tsx` (line 267)
 
 ```tsx
-<Card className="card-elevated !p-2 text-center group transition-transform duration-300 hover:scale-[1.01]">
+// From:
+<Card key={judge.name} className="card-elevated !px-2 !py-4 text-center ...">
+
+// To:
+<Card key={judge.name} className="card-elevated !px-2 !py-8 text-center ...">
 ```
 
-And remove the extra padding wrapper `<div className="px-1 py-2">` since the Card itself will now have minimal padding. The content can sit directly inside the Card.
-
-This single change will eliminate the excess whitespace inside each judge card.
+Single line change. The vertical padding will now match mentor cards while horizontal stays compact.
 
