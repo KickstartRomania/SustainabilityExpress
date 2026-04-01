@@ -44,7 +44,7 @@ const Navigation = () => {
               </Link>
             ))}
             <Button asChild className="btn-hero">
-              <Link to="/apply">Apply Now</Link>
+              <a href="https://luma.com/lxs8xxfm" target="_blank" rel="noopener noreferrer">Join Demo Day</a>
             </Button>
           </div>
 
