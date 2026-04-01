@@ -407,9 +407,9 @@ const Index = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild className="btn-hero text-lg px-8 py-6">
-                <Link to="/apply">
-                  Apply Now <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+                <a href="https://luma.com/lxs8xxfm" target="_blank" rel="noopener noreferrer">
+                  Join Demo Day <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 border-2 bg-background/60 backdrop-blur-sm">
                 <Link to="/how-it-works">Find Out More</Link>
