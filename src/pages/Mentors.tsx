@@ -264,20 +264,18 @@ const Mentors = () => {
             
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 max-w-6xl mx-auto">
               {judges.map((judge) => (
-                <Card key={judge.name} className="card-elevated text-center group transition-transform duration-300 hover:scale-[1.01]">
-                  <div className="px-1 py-2">
-                    <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-2 rounded-full overflow-hidden border-2 border-primary/20">
-                      <img src={judge.image} alt={judge.name} loading="lazy" className={`w-full h-full object-cover ${judge.imagePosition || ''}`} />
-                    </div>
-                    <h3 className="text-base md:text-lg font-bold text-foreground leading-snug mb-1">{judge.name}</h3>
-                    <p className="text-muted-foreground text-xs md:text-sm">{judge.role}</p>
-                    <p className="text-muted-foreground text-xs md:text-sm mb-3">{judge.company || '\u00A0'}</p>
-                    {judge.linkedin ? (
-                      <a href={judge.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`Open ${judge.name} on LinkedIn`} className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
-                        <Linkedin className="h-4 w-4 text-primary" />
-                      </a>
-                    ) : null}
+                <Card key={judge.name} className="card-elevated !p-2 text-center group transition-transform duration-300 hover:scale-[1.01]">
+                  <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-2 rounded-full overflow-hidden border-2 border-primary/20">
+                    <img src={judge.image} alt={judge.name} loading="lazy" className={`w-full h-full object-cover ${judge.imagePosition || ''}`} />
                   </div>
+                  <h3 className="text-base md:text-lg font-bold text-foreground leading-snug mb-1">{judge.name}</h3>
+                  <p className="text-muted-foreground text-xs md:text-sm">{judge.role}</p>
+                  <p className="text-muted-foreground text-xs md:text-sm mb-3">{judge.company || '\u00A0'}</p>
+                  {judge.linkedin ? (
+                    <a href={judge.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`Open ${judge.name} on LinkedIn`} className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
+                      <Linkedin className="h-4 w-4 text-primary" />
+                    </a>
+                  ) : null}
                 </Card>
               ))}
             </div>
