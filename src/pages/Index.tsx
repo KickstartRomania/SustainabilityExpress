@@ -407,9 +407,9 @@ const Index = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild className="btn-hero text-lg px-8 py-6">
-                <Link to="/apply">
-                  Apply Now <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+                <a href="https://luma.com/lxs8xxfm" target="_blank" rel="noopener noreferrer">
+                  Join Demo Day <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 border-2 bg-background/60 backdrop-blur-sm">
                 <Link to="/how-it-works">Find Out More</Link>
@@ -601,9 +601,9 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
           {/* Mobile-only Apply CTA */}
           <div className="text-center mt-12 md:hidden">
             <Button asChild className="btn-hero text-lg px-8 py-6">
-              <Link to="/apply">
-                Apply Now <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+              <a href="https://luma.com/lxs8xxfm" target="_blank" rel="noopener noreferrer">
+                Join Demo Day <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
             </Button>
           </div>
         </div>
@@ -776,9 +776,9 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
             {/* Mobile-only Apply CTA */}
             <div className="md:hidden">
               <Button asChild className="btn-hero text-lg px-8 py-6">
-                <Link to="/apply">
-                  Apply Now <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+                <a href="https://luma.com/lxs8xxfm" target="_blank" rel="noopener noreferrer">
+                  Join Demo Day <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
               </Button>
             </div>
           </div>
@@ -1009,14 +1009,14 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
       }} />
         
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-4xl font-bold text-white mb-6">Seats Are Limited</h2>
+          <h2 className="text-4xl font-bold text-white mb-6">Join Our Demo Day</h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Join innovators, builders, and sustainability enthusiasts for an unforgettable weekend of creation on rails.
+            See what 20 innovators built during 48 hours on rails. Join us for the Sustainability Express Demo Day — pitches, prizes, and sustainable solutions.
           </p>
           <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-6 font-bold group">
-            <Link to="/apply">
-              Apply Now <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            <a href="https://luma.com/lxs8xxfm" target="_blank" rel="noopener noreferrer">
+              Join Demo Day <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+            </a>
           </Button>
         </div>
       </section>
