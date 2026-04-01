@@ -262,7 +262,7 @@ const Mentors = () => {
               <p className="text-lg text-muted-foreground">The panel evaluating your solutions</p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 max-w-5xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 max-w-6xl mx-auto">
               {judges.map((judge) => (
                 <Card key={judge.name} className="card-elevated text-center group transition-transform duration-300 hover:scale-[1.01]">
                   <div className="p-4">
