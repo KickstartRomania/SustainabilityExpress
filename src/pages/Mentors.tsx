@@ -262,20 +262,19 @@ const Mentors = () => {
               <p className="text-lg text-muted-foreground">The panel evaluating your solutions</p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 max-w-5xl mx-auto">
               {judges.map((judge) => (
-                <Card key={judge.name} className="card-elevated group transition-transform duration-300 hover:scale-[1.01]">
-                  <div className="p-4 flex items-center gap-4">
-                    <div className="w-14 h-14 shrink-0 rounded-full overflow-hidden border-2 border-primary/20">
+                <Card key={judge.name} className="card-elevated text-center group transition-transform duration-300 hover:scale-[1.01]">
+                  <div className="p-4">
+                    <div className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-primary/20">
                       <img src={judge.image} alt={judge.name} loading="lazy" className={`w-full h-full object-cover ${judge.imagePosition || ''}`} />
                     </div>
-                    <div className="min-w-0">
-                      <h3 className="text-sm font-bold text-foreground leading-snug">{judge.name}</h3>
-                      <p className="text-muted-foreground text-xs">{judge.role}{judge.company ? `, ${judge.company}` : ''}</p>
-                    </div>
+                    <h3 className="text-base md:text-lg font-bold text-foreground leading-snug mb-1">{judge.name}</h3>
+                    <p className="text-muted-foreground text-xs md:text-sm">{judge.role}</p>
+                    <p className="text-muted-foreground text-xs md:text-sm mb-3">{judge.company || '\u00A0'}</p>
                     {judge.linkedin ? (
-                      <a href={judge.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`Open ${judge.name} on LinkedIn`} className="ml-auto shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
-                        <Linkedin className="h-3.5 w-3.5 text-primary" />
+                      <a href={judge.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`Open ${judge.name} on LinkedIn`} className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
+                        <Linkedin className="h-4 w-4 text-primary" />
                       </a>
                     ) : null}
                   </div>
