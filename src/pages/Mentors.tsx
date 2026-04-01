@@ -70,7 +70,7 @@ const mentors: Mentor[] = [
   {
     name: 'Razvan Suta',
     role: 'Co-founder & COO',
-    company: '',
+    company: 'Vest Ventures',
     image: razvanSuta,
     linkedin: 'https://www.linkedin.com/in/razvansuta/',
     imagePosition: 'object-[center_25%]',
