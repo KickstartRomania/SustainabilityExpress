@@ -1,39 +1,22 @@
 
 
-# Create `/onboard` Participant Page
+## Problem
 
-## Overview
-New public page at `/onboard` with three sections (skipping mentors for now). All content hardcoded from the MD file and screenshot.
+The judge cards still have large internal padding because the `card-elevated` CSS class applies `p-8` (2rem / 32px) padding. The `px-1 py-2` you added is on an inner `<div>`, but the outer `Card` with `card-elevated` already adds significant padding around everything.
 
-## Sections
+## Solution
 
-### 1. The Weekend — Visual Timeline
-Vertical timeline using Card components (matching Agenda.tsx pattern), three day cards:
+Override the `card-elevated` padding specifically on the judge cards by adding a padding override class directly on the `Card` element.
 
-- **Friday**: 18:00 Pre-boarding meetup, 19:30 Boarding, 20:30 Train departs
-- **Saturday**: 09:00 Arrive Timișoara, 10:00 Full build day, 20:00 Depart back
-- **Saturday night / Sunday**: 00:30 Midnight coding sprints
-- **Sunday morning**: 08:30 Arrive Bucharest, 09:00–10:00 Tura de duminica, 10:00–11:00 Transfer to Supertree
-- **Sunday at Supertree**: 11:00 Working session, 13:30 Doors open, 14:00 Demo Day, 15:30 Networking, 16:30 Space free
+### Changes in `src/pages/Mentors.tsx`
 
-### 2. Your Cohort — Team Cards
-Five team cards in a responsive grid (2-3 cols). Each card shows team name and 4 members with color-coded badges:
-- Tech → `bg-[#d6f5e3] text-green-800`
-- Business → `bg-[#E6F1FB] text-blue-800`
-- Creative → `bg-[#FAEEDA] text-amber-800`
-- High School → `bg-[#FDECEA] text-red-800`
+On the judge `Card` element, add `!p-2` (or `!p-3`) to override the `p-8` from `card-elevated`:
 
-Teams from MD: Argeș, Olt, Jiu, Timiș (Ludovico Cesaro, Emil Boncea, Diana-Roberta Micu, Alexandru-Valentin Grigorescu), Dunărea.
+```tsx
+<Card className="card-elevated !p-2 text-center group transition-transform duration-300 hover:scale-[1.01]">
+```
 
-### 3. How You'll Be Judged — Criteria Cards
-Five cards: Impact, Feasibility, Innovation, Prototype, Storytelling with one-sentence descriptions. Footer note about 5–7 min pitch + one-page summary by Sunday 17:00.
+And remove the extra padding wrapper `<div className="px-1 py-2">` since the Card itself will now have minimal padding. The content can sit directly inside the Card.
 
-## File Changes
-
-| File | Change |
-|------|--------|
-| `src/pages/Onboard.tsx` | **New** — full page, all data inline |
-| `src/App.tsx` | Add `<Route path="/onboard" element={<Onboard />} />` |
-
-Page uses Navigation + Footer for consistency. Not added to main nav — direct link only.
+This single change will eliminate the excess whitespace inside each judge card.
 
