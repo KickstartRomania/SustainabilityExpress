@@ -69,7 +69,7 @@ const stations: StationData[] = [
       { name: 'Zoltan-Cristian Bereczki', role: 'Co-Founder & Co-CEO', company: 'Synerb', image: zoltanBereczki, linkedin: 'https://www.linkedin.com/in/zbereczki/' },
       { name: 'Andreea (Oproiu) Nicolae', role: 'Head of MarCom', company: 'How to Web', image: andreeaNicolae, linkedin: 'https://www.linkedin.com/in/andreea-oproiu/' },
       { name: 'Adrian Gheorghe', role: 'Startup Advisor', company: 'Doers Ventures', image: adrianGheorghe, linkedin: 'https://www.linkedin.com/in/adrian-gheorghe/' },
-      { name: 'Răzvan Suta', role: 'Co-founder & COO', company: 'Vest Ventures', image: razvanSuta, imagePosition: 'object-[center_25%]', linkedin: 'https://www.linkedin.com/in/razvansuta/' },
+      { name: 'Razvan Suta', role: 'Co-founder & COO', company: 'Vest Ventures', image: razvanSuta, imagePosition: 'object-[center_25%]', linkedin: 'https://www.linkedin.com/in/razvansuta/' },
       { name: 'Radu Ticiu', role: 'Co-founder', company: 'Growceanu', image: raduTiciu, linkedin: 'https://www.linkedin.com/in/raduticiu/' },
     ],
   },

@@ -66,7 +66,7 @@ const teams = [
     ],
   },
   {
-    name: 'Team Dunărea',
+    name: 'Team Dunarea',
     members: [
       { name: 'Laurentiu Toader', background: 'Tech' },
       { name: 'Adriana Moima', background: 'Business' },
