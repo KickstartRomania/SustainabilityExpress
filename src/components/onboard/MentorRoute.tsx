@@ -143,7 +143,11 @@ const Station = ({ icon: Icon, label, sublabel, mentors, color, dotColor, isLast
                 <MentorCard key={m.name} mentor={m} />
               ))}
             </div>
-            <div />
+            <div className="flex flex-col gap-2">
+              {rightColumnMentors?.map((m) => (
+                <MentorCard key={m.name} mentor={m} />
+              ))}
+            </div>
           </>
         ) : (
           mentors.map((m) => (
