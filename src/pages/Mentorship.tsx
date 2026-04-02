@@ -47,6 +47,19 @@ const schedule = [
   { time: '20:41', activity: 'Departure from Timișoara' },
 ];
 
+const mentorLinkedins: Record<string, string> = {
+  'Toma Grozăvescu': 'https://www.linkedin.com/in/tomagrozavescu/',
+  'Zoltan Bereczki': 'https://www.linkedin.com/in/zbereczki/',
+  'Iulia Andritoiu Caizer': 'https://www.linkedin.com/in/iulia-caizer/',
+  'Tiberiu Lepădatu': 'https://www.linkedin.com/in/tiberiu-lepadatu-7975bab1/',
+  'Andreea Oproiu': 'https://www.linkedin.com/in/andreea-oproiu/',
+  'Mihai Burada': 'https://www.linkedin.com/in/mihai-burada-741b9b14/',
+  'Adrian Gheorghe': 'https://www.linkedin.com/in/adrian-gheorghe/',
+  'Nick Ungureanu': 'https://www.linkedin.com/in/nick-ungureanu-6211ba214/',
+  'Radu Ticiu': 'https://www.linkedin.com/in/raduticiu/',
+  'Stefania Duta': 'https://www.linkedin.com/in/stefania-duta/',
+};
+
 const mentorPairs = [
   { pair: 1, mentors: [{ name: 'Toma Grozăvescu', bg: 'Marketing' }, { name: 'Zoltan Bereczki', bg: 'Sustainability' }] },
   { pair: 2, mentors: [{ name: 'Iulia Andritoiu Caizer', bg: 'Legal' }, { name: 'Tiberiu Lepădatu', bg: 'Tech' }] },
