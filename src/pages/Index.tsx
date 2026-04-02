@@ -25,6 +25,7 @@ import mihaiBurada from '@/assets/mentors/mihai-burada.png';
 import tiberiuLepadatu from '@/assets/mentors/tiberiu-lepadatu.png';
 import cosminBolocan from '@/assets/mentors/cosmin-bolocan.png';
 import nickUngureanu from '@/assets/mentors/nick-ungureanu.png';
+import madalinaSandu from '@/assets/mentors/madalina-sandu.jpg';
 type Mentor = {
   name: string;
   role: string;
