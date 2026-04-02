@@ -1,61 +1,112 @@
 import { Train, MapPin, Building2 } from 'lucide-react';
 
-interface StationProps {
+// Mentor images
+import nicoletaPirvu from '@/assets/mentors/nicoleta-pirvu.png';
+import cosminPirvu from '@/assets/mentors/cosmin-pirvu.jpeg';
+import georgeBonea from '@/assets/mentors/george-bonea.jpeg';
+import cosminBolocan from '@/assets/mentors/cosmin-bolocan.png';
+import nickUngureanu from '@/assets/mentors/nick-ungureanu.png';
+import tiberiuLepadatu from '@/assets/mentors/tiberiu-lepadatu.png';
+import mihaiBurada from '@/assets/mentors/mihai-burada.png';
+import stefaniaDuta from '@/assets/mentors/stefania-duta.png';
+import tomaGrozavescu from '@/assets/mentors/toma-grozavescu.png';
+import iuliaAndritoiuCaizer from '@/assets/mentors/iulia-andritoiu-caizer.jpeg';
+import zoltanBereczki from '@/assets/mentors/zoltan-bereczki.png';
+import andreeaNicolae from '@/assets/mentors/andreea-nicolae.jpeg';
+import adrianGheorghe from '@/assets/mentors/adrian-gheorghe.jpeg';
+import razvanSuta from '@/assets/mentors/razvan-suta.jpeg';
+import raduTiciu from '@/assets/mentors/radu-ticiu.jpeg';
+import alexandruGolub from '@/assets/mentors/alexandru-golub.png';
+import aleodorTabarcea from '@/assets/mentors/aleodor-tabarcea.jpeg';
+import raduCristianGheorghe from '@/assets/mentors/radu-cristian-gheorghe.png';
+
+interface MentorInfo {
+  name: string;
+  role: string;
+  company: string;
+  image: string;
+  imagePosition?: string;
+}
+
+interface StationData {
   icon: React.ElementType;
   label: string;
   sublabel: string;
-  mentors: string[];
+  mentors: MentorInfo[];
   color: string;
   dotColor: string;
   isLast?: boolean;
 }
 
-const stations: StationProps[] = [
+const stations: StationData[] = [
   {
     icon: Train,
     label: 'On the Train',
     sublabel: 'Bucharest → Timișoara → Bucharest',
-    mentors: [
-      'Nicoleta Pîrvu',
-      'Cosmin Pîrvu',
-      'George Bonea',
-      'Cosmin Bolocan',
-      'Nick Ungureanu',
-      'Tiberiu Lepădatu',
-      'Mihai Burada',
-      'Ștefania Duță',
-    ],
     color: 'text-primary',
     dotColor: 'bg-primary',
+    mentors: [
+      { name: 'Nicoleta Pîrvu', role: 'Investor Relationship Manager', company: 'How to Web', image: nicoletaPirvu },
+      { name: 'Cosmin Pîrvu', role: 'Startup Program Manager', company: 'Veridion', image: cosminPirvu },
+      { name: 'George Bonea', role: 'Copywriter', company: 'Communication Consultant', image: georgeBonea },
+      { name: 'Cosmin Bolocan', role: 'Co-founder', company: 'Brewtifi', image: cosminBolocan },
+      { name: 'Nick Ungureanu', role: 'Sustainable Production Specialist', company: 'ProTV', image: nickUngureanu },
+      { name: 'Tiberiu Lepădatu', role: 'Lead Engineer', company: 'Propevo', image: tiberiuLepadatu },
+      { name: 'Mihai Burada', role: 'Urban Planning Specialist', company: 'TREE', image: mihaiBurada },
+      { name: 'Ștefania Duță', role: 'HR Manager', company: 'MIGSO-PCUBED', image: stefaniaDuta },
+    ],
   },
   {
     icon: MapPin,
     label: 'Timișoara',
     sublabel: 'Build-day venue',
-    mentors: [
-      'Toma Grozăvescu',
-      'Iulia Andritoiu Caizer',
-      'Zoltan-Cristian Bereczki',
-      'Andreea Oproiu',
-      'Adrian Gheorghe',
-      'Răzvan Suta',
-      'Radu Ticiu',
-    ],
     color: 'text-accent',
     dotColor: 'bg-accent',
+    mentors: [
+      { name: 'Toma Grozăvescu', role: 'Founder', company: 'SMARTERS', image: tomaGrozavescu },
+      { name: 'Iulia Andritoiu Caizer', role: 'CEO and co-founder', company: 'QuickLegal', image: iuliaAndritoiuCaizer },
+      { name: 'Zoltan-Cristian Bereczki', role: 'Co-Founder & Co-CEO', company: 'Synerb', image: zoltanBereczki },
+      { name: 'Andreea (Oproiu) Nicolae', role: 'Head of MarCom', company: 'How to Web', image: andreeaNicolae },
+      { name: 'Adrian Gheorghe', role: 'Startup Advisor', company: 'Doers Ventures', image: adrianGheorghe },
+      { name: 'Răzvan Suta', role: 'Co-founder & COO', company: 'Vest Ventures', image: razvanSuta, imagePosition: 'object-[center_25%]' },
+      { name: 'Radu Ticiu', role: 'Co-founder', company: 'Growceanu', image: raduTiciu },
+    ],
   },
   {
     icon: Building2,
     label: 'Bucharest',
     sublabel: 'Demo Day @ Supertree',
-    mentors: ['Alex Goub', 'Aleodor Tabarcea', 'Radu-Cristian Gheorghe'],
     color: 'text-sky-400',
     dotColor: 'bg-sky-400',
     isLast: true,
+    mentors: [
+      { name: 'Alexandru Golub', role: 'Co-Founder', company: 'Pupsi', image: alexandruGolub },
+      { name: 'Aleodor Tabarcea', role: 'Engineering Manager', company: 'Stripe', image: aleodorTabarcea },
+      { name: 'Radu-Cristian Gheorghe', role: 'Sustainability Specialist', company: 'Autonom Group', image: raduCristianGheorghe },
+    ],
   },
 ];
 
-const Station = ({ icon: Icon, label, sublabel, mentors, color, dotColor, isLast }: StationProps) => (
+const MentorCard = ({ mentor }: { mentor: MentorInfo }) => (
+  <div className="flex items-center gap-3 px-3 py-2 rounded-xl bg-secondary/60 border border-border">
+    <div className="w-10 h-10 rounded-full overflow-hidden shrink-0 border border-border">
+      <img
+        src={mentor.image}
+        alt={mentor.name}
+        loading="lazy"
+        className={`w-full h-full object-cover ${mentor.imagePosition || ''}`}
+      />
+    </div>
+    <div className="min-w-0">
+      <p className="text-sm font-semibold text-foreground leading-tight truncate">{mentor.name}</p>
+      <p className="text-xs text-muted-foreground leading-tight truncate">
+        {mentor.role}{mentor.company ? ` · ${mentor.company}` : ''}
+      </p>
+    </div>
+  </div>
+);
+
+const Station = ({ icon: Icon, label, sublabel, mentors, color, dotColor, isLast }: StationData) => (
   <div className="relative flex gap-6">
     {/* Rail line */}
     <div className="flex flex-col items-center">
@@ -64,21 +115,16 @@ const Station = ({ icon: Icon, label, sublabel, mentors, color, dotColor, isLast
     </div>
 
     {/* Content */}
-    <div className={`pb-12 ${isLast ? 'pb-0' : ''}`}>
+    <div className={`${isLast ? 'pb-0' : 'pb-12'} flex-1 min-w-0`}>
       <div className="flex items-center gap-2 mb-1">
-        <Icon className={`h-5 w-5 ${color}`} />
+        <Icon className={`h-5 w-5 ${color} shrink-0`} />
         <h3 className={`text-lg font-bold ${color}`}>{label}</h3>
       </div>
       <p className="text-muted-foreground text-sm mb-4">{sublabel}</p>
 
-      <div className="flex flex-wrap gap-2">
-        {mentors.map((name) => (
-          <span
-            key={name}
-            className="px-3 py-1.5 rounded-full bg-secondary text-foreground text-sm font-medium border border-border"
-          >
-            {name}
-          </span>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+        {mentors.map((m) => (
+          <MentorCard key={m.name} mentor={m} />
         ))}
       </div>
     </div>
