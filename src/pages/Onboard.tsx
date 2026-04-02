@@ -30,7 +30,7 @@ const dotColors: Record<string, string> = {
 
 const teams = [
   {
-    name: 'Team Argeș',
+    name: 'Team Arges',
     members: [
       { name: 'Stefan Ciobanu', background: 'Tech' },
       { name: 'Auras Vlase', background: 'Business' },
@@ -57,7 +57,7 @@ const teams = [
     ],
   },
   {
-    name: 'Team Timiș',
+    name: 'Team Timis',
     members: [
       { name: 'Ludovico Cesaro', background: 'Tech' },
       { name: 'Emil Boncea', background: 'Business' },
@@ -66,7 +66,7 @@ const teams = [
     ],
   },
   {
-    name: 'Team Dunărea',
+    name: 'Team Dunarea',
     members: [
       { name: 'Laurentiu Toader', background: 'Tech' },
       { name: 'Adriana Moima', background: 'Business' },
