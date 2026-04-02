@@ -138,7 +138,7 @@ const Station = ({ icon: Icon, label, sublabel, mentors, color, dotColor, isLast
 );
 
 const MentorRoute = () => (
-  <div className="max-w-3xl mx-auto">
+  <div className="max-w-5xl mx-auto">
     {stations.map((station) => (
       <Station key={station.label} {...station} />
     ))}

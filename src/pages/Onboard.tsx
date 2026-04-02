@@ -103,7 +103,7 @@ const Onboard = () => {
           </div>
 
           {/* ───── SECTION 1: THE WEEKEND ───── */}
-          <div className="max-w-4xl mx-auto mb-20">
+          <div className="max-w-5xl mx-auto mb-20">
             <h2 className="text-3xl font-bold text-foreground mb-8 text-center">The Weekend</h2>
 
             <Tabs defaultValue="friday" className="w-full">
@@ -247,7 +247,7 @@ const Onboard = () => {
               ))}
             </div>
 
-            <Card className="card-elevated max-w-3xl mx-auto text-center">
+            <Card className="card-elevated max-w-5xl mx-auto text-center">
               <p className="text-muted-foreground">
                 Each team delivers a <span className="text-foreground font-semibold">7-minute pitch</span> followed by a{' '}
                 <span className="text-foreground font-semibold">5-minute Q&A</span>, starting at{' '}
