@@ -133,10 +133,11 @@ const Onboard = () => {
                   </div>
                   <div className="space-y-3">
                     {[
-                      { time: '09:00', title: 'Arrive Timișoara', desc: 'Transfer to venue, breakfast, workspace setup' },
-                      { time: '10:00', title: 'Full build day', desc: 'Mentors, workshops, prototyping' },
-                      { time: '20:00', title: 'Depart Timișoara', desc: 'Board train back to Bucharest' },
-                      { time: '00:30', title: 'Midnight coding sprints', desc: 'Overnight development on the train (quiet coach available)' },
+                      { time: '06:30', title: 'Arrive in Timișoara', desc: 'Arrive at the station and transfer to the venue' },
+                      { time: '08:30', title: 'Breakfast', desc: 'Fuel up before the big build day' },
+                      { time: '10:00', title: 'Lean Canvas Workshop — Răzvan Suta', desc: 'Structure your idea with a guided Lean Canvas session' },
+                      { time: '20:41', title: 'Depart Timișoara', desc: 'Board the train back to Bucharest' },
+                      { time: '00:00', title: 'Midnight building sprints', desc: 'Overnight hacking on the train — quiet coach available' },
                     ].map((item) => (
                       <div key={item.time} className="flex items-start gap-4">
                         <div className="w-16 text-sm font-medium text-muted-foreground pt-0.5">{item.time}</div>
