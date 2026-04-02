@@ -30,7 +30,7 @@ const dotColors: Record<string, string> = {
 
 const teams = [
   {
-    name: 'Team Argeș',
+    name: 'Team Arges',
     members: [
       { name: 'Stefan Ciobanu', background: 'Tech' },
       { name: 'Auras Vlase', background: 'Business' },
