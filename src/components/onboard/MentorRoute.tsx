@@ -19,6 +19,7 @@ import raduTiciu from '@/assets/mentors/radu-ticiu.jpeg';
 import alexandruGolub from '@/assets/mentors/alexandru-golub.png';
 import aleodorTabarcea from '@/assets/mentors/aleodor-tabarcea.jpeg';
 import raduCristianGheorghe from '@/assets/mentors/radu-cristian-gheorghe.png';
+import madalinaSandu from '@/assets/mentors/madalina-sandu.jpg';
 
 interface MentorInfo {
   name: string;
