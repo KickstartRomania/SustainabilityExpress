@@ -81,6 +81,7 @@ const stations: StationData[] = [
     color: 'text-sky-400',
     dotColor: 'bg-sky-400',
     isLast: true,
+    leftColumnOnly: true,
     mentors: [
       { name: 'Alexandru Golub', role: 'Co-Founder', company: 'Pupsi', image: alexandruGolub, linkedin: 'https://www.linkedin.com/in/golubalexandru/' },
       { name: 'Radu-Cristian Gheorghe', role: 'Sustainability Specialist', company: 'Autonom Group', image: raduCristianGheorghe, linkedin: 'https://www.linkedin.com/in/radu-cristian-gheorghe-3b1230339/' },
