@@ -256,7 +256,7 @@ const Onboard = () => {
             <Card className="card-elevated max-w-5xl mx-auto text-center mb-8">
               <p className="text-muted-foreground">
                 Each team delivers a <span className="text-foreground font-semibold">7-minute pitch</span> followed by a{' '}
-                <span className="text-foreground font-semibold">5-minute Q&A</span>, starting at{' '}
+                <span className="text-foreground font-semibold">5-minute Q&A</span>, starting{' '}
                 <span className="text-primary font-semibold">Sunday 14:00</span>.
               </p>
             </Card>
