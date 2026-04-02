@@ -125,7 +125,7 @@ const Onboard = () => {
                     {[
                       { time: '18:00', title: 'Pre-boarding meetup', desc: 'Café near Gara de Nord (mandatory)' },
                       { time: '19:30', title: 'Boarding', desc: 'Check-in & welcome packages' },
-                      { time: '20:30', title: 'Train departs Bucharest', desc: 'IR 11501 — icebreakers & challenge reveal' },
+                      { time: '20:30', title: 'Train departs Bucharest', desc: 'IR 11501. Once onboard, you begin the first working session with your team.' },
                     ].map((item) => (
                       <div key={item.time} className="flex items-start gap-4">
                         <div className="w-16 text-sm font-medium text-muted-foreground pt-0.5">{item.time}</div>
