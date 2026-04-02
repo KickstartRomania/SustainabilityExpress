@@ -1,7 +1,7 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Clock, Users, Award, AlertTriangle } from 'lucide-react';
+import { Clock, Users, Award, AlertTriangle, Linkedin } from 'lucide-react';
 
 const BackgroundBubble = ({ bg }: { bg: string }) => {
   const colorMap: Record<string, string> = {
