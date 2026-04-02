@@ -15,6 +15,7 @@ import Apply from "./pages/Apply";
 import MentorApply from "./pages/MentorApply";
 import FAQ from "./pages/FAQ";
 import Onboard from "./pages/Onboard";
+import Mentorship from "./pages/Mentorship";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
