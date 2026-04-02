@@ -1,4 +1,4 @@
-import { Train, MapPin, Building2 } from 'lucide-react';
+import { Train, MapPin, Building2, Linkedin } from 'lucide-react';
 
 // Mentor images
 import nicoletaPirvu from '@/assets/mentors/nicoleta-pirvu.png';
