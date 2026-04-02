@@ -119,7 +119,7 @@ const MentorCard = ({ mentor }: { mentor: MentorInfo }) => (
   </div>
 );
 
-const Station = ({ icon: Icon, label, sublabel, mentors, color, dotColor, isLast, leftColumnOnly }: StationData) => (
+const Station = ({ icon: Icon, label, sublabel, mentors, color, dotColor, isLast, leftColumnOnly, rightColumnMentors }: StationData) => (
   <div className="relative flex gap-6">
     {/* Rail line */}
     <div className="flex flex-col items-center">
