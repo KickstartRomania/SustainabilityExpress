@@ -202,14 +202,7 @@ const Onboard = () => {
 
           {/* ───── SECTION 2: YOUR COHORT ───── */}
           <div className="mb-20">
-            <h2 className="text-3xl font-bold text-foreground mb-4 text-center">Your Cohort</h2>
-            <div className="flex justify-center gap-3 flex-wrap mb-8">
-              {Object.entries(backgroundColors).map(([label, cls]) => (
-                <span key={label} className={`${cls} px-3 py-1 rounded-full text-xs font-semibold`}>
-                  {label}
-                </span>
-              ))}
-            </div>
+            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Your Cohort</h2>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {teams.map((team) => (
