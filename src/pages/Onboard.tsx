@@ -121,7 +121,7 @@ const Onboard = () => {
                     </div>
                     <h3 className="text-xl font-bold text-foreground">Friday — Departure</h3>
                   </div>
-                  <div className="space-y-3">
+                  <div className="space-y-3 max-w-lg mx-auto">
                     {[
                       { time: '18:00', title: 'Pre-boarding meetup', desc: 'Café near Gara de Nord (mandatory)' },
                       { time: '19:30', title: 'Boarding', desc: 'Check-in & welcome packages' },
