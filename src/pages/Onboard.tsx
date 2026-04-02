@@ -149,15 +149,15 @@ const Onboard = () => {
                   </div>
                   <div className="space-y-3 max-w-lg mx-auto">
                     {[
-                      { time: '06:30', title: 'Arrive in Timișoara', desc: 'Arrive at the station and transfer to the venue' },
-                      { time: '08:30', title: 'Breakfast', desc: 'Fuel up before the big build day' },
-                      { time: '10:00', title: 'Lean Canvas Workshop — Răzvan Suta', desc: 'Structure your idea with a guided Lean Canvas session' },
+                      { time: '06:30', title: 'Arrival in Timisoara', desc: 'Arrive at the station and head to the venue.' },
+                      { time: '08:30', title: 'Breakfast', desc: 'Start the day with breakfast.' },
+                      { time: '10:00', title: 'Lean Canvas Workshop, with Razvan Suta', desc: 'Shape your idea with a guided session.' },
                       { time: '12:00', title: 'Lunch', desc: '' },
-                      { time: '13:00', title: 'Mentoring sessions', desc: 'One-on-one and group sessions until 16:00' },
-                      { time: '18:00', title: 'Pitching Workshop — George Bonea', desc: 'Sharpen your pitch before Demo Day' },
+                      { time: '13:00', title: 'Mentoring sessions', desc: 'Get feedback from mentors until 16:00.' },
+                      { time: '18:00', title: 'Pitching Workshop, with George Bonea', desc: 'Work on your pitch before Demo Day.' },
                       { time: '19:00', title: 'Dinner', desc: '' },
-                      { time: '20:41', title: 'Depart Timișoara', desc: 'Board the train back to Bucharest' },
-                      { time: '00:00', title: 'Midnight building sprints', desc: 'Overnight hacking on the train — quiet coach available' },
+                      { time: '20:41', title: 'Departure from Timisoara', desc: 'IR 11500. Board the train back to Bucharest.' },
+                      { time: '00:00', title: 'Late-night build session', desc: 'Keep working on the train.' },
                     ].map((item) => (
                       <div key={item.time} className="flex items-start gap-4">
                         <div className="w-16 text-sm font-medium text-muted-foreground pt-0.5">{item.time}</div>
