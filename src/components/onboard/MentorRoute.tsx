@@ -37,6 +37,7 @@ interface StationData {
   color: string;
   dotColor: string;
   isLast?: boolean;
+  leftColumnOnly?: boolean;
 }
 
 const stations: StationData[] = [
@@ -80,6 +81,7 @@ const stations: StationData[] = [
     color: 'text-sky-400',
     dotColor: 'bg-sky-400',
     isLast: true,
+    leftColumnOnly: true,
     mentors: [
       { name: 'Alexandru Golub', role: 'Co-Founder', company: 'Pupsi', image: alexandruGolub, linkedin: 'https://www.linkedin.com/in/golubalexandru/' },
       { name: 'Radu-Cristian Gheorghe', role: 'Sustainability Specialist', company: 'Autonom Group', image: raduCristianGheorghe, linkedin: 'https://www.linkedin.com/in/radu-cristian-gheorghe-3b1230339/' },
@@ -112,7 +114,7 @@ const MentorCard = ({ mentor }: { mentor: MentorInfo }) => (
   </div>
 );
 
-const Station = ({ icon: Icon, label, sublabel, mentors, color, dotColor, isLast }: StationData) => (
+const Station = ({ icon: Icon, label, sublabel, mentors, color, dotColor, isLast, leftColumnOnly }: StationData) => (
   <div className="relative flex gap-6">
     {/* Rail line */}
     <div className="flex flex-col items-center">
@@ -129,9 +131,20 @@ const Station = ({ icon: Icon, label, sublabel, mentors, color, dotColor, isLast
       <p className="text-muted-foreground text-sm mb-4">{sublabel}</p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-        {mentors.map((m) => (
-          <MentorCard key={m.name} mentor={m} />
-        ))}
+        {leftColumnOnly ? (
+          <>
+            <div className="flex flex-col gap-2">
+              {mentors.map((m) => (
+                <MentorCard key={m.name} mentor={m} />
+              ))}
+            </div>
+            <div />
+          </>
+        ) : (
+          mentors.map((m) => (
+            <MentorCard key={m.name} mentor={m} />
+          ))
+        )}
       </div>
     </div>
   </div>
