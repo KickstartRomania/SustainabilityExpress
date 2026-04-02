@@ -152,6 +152,10 @@ const Onboard = () => {
                       { time: '06:30', title: 'Arrive in Timișoara', desc: 'Arrive at the station and transfer to the venue' },
                       { time: '08:30', title: 'Breakfast', desc: 'Fuel up before the big build day' },
                       { time: '10:00', title: 'Lean Canvas Workshop — Răzvan Suta', desc: 'Structure your idea with a guided Lean Canvas session' },
+                      { time: '12:00', title: 'Lunch', desc: '' },
+                      { time: '13:00', title: 'Mentoring sessions', desc: 'One-on-one and group sessions until 16:00' },
+                      { time: '18:00', title: 'Pitching Workshop — George Bonea', desc: 'Sharpen your pitch before Demo Day' },
+                      { time: '19:00', title: 'Dinner', desc: '' },
                       { time: '20:41', title: 'Depart Timișoara', desc: 'Board the train back to Bucharest' },
                       { time: '00:00', title: 'Midnight building sprints', desc: 'Overnight hacking on the train — quiet coach available' },
                     ].map((item) => (
