@@ -4,6 +4,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Clock, MapPin, Train, Moon, Star, Trophy, Lightbulb, Target, Wrench, MessageSquare } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import MentorRoute from '@/components/onboard/MentorRoute';
 
 const backgroundColors: Record<string, string> = {
   Tech: 'bg-[#d6f5e3] text-green-800',
