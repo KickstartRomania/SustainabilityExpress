@@ -1,4 +1,4 @@
-import { Train, MapPin, Building2 } from 'lucide-react';
+import { Train, MapPin, Building2, Linkedin } from 'lucide-react';
 
 // Mentor images
 import nicoletaPirvu from '@/assets/mentors/nicoleta-pirvu.png';
@@ -26,6 +26,7 @@ interface MentorInfo {
   company: string;
   image: string;
   imagePosition?: string;
+  linkedin?: string;
 }
 
 interface StationData {
@@ -46,14 +47,14 @@ const stations: StationData[] = [
     color: 'text-primary',
     dotColor: 'bg-primary',
     mentors: [
-      { name: 'Nicoleta Pîrvu', role: 'Investor Relationship Manager', company: 'How to Web', image: nicoletaPirvu },
-      { name: 'Cosmin Pîrvu', role: 'Startup Program Manager', company: 'Veridion', image: cosminPirvu },
-      { name: 'George Bonea', role: 'Copywriter', company: 'Communication Consultant', image: georgeBonea },
-      { name: 'Cosmin Bolocan', role: 'Co-founder', company: 'Brewtifi', image: cosminBolocan },
-      { name: 'Nick Ungureanu', role: 'Sustainable Production Specialist', company: 'ProTV', image: nickUngureanu },
-      { name: 'Tiberiu Lepădatu', role: 'Lead Engineer', company: 'Propevo', image: tiberiuLepadatu },
-      { name: 'Mihai Burada', role: 'Urban Planning Specialist', company: 'TREE', image: mihaiBurada },
-      { name: 'Ștefania Duță', role: 'HR Manager', company: 'MIGSO-PCUBED', image: stefaniaDuta },
+      { name: 'Nicoleta Pîrvu', role: 'Investor Relationship Manager', company: 'How to Web', image: nicoletaPirvu, linkedin: 'https://www.linkedin.com/in/nicoletapirvu/' },
+      { name: 'Cosmin Pîrvu', role: 'Startup Program Manager', company: 'Veridion', image: cosminPirvu, linkedin: 'https://www.linkedin.com/in/cosminpirvu/' },
+      { name: 'George Bonea', role: 'Copywriter', company: 'Communication Consultant', image: georgeBonea, linkedin: 'https://www.linkedin.com/in/george-bonea-b0494b91/' },
+      { name: 'Cosmin Bolocan', role: 'Co-founder', company: 'Brewtifi', image: cosminBolocan, linkedin: 'https://www.linkedin.com/in/petre-cosmin-vlad-bolocan/' },
+      { name: 'Nick Ungureanu', role: 'Sustainable Production Specialist', company: 'ProTV', image: nickUngureanu, linkedin: 'https://www.linkedin.com/in/nick-ungureanu-6211ba214/' },
+      { name: 'Tiberiu Lepădatu', role: 'Lead Engineer', company: 'Propevo', image: tiberiuLepadatu, linkedin: 'https://www.linkedin.com/in/tiberiu-lepadatu-7975bab1/' },
+      { name: 'Mihai Burada', role: 'Urban Planning Specialist', company: 'TREE', image: mihaiBurada, linkedin: 'https://www.linkedin.com/in/mihai-burada-741b9b14/' },
+      { name: 'Ștefania Duță', role: 'HR Manager', company: 'MIGSO-PCUBED', image: stefaniaDuta, linkedin: 'https://www.linkedin.com/in/stefania-duta/' },
     ],
   },
   {
@@ -63,13 +64,13 @@ const stations: StationData[] = [
     color: 'text-accent',
     dotColor: 'bg-accent',
     mentors: [
-      { name: 'Toma Grozăvescu', role: 'Founder', company: 'SMARTERS', image: tomaGrozavescu },
-      { name: 'Iulia Andritoiu Caizer', role: 'CEO and co-founder', company: 'QuickLegal', image: iuliaAndritoiuCaizer },
-      { name: 'Zoltan-Cristian Bereczki', role: 'Co-Founder & Co-CEO', company: 'Synerb', image: zoltanBereczki },
-      { name: 'Andreea (Oproiu) Nicolae', role: 'Head of MarCom', company: 'How to Web', image: andreeaNicolae },
-      { name: 'Adrian Gheorghe', role: 'Startup Advisor', company: 'Doers Ventures', image: adrianGheorghe },
-      { name: 'Răzvan Suta', role: 'Co-founder & COO', company: 'Vest Ventures', image: razvanSuta, imagePosition: 'object-[center_25%]' },
-      { name: 'Radu Ticiu', role: 'Co-founder', company: 'Growceanu', image: raduTiciu },
+      { name: 'Toma Grozăvescu', role: 'Founder', company: 'SMARTERS', image: tomaGrozavescu, linkedin: 'https://www.linkedin.com/in/tomagrozavescu/' },
+      { name: 'Iulia Andritoiu Caizer', role: 'CEO and co-founder', company: 'QuickLegal', image: iuliaAndritoiuCaizer, linkedin: 'https://www.linkedin.com/in/iulia-caizer/' },
+      { name: 'Zoltan-Cristian Bereczki', role: 'Co-Founder & Co-CEO', company: 'Synerb', image: zoltanBereczki, linkedin: 'https://www.linkedin.com/in/zbereczki/' },
+      { name: 'Andreea (Oproiu) Nicolae', role: 'Head of MarCom', company: 'How to Web', image: andreeaNicolae, linkedin: 'https://www.linkedin.com/in/andreea-oproiu/' },
+      { name: 'Adrian Gheorghe', role: 'Startup Advisor', company: 'Doers Ventures', image: adrianGheorghe, linkedin: 'https://www.linkedin.com/in/adrian-gheorghe/' },
+      { name: 'Răzvan Suta', role: 'Co-founder & COO', company: 'Vest Ventures', image: razvanSuta, imagePosition: 'object-[center_25%]', linkedin: 'https://www.linkedin.com/in/razvansuta/' },
+      { name: 'Radu Ticiu', role: 'Co-founder', company: 'Growceanu', image: raduTiciu, linkedin: 'https://www.linkedin.com/in/raduticiu/' },
     ],
   },
   {
@@ -80,9 +81,9 @@ const stations: StationData[] = [
     dotColor: 'bg-sky-400',
     isLast: true,
     mentors: [
-      { name: 'Alexandru Golub', role: 'Co-Founder', company: 'Pupsi', image: alexandruGolub },
-      { name: 'Aleodor Tabarcea', role: 'Engineering Manager', company: 'Stripe', image: aleodorTabarcea },
-      { name: 'Radu-Cristian Gheorghe', role: 'Sustainability Specialist', company: 'Autonom Group', image: raduCristianGheorghe },
+      { name: 'Alexandru Golub', role: 'Co-Founder', company: 'Pupsi', image: alexandruGolub, linkedin: 'https://www.linkedin.com/in/golubalexandru/' },
+      { name: 'Aleodor Tabarcea', role: 'Engineering Manager', company: 'Stripe', image: aleodorTabarcea, linkedin: 'https://www.linkedin.com/in/aleodor-tabarcea/' },
+      { name: 'Radu-Cristian Gheorghe', role: 'Sustainability Specialist', company: 'Autonom Group', image: raduCristianGheorghe, linkedin: 'https://www.linkedin.com/in/radu-cristian-gheorghe-3b1230339/' },
     ],
   },
 ];
@@ -97,12 +98,17 @@ const MentorCard = ({ mentor }: { mentor: MentorInfo }) => (
         className={`w-full h-full object-cover ${mentor.imagePosition || ''}`}
       />
     </div>
-    <div className="min-w-0">
+    <div className="min-w-0 flex-1">
       <p className="text-sm font-semibold text-foreground leading-tight truncate">{mentor.name}</p>
       <p className="text-xs text-muted-foreground leading-tight truncate">
         {mentor.role}{mentor.company ? ` · ${mentor.company}` : ''}
       </p>
     </div>
+    {mentor.linkedin && (
+      <a href={mentor.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${mentor.name} on LinkedIn`} className="shrink-0 w-7 h-7 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors flex items-center justify-center">
+        <Linkedin className="h-3.5 w-3.5 text-primary" />
+      </a>
+    )}
   </div>
 );
 
