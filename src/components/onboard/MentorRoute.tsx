@@ -82,8 +82,8 @@ const stations: StationData[] = [
     isLast: true,
     mentors: [
       { name: 'Alexandru Golub', role: 'Co-Founder', company: 'Pupsi', image: alexandruGolub, linkedin: 'https://www.linkedin.com/in/golubalexandru/' },
-      { name: 'Aleodor Tabarcea', role: 'Engineering Manager', company: 'Stripe', image: aleodorTabarcea, linkedin: 'https://www.linkedin.com/in/aleodor-tabarcea/' },
       { name: 'Radu-Cristian Gheorghe', role: 'Sustainability Specialist', company: 'Autonom Group', image: raduCristianGheorghe, linkedin: 'https://www.linkedin.com/in/radu-cristian-gheorghe-3b1230339/' },
+      { name: 'Aleodor Tabarcea', role: 'Engineering Manager', company: 'Stripe', image: aleodorTabarcea, linkedin: 'https://www.linkedin.com/in/aleodor-tabarcea/' },
     ],
   },
 ];
