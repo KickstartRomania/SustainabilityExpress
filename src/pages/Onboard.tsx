@@ -212,24 +212,19 @@ const Onboard = () => {
           <div className="mb-20">
             <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Your Cohort</h2>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="max-w-5xl mx-auto space-y-3">
               {teams.map((team) => (
-                <Card key={team.name} className="card-elevated">
-                  <div className="flex items-center gap-3 mb-5">
-                    <Train className="h-5 w-5 text-primary" />
-                    <h3 className="text-xl font-bold text-foreground">{team.name}</h3>
+                <div key={team.name} className="flex flex-wrap items-center gap-2 px-4 py-3 rounded-xl bg-secondary/40 border border-border">
+                  <div className="flex items-center gap-2 mr-2 shrink-0">
+                    <Train className="h-4 w-4 text-primary" />
+                    <span className="text-sm font-bold text-foreground">{team.name}</span>
                   </div>
-                  <ul className="space-y-3">
-                    {team.members.map((m) => (
-                      <li key={m.name} className="flex items-center justify-between gap-2">
-                        <span className="text-foreground text-sm">{m.name}</span>
-                        <Badge className={`${backgroundColors[m.background]} border-0 text-xs shrink-0`}>
-                          {m.background}
-                        </Badge>
-                      </li>
-                    ))}
-                  </ul>
-                </Card>
+                  {team.members.map((m) => (
+                    <Badge key={m.name} className={`${backgroundColors[m.background]} border-0 text-xs font-medium px-2.5 py-1`}>
+                      {m.name}
+                    </Badge>
+                  ))}
+                </div>
               ))}
             </div>
           </div>
