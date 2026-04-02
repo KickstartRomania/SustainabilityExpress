@@ -182,7 +182,7 @@ const Onboard = () => {
                   <div className="space-y-3 max-w-lg mx-auto">
                     {[
                       { time: '08:30', title: 'Arrival in Bucharest', desc: 'Back at Gara de Nord.' },
-                      { time: '09:00', title: 'Tura de duminica', desc: 'A relaxed morning walk in Cotroceni, away from screens and closer to people.', link: 'https://luma.com/fxmyhr1d' },
+                      { time: '09:00', title: 'Tura de duminica', desc: 'A relaxed morning walk in Cotroceni, away from screens,', link: 'https://luma.com/fxmyhr1d' },
                       { time: '10:00', title: 'Transfer to Supertree', desc: 'Head to the Demo Day venue.' },
                       { time: '11:00', title: 'Final working session', desc: 'Final polish and presentation prep.' },
                       { time: '13:30', title: 'Doors open', desc: 'Guests begin to arrive.' },
