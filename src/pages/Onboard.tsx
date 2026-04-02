@@ -1,5 +1,5 @@
 import { Card } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Clock, MapPin, Train, Moon, Star, Trophy, Lightbulb, Target, Wrench, MessageSquare, Linkedin } from 'lucide-react';
 import Navigation from '@/components/Navigation';
