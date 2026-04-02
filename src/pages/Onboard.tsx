@@ -57,7 +57,7 @@ const teams = [
     ],
   },
   {
-    name: 'Team Timiș',
+    name: 'Team Timis',
     members: [
       { name: 'Ludovico Cesaro', background: 'Tech' },
       { name: 'Emil Boncea', background: 'Business' },
