@@ -47,8 +47,8 @@ const stations: StationData[] = [
     color: 'text-primary',
     dotColor: 'bg-primary',
     mentors: [
-      { name: 'Nicoleta Pîrvu', role: 'Investor Relationship Manager', company: 'How to Web', image: nicoletaPirvu, linkedin: 'https://www.linkedin.com/in/nicoletapirvu/' },
-      { name: 'Cosmin Pîrvu', role: 'Startup Program Manager', company: 'Veridion', image: cosminPirvu, linkedin: 'https://www.linkedin.com/in/cosminpirvu/' },
+      { name: 'Nicoleta Pirvu', role: 'Investor Relationship Manager', company: 'How to Web', image: nicoletaPirvu, linkedin: 'https://www.linkedin.com/in/nicoletapirvu/' },
+      { name: 'Cosmin Pirvu', role: 'Startup Program Manager', company: 'Veridion', image: cosminPirvu, linkedin: 'https://www.linkedin.com/in/cosminpirvu/' },
       { name: 'George Bonea', role: 'Copywriter', company: 'Communication Consultant', image: georgeBonea, linkedin: 'https://www.linkedin.com/in/george-bonea-b0494b91/' },
       { name: 'Cosmin Bolocan', role: 'Co-founder', company: 'Brewtifi', image: cosminBolocan, linkedin: 'https://www.linkedin.com/in/petre-cosmin-vlad-bolocan/' },
       { name: 'Nick Ungureanu', role: 'Sustainable Production Specialist', company: 'ProTV', image: nickUngureanu, linkedin: 'https://www.linkedin.com/in/nick-ungureanu-6211ba214/' },
