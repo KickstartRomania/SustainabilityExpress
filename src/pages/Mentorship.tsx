@@ -224,7 +224,7 @@ const Mentorship = () => {
                             <div className="flex items-center gap-2 flex-wrap mb-1">
                               <span className="text-sm font-medium text-foreground">{m.name}</span>
                               <BackgroundBubble bg={m.bg} />
-                              <LevelBadge level={m.level} />
+                              
                             </div>
                             <p className="text-xs text-muted-foreground leading-relaxed">{m.summary}</p>
                           </div>
