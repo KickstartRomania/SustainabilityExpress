@@ -1,10 +1,25 @@
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { Clock, MapPin, Train, Moon, Star, Trophy, Lightbulb, Target, Wrench, MessageSquare } from 'lucide-react';
+import { Clock, MapPin, Train, Moon, Star, Trophy, Lightbulb, Target, Wrench, MessageSquare, Linkedin } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import MentorRoute from '@/components/onboard/MentorRoute';
+
+// Judge images
+import hanaanYaseen from '@/assets/judges/hanaan-yaseen.jpg';
+import ralucaMessai from '@/assets/mentors/raluca-messai.jpeg';
+import aleodorTabarcea from '@/assets/mentors/aleodor-tabarcea.jpeg';
+import samuelStancu from '@/assets/judges/samuel-stancu.png';
+import loredanaGavrilescu from '@/assets/judges/loredana-gavrilescu.png';
+
+const judges = [
+  { name: 'Hanaan Yaseen', role: 'Strategy and ESG Manager', company: 'Pro TV', image: hanaanYaseen, linkedin: 'https://www.linkedin.com/in/hanaan-yaseen-phd-64263933/' },
+  { name: 'Raluca Messai', role: 'Founder', company: 'diARK', image: ralucaMessai, linkedin: 'https://www.linkedin.com/in/ralucamessai/' },
+  { name: 'Aleodor Tabarcea', role: 'Engineering Manager', company: 'Stripe', image: aleodorTabarcea, linkedin: 'https://www.linkedin.com/in/aleodor-tabarcea/' },
+  { name: 'Samuel Stancu', role: 'Head of Urbanism Division', company: 'UrbanizeHub', image: samuelStancu, linkedin: 'https://www.linkedin.com/in/samuelstancu/' },
+  { name: 'Loredana Gavrilescu', role: 'Startup Ecosystem Coordinator', company: 'Iceberg Plus', image: loredanaGavrilescu, linkedin: 'https://www.linkedin.com/in/loredana-gavrilescu-startup-consultant/' },
+];
 
 const backgroundColors: Record<string, string> = {
   Tech: 'bg-[#d6f5e3] text-green-800',
@@ -246,6 +261,26 @@ const Onboard = () => {
                 <span className="text-primary font-semibold">Sunday 17:00</span>.
               </p>
             </Card>
+
+            {/* Jury Members */}
+            <h3 className="text-2xl font-bold text-foreground mt-10 mb-6 text-center">The Jury</h3>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-5xl mx-auto">
+              {judges.map((judge) => (
+                <Card key={judge.name} className="card-elevated !px-2 !py-6 text-center">
+                  <div className="w-16 h-16 mx-auto mb-2 rounded-full overflow-hidden border-2 border-primary/20">
+                    <img src={judge.image} alt={judge.name} loading="lazy" className="w-full h-full object-cover" />
+                  </div>
+                  <h4 className="text-sm font-bold text-foreground leading-snug mb-1">{judge.name}</h4>
+                  <p className="text-muted-foreground text-xs">{judge.role}</p>
+                  <p className="text-muted-foreground text-xs mb-2">{judge.company}</p>
+                  {judge.linkedin && (
+                    <a href={judge.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${judge.name} on LinkedIn`} className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
+                      <Linkedin className="h-3.5 w-3.5 text-primary" />
+                    </a>
+                  )}
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </div>
