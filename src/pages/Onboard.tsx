@@ -212,24 +212,32 @@ const Onboard = () => {
           <div className="mb-20">
             <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Your Cohort</h2>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 max-w-5xl mx-auto">
               {teams.map((team) => (
-                <Card key={team.name} className="card-elevated">
-                  <div className="flex items-center gap-3 mb-5">
-                    <Train className="h-5 w-5 text-primary" />
-                    <h3 className="text-xl font-bold text-foreground">{team.name}</h3>
+                <Card key={team.name} className="card-elevated !p-3">
+                  <div className="flex items-center gap-1.5 mb-3">
+                    <Train className="h-4 w-4 text-primary shrink-0" />
+                    <h3 className="text-sm font-bold text-foreground">{team.name}</h3>
                   </div>
-                  <ul className="space-y-3">
+                  <ul className="space-y-1.5">
                     {team.members.map((m) => (
-                      <li key={m.name} className="flex items-center justify-between gap-2">
-                        <span className="text-foreground text-sm">{m.name}</span>
-                        <Badge className={`${backgroundColors[m.background]} border-0 text-xs shrink-0`}>
-                          {m.background}
-                        </Badge>
+                      <li key={m.name} className="flex items-center gap-2">
+                        <span className={`w-2 h-2 rounded-full shrink-0 ${dotColors[m.background]}`} />
+                        <span className="text-foreground text-xs truncate">{m.name}</span>
                       </li>
                     ))}
                   </ul>
                 </Card>
+              ))}
+            </div>
+
+            {/* Legend */}
+            <div className="flex flex-wrap items-center justify-center gap-4 mt-4 max-w-5xl mx-auto">
+              {Object.entries(dotColors).map(([label, color]) => (
+                <div key={label} className="flex items-center gap-1.5">
+                  <span className={`w-2 h-2 rounded-full ${color}`} />
+                  <span className="text-xs text-muted-foreground">{label}</span>
+                </div>
               ))}
             </div>
           </div>
