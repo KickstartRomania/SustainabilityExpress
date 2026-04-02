@@ -1,7 +1,7 @@
 import { Card } from '@/components/ui/card';
 
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { Clock, MapPin, Train, Moon, Star, Trophy, Lightbulb, Target, Wrench, MessageSquare, Linkedin } from 'lucide-react';
+import { Clock, MapPin, Train, Moon, Star, Trophy, Lightbulb, Target, Wrench, MessageSquare, Linkedin, TrainFront, BedDouble, UtensilsCrossed, Backpack, MessageCircle, HeartHandshake } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import MentorRoute from '@/components/onboard/MentorRoute';
@@ -286,6 +286,47 @@ const Onboard = () => {
                     <a href={judge.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${judge.name} on LinkedIn`} className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
                       <Linkedin className="h-3.5 w-3.5 text-primary" />
                     </a>
+                  )}
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* ───── SECTION 5: LOGISTICS ───── */}
+          <div className="mb-16 max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Logistics</h2>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                { icon: TrainFront, title: 'Transport', desc: 'Bucharest → Timișoara → Bucharest. Group transfers included.' },
+                { icon: BedDouble, title: 'Accommodation', desc: '2 nights on the train. Sleeping arrangements provided.' },
+                { icon: UtensilsCrossed, title: 'Food', desc: 'Meals, snacks, and drinks covered.' },
+                { icon: Backpack, title: 'What to Bring', desc: 'Laptop, charger, headphones, comfortable clothes, essentials.' },
+                { icon: MessageCircle, title: 'Communication', desc: 'whatsapp', isWhatsApp: true },
+                { icon: HeartHandshake, title: 'Support', desc: 'Organizers available throughout the event.' },
+              ].map((item) => (
+                <Card key={item.title} className="card-elevated">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-9 h-9 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
+                      <item.icon className="h-4.5 w-4.5 text-primary" />
+                    </div>
+                    <h3 className="font-bold text-foreground">{item.title}</h3>
+                  </div>
+                  {'isWhatsApp' in item && item.isWhatsApp ? (
+                    <p className="text-muted-foreground text-sm">
+                      All updates in the{' '}
+                      <a
+                        href="https://chat.whatsapp.com/CapmXsq4uvy9gR2UTgIE96?mode=gi_t"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline font-medium"
+                      >
+                        WhatsApp group
+                      </a>
+                      .
+                    </p>
+                  ) : (
+                    <p className="text-muted-foreground text-sm">{item.desc}</p>
                   )}
                 </Card>
               ))}
