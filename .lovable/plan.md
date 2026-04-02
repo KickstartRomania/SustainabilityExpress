@@ -1,22 +1,21 @@
 
 
-## Problem
+## Compact Team Cards — Single Row
 
-Sections on `/onboard` use inconsistent max-widths:
-- **The Weekend (agenda):** `max-w-4xl` (~896px)
-- **Your Cohort:** `max-w-5xl` (~1024px)
-- **Your Mentors (MentorRoute):** `max-w-3xl` (~768px)
-- **Judging criteria grid:** `max-w-5xl`
-- **Pitch format card:** `max-w-3xl`
-- **Jury grid:** `max-w-5xl`
+**File:** `src/pages/Onboard.tsx`
 
-## Plan
+### Changes
 
-Standardize all sections to `max-w-5xl` for a consistent content width:
+1. **Grid**: Change from `sm:grid-cols-2 lg:grid-cols-3` → `grid-cols-2 sm:grid-cols-3 lg:grid-cols-5`
+2. **Card padding**: Reduce to `!p-3`
+3. **Train icon**: Keep but shrink to `h-4 w-4`; team name to `text-sm font-bold`; reduce header margin
+4. **Member list**: Tighten spacing to `space-y-1.5`
+5. **Badges**: Replace full-width badges with small colored dots (8px circles) next to each name, using existing color scheme
+6. **Legend**: Add a small inline legend below the grid showing dot colors → background labels
 
-1. **`src/pages/Onboard.tsx`** — Change `max-w-4xl` on The Weekend section (line 106) to `max-w-5xl`. Change `max-w-3xl` on the pitch format card (line 250) to `max-w-5xl`.
+### Technical Details
 
-2. **`src/components/onboard/MentorRoute.tsx`** — Change `max-w-3xl` (line 141) to `max-w-5xl`.
-
-Three small edits, no structural changes.
+- Dot colors derived from existing `backgroundColors` map, just using the bg color as a circle
+- Member names use `text-xs` to fit in narrower columns
+- Responsive: 2 cols on mobile, 3 on tablet, 5 on desktop
 
