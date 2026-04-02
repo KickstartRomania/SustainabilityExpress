@@ -175,7 +175,7 @@ const Onboard = () => {
                     </div>
                     <h3 className="text-xl font-bold text-foreground">Sunday — Demo Day</h3>
                   </div>
-                  <div className="space-y-3">
+                  <div className="space-y-3 max-w-lg mx-auto">
                     {[
                       { time: '08:30', title: 'Arrive Bucharest', desc: 'Back at Gara de Nord' },
                       { time: '09:00', title: 'Tura de duminică', desc: 'Group morning activity' },
