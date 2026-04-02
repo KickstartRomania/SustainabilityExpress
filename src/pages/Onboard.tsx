@@ -181,20 +181,23 @@ const Onboard = () => {
                   </div>
                   <div className="space-y-3 max-w-lg mx-auto">
                     {[
-                      { time: '08:30', title: 'Arrive Bucharest', desc: 'Back at Gara de Nord' },
-                      { time: '09:00', title: 'Tura de duminică', desc: 'Group morning activity' },
-                      { time: '10:00', title: 'Transfer to Supertree', desc: 'Move to Demo Day venue' },
-                      { time: '11:00', title: 'Working session', desc: 'Final polish & presentation prep' },
-                      { time: '13:30', title: 'Doors open for guests', desc: 'Friends, family, and community join' },
-                      { time: '14:00', title: 'Demo Day', desc: 'Pitches, jury deliberation & awards' },
-                      { time: '15:30', title: 'Networking', desc: 'Mingle with mentors, jury & guests' },
-                      { time: '16:30', title: 'Space free', desc: 'Event wraps up' },
+                      { time: '08:30', title: 'Arrival in Bucharest', desc: 'Back at Gara de Nord.' },
+                      { time: '09:00', title: 'Tura de duminica', desc: 'A relaxed morning walk in Cotroceni, away from screens and closer to people.', link: 'https://luma.com/fxmyhr1d' },
+                      { time: '10:00', title: 'Transfer to Supertree', desc: 'Head to the Demo Day venue.' },
+                      { time: '11:00', title: 'Final working session', desc: 'Final polish and presentation prep.' },
+                      { time: '13:30', title: 'Doors open', desc: 'Guests begin to arrive.' },
+                      { time: '14:00', title: 'Demo Day', desc: 'Each team presents, followed by jury Q&A and awards.' },
+                      { time: '15:30', title: 'Networking', desc: 'Connect with mentors, jury, and guests.' },
+                      { time: '16:30', title: 'Closing session', desc: 'The program wraps up.' },
                     ].map((item) => (
                       <div key={item.time} className="flex items-start gap-4">
                         <div className="w-16 text-sm font-medium text-muted-foreground pt-0.5">{item.time}</div>
                         <div className="flex-1">
                           <h4 className="font-semibold text-foreground text-sm">{item.title}</h4>
                           <p className="text-muted-foreground text-sm">{item.desc}</p>
+                          {'link' in item && item.link && (
+                            <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline text-sm">{item.link}</a>
+                          )}
                         </div>
                       </div>
                     ))}
