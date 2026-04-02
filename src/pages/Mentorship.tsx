@@ -209,6 +209,11 @@ const Mentorship = () => {
                         <div key={m.name} className="flex items-center gap-2 flex-wrap">
                           <span className="text-sm font-medium text-foreground">{m.name}</span>
                           <BackgroundBubble bg={m.bg} />
+                          {mentorLinkedins[m.name] && (
+                            <a href={mentorLinkedins[m.name]} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                              <Linkedin className="h-3.5 w-3.5" />
+                            </a>
+                          )}
                         </div>
                       ))}
                     </CardContent>
