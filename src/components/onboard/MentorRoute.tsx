@@ -19,6 +19,7 @@ import raduTiciu from '@/assets/mentors/radu-ticiu.jpeg';
 import alexandruGolub from '@/assets/mentors/alexandru-golub.png';
 import aleodorTabarcea from '@/assets/mentors/aleodor-tabarcea.jpeg';
 import raduCristianGheorghe from '@/assets/mentors/radu-cristian-gheorghe.png';
+import madalinaSandu from '@/assets/mentors/madalina-sandu.jpg';
 
 interface MentorInfo {
   name: string;
@@ -86,6 +87,7 @@ const stations: StationData[] = [
       { name: 'Alexandru Golub', role: 'Co-Founder', company: 'Pupsi', image: alexandruGolub, linkedin: 'https://www.linkedin.com/in/golubalexandru/' },
       { name: 'Radu-Cristian Gheorghe', role: 'Sustainability Specialist', company: 'Autonom Group', image: raduCristianGheorghe, linkedin: 'https://www.linkedin.com/in/radu-cristian-gheorghe-3b1230339/' },
       { name: 'Aleodor Tabarcea', role: 'Engineering Manager', company: 'Stripe', image: aleodorTabarcea, linkedin: 'https://www.linkedin.com/in/aleodor-tabarcea/' },
+      { name: 'Madalina Sandu', role: 'Founder & CEO', company: 'Green PR Global', image: madalinaSandu, linkedin: 'https://www.linkedin.com/in/m%C4%83d%C4%83lina-sandu-431ba578/' },
     ],
   },
 ];

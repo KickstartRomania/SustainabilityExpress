@@ -30,6 +30,7 @@ import mihaiBurada from '@/assets/mentors/mihai-burada.png';
 import tiberiuLepadatu from '@/assets/mentors/tiberiu-lepadatu.png';
 import cosminBolocan from '@/assets/mentors/cosmin-bolocan.png';
 import nickUngureanu from '@/assets/mentors/nick-ungureanu.png';
+import madalinaSandu from '@/assets/mentors/madalina-sandu.jpg';
 
 // Judge images
 import hanaanYaseen from '@/assets/judges/hanaan-yaseen.jpg';
@@ -200,6 +201,13 @@ const mentors: Mentor[] = [
     company: 'ProTV',
     image: nickUngureanu,
     linkedin: 'https://www.linkedin.com/in/nick-ungureanu-6211ba214/',
+  },
+  {
+    name: 'Madalina Sandu',
+    role: 'Founder & CEO',
+    company: 'Green PR Global',
+    image: madalinaSandu,
+    linkedin: 'https://www.linkedin.com/in/m%C4%83d%C4%83lina-sandu-431ba578/',
   },
 ];
 
