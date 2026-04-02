@@ -186,18 +186,19 @@ const Onboard = () => {
                       { time: '10:00', title: 'Transfer to Supertree', desc: 'Head to the Demo Day venue.' },
                       { time: '11:00', title: 'Final working session', desc: 'Final polish and presentation prep.' },
                       { time: '13:30', title: 'Doors open', desc: 'Guests begin to arrive.' },
-                      { time: '14:00', title: 'Demo Day', desc: 'Each team presents, followed by jury Q&A and awards.' },
+                      { time: '14:00', title: 'Demo Day', desc: 'Each team presents, followed by jury Q&A and awards.', link: 'https://luma.com/lxs8xxfm' },
                       { time: '15:30', title: 'Networking', desc: 'Connect with mentors, jury, and guests.' },
                       { time: '16:30', title: 'Closing session', desc: 'The program wraps up.' },
                     ].map((item) => (
                       <div key={item.time} className="flex items-start gap-4">
                         <div className="w-16 text-sm font-medium text-muted-foreground pt-0.5">{item.time}</div>
                         <div className="flex-1">
-                          <h4 className="font-semibold text-foreground text-sm">{item.title}</h4>
-                          <p className="text-muted-foreground text-sm">{item.desc}</p>
-                          {'link' in item && item.link && (
-                            <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline text-sm">{item.link}</a>
+                          {'link' in item && item.link ? (
+                            <a href={item.link} target="_blank" rel="noopener noreferrer" className="font-semibold text-primary hover:underline text-sm">{item.title}</a>
+                          ) : (
+                            <h4 className="font-semibold text-foreground text-sm">{item.title}</h4>
                           )}
+                          <p className="text-muted-foreground text-sm">{item.desc}</p>
                         </div>
                       </div>
                     ))}
