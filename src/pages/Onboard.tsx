@@ -218,7 +218,14 @@ const Onboard = () => {
             </div>
           </div>
 
-          {/* ───── SECTION 3: HOW YOU'LL BE JUDGED ───── */}
+
+          {/* ───── SECTION 3: YOUR MENTORS ───── */}
+          <div className="mb-20">
+            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Your Mentors</h2>
+            <MentorRoute />
+          </div>
+
+          {/* ───── SECTION 4: HOW YOU'LL BE JUDGED ───── */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-foreground mb-8 text-center">How You'll Be Judged</h2>
 
