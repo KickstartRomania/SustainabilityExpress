@@ -64,7 +64,7 @@ const stations: StationData[] = [
     color: 'text-accent',
     dotColor: 'bg-accent',
     mentors: [
-      { name: 'Toma Grozăvescu', role: 'Founder', company: 'SMARTERS', image: tomaGrozavescu, linkedin: 'https://www.linkedin.com/in/tomagrozavescu/' },
+      { name: 'Toma Grozavescu', role: 'Founder', company: 'SMARTERS', image: tomaGrozavescu, linkedin: 'https://www.linkedin.com/in/tomagrozavescu/' },
       { name: 'Iulia Andritoiu Caizer', role: 'CEO and co-founder', company: 'QuickLegal', image: iuliaAndritoiuCaizer, linkedin: 'https://www.linkedin.com/in/iulia-caizer/' },
       { name: 'Zoltan-Cristian Bereczki', role: 'Co-Founder & Co-CEO', company: 'Synerb', image: zoltanBereczki, linkedin: 'https://www.linkedin.com/in/zbereczki/' },
       { name: 'Andreea (Oproiu) Nicolae', role: 'Head of MarCom', company: 'How to Web', image: andreeaNicolae, linkedin: 'https://www.linkedin.com/in/andreea-oproiu/' },
