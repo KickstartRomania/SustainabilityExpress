@@ -128,7 +128,7 @@ const Station = ({ icon: Icon, label, sublabel, mentors, color, dotColor, isLast
       </div>
       <p className="text-muted-foreground text-sm mb-4">{sublabel}</p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+      <div className={`grid grid-cols-1 ${mentors.length > 3 ? 'sm:grid-cols-2' : ''} gap-2`}>
         {mentors.map((m) => (
           <MentorCard key={m.name} mentor={m} />
         ))}
