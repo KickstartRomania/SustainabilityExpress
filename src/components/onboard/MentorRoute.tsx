@@ -26,6 +26,7 @@ interface MentorInfo {
   company: string;
   image: string;
   imagePosition?: string;
+  linkedin?: string;
 }
 
 interface StationData {
