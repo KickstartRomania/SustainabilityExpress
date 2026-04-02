@@ -39,6 +39,7 @@ interface StationData {
   dotColor: string;
   isLast?: boolean;
   leftColumnOnly?: boolean;
+  rightColumnMentors?: MentorInfo[];
 }
 
 const stations: StationData[] = [
@@ -86,6 +87,8 @@ const stations: StationData[] = [
     mentors: [
       { name: 'Alexandru Golub', role: 'Co-Founder', company: 'Pupsi', image: alexandruGolub, linkedin: 'https://www.linkedin.com/in/golubalexandru/' },
       { name: 'Radu-Cristian Gheorghe', role: 'Sustainability Specialist', company: 'Autonom Group', image: raduCristianGheorghe, linkedin: 'https://www.linkedin.com/in/radu-cristian-gheorghe-3b1230339/' },
+    ],
+    rightColumnMentors: [
       { name: 'Aleodor Tabarcea', role: 'Engineering Manager', company: 'Stripe', image: aleodorTabarcea, linkedin: 'https://www.linkedin.com/in/aleodor-tabarcea/' },
       { name: 'Madalina Sandu', role: 'Founder & CEO', company: 'Green PR Global', image: madalinaSandu, linkedin: 'https://www.linkedin.com/in/m%C4%83d%C4%83lina-sandu-431ba578/' },
     ],
@@ -116,7 +119,7 @@ const MentorCard = ({ mentor }: { mentor: MentorInfo }) => (
   </div>
 );
 
-const Station = ({ icon: Icon, label, sublabel, mentors, color, dotColor, isLast, leftColumnOnly }: StationData) => (
+const Station = ({ icon: Icon, label, sublabel, mentors, color, dotColor, isLast, leftColumnOnly, rightColumnMentors }: StationData) => (
   <div className="relative flex gap-6">
     {/* Rail line */}
     <div className="flex flex-col items-center">
@@ -140,7 +143,11 @@ const Station = ({ icon: Icon, label, sublabel, mentors, color, dotColor, isLast
                 <MentorCard key={m.name} mentor={m} />
               ))}
             </div>
-            <div />
+            <div className="flex flex-col gap-2">
+              {rightColumnMentors?.map((m) => (
+                <MentorCard key={m.name} mentor={m} />
+              ))}
+            </div>
           </>
         ) : (
           mentors.map((m) => (
