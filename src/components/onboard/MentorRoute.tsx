@@ -54,7 +54,7 @@ const stations: StationData[] = [
       { name: 'Nick Ungureanu', role: 'Sustainable Production Specialist', company: 'ProTV', image: nickUngureanu, linkedin: 'https://www.linkedin.com/in/nick-ungureanu-6211ba214/' },
       { name: 'Tiberiu Lepadatu', role: 'Lead Engineer', company: 'Propevo', image: tiberiuLepadatu, linkedin: 'https://www.linkedin.com/in/tiberiu-lepadatu-7975bab1/' },
       { name: 'Mihai Burada', role: 'Urban Planning Specialist', company: 'TREE', image: mihaiBurada, linkedin: 'https://www.linkedin.com/in/mihai-burada-741b9b14/' },
-      { name: 'Ștefania Duță', role: 'HR Manager', company: 'MIGSO-PCUBED', image: stefaniaDuta, linkedin: 'https://www.linkedin.com/in/stefania-duta/' },
+      { name: 'Stefania Duta', role: 'HR Manager', company: 'MIGSO-PCUBED', image: stefaniaDuta, linkedin: 'https://www.linkedin.com/in/stefania-duta/' },
     ],
   },
   {
