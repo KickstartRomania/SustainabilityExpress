@@ -15,7 +15,7 @@ const Agenda = () => {
             <span className="inline-block bg-primary/20 text-primary px-4 py-2 rounded-full text-lg font-semibold border border-primary/30 mb-6">
               3-5 April 2026
             </span>
-            <h1 className="text-5xl font-bold text-foreground mb-6">Detailed Agenda</h1>
+            <h1 className="text-5xl font-bold text-foreground mb-6">Agenda</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Your complete 48-hour journey from Bucharest to Timisoara and back. 
               Every moment designed for maximum collaboration and innovation.
