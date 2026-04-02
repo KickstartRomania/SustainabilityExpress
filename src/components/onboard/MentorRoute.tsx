@@ -39,6 +39,7 @@ interface StationData {
   dotColor: string;
   isLast?: boolean;
   leftColumnOnly?: boolean;
+  rightColumnMentors?: MentorInfo[];
 }
 
 const stations: StationData[] = [
