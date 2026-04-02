@@ -115,7 +115,7 @@ const Onboard = () => {
 
               <TabsContent value="friday">
                 <Card className="card-elevated">
-                  <div className="flex items-center gap-4 mb-6">
+                  <div className="flex items-center gap-4 mb-6 max-w-lg mx-auto">
                     <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
                       <Clock className="h-5 w-5 text-primary-foreground" />
                     </div>
@@ -141,7 +141,7 @@ const Onboard = () => {
 
               <TabsContent value="saturday">
                 <Card className="card-elevated">
-                  <div className="flex items-center gap-4 mb-6">
+                  <div className="flex items-center gap-4 mb-6 max-w-lg mx-auto">
                     <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
                       <MapPin className="h-5 w-5 text-primary-foreground" />
                     </div>
@@ -169,7 +169,7 @@ const Onboard = () => {
 
               <TabsContent value="sunday">
                 <Card className="card-elevated">
-                  <div className="flex items-center gap-4 mb-6">
+                  <div className="flex items-center gap-4 mb-6 max-w-lg mx-auto">
                     <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
                       <Trophy className="h-5 w-5 text-primary-foreground" />
                     </div>
