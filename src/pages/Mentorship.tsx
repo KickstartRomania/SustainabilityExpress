@@ -24,20 +24,6 @@ const BackgroundBubble = ({ bg }: { bg: string }) => {
   );
 };
 
-const LevelBadge = ({ level }: { level: string }) => {
-  const colorMap: Record<string, string> = {
-    student: 'border-sky-500/40 text-sky-400',
-    junior: 'border-primary/40 text-primary',
-    mid: 'border-amber-500/40 text-amber-400',
-    senior: 'border-accent/40 text-accent',
-  };
-  const classes = colorMap[level.toLowerCase()] || 'border-muted text-muted-foreground';
-  return (
-    <span className={`text-xs px-2 py-0.5 rounded-full border ${classes}`}>
-      {level}
-    </span>
-  );
-};
 
 const schedule = [
   { time: '06:30', activity: 'Arrival in Timișoara' },
