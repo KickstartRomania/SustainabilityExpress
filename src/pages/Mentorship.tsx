@@ -40,11 +40,11 @@ const LevelBadge = ({ level }: { level: string }) => {
 };
 
 const schedule = [
-  { time: 'Sat 09:00', activity: 'Arrive Timișoara' },
-  { time: 'Sat 10:00', activity: 'Build day starts' },
-  { time: 'Sat 13:00–16:00', activity: 'Speed mentoring rotation', highlight: true },
-  { time: 'Sat 16:00–20:00', activity: 'Final build and prototyping' },
-  { time: 'Sat 20:00', activity: 'Teams depart back to Bucharest' },
+  { time: '06:30', activity: 'Arrival in Timișoara' },
+  { time: '10:00', activity: 'Lean Canvas Workshop, with Răzvan Șuța' },
+  { time: '13:00–16:00', activity: 'Speed mentoring rotation', highlight: true },
+  { time: '18:00', activity: 'Pitching Workshop, with George Bonea' },
+  { time: '20:41', activity: 'Departure from Timișoara' },
 ];
 
 const mentorPairs = [
