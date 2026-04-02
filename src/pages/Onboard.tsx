@@ -1,10 +1,25 @@
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { Clock, MapPin, Train, Moon, Star, Trophy, Lightbulb, Target, Wrench, MessageSquare } from 'lucide-react';
+import { Clock, MapPin, Train, Moon, Star, Trophy, Lightbulb, Target, Wrench, MessageSquare, Linkedin } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import MentorRoute from '@/components/onboard/MentorRoute';
+
+// Judge images
+import hanaanYaseen from '@/assets/judges/hanaan-yaseen.jpg';
+import ralucaMessai from '@/assets/mentors/raluca-messai.jpeg';
+import aleodorTabarcea from '@/assets/mentors/aleodor-tabarcea.jpeg';
+import samuelStancu from '@/assets/judges/samuel-stancu.png';
+import loredanaGavrilescu from '@/assets/judges/loredana-gavrilescu.png';
+
+const judges = [
+  { name: 'Hanaan Yaseen', role: 'Strategy and ESG Manager', company: 'Pro TV', image: hanaanYaseen, linkedin: 'https://www.linkedin.com/in/hanaan-yaseen-phd-64263933/' },
+  { name: 'Raluca Messai', role: 'Founder', company: 'diARK', image: ralucaMessai, linkedin: 'https://www.linkedin.com/in/ralucamessai/' },
+  { name: 'Aleodor Tabarcea', role: 'Engineering Manager', company: 'Stripe', image: aleodorTabarcea, linkedin: 'https://www.linkedin.com/in/aleodor-tabarcea/' },
+  { name: 'Samuel Stancu', role: 'Head of Urbanism Division', company: 'UrbanizeHub', image: samuelStancu, linkedin: 'https://www.linkedin.com/in/samuelstancu/' },
+  { name: 'Loredana Gavrilescu', role: 'Startup Ecosystem Coordinator', company: 'Iceberg Plus', image: loredanaGavrilescu, linkedin: 'https://www.linkedin.com/in/loredana-gavrilescu-startup-consultant/' },
+];
 
 const backgroundColors: Record<string, string> = {
   Tech: 'bg-[#d6f5e3] text-green-800',
