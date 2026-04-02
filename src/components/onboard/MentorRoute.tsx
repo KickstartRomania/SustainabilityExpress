@@ -37,6 +37,7 @@ interface StationData {
   color: string;
   dotColor: string;
   isLast?: boolean;
+  leftColumnOnly?: boolean;
 }
 
 const stations: StationData[] = [
