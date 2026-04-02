@@ -121,7 +121,7 @@ const Onboard = () => {
                     </div>
                     <h3 className="text-xl font-bold text-foreground">Friday — Departure</h3>
                   </div>
-                  <div className="space-y-3">
+                  <div className="space-y-3 max-w-lg mx-auto">
                     {[
                       { time: '18:00', title: 'Pre-boarding meetup', desc: 'Café near Gara de Nord (mandatory)' },
                       { time: '19:30', title: 'Boarding', desc: 'Check-in & welcome packages' },
@@ -147,7 +147,7 @@ const Onboard = () => {
                     </div>
                     <h3 className="text-xl font-bold text-foreground">Saturday — Full Build Day</h3>
                   </div>
-                  <div className="space-y-3">
+                  <div className="space-y-3 max-w-lg mx-auto">
                     {[
                       { time: '06:30', title: 'Arrive in Timișoara', desc: 'Arrive at the station and transfer to the venue' },
                       { time: '08:30', title: 'Breakfast', desc: 'Fuel up before the big build day' },
@@ -175,7 +175,7 @@ const Onboard = () => {
                     </div>
                     <h3 className="text-xl font-bold text-foreground">Sunday — Demo Day</h3>
                   </div>
-                  <div className="space-y-3">
+                  <div className="space-y-3 max-w-lg mx-auto">
                     {[
                       { time: '08:30', title: 'Arrive Bucharest', desc: 'Back at Gara de Nord' },
                       { time: '09:00', title: 'Tura de duminică', desc: 'Group morning activity' },
