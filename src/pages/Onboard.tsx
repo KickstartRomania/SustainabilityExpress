@@ -263,7 +263,7 @@ const Onboard = () => {
             </div>
 
             {/* Jury Members */}
-            <h3 className="text-2xl font-bold text-foreground mt-10 mb-6 text-center">The Jury</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-10 mb-6 text-center">Who Will Judge You</h3>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-5xl mx-auto">
               {judges.map((judge) => (
                 <Card key={judge.name} className="card-elevated !px-2 !py-6 text-center">
