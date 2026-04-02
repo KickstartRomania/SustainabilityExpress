@@ -114,7 +114,7 @@ const MentorCard = ({ mentor }: { mentor: MentorInfo }) => (
   </div>
 );
 
-const Station = ({ icon: Icon, label, sublabel, mentors, color, dotColor, isLast }: StationData) => (
+const Station = ({ icon: Icon, label, sublabel, mentors, color, dotColor, isLast, leftColumnOnly }: StationData) => (
   <div className="relative flex gap-6">
     {/* Rail line */}
     <div className="flex flex-col items-center">
@@ -131,12 +131,20 @@ const Station = ({ icon: Icon, label, sublabel, mentors, color, dotColor, isLast
       <p className="text-muted-foreground text-sm mb-4">{sublabel}</p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-        <div className="flex flex-col gap-2">
-          {mentors.map((m) => (
+        {leftColumnOnly ? (
+          <>
+            <div className="flex flex-col gap-2">
+              {mentors.map((m) => (
+                <MentorCard key={m.name} mentor={m} />
+              ))}
+            </div>
+            <div />
+          </>
+        ) : (
+          mentors.map((m) => (
             <MentorCard key={m.name} mentor={m} />
-          ))}
-        </div>
-        <div />
+          ))
+        )}
       </div>
     </div>
   </div>
