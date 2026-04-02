@@ -202,6 +202,13 @@ const mentors: Mentor[] = [
     image: nickUngureanu,
     linkedin: 'https://www.linkedin.com/in/nick-ungureanu-6211ba214/',
   },
+  {
+    name: 'Madalina Sandu',
+    role: 'Founder & CEO',
+    company: 'Green PR Global',
+    image: madalinaSandu,
+    linkedin: 'https://www.linkedin.com/in/m%C4%83d%C4%83lina-sandu-431ba578/',
+  },
 ];
 
 const judges: Mentor[] = [
