@@ -62,7 +62,7 @@ const teams = [
       { name: 'Ludovico Cesaro', background: 'Tech' },
       { name: 'Emil Boncea', background: 'Business' },
       { name: 'Diana-Roberta Micu', background: 'Creative' },
-      { name: 'Alexandru-Valentin Grigorescu', background: 'High School' },
+      { name: 'Alexandru Grigorescu', background: 'High School' },
     ],
   },
   {
