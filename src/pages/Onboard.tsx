@@ -21,11 +21,11 @@ const judges = [
   { name: 'Loredana Gavrilescu', role: 'Startup Ecosystem Coordinator', company: 'Iceberg Plus', image: loredanaGavrilescu, linkedin: 'https://www.linkedin.com/in/loredana-gavrilescu-startup-consultant/' },
 ];
 
-const backgroundColors: Record<string, string> = {
-  Tech: 'bg-[#d6f5e3] text-green-800',
-  Business: 'bg-[#E6F1FB] text-blue-800',
-  Creative: 'bg-[#FAEEDA] text-amber-800',
-  'High School': 'bg-[#FDECEA] text-red-800',
+const dotColors: Record<string, string> = {
+  Tech: 'bg-green-500',
+  Business: 'bg-blue-500',
+  Creative: 'bg-amber-500',
+  'High School': 'bg-red-400',
 };
 
 const teams = [
