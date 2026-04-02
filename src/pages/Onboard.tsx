@@ -235,7 +235,15 @@ const Onboard = () => {
 
           {/* ───── SECTION 4: HOW YOU'LL BE JUDGED ───── */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">How You'll Be Judged</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4 text-center">How You'll Be Judged</h2>
+
+            <Card className="card-elevated max-w-5xl mx-auto text-center mb-8">
+              <p className="text-muted-foreground">
+                Each team delivers a <span className="text-foreground font-semibold">7-minute pitch</span> followed by a{' '}
+                <span className="text-foreground font-semibold">5-minute Q&A</span>, starting at{' '}
+                <span className="text-primary font-semibold">Sunday 14:00</span>.
+              </p>
+            </Card>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-5xl mx-auto mb-8">
               {criteria.map((c) => (
@@ -246,14 +254,6 @@ const Onboard = () => {
                 </Card>
               ))}
             </div>
-
-            <Card className="card-elevated max-w-5xl mx-auto text-center">
-              <p className="text-muted-foreground">
-                Each team delivers a <span className="text-foreground font-semibold">7-minute pitch</span> followed by a{' '}
-                <span className="text-foreground font-semibold">5-minute Q&A</span>, starting at{' '}
-                <span className="text-primary font-semibold">Sunday 14:00</span>.
-              </p>
-            </Card>
 
             {/* Jury Members */}
             <h3 className="text-2xl font-bold text-foreground mt-10 mb-6 text-center">The Jury</h3>
