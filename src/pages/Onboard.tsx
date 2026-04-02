@@ -4,6 +4,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Clock, MapPin, Train, Moon, Star, Trophy, Lightbulb, Target, Wrench, MessageSquare } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import MentorRoute from '@/components/onboard/MentorRoute';
 
 const backgroundColors: Record<string, string> = {
   Tech: 'bg-[#d6f5e3] text-green-800',
@@ -217,7 +218,14 @@ const Onboard = () => {
             </div>
           </div>
 
-          {/* ───── SECTION 3: HOW YOU'LL BE JUDGED ───── */}
+
+          {/* ───── SECTION 3: YOUR MENTORS ───── */}
+          <div className="mb-20">
+            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Your Mentors</h2>
+            <MentorRoute />
+          </div>
+
+          {/* ───── SECTION 4: HOW YOU'LL BE JUDGED ───── */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-foreground mb-8 text-center">How You'll Be Judged</h2>
 
