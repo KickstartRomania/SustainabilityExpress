@@ -3,6 +3,18 @@ import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Clock, Users, Award, AlertTriangle, Linkedin } from 'lucide-react';
 
+// Mentor images
+import tomaGrozavescu from '@/assets/mentors/toma-grozavescu.png';
+import zoltanBereczki from '@/assets/mentors/zoltan-bereczki.png';
+import iuliaAndritoiuCaizer from '@/assets/mentors/iulia-andritoiu-caizer.jpeg';
+import tiberiuLepadatu from '@/assets/mentors/tiberiu-lepadatu.png';
+import andreeaNicolae from '@/assets/mentors/andreea-nicolae.jpeg';
+import mihaiBurada from '@/assets/mentors/mihai-burada.png';
+import adrianGheorghe from '@/assets/mentors/adrian-gheorghe.jpeg';
+import nickUngureanu from '@/assets/mentors/nick-ungureanu.png';
+import raduTiciu from '@/assets/mentors/radu-ticiu.jpeg';
+import stefaniaDuta from '@/assets/mentors/stefania-duta.png';
+
 const BackgroundBubble = ({ bg }: { bg: string }) => {
   const colorMap: Record<string, string> = {
     marketing: 'bg-accent/20 text-accent',
@@ -47,11 +59,11 @@ const mentorLinkedins: Record<string, string> = {
 };
 
 const mentorPairs = [
-  { pair: 1, mentors: [{ name: 'Toma Grozăvescu', bg: 'Marketing' }, { name: 'Zoltan Bereczki', bg: 'Sustainability' }] },
-  { pair: 2, mentors: [{ name: 'Iulia Andritoiu Caizer', bg: 'Legal' }, { name: 'Tiberiu Lepădatu', bg: 'Tech' }] },
-  { pair: 3, mentors: [{ name: 'Andreea Oproiu', bg: 'Marketing' }, { name: 'Mihai Burada', bg: 'Sustainability' }] },
-  { pair: 4, mentors: [{ name: 'Adrian Gheorghe', bg: 'Business' }, { name: 'Nick Ungureanu', bg: 'Sustainability' }] },
-  { pair: 5, mentors: [{ name: 'Radu Ticiu', bg: 'Investor' }, { name: 'Stefania Duta', bg: 'HR / project management' }] },
+  { pair: 1, mentors: [{ name: 'Toma Grozăvescu', bg: 'Marketing', image: tomaGrozavescu, role: 'Founder', company: 'SMARTERS' }, { name: 'Zoltan Bereczki', bg: 'Sustainability', image: zoltanBereczki, role: 'Co-Founder & Co-CEO', company: 'Synerb' }] },
+  { pair: 2, mentors: [{ name: 'Iulia Andritoiu Caizer', bg: 'Legal', image: iuliaAndritoiuCaizer, role: 'CEO and co-founder', company: 'QuickLegal' }, { name: 'Tiberiu Lepădatu', bg: 'Tech', image: tiberiuLepadatu, role: 'Lead Engineer', company: 'Propevo' }] },
+  { pair: 3, mentors: [{ name: 'Andreea Oproiu', bg: 'Marketing', image: andreeaNicolae, role: 'Head of MarCom', company: 'How to Web' }, { name: 'Mihai Burada', bg: 'Sustainability', image: mihaiBurada, role: 'Urban Planning Specialist', company: 'TREE' }] },
+  { pair: 4, mentors: [{ name: 'Adrian Gheorghe', bg: 'Business', image: adrianGheorghe, role: 'Startup Advisor', company: 'Doers Ventures' }, { name: 'Nick Ungureanu', bg: 'Sustainability', image: nickUngureanu, role: 'Sustainable Production Specialist', company: 'ProTV' }] },
+  { pair: 5, mentors: [{ name: 'Radu Ticiu', bg: 'Investor', image: raduTiciu, role: 'Co-founder', company: 'Growceanu' }, { name: 'Stefania Duta', bg: 'HR / project management', image: stefaniaDuta, role: 'HR Manager', company: 'MIGSO-PCUBED' }] },
 ];
 
 const teams = [
@@ -182,24 +194,32 @@ const Mentorship = () => {
             {/* Mentor Pairs */}
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-4">Mentor Pairs</h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {mentorPairs.map((p) => (
                   <Card key={p.pair} className="bg-card border-border">
-                    <CardHeader className="pb-2 pt-4 px-4">
+                    <CardHeader className="pb-2 pt-4 px-5">
                       <CardTitle className="text-xs uppercase tracking-widest text-muted-foreground">
                         Pair {p.pair}
                       </CardTitle>
                     </CardHeader>
-                    <CardContent className="px-4 pb-4 space-y-2">
+                    <CardContent className="px-5 pb-5 space-y-4">
                       {p.mentors.map((m) => (
-                        <div key={m.name} className="flex items-center gap-2 flex-wrap">
-                          <span className="text-sm font-medium text-foreground">{m.name}</span>
-                          <BackgroundBubble bg={m.bg} />
-                          {mentorLinkedins[m.name] && (
-                            <a href={mentorLinkedins[m.name]} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                              <Linkedin className="h-3.5 w-3.5" />
-                            </a>
-                          )}
+                        <div key={m.name} className="flex items-center gap-3">
+                          <div className="w-14 h-14 shrink-0 rounded-full overflow-hidden border-2 border-primary/20">
+                            <img src={m.image} alt={m.name} loading="lazy" className="w-full h-full object-cover" />
+                          </div>
+                          <div className="min-w-0">
+                            <div className="flex items-center gap-2 flex-wrap">
+                              <span className="text-sm font-semibold text-foreground">{m.name}</span>
+                              {mentorLinkedins[m.name] && (
+                                <a href={mentorLinkedins[m.name]} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                                  <Linkedin className="h-3.5 w-3.5" />
+                                </a>
+                              )}
+                            </div>
+                            <p className="text-xs text-muted-foreground">{m.role} · {m.company}</p>
+                            <BackgroundBubble bg={m.bg} />
+                          </div>
                         </div>
                       ))}
                     </CardContent>
