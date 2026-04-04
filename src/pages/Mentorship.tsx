@@ -3,6 +3,18 @@ import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Clock, Users, Award, AlertTriangle, Linkedin } from 'lucide-react';
 
+// Mentor images
+import tomaGrozavescu from '@/assets/mentors/toma-grozavescu.png';
+import zoltanBereczki from '@/assets/mentors/zoltan-bereczki.png';
+import iuliaAndritoiuCaizer from '@/assets/mentors/iulia-andritoiu-caizer.jpeg';
+import tiberiuLepadatu from '@/assets/mentors/tiberiu-lepadatu.png';
+import andreeaNicolae from '@/assets/mentors/andreea-nicolae.jpeg';
+import mihaiBurada from '@/assets/mentors/mihai-burada.png';
+import adrianGheorghe from '@/assets/mentors/adrian-gheorghe.jpeg';
+import nickUngureanu from '@/assets/mentors/nick-ungureanu.png';
+import raduTiciu from '@/assets/mentors/radu-ticiu.jpeg';
+import stefaniaDuta from '@/assets/mentors/stefania-duta.png';
+
 const BackgroundBubble = ({ bg }: { bg: string }) => {
   const colorMap: Record<string, string> = {
     marketing: 'bg-accent/20 text-accent',
