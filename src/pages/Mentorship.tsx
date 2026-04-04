@@ -194,24 +194,32 @@ const Mentorship = () => {
             {/* Mentor Pairs */}
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-4">Mentor Pairs</h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {mentorPairs.map((p) => (
                   <Card key={p.pair} className="bg-card border-border">
-                    <CardHeader className="pb-2 pt-4 px-4">
+                    <CardHeader className="pb-2 pt-4 px-5">
                       <CardTitle className="text-xs uppercase tracking-widest text-muted-foreground">
                         Pair {p.pair}
                       </CardTitle>
                     </CardHeader>
-                    <CardContent className="px-4 pb-4 space-y-2">
+                    <CardContent className="px-5 pb-5 space-y-4">
                       {p.mentors.map((m) => (
-                        <div key={m.name} className="flex items-center gap-2 flex-wrap">
-                          <span className="text-sm font-medium text-foreground">{m.name}</span>
-                          <BackgroundBubble bg={m.bg} />
-                          {mentorLinkedins[m.name] && (
-                            <a href={mentorLinkedins[m.name]} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                              <Linkedin className="h-3.5 w-3.5" />
-                            </a>
-                          )}
+                        <div key={m.name} className="flex items-center gap-3">
+                          <div className="w-14 h-14 shrink-0 rounded-full overflow-hidden border-2 border-primary/20">
+                            <img src={m.image} alt={m.name} loading="lazy" className="w-full h-full object-cover" />
+                          </div>
+                          <div className="min-w-0">
+                            <div className="flex items-center gap-2 flex-wrap">
+                              <span className="text-sm font-semibold text-foreground">{m.name}</span>
+                              {mentorLinkedins[m.name] && (
+                                <a href={mentorLinkedins[m.name]} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                                  <Linkedin className="h-3.5 w-3.5" />
+                                </a>
+                              )}
+                            </div>
+                            <p className="text-xs text-muted-foreground">{m.role} · {m.company}</p>
+                            <BackgroundBubble bg={m.bg} />
+                          </div>
                         </div>
                       ))}
                     </CardContent>
