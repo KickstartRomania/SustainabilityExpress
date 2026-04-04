@@ -196,7 +196,7 @@ const Mentorship = () => {
               <h3 className="text-lg font-semibold text-foreground mb-4">Mentor Teams</h3>
               <div className="flex flex-wrap justify-center gap-5">
                 {mentorPairs.map((p) => (
-                  <Card key={p.pair} className="bg-card border-border">
+                  <Card key={p.pair} className="bg-card border-border w-full md:w-[calc(33.333%-1.25rem)] min-w-[280px]">
                     <CardHeader className="pb-2 pt-4 px-5">
                       <CardTitle className="text-xs uppercase tracking-widest text-muted-foreground">
                         Mentor Team {p.pair}
