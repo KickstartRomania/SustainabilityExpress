@@ -193,7 +193,7 @@ const Mentorship = () => {
 
             {/* Mentor Pairs */}
             <div>
-              <h3 className="text-lg font-semibold text-foreground mb-4">Mentor Pairs</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-4">Mentor Teams</h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {mentorPairs.map((p) => (
                   <Card key={p.pair} className="bg-card border-border">
