@@ -59,11 +59,11 @@ const mentorLinkedins: Record<string, string> = {
 };
 
 const mentorPairs = [
-  { pair: 1, mentors: [{ name: 'Toma Grozăvescu', bg: 'Marketing' }, { name: 'Zoltan Bereczki', bg: 'Sustainability' }] },
-  { pair: 2, mentors: [{ name: 'Iulia Andritoiu Caizer', bg: 'Legal' }, { name: 'Tiberiu Lepădatu', bg: 'Tech' }] },
-  { pair: 3, mentors: [{ name: 'Andreea Oproiu', bg: 'Marketing' }, { name: 'Mihai Burada', bg: 'Sustainability' }] },
-  { pair: 4, mentors: [{ name: 'Adrian Gheorghe', bg: 'Business' }, { name: 'Nick Ungureanu', bg: 'Sustainability' }] },
-  { pair: 5, mentors: [{ name: 'Radu Ticiu', bg: 'Investor' }, { name: 'Stefania Duta', bg: 'HR / project management' }] },
+  { pair: 1, mentors: [{ name: 'Toma Grozăvescu', bg: 'Marketing', image: tomaGrozavescu, role: 'Founder', company: 'SMARTERS' }, { name: 'Zoltan Bereczki', bg: 'Sustainability', image: zoltanBereczki, role: 'Co-Founder & Co-CEO', company: 'Synerb' }] },
+  { pair: 2, mentors: [{ name: 'Iulia Andritoiu Caizer', bg: 'Legal', image: iuliaAndritoiuCaizer, role: 'CEO and co-founder', company: 'QuickLegal' }, { name: 'Tiberiu Lepădatu', bg: 'Tech', image: tiberiuLepadatu, role: 'Lead Engineer', company: 'Propevo' }] },
+  { pair: 3, mentors: [{ name: 'Andreea Oproiu', bg: 'Marketing', image: andreeaNicolae, role: 'Head of MarCom', company: 'How to Web' }, { name: 'Mihai Burada', bg: 'Sustainability', image: mihaiBurada, role: 'Urban Planning Specialist', company: 'TREE' }] },
+  { pair: 4, mentors: [{ name: 'Adrian Gheorghe', bg: 'Business', image: adrianGheorghe, role: 'Startup Advisor', company: 'Doers Ventures' }, { name: 'Nick Ungureanu', bg: 'Sustainability', image: nickUngureanu, role: 'Sustainable Production Specialist', company: 'ProTV' }] },
+  { pair: 5, mentors: [{ name: 'Radu Ticiu', bg: 'Investor', image: raduTiciu, role: 'Co-founder', company: 'Growceanu' }, { name: 'Stefania Duta', bg: 'HR / project management', image: stefaniaDuta, role: 'HR Manager', company: 'MIGSO-PCUBED' }] },
 ];
 
 const teams = [
