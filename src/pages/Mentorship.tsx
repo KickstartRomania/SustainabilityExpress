@@ -199,7 +199,7 @@ const Mentorship = () => {
                   <Card key={p.pair} className="bg-card border-border">
                     <CardHeader className="pb-2 pt-4 px-5">
                       <CardTitle className="text-xs uppercase tracking-widest text-muted-foreground">
-                        Pair {p.pair}
+                        Mentor Team {p.pair}
                       </CardTitle>
                     </CardHeader>
                     <CardContent className="px-5 pb-5 space-y-4">
