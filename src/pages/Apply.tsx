@@ -208,7 +208,7 @@ const Apply = () => {
             </span>
             <h1 className="text-5xl font-bold text-foreground mb-6">Apply Now</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Join us for 48 hours of innovation on rails. Limited seats available for passionate builders, 
+              Join us for 4 days of innovation on rails. Limited seats available for passionate builders, 
               designers, and sustainability enthusiasts.
             </p>
           </div>
