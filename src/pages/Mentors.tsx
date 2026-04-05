@@ -260,14 +260,14 @@ const Mentors = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-foreground mb-6">Meet Our Expert Panel</h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Experienced professionals from sustainability, technology, design, and business</p>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Experienced professionals from sustainability, technology, design, and business. Below are the mentors and judges from our previous edition.</p>
           </div>
 
           {/* Judges Grid */}
           <section className="mb-20">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Judges</h2>
-              <p className="text-lg text-muted-foreground">The panel evaluating your solutions</p>
+              <h2 className="text-3xl font-bold text-foreground mb-4">Previous Edition Judges</h2>
+              <p className="text-lg text-muted-foreground">The panel that evaluated solutions in Edition 1</p>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 max-w-6xl mx-auto">
@@ -292,8 +292,8 @@ const Mentors = () => {
           {/* Mentor Grid */}
           <section className="mb-20">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Mentors</h2>
-              <p className="text-lg text-muted-foreground">Guiding you throughout the hackathon journey</p>
+              <h2 className="text-3xl font-bold text-foreground mb-4">Previous Edition Mentors</h2>
+              <p className="text-lg text-muted-foreground">They guided participants throughout the first hackathon journey</p>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
@@ -441,9 +441,9 @@ const Mentors = () => {
               Join our hackathon and get direct access to industry leaders who are passionate about sustainable innovation.
             </p>
             <Button asChild className="btn-hero text-xl px-12 py-6">
-              <a href="https://luma.com/lxs8xxfm" target="_blank" rel="noopener noreferrer">
-                Join Demo Day <ArrowRight className="ml-2 h-6 w-6" />
-              </a>
+              <Link to="/apply">
+                Apply Now <ArrowRight className="ml-2 h-6 w-6" />
+              </Link>
             </Button>
           </div>
         </div>

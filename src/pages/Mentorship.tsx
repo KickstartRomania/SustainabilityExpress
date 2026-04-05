@@ -141,10 +141,10 @@ const Mentorship = () => {
           {/* Header */}
           <div className="text-center space-y-3">
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-foreground">
-              Mentors View
+              Previous Edition — Mentors View
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Speed mentoring rotation · Saturday April 4, Timișoara
+              Speed mentoring rotation · Saturday April 4, Timisoara (Edition 1)
             </p>
           </div>
 

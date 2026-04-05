@@ -46,7 +46,7 @@ const stations: StationData[] = [
   {
     icon: Train,
     label: 'On the Train',
-    sublabel: 'Bucharest → Timisoara → Bucharest',
+    sublabel: 'Bucharest → Chisinau → Bucharest (Previous Edition)',
     color: 'text-primary',
     dotColor: 'bg-primary',
     mentors: [
@@ -62,8 +62,8 @@ const stations: StationData[] = [
   },
   {
     icon: MapPin,
-    label: 'Timișoara',
-    sublabel: 'Build-day venue',
+    label: 'Timisoara',
+    sublabel: 'Build-day venue (Previous Edition)',
     color: 'text-accent',
     dotColor: 'bg-accent',
     mentors: [
@@ -79,7 +79,7 @@ const stations: StationData[] = [
   {
     icon: Building2,
     label: 'Bucharest',
-    sublabel: 'Demo Day @ Supertree',
+    sublabel: 'Demo Day @ Venue TBA (Previous Edition)',
     color: 'text-sky-400',
     dotColor: 'bg-sky-400',
     isLast: true,

@@ -94,7 +94,7 @@ const Onboard = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <span className="inline-block bg-primary/20 text-primary px-4 py-2 rounded-full text-lg font-semibold border border-primary/30 mb-6">
-              3-5 April 2026
+              Previous Edition — April 2026
             </span>
             <h1 className="text-5xl font-bold text-foreground mb-4">Welcome Aboard</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -210,7 +210,7 @@ const Onboard = () => {
 
           {/* ───── SECTION 2: YOUR COHORT ───── */}
           <div className="mb-20">
-            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Your Cohort</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Previous Edition — Your Cohort</h2>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 max-w-5xl mx-auto">
               {teams.map((team) => (
@@ -245,13 +245,13 @@ const Onboard = () => {
 
           {/* ───── SECTION 3: YOUR MENTORS ───── */}
           <div className="mb-20">
-            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Your Mentors</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Previous Edition — Your Mentors</h2>
             <MentorRoute />
           </div>
 
           {/* ───── SECTION 4: HOW YOU'LL BE JUDGED ───── */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-foreground mb-4 text-center">How You'll Be Judged</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4 text-center">Previous Edition — How You Were Judged</h2>
 
             <Card className="card-elevated max-w-5xl mx-auto text-center mb-8">
               <p className="text-muted-foreground">
@@ -272,7 +272,7 @@ const Onboard = () => {
             </div>
 
             {/* Jury Members */}
-            <h3 className="text-2xl font-bold text-foreground mt-10 mb-6 text-center">Who Will Judge You</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-10 mb-6 text-center">Previous Edition Jury</h3>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-5xl mx-auto">
               {judges.map((judge) => (
                 <Card key={judge.name} className="card-elevated !px-2 !py-6 text-center">
@@ -298,7 +298,7 @@ const Onboard = () => {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
-                { icon: TrainFront, title: 'Transport', desc: 'Bucharest → Timișoara → Bucharest. Group transfers included.' },
+                { icon: TrainFront, title: 'Transport', desc: 'Bucharest → Chisinau → Bucharest. Group transfers included.' },
                 { icon: BedDouble, title: 'Accommodation', desc: '2 nights on the train. Sleeping arrangements provided.' },
                 { icon: UtensilsCrossed, title: 'Food', desc: 'Meals, snacks, and drinks covered.' },
                 { icon: Backpack, title: 'What to Bring', desc: 'Laptop, charger, headphones, comfortable clothes, essentials.' },
