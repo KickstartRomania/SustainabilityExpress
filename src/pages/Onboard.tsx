@@ -94,7 +94,7 @@ const Onboard = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <span className="inline-block bg-primary/20 text-primary px-4 py-2 rounded-full text-lg font-semibold border border-primary/30 mb-6">
-              3-5 April 2026
+              Previous Edition — April 2026
             </span>
             <h1 className="text-5xl font-bold text-foreground mb-4">Welcome Aboard</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -149,14 +149,14 @@ const Onboard = () => {
                   </div>
                   <div className="space-y-3 max-w-lg mx-auto">
                     {[
-                      { time: '06:30', title: 'Arrival in Timisoara', desc: 'Arrive at the station and head to the venue.' },
+                      { time: '06:30', title: 'Arrival in Chisinau', desc: 'Arrive at the station and head to the venue.' },
                       { time: '08:30', title: 'Breakfast', desc: 'Start the day with breakfast.' },
                       { time: '10:00', title: 'Lean Canvas Workshop, with Razvan Suta', desc: 'Shape your idea with a guided session.' },
                       { time: '12:00', title: 'Lunch', desc: '' },
                       { time: '13:00', title: 'Mentoring sessions', desc: 'Get feedback from mentors until 16:00.' },
                       { time: '18:00', title: 'Pitching Workshop, with George Bonea', desc: 'Work on your pitch before Demo Day.' },
                       { time: '19:00', title: 'Dinner', desc: '' },
-                      { time: '20:41', title: 'Departure from Timisoara', desc: 'IR 11500. Board the train back to Bucharest.' },
+                      { time: '20:41', title: 'Departure from Chisinau', desc: 'Board the train back to Bucharest.' },
                       { time: '00:00', title: 'Late-night build session', desc: 'Keep working on the train.' },
                     ].map((item) => (
                       <div key={item.time} className="flex items-start gap-4">
@@ -183,7 +183,7 @@ const Onboard = () => {
                     {[
                       { time: '08:30', title: 'Arrival in Bucharest', desc: 'Back at Gara de Nord.' },
                       { time: '09:00', title: 'Tura de duminica', desc: 'A relaxed morning walk in Cotroceni, away from screens,', link: 'https://luma.com/fxmyhr1d' },
-                      { time: '10:00', title: 'Transfer to Supertree', desc: 'Head to the Demo Day venue.' },
+                      { time: '10:00', title: 'Transfer to Venue TBA', desc: 'Head to the Demo Day venue.' },
                       { time: '11:00', title: 'Final working session', desc: 'Final polish and presentation prep.' },
                       { time: '13:30', title: 'Doors open', desc: 'Guests begin to arrive.' },
                       { time: '14:00', title: 'Demo Day', desc: 'Each team presents, followed by jury Q&A and awards.', link: 'https://luma.com/lxs8xxfm' },
@@ -210,7 +210,7 @@ const Onboard = () => {
 
           {/* ───── SECTION 2: YOUR COHORT ───── */}
           <div className="mb-20">
-            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Your Cohort</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Previous Edition — Your Cohort</h2>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 max-w-5xl mx-auto">
               {teams.map((team) => (
@@ -245,13 +245,13 @@ const Onboard = () => {
 
           {/* ───── SECTION 3: YOUR MENTORS ───── */}
           <div className="mb-20">
-            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Your Mentors</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Previous Edition — Your Mentors</h2>
             <MentorRoute />
           </div>
 
           {/* ───── SECTION 4: HOW YOU'LL BE JUDGED ───── */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-foreground mb-4 text-center">How You'll Be Judged</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4 text-center">Previous Edition — How You Were Judged</h2>
 
             <Card className="card-elevated max-w-5xl mx-auto text-center mb-8">
               <p className="text-muted-foreground">
@@ -272,7 +272,7 @@ const Onboard = () => {
             </div>
 
             {/* Jury Members */}
-            <h3 className="text-2xl font-bold text-foreground mt-10 mb-6 text-center">Who Will Judge You</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-10 mb-6 text-center">Previous Edition Jury</h3>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-5xl mx-auto">
               {judges.map((judge) => (
                 <Card key={judge.name} className="card-elevated !px-2 !py-6 text-center">
@@ -298,7 +298,7 @@ const Onboard = () => {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
-                { icon: TrainFront, title: 'Transport', desc: 'Bucharest → Timișoara → Bucharest. Group transfers included.' },
+                { icon: TrainFront, title: 'Transport', desc: 'Bucharest → Chisinau → Bucharest. Group transfers included.' },
                 { icon: BedDouble, title: 'Accommodation', desc: '2 nights on the train. Sleeping arrangements provided.' },
                 { icon: UtensilsCrossed, title: 'Food', desc: 'Meals, snacks, and drinks covered.' },
                 { icon: Backpack, title: 'What to Bring', desc: 'Laptop, charger, headphones, comfortable clothes, essentials.' },

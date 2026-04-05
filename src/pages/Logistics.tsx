@@ -13,7 +13,7 @@ const Logistics = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <span className="inline-block bg-primary/20 text-primary px-4 py-2 rounded-full text-lg font-semibold border border-primary/30 mb-6">
-              3-5 April 2026
+              Summer 2026
             </span>
             <h1 className="text-5xl font-bold text-foreground mb-6">Logistics</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -203,9 +203,9 @@ const Logistics = () => {
               All set with logistics? Time to secure your seat on the most innovative train journey in Romania.
             </p>
             <Button asChild className="btn-hero text-xl px-12 py-6">
-              <a href="https://luma.com/lxs8xxfm" target="_blank" rel="noopener noreferrer">
-                Join Demo Day <ArrowRight className="ml-2 h-6 w-6" />
-              </a>
+              <Link to="/apply">
+                Apply Now <ArrowRight className="ml-2 h-6 w-6" />
+              </Link>
             </Button>
           </div>
         </div>

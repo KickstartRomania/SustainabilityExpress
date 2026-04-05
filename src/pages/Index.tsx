@@ -304,7 +304,7 @@ const row2Partners = [{
   name: 'Buletin de București',
   logo: buletinBucurestiLogo
 }, {
-  name: 'CO-work Timișoara',
+  name: 'CO-work Timisoara (Previous Edition)',
   logo: coworkTimisoaraLogo
 }, {
   name: 'MP',
@@ -375,7 +375,7 @@ const Index = () => {
             
             <div className="space-y-4">
               <span className="inline-block bg-primary/20 text-primary px-4 py-2 rounded-full text-lg font-semibold border border-primary/30">
-                3-5 April 2026
+                Summer 2026
               </span>
               <div>
                 <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
@@ -414,9 +414,9 @@ const Index = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild className="btn-hero text-lg px-8 py-6">
-                <a href="https://luma.com/lxs8xxfm" target="_blank" rel="noopener noreferrer">
-                  Join Demo Day <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
+                <Link to="/apply">
+                  Apply Now <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 border-2 bg-background/60 backdrop-blur-sm">
                 <Link to="/how-it-works">Find Out More</Link>
@@ -441,14 +441,14 @@ const Index = () => {
             <p className="text-xl text-muted-foreground leading-relaxed mb-12">
               Sustainability Express is an on-train innovation journey turning sustainable challenges into real, testable solutions.
 
-Our first journey takes place on a train from Bucharest to Timișoara and back.
+Our next journey takes place on a train from Bucharest to Chisinau and back.
 
 48 hours, mostly on board, dedicated to creating implementable ideas that can change the world.
 
             </p>
             
             {/* Route visualization */}
-            <RouteVisualization stops={['Bucharest', 'Timisoara', 'Bucharest']} />
+            <RouteVisualization stops={['Bucharest', 'Chisinau', 'Bucharest']} />
           </div>
         </div>
       </RailSection>
@@ -608,9 +608,9 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
           {/* Mobile-only Apply CTA */}
           <div className="text-center mt-12 md:hidden">
             <Button asChild className="btn-hero text-lg px-8 py-6">
-              <a href="https://luma.com/lxs8xxfm" target="_blank" rel="noopener noreferrer">
-                Join Demo Day <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
+              <Link to="/apply">
+                Apply Now <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
           </div>
         </div>
@@ -686,8 +686,8 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <SectionDivider icon={Users} className="mb-8" />
-            <h2 className="text-4xl font-bold text-foreground mb-4">Mentors & Jury</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">They are the mentors and industry professionals who will help turn your idea into reality and boost its chances of success.</p>
+            <h2 className="text-4xl font-bold text-foreground mb-4">Previous Edition — Mentors & Jury</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">They were the mentors and industry professionals from our first edition who helped turn ideas into reality.</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
@@ -743,7 +743,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 1
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-2">Departure & Ideation</h3>
-              <p className="text-sm font-medium text-primary mb-4">(Bucharest → Timișoara)</p>
+              <p className="text-sm font-medium text-primary mb-4">(Bucharest → Chisinau)</p>
               <p className="text-muted-foreground">
                 The journey starts on a night train where teams are formed, challenges are introduced, and the first ideas take shape during intensive on-board collaboration.
               </p>
@@ -754,7 +754,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 2
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-2">Deep Work & Mentorship</h3>
-              <p className="text-sm font-medium text-primary mb-4">(Timișoara)</p>
+              <p className="text-sm font-medium text-primary mb-4">(Chisinau)</p>
               <p className="text-muted-foreground">
                 A full day of workshops, expert mentorship, and team work focused on refining concepts, validating ideas, and preparing clear solution directions.
               </p>
@@ -765,7 +765,7 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
                 3
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-2">Prototyping & Final Pitches</h3>
-              <p className="text-sm font-medium text-primary mb-4">(Timișoara → Bucharest)</p>
+              <p className="text-sm font-medium text-primary mb-4">(Chisinau → Bucharest)</p>
               <p className="text-muted-foreground">
                 Teams finalize prototypes and presentations on the return train, then pitch their solutions in Bucharest in front of a jury and partners.
               </p>
@@ -783,9 +783,9 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
             {/* Mobile-only Apply CTA */}
             <div className="md:hidden">
               <Button asChild className="btn-hero text-lg px-8 py-6">
-                <a href="https://luma.com/lxs8xxfm" target="_blank" rel="noopener noreferrer">
-                  Join Demo Day <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
+                <Link to="/apply">
+                  Apply Now <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
             </div>
           </div>
@@ -1016,14 +1016,14 @@ Our first journey takes place on a train from Bucharest to Timișoara and back.
       }} />
         
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-4xl font-bold text-white mb-6">Join Our Demo Day</h2>
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Board?</h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            See what 20 innovators built during 48 hours on rails. Join us for the Sustainability Express Demo Day — pitches, prizes, and sustainable solutions.
+            Join 20 innovators for 48 hours on rails. Apply now for the next edition of Sustainability Express — Bucharest to Chisinau and back.
           </p>
           <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-6 font-bold group">
-            <a href="https://luma.com/lxs8xxfm" target="_blank" rel="noopener noreferrer">
-              Join Demo Day <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
-            </a>
+            <Link to="/apply">
+              Apply Now <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </Button>
         </div>
       </section>

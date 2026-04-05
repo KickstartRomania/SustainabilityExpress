@@ -38,18 +38,18 @@ const BackgroundBubble = ({ bg }: { bg: string }) => {
 
 
 const schedule = [
-  { time: '06:30', activity: 'Arrival in Timișoara' },
-  { time: '10:00', activity: 'Lean Canvas Workshop, with Răzvan Șuța' },
+  { time: '06:30', activity: 'Arrival in Timisoara' },
+  { time: '10:00', activity: 'Lean Canvas Workshop, with Razvan Suta' },
   { time: '13:00–16:00', activity: 'Speed mentoring rotation', highlight: true },
   { time: '18:00', activity: 'Pitching Workshop, with George Bonea' },
-  { time: '20:41', activity: 'Departure from Timișoara' },
+  { time: '20:41', activity: 'Departure from Timisoara' },
 ];
 
 const mentorLinkedins: Record<string, string> = {
-  'Toma Grozăvescu': 'https://www.linkedin.com/in/tomagrozavescu/',
+  'Toma Grozavescu': 'https://www.linkedin.com/in/tomagrozavescu/',
   'Zoltan Bereczki': 'https://www.linkedin.com/in/zbereczki/',
   'Iulia Andritoiu Caizer': 'https://www.linkedin.com/in/iulia-caizer/',
-  'Tiberiu Lepădatu': 'https://www.linkedin.com/in/tiberiu-lepadatu-7975bab1/',
+  'Tiberiu Lepadatu': 'https://www.linkedin.com/in/tiberiu-lepadatu-7975bab1/',
   'Andreea Oproiu': 'https://www.linkedin.com/in/andreea-oproiu/',
   'Mihai Burada': 'https://www.linkedin.com/in/mihai-burada-741b9b14/',
   'Adrian Gheorghe': 'https://www.linkedin.com/in/adrian-gheorghe/',
@@ -59,8 +59,8 @@ const mentorLinkedins: Record<string, string> = {
 };
 
 const mentorPairs = [
-  { pair: 1, mentors: [{ name: 'Toma Grozăvescu', bg: 'Marketing', image: tomaGrozavescu, role: 'Founder', company: 'SMARTERS' }, { name: 'Zoltan Bereczki', bg: 'Sustainability', image: zoltanBereczki, role: 'Co-Founder & Co-CEO', company: 'Synerb' }] },
-  { pair: 2, mentors: [{ name: 'Iulia Andritoiu Caizer', bg: 'Legal', image: iuliaAndritoiuCaizer, role: 'CEO and co-founder', company: 'QuickLegal' }, { name: 'Tiberiu Lepădatu', bg: 'Tech', image: tiberiuLepadatu, role: 'Lead Engineer', company: 'Propevo' }] },
+  { pair: 1, mentors: [{ name: 'Toma Grozavescu', bg: 'Marketing', image: tomaGrozavescu, role: 'Founder', company: 'SMARTERS' }, { name: 'Zoltan Bereczki', bg: 'Sustainability', image: zoltanBereczki, role: 'Co-Founder & Co-CEO', company: 'Synerb' }] },
+  { pair: 2, mentors: [{ name: 'Iulia Andritoiu Caizer', bg: 'Legal', image: iuliaAndritoiuCaizer, role: 'CEO and co-founder', company: 'QuickLegal' }, { name: 'Tiberiu Lepadatu', bg: 'Tech', image: tiberiuLepadatu, role: 'Lead Engineer', company: 'Propevo' }] },
   { pair: 3, mentors: [{ name: 'Andreea Oproiu', bg: 'Marketing', image: andreeaNicolae, role: 'Head of MarCom', company: 'How to Web' }, { name: 'Mihai Burada', bg: 'Sustainability', image: mihaiBurada, role: 'Urban Planning Specialist', company: 'TREE' }] },
   { pair: 4, mentors: [{ name: 'Adrian Gheorghe', bg: 'Business', image: adrianGheorghe, role: 'Startup Advisor', company: 'Doers Ventures' }, { name: 'Nick Ungureanu', bg: 'Sustainability', image: nickUngureanu, role: 'Sustainable Production Specialist', company: 'ProTV' }] },
   { pair: 5, mentors: [{ name: 'Radu Ticiu', bg: 'Investor', image: raduTiciu, role: 'Co-founder', company: 'Growceanu' }, { name: 'Stefania Duta', bg: 'HR / project management', image: stefaniaDuta, role: 'HR Manager', company: 'MIGSO-PCUBED' }] },
@@ -68,7 +68,7 @@ const mentorPairs = [
 
 const teams = [
   {
-    name: 'Team Argeș',
+    name: 'Team Arges',
     members: [
       { name: 'Stefan Ciobanu', bg: 'Tech', level: 'Junior', summary: 'CASSINI Hackathon winner; fullstack + IoT + satellite data; renewable energy platform builder' },
       { name: 'Auras Vlase', bg: 'Business', level: 'Senior', summary: 'Construction + logistics systems thinker; Radar Meseriasi; pragmatic execution focus' },
@@ -95,7 +95,7 @@ const teams = [
     ],
   },
   {
-    name: 'Team Timiș',
+    name: 'Team Timis',
     members: [
       { name: 'Ludovico Cesaro', bg: 'Tech', level: 'Senior', summary: 'Senior AI engineer; train-related POC already in progress; rapid cloud prototyping' },
       { name: 'Emil Boncea', bg: 'Business', level: 'Junior', summary: 'Sustainability specialist at Autonom; green mobility + ESG; deep domain knowledge' },
@@ -104,7 +104,7 @@ const teams = [
     ],
   },
   {
-    name: 'Team Dunărea',
+    name: 'Team Dunarea',
     members: [
       { name: 'Laurentiu Toader', bg: 'Tech', level: 'Mid', summary: 'Co-produced Attenborough\'s Ocean; builds AI at Strand Ventures; exceptional conservation network' },
       { name: 'Adriana Moima', bg: 'Business', level: 'Senior', summary: 'Senior consultant; unconventional thinking; structured planning; business expertise' },
@@ -141,10 +141,10 @@ const Mentorship = () => {
           {/* Header */}
           <div className="text-center space-y-3">
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-foreground">
-              Mentors View
+              Previous Edition — Mentors View
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Speed mentoring rotation · Saturday April 4, Timișoara
+              Speed mentoring rotation · Saturday April 4, Timisoara (Edition 1)
             </p>
           </div>
 

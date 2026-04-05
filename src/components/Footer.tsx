@@ -30,9 +30,9 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="https://luma.com/lxs8xxfm" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">
-                  Join Demo Day
-                </a>
+                <Link to="/apply" className="text-white/80 hover:text-white transition-colors">
+                  Apply Now
+                </Link>
               </li>
               <li>
                 <Link to="/faq" className="text-white/80 hover:text-white transition-colors">
@@ -48,7 +48,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2 text-white/80">
                 <Train className="h-4 w-4" />
-                Bucharest ↔ Timisoara
+                Bucharest ↔ Chisinau
               </li>
               <li className="flex items-center gap-2 text-white/80">
                 <MapPin className="h-4 w-4" />

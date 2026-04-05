@@ -79,9 +79,9 @@ const FAQ = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild className="btn-hero">
-                <a href="https://luma.com/lxs8xxfm" target="_blank" rel="noopener noreferrer">
-                  Join Demo Day <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
+                <Link to="/apply">
+                  Apply Now <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
               <Button variant="outline" size="lg">
                 Contact Us
