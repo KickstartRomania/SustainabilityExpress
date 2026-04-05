@@ -304,7 +304,7 @@ const row2Partners = [{
   name: 'Buletin de București',
   logo: buletinBucurestiLogo
 }, {
-  name: 'CO-work Timișoara',
+  name: 'CO-work Timisoara (Previous Edition)',
   logo: coworkTimisoaraLogo
 }, {
   name: 'MP',
