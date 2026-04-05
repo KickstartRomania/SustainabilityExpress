@@ -252,7 +252,7 @@ const judges: Mentor[] = [
 const Mentors = () => {
   const renderedMentors = useMemo(() => mentors.filter(m => !['Catalin Anghel', 'Alexandra Jivan', 'Maxim Rotaru'].includes(m.name)), []);
 
-  return <div className="min-h-screen bg-background">
+  return <div className="min-h-screen" style={{ backgroundColor: '#ffeeca' }}>
       <Navigation />
       
       <div className="pt-24 pb-16">
@@ -272,16 +272,16 @@ const Mentors = () => {
             
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 max-w-6xl mx-auto">
               {judges.map((judge) => (
-                <Card key={judge.name} className="card-elevated !px-2 !py-8 text-center group transition-transform duration-300 hover:scale-[1.01]">
-                  <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-2 rounded-full overflow-hidden border-2 border-primary/20">
+                <Card key={judge.name} className="!px-2 !py-8 text-center group transition-transform duration-300 hover:scale-[1.01] border-0 shadow-lg" style={{ backgroundColor: '#518c5d' }}>
+                  <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-2 rounded-full overflow-hidden border-2 border-white/30">
                     <img src={judge.image} alt={judge.name} loading="lazy" className={`w-full h-full object-cover ${judge.imagePosition || ''}`} />
                   </div>
-                  <h3 className="text-base md:text-lg font-bold text-foreground leading-snug mb-1">{judge.name}</h3>
-                  <p className="text-muted-foreground text-xs md:text-sm">{judge.role}</p>
-                  <p className="text-muted-foreground text-xs md:text-sm mb-3">{judge.company || '\u00A0'}</p>
+                  <h3 className="text-base md:text-lg font-bold text-white leading-snug mb-1">{judge.name}</h3>
+                  <p className="text-white/80 text-xs md:text-sm">{judge.role}</p>
+                  <p className="text-white/80 text-xs md:text-sm mb-3">{judge.company || '\u00A0'}</p>
                   {judge.linkedin ? (
-                    <a href={judge.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`Open ${judge.name} on LinkedIn`} className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
-                      <Linkedin className="h-4 w-4 text-primary" />
+                    <a href={judge.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`Open ${judge.name} on LinkedIn`} className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/15 hover:bg-white/25 transition-colors">
+                      <Linkedin className="h-4 w-4 text-white" />
                     </a>
                   ) : null}
                 </Card>
@@ -298,16 +298,16 @@ const Mentors = () => {
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
               {renderedMentors.map((mentor) => (
-                <Card key={`${mentor.name}-${mentor.company ?? ''}`} className="card-elevated text-center group transition-transform duration-300 hover:scale-[1.01]">
+                <Card key={`${mentor.name}-${mentor.company ?? ''}`} className="text-center group transition-transform duration-300 hover:scale-[1.01] border-0 shadow-lg" style={{ backgroundColor: '#518c5d' }}>
                     <div className="p-4">
-                      <div className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-primary/20">
+                      <div className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-white/30">
                         <img src={mentor.image} alt={mentor.name} loading="lazy" className={`w-full h-full object-cover ${mentor.imagePosition || ''}`} />
                       </div>
-                      <h3 className="text-base md:text-lg font-bold text-foreground leading-snug mb-1">{mentor.name}</h3>
-                      <p className="text-muted-foreground text-xs md:text-sm">{mentor.role}</p>
-                      <p className="text-muted-foreground text-xs md:text-sm mb-3">{mentor.company || '\u00A0'}</p>
-                      {mentor.linkedin ? <a href={mentor.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`Open ${mentor.name} on LinkedIn`} className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
-                          <Linkedin className="h-4 w-4 text-primary" />
+                      <h3 className="text-base md:text-lg font-bold text-white leading-snug mb-1">{mentor.name}</h3>
+                      <p className="text-white/80 text-xs md:text-sm">{mentor.role}</p>
+                      <p className="text-white/80 text-xs md:text-sm mb-3">{mentor.company || '\u00A0'}</p>
+                      {mentor.linkedin ? <a href={mentor.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`Open ${mentor.name} on LinkedIn`} className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/15 hover:bg-white/25 transition-colors">
+                          <Linkedin className="h-4 w-4 text-white" />
                         </a> : null}
                     </div>
                   </Card>
@@ -320,42 +320,42 @@ const Mentors = () => {
           </section>
 
           {/* Mentorship Process */}
-          <section className="mb-20 bg-secondary/30 rounded-3xl p-12">
+          <section className="mb-20 rounded-3xl p-12" style={{ backgroundColor: '#518c5d' }}>
             <div className="text-center mb-12">
-              <Star className="h-16 w-16 text-primary mx-auto mb-6" />
-              <h2 className="text-3xl font-bold text-foreground mb-4">How Mentorship Works</h2>
-              <p className="text-lg text-muted-foreground">
+              <Star className="h-16 w-16 text-white mx-auto mb-6" />
+              <h2 className="text-3xl font-bold text-white mb-4">How Mentorship Works</h2>
+              <p className="text-lg text-white/80">
                 Get guidance throughout your 48-hour innovation journey
               </p>
             </div>
             
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               <div className="text-center">
-                <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-xl">1</span>
+                <div className="w-16 h-16 bg-white/20 rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">1</span>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-4">Initial Guidance</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-xl font-bold text-white mb-4">Initial Guidance</h3>
+                <p className="text-white/80">
                   Meet mentors during team formation to validate ideas and get initial direction for your project.
                 </p>
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-xl">2</span>
+                <div className="w-16 h-16 bg-white/20 rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">2</span>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-4">Regular Checkpoints</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-xl font-bold text-white mb-4">Regular Checkpoints</h3>
+                <p className="text-white/80">
                   Scheduled mentorship sessions throughout Saturday to review progress and provide strategic advice.
                 </p>
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-xl">3</span>
+                <div className="w-16 h-16 bg-white/20 rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">3</span>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-4">Final Evaluation</h3>
-                <p className="text-muted-foreground">
+                <h3 className="text-xl font-bold text-white mb-4">Final Evaluation</h3>
+                <p className="text-white/80">
                   Mentors serve as jury members, providing feedback and selecting winners based on impact and innovation.
                 </p>
               </div>
@@ -369,45 +369,45 @@ const Mentors = () => {
             </div>
             
             <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              <Card className="card-elevated">
-                <h3 className="text-xl font-bold text-foreground mb-6">Expert Knowledge</h3>
-                <ul className="space-y-3 text-muted-foreground">
+              <Card className="border-0 shadow-lg p-6" style={{ backgroundColor: '#518c5d' }}>
+                <h3 className="text-xl font-bold text-white mb-6">Expert Knowledge</h3>
+                <ul className="space-y-3 text-white/80">
                   <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
                     Industry insights and best practices
                   </li>
                   <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
                     Technical expertise and validation
                   </li>
                   <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
                     Sustainability framework guidance
                   </li>
                   <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
                     Market opportunity assessment
                   </li>
                 </ul>
               </Card>
 
-              <Card className="card-elevated">
-                <h3 className="text-xl font-bold text-foreground mb-6">Career Development</h3>
-                <ul className="space-y-3 text-muted-foreground">
+              <Card className="border-0 shadow-lg p-6" style={{ backgroundColor: '#518c5d' }}>
+                <h3 className="text-xl font-bold text-white mb-6">Career Development</h3>
+                <ul className="space-y-3 text-white/80">
                   <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
                     Networking opportunities
                   </li>
                   <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
                     Professional advice and tips
                   </li>
                   <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
                     Potential collaboration offers
                   </li>
                   <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
                     Future opportunity introductions
                   </li>
                 </ul>
@@ -417,10 +417,10 @@ const Mentors = () => {
 
           {/* Become a Mentor CTA */}
           <section className="mb-16">
-            <Card className="card-elevated max-w-4xl mx-auto text-center bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20">
-              <Plus className="h-16 w-16 text-primary mx-auto mb-6" />
-              <h2 className="text-3xl font-bold text-foreground mb-4">Become a Mentor</h2>
-              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <Card className="max-w-4xl mx-auto text-center border-0 shadow-lg p-8" style={{ backgroundColor: '#518c5d' }}>
+              <Plus className="h-16 w-16 text-white mx-auto mb-6" />
+              <h2 className="text-3xl font-bold text-white mb-4">Become a Mentor</h2>
+              <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
                 Are you an expert in sustainability, technology, design, or business? 
                 Join our mentor network and help shape the future of sustainable transportation.
               </p>
