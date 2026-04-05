@@ -17,7 +17,7 @@ const Agenda = () => {
             </span>
             <h1 className="text-5xl font-bold text-foreground mb-6">Agenda</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Your complete 48-hour journey from Bucharest to Chisinau and back. 
+              Your complete 4-day journey from Bucharest to Chisinau and back. 
               Every moment designed for maximum collaboration and innovation.
             </p>
           </div>
@@ -164,7 +164,7 @@ const Agenda = () => {
           <div className="text-center">
             <h2 className="text-3xl font-bold text-foreground mb-6">Ready for the Journey?</h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Pack light, think big, and prepare for 48 hours of innovation on rails.
+              Pack light, think big, and prepare for 4 days of innovation on rails.
             </p>
             <Button asChild className="btn-hero text-xl px-12 py-6">
               <Link to="/apply">

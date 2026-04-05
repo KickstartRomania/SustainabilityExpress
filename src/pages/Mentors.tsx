@@ -325,7 +325,7 @@ const Mentors = () => {
               <Star className="h-16 w-16 text-primary mx-auto mb-6" />
               <h2 className="text-3xl font-bold text-foreground mb-4">How Mentorship Works</h2>
               <p className="text-lg text-muted-foreground">
-                Get guidance throughout your 48-hour innovation journey
+                Get guidance throughout your 4-day innovation journey
               </p>
             </div>
             

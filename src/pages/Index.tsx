@@ -805,8 +805,8 @@ Our next journey takes place on a train from Bucharest to Chisinau and back.
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
             <SectionDivider icon={Handshake} className="mb-8" />
-            <h2 className="text-4xl font-bold text-foreground mb-4">Our Partners</h2>
-            <p className="text-xl text-muted-foreground">Supported by industry leaders committed to sustainable innovation</p>
+            <h2 className="text-4xl font-bold text-foreground mb-4">Previous Partners</h2>
+            <p className="text-xl text-muted-foreground">Partners from our previous edition committed to sustainable innovation</p>
           </div>
           
           {/* Train-Themed Logo Slider */}
@@ -1018,7 +1018,7 @@ Our next journey takes place on a train from Bucharest to Chisinau and back.
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Board?</h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Join 20 innovators for 48 hours on rails. Apply now for the next edition of Sustainability Express — Bucharest to Chisinau and back.
+            Join 20 innovators for 4 days on rails. Apply now for the next edition of Sustainability Express — Bucharest to Chisinau and back.
           </p>
           <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-6 font-bold group">
             <Link to="/apply">
