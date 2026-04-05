@@ -1,68 +1,28 @@
 
 
-## Full Site Update: Edition 2 — Bucharest → Chisinau → Bucharest
+## Plan: Update Duration & Partner Labels
 
-### Summary of all changes
+### Changes
 
-**1. Route: Timisoara → Chisinau (no diacritics)**
+**1. "48 hours" → "4 days" (6 files)**
 
-Every instance of "Timisoara" / "Timișoara" becomes "Chisinau". Every "Bucharest → Timisoara → Bucharest" becomes "Bucharest → Chisinau → Bucharest". No diacritics anywhere.
+| File | Line(s) | Current | New |
+|------|---------|---------|-----|
+| `Index.tsx` | ~446 | "48 hours, mostly on board" | "4 days, mostly on board" |
+| `Index.tsx` | ~1021 | "48 hours on rails" | "4 days on rails" |
+| `Agenda.tsx` | ~20 | "48-hour journey" | "4-day journey" |
+| `Agenda.tsx` | ~167 | "48 hours of innovation on rails" | "4 days of innovation on rails" |
+| `Apply.tsx` | ~211 | "48 hours of innovation on rails" | "4 days of innovation on rails" |
+| `Mentors.tsx` | ~328 | "48-hour innovation journey" | "4-day innovation journey" |
+| `Logistics.tsx` | ~21 | "48 hours on rails" | "4 days on rails" |
+| `Logistics.tsx` | ~168 | "48 hours of innovation" | "4 days of innovation" |
+| `Footer.tsx` | ~55 | "48 Hours on Rails" | "4 Days on Rails" |
 
-Files: `Index.tsx`, `Agenda.tsx`, `Onboard.tsx`, `Logistics.tsx`, `HowItWorks.tsx`, `MentorRoute.tsx`, `Partners.tsx`
+**2. Homepage partners section → "Previous Partners" (`Index.tsx`)**
 
-**2. Date: "3-5 April 2026" → "Summer 2026"**
+- Line ~808: Change `"Our Partners"` → `"Previous Partners"`
+- Line ~809: Update subtitle to mention these are from the previous edition
 
-All date badges across all page headers.
-
-Files: `Index.tsx`, `Agenda.tsx`, `Onboard.tsx`, `Logistics.tsx`, `HowItWorks.tsx`, `Apply.tsx`
-
-**3. Price: 250 RON → 500 RON**
-
-File: `Apply.tsx`
-
-**4. Venue: "Supertree" → "TBA"**
-
-Replace all "Supertree" references with "Venue TBA" or "TBA".
-
-Files: `Onboard.tsx`, `MentorRoute.tsx`, `Agenda.tsx`
-
-**5. CTA: "Join Demo Day" → "Apply Now", link to /apply**
-
-Change all "Join Demo Day" buttons/links from external Luma URL to internal `/apply` route. Update text to "Apply Now".
-
-Files: `Navigation.tsx`, `Footer.tsx`, `Index.tsx`, `HowItWorks.tsx`, `Themes.tsx`, `Logistics.tsx`, `FAQ.tsx`, `Agenda.tsx`
-
-**6. CO-work Timisoara → label as previous edition partner**
-
-In `Partners.tsx`, change the name to "CO-work Timisoara (Previous Edition)" or add a "Previous Edition" badge next to it.
-
-**7. Mentors/Judges/Teams → label as "Previous Edition"**
-
-- `Mentors.tsx`: Add a "Previous Edition" heading/badge above mentor and judge listings
-- `Mentorship.tsx`: Add "Previous Edition" label above team briefings
-- `Onboard.tsx`: Add "Previous Edition" label above mentor route, cohort teams, and judges sections
-- `MentorRoute.tsx`: Update sublabels — train route to "Bucharest → Chisinau → Bucharest" but station labels (Timisoara, Bucharest/Supertree) get "Previous Edition" context
-
-**8. Agenda content**
-
-Update all Timisoara-specific items (arrival, departure) to say Chisinau. Remove specific train numbers and times that were edition-1-specific, or label the detailed schedule as "Previous Edition" and add a general new-edition placeholder.
-
-### Files touched (13 total)
-
-| File | Changes |
-|------|---------|
-| `Navigation.tsx` | CTA text + link |
-| `Footer.tsx` | CTA text + link |
-| `Index.tsx` | Date, route, CTA, Timisoara refs |
-| `Agenda.tsx` | Date, Timisoara → Chisinau, Supertree → TBA, CTA |
-| `Apply.tsx` | Date, price |
-| `HowItWorks.tsx` | Date, CTA |
-| `Logistics.tsx` | Date, Timisoara → Chisinau, CTA |
-| `Themes.tsx` | CTA |
-| `FAQ.tsx` | CTA |
-| `Onboard.tsx` | Date, route, venue, "Previous Edition" labels |
-| `Mentors.tsx` | "Previous Edition" labels |
-| `Mentorship.tsx` | "Previous Edition" label |
-| `MentorRoute.tsx` | Route text, station labels, venue |
-| `Partners.tsx` | CO-work Timisoara label |
+### Files touched: 6
+`Index.tsx`, `Agenda.tsx`, `Apply.tsx`, `Mentors.tsx`, `Logistics.tsx`, `Footer.tsx`
 
