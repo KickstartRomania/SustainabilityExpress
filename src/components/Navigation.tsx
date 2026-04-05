@@ -44,7 +44,7 @@ const Navigation = () => {
               </Link>
             ))}
             <Button asChild className="btn-hero">
-              <a href="https://luma.com/lxs8xxfm" target="_blank" rel="noopener noreferrer">Join Demo Day</a>
+              <Link to="/apply">Apply Now</Link>
             </Button>
           </div>
 
@@ -82,9 +82,9 @@ const Navigation = () => {
               ))}
               <div className="pt-4">
                 <Button asChild className="btn-hero w-full">
-                  <a href="https://luma.com/lxs8xxfm" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
-                    Join Demo Day
-                  </a>
+                  <Link to="/apply" onClick={() => setIsOpen(false)}>
+                    Apply Now
+                  </Link>
                 </Button>
               </div>
             </div>
