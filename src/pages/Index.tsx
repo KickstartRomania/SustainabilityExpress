@@ -443,7 +443,7 @@ const Index = () => {
 
 Our next journey takes place on a train from Bucharest to Chisinau and back.
 
-48 hours, mostly on board, dedicated to creating implementable ideas that can change the world.
+4 days, mostly on board, dedicated to creating implementable ideas that can change the world.
 
             </p>
             
