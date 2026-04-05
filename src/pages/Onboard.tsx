@@ -149,14 +149,14 @@ const Onboard = () => {
                   </div>
                   <div className="space-y-3 max-w-lg mx-auto">
                     {[
-                      { time: '06:30', title: 'Arrival in Timisoara', desc: 'Arrive at the station and head to the venue.' },
+                      { time: '06:30', title: 'Arrival in Chisinau', desc: 'Arrive at the station and head to the venue.' },
                       { time: '08:30', title: 'Breakfast', desc: 'Start the day with breakfast.' },
                       { time: '10:00', title: 'Lean Canvas Workshop, with Razvan Suta', desc: 'Shape your idea with a guided session.' },
                       { time: '12:00', title: 'Lunch', desc: '' },
                       { time: '13:00', title: 'Mentoring sessions', desc: 'Get feedback from mentors until 16:00.' },
                       { time: '18:00', title: 'Pitching Workshop, with George Bonea', desc: 'Work on your pitch before Demo Day.' },
                       { time: '19:00', title: 'Dinner', desc: '' },
-                      { time: '20:41', title: 'Departure from Timisoara', desc: 'IR 11500. Board the train back to Bucharest.' },
+                      { time: '20:41', title: 'Departure from Chisinau', desc: 'Board the train back to Bucharest.' },
                       { time: '00:00', title: 'Late-night build session', desc: 'Keep working on the train.' },
                     ].map((item) => (
                       <div key={item.time} className="flex items-start gap-4">
@@ -183,7 +183,7 @@ const Onboard = () => {
                     {[
                       { time: '08:30', title: 'Arrival in Bucharest', desc: 'Back at Gara de Nord.' },
                       { time: '09:00', title: 'Tura de duminica', desc: 'A relaxed morning walk in Cotroceni, away from screens,', link: 'https://luma.com/fxmyhr1d' },
-                      { time: '10:00', title: 'Transfer to Supertree', desc: 'Head to the Demo Day venue.' },
+                      { time: '10:00', title: 'Transfer to Venue TBA', desc: 'Head to the Demo Day venue.' },
                       { time: '11:00', title: 'Final working session', desc: 'Final polish and presentation prep.' },
                       { time: '13:30', title: 'Doors open', desc: 'Guests begin to arrive.' },
                       { time: '14:00', title: 'Demo Day', desc: 'Each team presents, followed by jury Q&A and awards.', link: 'https://luma.com/lxs8xxfm' },
