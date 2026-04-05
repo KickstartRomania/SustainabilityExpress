@@ -8,14 +8,14 @@ import MentorRoute from '@/components/onboard/MentorRoute';
 
 // Judge images
 import hanaanYaseen from '@/assets/judges/hanaan-yaseen.jpg';
-import ralucaMessai from '@/assets/mentors/raluca-messai.jpeg';
+import edouardMillot from '@/assets/judges/edouard-millot.png';
 import aleodorTabarcea from '@/assets/mentors/aleodor-tabarcea.jpeg';
 import samuelStancu from '@/assets/judges/samuel-stancu.png';
 import loredanaGavrilescu from '@/assets/judges/loredana-gavrilescu.png';
 
 const judges = [
   { name: 'Hanaan Yaseen', role: 'Strategy and ESG Manager', company: 'Pro TV', image: hanaanYaseen, linkedin: 'https://www.linkedin.com/in/hanaan-yaseen-phd-64263933/' },
-  { name: 'Raluca Messai', role: 'Founder', company: 'diARK', image: ralucaMessai, linkedin: 'https://www.linkedin.com/in/ralucamessai/' },
+  { name: 'Edouard Millot', role: 'Founding Partner', company: 'Alt Era Partners', image: edouardMillot, linkedin: 'https://www.linkedin.com/in/edouard-millot-514b0412/' },
   { name: 'Aleodor Tabarcea', role: 'Engineering Manager', company: 'Stripe', image: aleodorTabarcea, linkedin: 'https://www.linkedin.com/in/aleodor-tabarcea/' },
   { name: 'Samuel Stancu', role: 'Head of Urbanism Division', company: 'UrbanizeHub', image: samuelStancu, linkedin: 'https://www.linkedin.com/in/samuelstancu/' },
   { name: 'Loredana Gavrilescu', role: 'Startup Ecosystem Coordinator', company: 'Iceberg Plus', image: loredanaGavrilescu, linkedin: 'https://www.linkedin.com/in/loredana-gavrilescu-startup-consultant/' },

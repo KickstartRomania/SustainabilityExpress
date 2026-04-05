@@ -13,7 +13,7 @@ import catalinAnghel from '@/assets/mentors/catalin-anghel.jpeg';
 import maximRotaru from '@/assets/mentors/maxim-rotaru.jpeg';
 import raduTiciu from '@/assets/mentors/radu-ticiu.jpeg';
 import iuliaAndritoiuCaizer from '@/assets/mentors/iulia-andritoiu-caizer.jpeg';
-import ralucaMessai from '@/assets/mentors/raluca-messai.jpeg';
+import edouardMillot from '@/assets/judges/edouard-millot.png';
 import andreeaNicolae from '@/assets/mentors/andreea-nicolae.jpeg';
 import stefaniaDuta from '@/assets/mentors/stefania-duta.png';
 import nicoletaPirvu from '@/assets/mentors/nicoleta-pirvu.png';
@@ -36,11 +36,11 @@ type Mentor = {
 };
 
 const mentors: Mentor[] = [{
-  name: 'Raluca Messai',
-  role: 'Entrepreneur & Brand strategist',
-  company: 'diARK',
-  image: ralucaMessai,
-  linkedin: 'https://www.linkedin.com/in/ralucamessai/'
+  name: 'Edouard Millot',
+  role: 'Founding Partner',
+  company: 'Alt Era Partners',
+  image: edouardMillot,
+  linkedin: 'https://www.linkedin.com/in/edouard-millot-514b0412/'
 }, {
   name: 'Aleodor Tabarcea',
   role: 'Engineering Manager',
