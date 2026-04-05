@@ -38,11 +38,11 @@ const BackgroundBubble = ({ bg }: { bg: string }) => {
 
 
 const schedule = [
-  { time: '06:30', activity: 'Arrival in Timișoara' },
+  { time: '06:30', activity: 'Arrival in Timisoara' },
   { time: '10:00', activity: 'Lean Canvas Workshop, with Răzvan Șuța' },
   { time: '13:00–16:00', activity: 'Speed mentoring rotation', highlight: true },
   { time: '18:00', activity: 'Pitching Workshop, with George Bonea' },
-  { time: '20:41', activity: 'Departure from Timișoara' },
+  { time: '20:41', activity: 'Departure from Timisoara' },
 ];
 
 const mentorLinkedins: Record<string, string> = {
