@@ -44,6 +44,7 @@ import coworkTimisoaraLogo from '@/assets/partners/cowork-timisoara.png';
 import autonomLogo from '@/assets/partners/autonom.png';
 import protvLogo from '@/assets/partners/protv.png';
 import mpLogo from '@/assets/partners/mp.png';
+import supertreeLogo from '@/assets/partners/supertree.png';
 const partners = [{
   name: 'Pro TV',
   logo: protvLogo
@@ -53,6 +54,9 @@ const partners = [{
 }, {
   name: 'diARK',
   logo: diarkLogo
+}, {
+  name: 'Supertree',
+  logo: supertreeLogo
 }, {
   name: 'Bookster',
   logo: booksterLogo
