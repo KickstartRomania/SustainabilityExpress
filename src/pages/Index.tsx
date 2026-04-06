@@ -266,6 +266,9 @@ const row2Partners = [{
   logo: protvLogo,
   wide: true
 }, {
+  name: 'Supertree',
+  logo: supertreeLogo
+}, {
   name: 'Autonom',
   logo: autonomLogo
 }, {
