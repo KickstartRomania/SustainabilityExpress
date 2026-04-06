@@ -215,6 +215,7 @@ import coworkTimisoaraLogo from '@/assets/partners/cowork-timisoara.png';
 import autonomLogo from '@/assets/partners/autonom.png';
 import protvLogo from '@/assets/partners/protv.png';
 import mpLogo from '@/assets/partners/mp.png';
+import supertreeLogo from '@/assets/partners/supertree.png';
 
 // Row 1 partners (first half - including ProTV as main sponsor and PHINIA)
 const row1Partners = [{
@@ -264,6 +265,9 @@ const row2Partners = [{
   name: 'Pro TV',
   logo: protvLogo,
   wide: true
+}, {
+  name: 'Supertree',
+  logo: supertreeLogo
 }, {
   name: 'Autonom',
   logo: autonomLogo
