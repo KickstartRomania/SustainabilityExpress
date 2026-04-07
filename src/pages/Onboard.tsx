@@ -70,7 +70,7 @@ const teams = [
     members: [
       { name: 'Laurentiu Toader', background: 'Tech', linkedin: 'https://www.linkedin.com/in/laurentiu-cel-toader' },
       { name: 'Adriana Moima', background: 'Business', linkedin: 'https://www.linkedin.com/in/adriana-moima-24465b84' },
-      { name: 'Gabriela Caragata', background: 'Creative', linkedin: 'https://www.linkedin.com/in/gabriela-caragata-0810a3227/' },
+      { name: 'Gabriela Caragata', background: 'Creative', linkedin: 'https://www.linkedin.com/in/gabriela-caraga%C8%9B%C4%83-0810a3227/' },
       { name: 'Andrei Gagiu', background: 'High School' },
     ],
   },
