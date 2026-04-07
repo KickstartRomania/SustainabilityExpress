@@ -32,46 +32,46 @@ const teams = [
   {
     name: 'Team Arges',
     members: [
-      { name: 'Stefan Ciobanu', background: 'Tech' },
-      { name: 'Auras Vlase', background: 'Business' },
-      { name: 'Serena Stoica', background: 'Creative' },
-      { name: 'Adriana Moise', background: 'High School' },
+      { name: 'Stefan Ciobanu', background: 'Tech', linkedin: 'https://www.linkedin.com/in/stefan-ciobanu-64a510235/' },
+      { name: 'Auras Vlase', background: 'Business', linkedin: 'https://www.linkedin.com/in/auras-vlase/' },
+      { name: 'Serena Stoica', background: 'Creative', linkedin: 'https://www.linkedin.com/in/serena-stoica/' },
+      { name: 'Adriana Moise', background: 'High School', linkedin: 'https://www.linkedin.com/in/adriana-moise/' },
     ],
   },
   {
     name: 'Team Olt',
     members: [
-      { name: 'Andrei Stroescu', background: 'Tech' },
-      { name: 'Dan Popescu', background: 'Business' },
-      { name: 'Ana Maria Dragan', background: 'Creative' },
-      { name: 'Andrei Pana', background: 'High School' },
+      { name: 'Andrei Stroescu', background: 'Tech', linkedin: 'https://www.linkedin.com/in/andrei-stroescu/' },
+      { name: 'Dan Popescu', background: 'Business', linkedin: 'https://www.linkedin.com/in/dan-popescu/' },
+      { name: 'Ana Maria Dragan', background: 'Creative', linkedin: 'https://www.linkedin.com/in/ana-maria-dragan/' },
+      { name: 'Andrei Pana', background: 'High School', linkedin: 'https://www.linkedin.com/in/andrei-pana/' },
     ],
   },
   {
     name: 'Team Jiu',
     members: [
-      { name: 'Omid Ghozatlou', background: 'Tech' },
-      { name: 'Ioana Bitoleanu', background: 'Business' },
-      { name: 'Andrei Bucureci', background: 'Creative' },
-      { name: 'Alexandru Despina', background: 'High School' },
+      { name: 'Omid Ghozatlou', background: 'Tech', linkedin: 'https://www.linkedin.com/in/omid-ghozatlou/' },
+      { name: 'Ioana Bitoleanu', background: 'Business', linkedin: 'https://www.linkedin.com/in/ioana-bitoleanu/' },
+      { name: 'Andrei Bucureci', background: 'Creative', linkedin: 'https://www.linkedin.com/in/andrei-bucureci/' },
+      { name: 'Alexandru Despina', background: 'High School', linkedin: 'https://www.linkedin.com/in/alexandru-despina/' },
     ],
   },
   {
     name: 'Team Timis',
     members: [
-      { name: 'Ludovico Cesaro', background: 'Tech' },
-      { name: 'Emil Boncea', background: 'Business' },
-      { name: 'Diana Micu', background: 'Creative' },
-      { name: 'Alexandru Grigorescu', background: 'High School' },
+      { name: 'Ludovico Cesaro', background: 'Tech', linkedin: 'https://www.linkedin.com/in/ludovico-cesaro/' },
+      { name: 'Emil Boncea', background: 'Business', linkedin: 'https://www.linkedin.com/in/emil-boncea/' },
+      { name: 'Diana Micu', background: 'Creative', linkedin: 'https://www.linkedin.com/in/diana-micu/' },
+      { name: 'Alexandru Grigorescu', background: 'High School', linkedin: 'https://www.linkedin.com/in/alexandru-grigorescu/' },
     ],
   },
   {
     name: 'Team Dunarea',
     members: [
-      { name: 'Laurentiu Toader', background: 'Tech' },
-      { name: 'Adriana Moima', background: 'Business' },
-      { name: 'Gabriela Caragata', background: 'Creative' },
-      { name: 'Andrei Gagiu', background: 'High School' },
+      { name: 'Laurentiu Toader', background: 'Tech', linkedin: 'https://www.linkedin.com/in/laurentiu-toader/' },
+      { name: 'Adriana Moima', background: 'Business', linkedin: 'https://www.linkedin.com/in/adriana-moima/' },
+      { name: 'Gabriela Caragata', background: 'Creative', linkedin: 'https://www.linkedin.com/in/gabriela-caragata/' },
+      { name: 'Andrei Gagiu', background: 'High School', linkedin: 'https://www.linkedin.com/in/andrei-gagiu/' },
     ],
   },
 ];
@@ -223,7 +223,12 @@ const Onboard = () => {
                     {team.members.map((m) => (
                       <li key={m.name} className="flex items-center gap-2">
                         <span className={`w-2 h-2 rounded-full shrink-0 ${dotColors[m.background]}`} />
-                        <span className="text-foreground text-xs truncate">{m.name}</span>
+                        <span className="text-foreground text-xs truncate flex-1">{m.name}</span>
+                        {m.linkedin && (
+                          <a href={m.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${m.name} on LinkedIn`} className="shrink-0 w-5 h-5 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors flex items-center justify-center">
+                            <Linkedin className="h-3 w-3 text-primary" />
+                          </a>
+                        )}
                       </li>
                     ))}
                   </ul>
