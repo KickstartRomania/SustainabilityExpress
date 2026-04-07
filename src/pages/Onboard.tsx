@@ -33,7 +33,7 @@ const teams = [
     name: 'Team Arges',
     members: [
       { name: 'Stefan Ciobanu', background: 'Tech', linkedin: 'https://www.linkedin.com/in/stefan-silvian-ciobanu-ro18' },
-      { name: 'Auras Vlase', background: 'Business' },
+      { name: 'Auras Vlase', background: 'Business', linkedin: 'https://www.linkedin.com/in/vlase-a-43b022a5/' },
       { name: 'Serena Stoica', background: 'Creative', linkedin: 'https://www.linkedin.com/in/maria-serena-stoica-9692b0223' },
       { name: 'Adriana Moise', background: 'High School' },
     ],
@@ -60,8 +60,8 @@ const teams = [
     name: 'Team Timis',
     members: [
       { name: 'Ludovico Cesaro', background: 'Tech', linkedin: 'https://www.linkedin.com/in/ludovico-c-2a68b29b' },
-      { name: 'Emil Boncea', background: 'Business' },
-      { name: 'Diana Micu', background: 'Creative' },
+      { name: 'Emil Boncea', background: 'Business', linkedin: 'https://www.linkedin.com/in/emil-gabriel-boncea-365b1629a/' },
+      { name: 'Diana Micu', background: 'Creative', linkedin: 'https://www.linkedin.com/in/roberta-micu-1b8231235' },
       { name: 'Alexandru Grigorescu', background: 'High School' },
     ],
   },
@@ -70,7 +70,7 @@ const teams = [
     members: [
       { name: 'Laurentiu Toader', background: 'Tech', linkedin: 'https://www.linkedin.com/in/laurentiu-cel-toader' },
       { name: 'Adriana Moima', background: 'Business', linkedin: 'https://www.linkedin.com/in/adriana-moima-24465b84' },
-      { name: 'Gabriela Caragata', background: 'Creative' },
+      { name: 'Gabriela Caragata', background: 'Creative', linkedin: 'https://www.linkedin.com/in/gabriela-caragata-0810a3227/' },
       { name: 'Andrei Gagiu', background: 'High School' },
     ],
   },
