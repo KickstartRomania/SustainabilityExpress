@@ -223,7 +223,12 @@ const Onboard = () => {
                     {team.members.map((m) => (
                       <li key={m.name} className="flex items-center gap-2">
                         <span className={`w-2 h-2 rounded-full shrink-0 ${dotColors[m.background]}`} />
-                        <span className="text-foreground text-xs truncate">{m.name}</span>
+                        <span className="text-foreground text-xs truncate flex-1">{m.name}</span>
+                        {m.linkedin && (
+                          <a href={m.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${m.name} on LinkedIn`} className="shrink-0 w-5 h-5 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors flex items-center justify-center">
+                            <Linkedin className="h-3 w-3 text-primary" />
+                          </a>
+                        )}
                       </li>
                     ))}
                   </ul>
