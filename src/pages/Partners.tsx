@@ -186,36 +186,23 @@ const Partners = () => {
   };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    // Validate form data with Zod
-    const validationResult = partnerInquirySchema.safeParse({
-      ...formData,
-      sponsorType
-    });
-    if (!validationResult.success) {
-      const firstError = validationResult.error.errors[0];
-      toast({
-        title: "Validation Error",
-        description: firstError.message,
-        variant: "destructive"
-      });
-      return;
-    }
-
     setIsSubmitting(true);
 
     try {
-      const validated = validationResult.data;
-      const { error } = await supabase.from("partner_inquiries").insert({
-        first_name: validated.firstName,
-        last_name: validated.lastName,
-        email: validated.email,
-        phone: validated.phone,
-        company: validated.company,
-        sponsor_type: validated.sponsorType,
+      const res = await fetch("https://se-forms.kickstartromania.workers.dev/partner", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          sponsor_type: sponsorType,
+        }),
       });
 
-      if (error) throw error;
+      if (!res.ok) throw new Error("Submission failed");
 
       setIsDialogOpen(false);
       setFormData({
@@ -229,11 +216,11 @@ const Partners = () => {
         title: "Thanks for getting in touch!",
         description: "We will reach out by email."
       });
-    } catch (error: unknown) {
-      logError(error, 'partner-inquiry-submission');
+    } catch (error) {
+      console.error("Error submitting partner inquiry:", error);
       toast({
-        title: "Submission Failed",
-        description: "There was an error submitting your inquiry. Please try again.",
+        title: "Error",
+        description: "Failed to submit inquiry. Please try again.",
         variant: "destructive"
       });
     } finally {
