@@ -61,93 +61,36 @@ const Apply = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Validate form data with Zod
-    const validationResult = applicationSchema.safeParse(formData);
-    
-    if (!validationResult.success) {
-      const firstError = validationResult.error.errors[0];
-      toast({
-        title: "Validation Error",
-        description: firstError.message,
-        variant: "destructive",
-      });
-      return;
-    }
-
-    const validatedData = validationResult.data;
-    
-    // Check rate limit before submission
-    const rateLimitResult = checkRateLimit('application_form', { maxSubmissions: 3, windowMs: 3600000 });
-    if (!rateLimitResult.allowed) {
-      const resetTimeStr = rateLimitResult.resetTime ? formatResetTime(rateLimitResult.resetTime) : 'later';
-      toast({
-        title: "Too Many Submissions",
-        description: `You can only submit 3 applications per hour. Please try again in ${resetTimeStr}.`,
-        variant: "destructive",
-      });
-      return;
-    }
-    
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase.from('applications').insert({
-        first_name: validatedData.firstName,
-        last_name: validatedData.lastName,
-        email: validatedData.email,
-        phone: validatedData.phone,
-        role: validatedData.role,
-        skill_level: validatedData.skillLevel,
-        portfolio: validatedData.portfolio || null,
-        motivation: validatedData.motivation,
-        idea: validatedData.idea || null,
-        accessibility: validatedData.accessibility || null,
-        code_of_conduct: validatedData.codeOfConduct,
-        photo_consent: validatedData.photoConsent,
-      });
-
-      if (error) throw error;
-
-      // Record successful submission for rate limiting
-      recordSubmission('application_form', 3600000);
-
-      // Send to Make.com webhook (non-blocking - don't fail if webhook fails)
-      fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-to-make`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const res = await fetch("https://se-forms.kickstartromania.workers.dev/apply", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          firstName: validatedData.firstName,
-          lastName: validatedData.lastName,
-          email: validatedData.email,
-          phone: validatedData.phone,
-          role: validatedData.role,
-          skill_level: validatedData.skillLevel,
-          portfolio: validatedData.portfolio,
-          motivation: validatedData.motivation,
-          idea: validatedData.idea || null,
-          accessibility: validatedData.accessibility || null,
-          submitted_at: new Date().toISOString()
-        })
-      }).catch(err => console.error('Make.com webhook failed:', err));
-      
-      setIsSubmitted(true);
-      toast({
-        title: "Application Submitted!",
-        description: "We'll review your application and get back to you within 5-7 days.",
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          role: formData.role,
+          skill_level: formData.skillLevel,
+          portfolio: formData.portfolio,
+          motivation: formData.motivation,
+          idea: formData.idea,
+          accessibility: formData.accessibility,
+          code_of_conduct: formData.codeOfConduct,
+          photo_consent: formData.photoConsent,
+        }),
       });
-    } catch (error: unknown) {
-      logError(error, 'application-submission');
-      
-      // Check if this is a rate limit error from the database trigger
-      const errorMessage = error instanceof Error ? error.message : String(error);
-      const isRateLimitError = errorMessage.includes('Rate limit exceeded');
-      
+
+      if (!res.ok) throw new Error("Submission failed");
+
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error("Error submitting application:", error);
       toast({
-        title: isRateLimitError ? "Too Many Submissions" : "Submission Failed",
-        description: isRateLimitError 
-          ? "You can only submit 3 applications per hour. Please try again later."
-          : "There was an error submitting your application. Please try again.",
+        title: "Error",
+        description: "Failed to submit application. Please try again.",
         variant: "destructive",
       });
     } finally {

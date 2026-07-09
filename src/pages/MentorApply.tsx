@@ -74,44 +74,31 @@ const MentorApply = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    const validationResult = mentorApplicationSchema.safeParse(formData);
-    if (!validationResult.success) {
-      const firstError = validationResult.error.errors[0];
-      toast({
-        title: "Validation Error",
-        description: firstError.message,
-        variant: "destructive",
-      });
-      return;
-    }
-
     setIsSubmitting(true);
 
     try {
-      const validated = validationResult.data;
-      const { error } = await supabase.from("mentor_applications").insert({
-        first_name: validated.firstName,
-        last_name: validated.lastName,
-        email: validated.email,
-        linkedin: validated.linkedin,
-        phone: validated.phone,
-        based_in: validated.basedIn,
-        background: validated.background,
+      const res = await fetch("https://se-forms.kickstartromania.workers.dev/mentor", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          linkedin: formData.linkedin,
+          based_in: formData.basedIn,
+          background: formData.background,
+        }),
       });
 
-      if (error) throw error;
+      if (!res.ok) throw new Error("Submission failed");
 
       setIsSubmitted(true);
+    } catch (error) {
+      console.error("Error submitting mentor application:", error);
       toast({
-        title: "Thanks!",
-        description: "We received your mentor application and will get back to you soon.",
-      });
-    } catch (error: unknown) {
-      logError(error, "mentor-application-submission");
-      toast({
-        title: "Submission Failed",
-        description: "There was an error submitting your mentor application. Please try again.",
+        title: "Error",
+        description: "Failed to submit application. Please try again.",
         variant: "destructive",
       });
     } finally {
