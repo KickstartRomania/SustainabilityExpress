@@ -13,11 +13,11 @@ const Agenda = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <span className="inline-block bg-primary/20 text-primary px-4 py-2 rounded-full text-lg font-semibold border border-primary/30 mb-6">
-              Summer 2026
+              20-22 November 2026
             </span>
             <h1 className="text-5xl font-bold text-foreground mb-6">Agenda</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Your complete 4-day journey from Bucharest to Chisinau and back. 
+              Your complete journey from Bucharest to Cluj and back. 
               Every moment designed for maximum collaboration and innovation.
             </p>
           </div>
@@ -59,14 +59,14 @@ const Agenda = () => {
                   <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
                     <MapPin className="h-6 w-6 text-primary-foreground" />
                   </div>
-                  <h2 className="text-2xl font-bold text-foreground">Saturday - Full Hack Day in Chisinau</h2>
+                  <h2 className="text-2xl font-bold text-foreground">Saturday - Full Hack Day in Cluj</h2>
                 </div>
                 
                 <div className="space-y-4">
                   <div className="flex items-start gap-4">
                     <div className="w-20 text-sm font-medium text-muted-foreground pt-1">09:00</div>
                     <div className="flex-1">
-                      <h3 className="font-semibold text-foreground">Arrive Chisinau</h3>
+                      <h3 className="font-semibold text-foreground">Arrive Cluj</h3>
                       <p className="text-muted-foreground">Transfer to venue (TBA), breakfast, workspace setup</p>
                     </div>
                   </div>

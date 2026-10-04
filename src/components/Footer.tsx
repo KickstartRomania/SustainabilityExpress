@@ -48,7 +48,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2 text-white/80">
                 <Train className="h-4 w-4" />
-                Bucharest ↔ Chisinau
+                Bucharest ↔ Cluj
               </li>
               <li className="flex items-center gap-2 text-white/80">
                 <MapPin className="h-4 w-4" />

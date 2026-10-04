@@ -379,7 +379,7 @@ const Index = () => {
             
             <div className="space-y-4">
               <span className="inline-block bg-primary/20 text-primary px-4 py-2 rounded-full text-lg font-semibold border border-primary/30">
-                Summer 2026
+                20-22 November 2026
               </span>
               <div>
                 <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
@@ -445,14 +445,14 @@ const Index = () => {
             <p className="text-xl text-muted-foreground leading-relaxed mb-12">
               Sustainability Express is an on-train innovation journey turning sustainable challenges into real, testable solutions.
 
-Our next journey takes place on a train from Bucharest to Chisinau and back.
+Our next journey takes place on a train from Bucharest to Cluj and back.
 
 4 days, mostly on board, dedicated to creating implementable ideas that can change the world.
 
             </p>
             
             {/* Route visualization */}
-            <RouteVisualization stops={['Bucharest', 'Chisinau', 'Bucharest']} />
+            <RouteVisualization stops={['Bucharest', 'Cluj', 'Bucharest']} />
           </div>
         </div>
       </RailSection>
@@ -747,7 +747,7 @@ Our next journey takes place on a train from Bucharest to Chisinau and back.
                 1
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-2">Departure & Ideation</h3>
-              <p className="text-sm font-medium text-primary mb-4">(Bucharest → Chisinau)</p>
+              <p className="text-sm font-medium text-primary mb-4">(Bucharest → Cluj)</p>
               <p className="text-muted-foreground">
                 The journey starts on a night train where teams are formed, challenges are introduced, and the first ideas take shape during intensive on-board collaboration.
               </p>
@@ -758,7 +758,7 @@ Our next journey takes place on a train from Bucharest to Chisinau and back.
                 2
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-2">Deep Work & Mentorship</h3>
-              <p className="text-sm font-medium text-primary mb-4">(Chisinau)</p>
+              <p className="text-sm font-medium text-primary mb-4">(Cluj)</p>
               <p className="text-muted-foreground">
                 A full day of workshops, expert mentorship, and team work focused on refining concepts, validating ideas, and preparing clear solution directions.
               </p>
@@ -769,7 +769,7 @@ Our next journey takes place on a train from Bucharest to Chisinau and back.
                 3
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-2">Prototyping & Final Pitches</h3>
-              <p className="text-sm font-medium text-primary mb-4">(Chisinau → Bucharest)</p>
+              <p className="text-sm font-medium text-primary mb-4">(Cluj → Bucharest)</p>
               <p className="text-muted-foreground">
                 Teams finalize prototypes and presentations on the return train, then pitch their solutions in Bucharest in front of a jury and partners.
               </p>
@@ -1022,7 +1022,7 @@ Our next journey takes place on a train from Bucharest to Chisinau and back.
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Board?</h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Join 20 innovators for 4 days on rails. Apply now for the next edition of Sustainability Express — Bucharest to Chisinau and back.
+            Join 20 innovators for 4 days on rails. Apply now for the next edition of Sustainability Express — Bucharest to Cluj and back.
           </p>
           <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-6 font-bold group">
             <Link to="/apply">
