@@ -52,7 +52,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2 text-white/80">
                 <MapPin className="h-4 w-4" />
-                4 Days on Rails
+                3 Days on Rails
               </li>
               <li className="text-white/80">
                 20 Participants
