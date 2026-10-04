@@ -13,7 +13,7 @@ const HowItWorks = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <span className="inline-block bg-primary/20 text-primary px-4 py-2 rounded-full text-lg font-semibold border border-primary/30 mb-6">
-              Summer 2026
+              20-22 November 2026
             </span>
             <h1 className="text-5xl font-bold text-foreground mb-6">How It Works</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -223,7 +223,7 @@ const HowItWorks = () => {
                   <h3 className="text-xl font-bold text-foreground mb-4">Included</h3>
                   <ul className="space-y-2 text-muted-foreground">
                     <li>✅ Train seats and workspace</li>
-                    <li>✅ Venue space in Chisinau</li>
+                    <li>✅ Venue space in Cluj</li>
                     <li>✅ All meals and coffee</li>
                     <li>✅ Wi-Fi (where available)</li>
                     <li>✅ On-board mentorship</li>

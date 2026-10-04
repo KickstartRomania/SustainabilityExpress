@@ -46,7 +46,7 @@ const stations: StationData[] = [
   {
     icon: Train,
     label: 'On the Train',
-    sublabel: 'Bucharest → Chisinau → Bucharest (Previous Edition)',
+    sublabel: 'Bucharest → Timisoara → Bucharest (Previous Edition)',
     color: 'text-primary',
     dotColor: 'bg-primary',
     mentors: [

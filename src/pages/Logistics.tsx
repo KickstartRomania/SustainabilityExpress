@@ -13,12 +13,12 @@ const Logistics = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <span className="inline-block bg-primary/20 text-primary px-4 py-2 rounded-full text-lg font-semibold border border-primary/30 mb-6">
-              Summer 2026
+              20-22 November 2026
             </span>
             <h1 className="text-5xl font-bold text-foreground mb-6">Logistics</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Everything you need to know about the train journey, venue details, 
-              safety protocols, and what to expect during your 4 days on rails.
+              safety protocols, and what to expect during your 3 days on rails.
             </p>
           </div>
 
@@ -165,7 +165,7 @@ const Logistics = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-foreground mb-4">Final Packing Checklist</h2>
               <p className="text-xl text-muted-foreground">
-                Make sure you're prepared for 4 days of innovation
+                Make sure you're prepared for 3 days of innovation
               </p>
             </div>
             

@@ -147,11 +147,11 @@ const Apply = () => {
           {/* Header */}
           <div className="text-center mb-12">
             <span className="inline-block bg-primary/20 text-primary px-4 py-2 rounded-full text-lg font-semibold border border-primary/30 mb-6">
-              Summer 2026
+              20-22 November 2026
             </span>
             <h1 className="text-5xl font-bold text-foreground mb-6">Apply Now</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Join us for 4 days of innovation on rails. Limited seats available for passionate builders, 
+              Join us for 3 days of innovation on rails. Limited seats available for passionate builders, 
               designers, and sustainability enthusiasts.
             </p>
           </div>
