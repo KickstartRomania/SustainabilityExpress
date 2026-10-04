@@ -149,14 +149,14 @@ const Onboard = () => {
                   </div>
                   <div className="space-y-3 max-w-lg mx-auto">
                     {[
-                      { time: '06:30', title: 'Arrival in Cluj', desc: 'Arrive at the station and head to the venue.' },
+                      { time: '06:30', title: 'Arrival in Timisoara', desc: 'Arrive at the station and head to the venue.' },
                       { time: '08:30', title: 'Breakfast', desc: 'Start the day with breakfast.' },
                       { time: '10:00', title: 'Lean Canvas Workshop, with Razvan Suta', desc: 'Shape your idea with a guided session.' },
                       { time: '12:00', title: 'Lunch', desc: '' },
                       { time: '13:00', title: 'Mentoring sessions', desc: 'Get feedback from mentors until 16:00.' },
                       { time: '18:00', title: 'Pitching Workshop, with George Bonea', desc: 'Work on your pitch before Demo Day.' },
                       { time: '19:00', title: 'Dinner', desc: '' },
-                      { time: '20:41', title: 'Departure from Cluj', desc: 'Board the train back to Bucharest.' },
+                      { time: '20:41', title: 'Departure from Timisoara', desc: 'Board the train back to Bucharest.' },
                       { time: '00:00', title: 'Late-night build session', desc: 'Keep working on the train.' },
                     ].map((item) => (
                       <div key={item.time} className="flex items-start gap-4">
@@ -303,7 +303,7 @@ const Onboard = () => {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
-                { icon: TrainFront, title: 'Transport', desc: 'Bucharest → Cluj → Bucharest. Group transfers included.' },
+                { icon: TrainFront, title: 'Transport', desc: 'Bucharest → Timisoara → Bucharest. Group transfers included.' },
                 { icon: BedDouble, title: 'Accommodation', desc: '2 nights on the train. Sleeping arrangements provided.' },
                 { icon: UtensilsCrossed, title: 'Food', desc: 'Meals, snacks, and drinks covered.' },
                 { icon: Backpack, title: 'What to Bring', desc: 'Laptop, charger, headphones, comfortable clothes, essentials.' },
