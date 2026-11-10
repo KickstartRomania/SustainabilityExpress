@@ -442,14 +442,14 @@ const Index = () => {
             <p className="text-xl text-muted-foreground leading-relaxed mb-12">
               Sustainability Express is an on-train innovation journey turning sustainable challenges into real, testable solutions.
 
-Our Spring 2027 journey takes place on a train from Bucharest to Cluj and back.
+Our Spring 2027 journey brings innovators together for 3 days of building, learning, and collaboration on rails.
 
 3 days, mostly on board, dedicated to creating implementable ideas that can change the world.
 
             </p>
             
             {/* Route visualization */}
-            <RouteVisualization stops={['Bucharest', 'Cluj', 'Bucharest']} />
+            <RouteVisualization stops={['Board', 'Build', 'Pitch']} />
           </div>
         </div>
       </RailSection>
@@ -744,7 +744,7 @@ Our Spring 2027 journey takes place on a train from Bucharest to Cluj and back.
                 1
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-2">Departure & Ideation</h3>
-              <p className="text-sm font-medium text-primary mb-4">(Bucharest → Cluj)</p>
+              <p className="text-sm font-medium text-primary mb-4">On the train</p>
               <p className="text-muted-foreground">
                 The journey starts on a night train where teams are formed, challenges are introduced, and the first ideas take shape during intensive on-board collaboration.
               </p>
@@ -755,7 +755,7 @@ Our Spring 2027 journey takes place on a train from Bucharest to Cluj and back.
                 2
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-2">Deep Work & Mentorship</h3>
-              <p className="text-sm font-medium text-primary mb-4">(Cluj)</p>
+              <p className="text-sm font-medium text-primary mb-4">Workshops & mentorship</p>
               <p className="text-muted-foreground">
                 A full day of workshops, expert mentorship, and team work focused on refining concepts, validating ideas, and preparing clear solution directions.
               </p>
@@ -766,7 +766,7 @@ Our Spring 2027 journey takes place on a train from Bucharest to Cluj and back.
                 3
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-2">Prototyping & Final Pitches</h3>
-              <p className="text-sm font-medium text-primary mb-4">(Cluj → Bucharest)</p>
+              <p className="text-sm font-medium text-primary mb-4">Return & final pitches</p>
               <p className="text-muted-foreground">
                 Teams finalize prototypes and presentations on the return train, then pitch their solutions in Bucharest in front of a jury and partners.
               </p>
@@ -1019,7 +1019,7 @@ Our Spring 2027 journey takes place on a train from Bucharest to Cluj and back.
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Board?</h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Join 20 innovators for 3 days on rails. Apply now for the Spring 2027 edition of Sustainability Express — Bucharest to Cluj and back.
+            Join 20 innovators for 3 days on rails. Apply now for the Spring 2027 edition of Sustainability Express.
           </p>
           <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-6 font-bold group">
             <Link to="/apply">

@@ -223,7 +223,7 @@ const HowItWorks = () => {
                   <h3 className="text-xl font-bold text-foreground mb-4">Included</h3>
                   <ul className="space-y-2 text-muted-foreground">
                     <li>✅ Train seats and workspace</li>
-                    <li>✅ Venue space in Cluj</li>
+                    <li>✅ Hackathon workspace</li>
                     <li>✅ All meals and coffee</li>
                     <li>✅ Wi-Fi (where available)</li>
                     <li>✅ On-board mentorship</li>
