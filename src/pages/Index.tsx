@@ -442,7 +442,7 @@ const Index = () => {
             <p className="text-xl text-muted-foreground leading-relaxed mb-12">
               Sustainability Express is an on-train innovation journey turning sustainable challenges into real, testable solutions.
 
-Our next journey takes place on a train from Bucharest to Cluj and back.
+Our Spring 2027 journey takes place on a train from Bucharest to Cluj and back.
 
 3 days, mostly on board, dedicated to creating implementable ideas that can change the world.
 
@@ -1019,7 +1019,7 @@ Our next journey takes place on a train from Bucharest to Cluj and back.
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Board?</h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Join 20 innovators for 3 days on rails. Apply now for the next edition of Sustainability Express — Bucharest to Cluj and back.
+            Join 20 innovators for 3 days on rails. Apply now for the Spring 2027 edition of Sustainability Express — Bucharest to Cluj and back.
           </p>
           <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 text-xl px-12 py-6 font-bold group">
             <Link to="/apply">
